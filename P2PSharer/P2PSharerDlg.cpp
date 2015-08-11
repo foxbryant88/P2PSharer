@@ -158,7 +158,8 @@ HCURSOR CP2PSharerDlg::OnQueryDragIcon()
 
 void CP2PSharerDlg::OnBnClickedButtonSearch()
 {
-	int  count = 100, max_threads = 1, length = 256;
+	int  count = 3, max_threads = 1, length = 256;
+	//acl::string addr("127.0.0.1:1900");
 	acl::string addr("119.29.66.237:1900");
 	
 	acl::log::stdout_open(true);

@@ -58,12 +58,13 @@ private:
 		ACL_SAFE_STRNCPY(req_hdr.cmd, "SEND", sizeof(req_hdr.cmd));
 
 		//先写数据头
-		if (conn.write(&req_hdr, sizeof(req_hdr) == -1))
+// 		if (conn.write(&req_hdr, sizeof(req_hdr) == -1))
+		if (conn.write(&req_hdr, sizeof(req_hdr)) == -1)
 		{
 			MessageBox(NULL, "write hdr to server failed!", "error", MB_OK);
 			return false;
 		}
-
+		 
 		// 再写数据体
 		if (conn.write(req_dat_, length_) == -1)
 		{
@@ -111,7 +112,7 @@ private:
 		if (i < 10)
 		{
 			msg_.format("thread: %lu, cmd: %s, dat: %s, len: %d\r\n", (unsigned long)thread_id(), res.cmd, res_dat_, res.len);
-			MessageBox(NULL, "write dat to server failed!", "error", MB_OK);
+			MessageBox(NULL, msg_.c_str(), "error", MB_OK);
 		}
 
 		return true;
