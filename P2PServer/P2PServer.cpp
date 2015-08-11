@@ -71,6 +71,8 @@ public:
 				return false;
 			}
 
+			printf("收到数据头，%s\r\n", req_hdr->cmd);
+
 			// 修改状态位，表明下一步需要读取数据体
 			status_ = STATUS_T_DAT;
 

@@ -8,7 +8,7 @@
 #include "afxdialogex.h"
 #include "define.h"
 #include "mythread.h"
-
+#include "ServerEX.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -158,32 +158,35 @@ HCURSOR CP2PSharerDlg::OnQueryDragIcon()
 
 void CP2PSharerDlg::OnBnClickedButtonSearch()
 {
-	int  count = 3, max_threads = 1, length = 256;
-	//acl::string addr("127.0.0.1:1900");
-	acl::string addr("119.29.66.237:1900");
+	//int  count = 3, max_threads = 1, length = 256;
+	acl::string addr("127.0.0.1:1900");
+	//acl::string addr("119.29.66.237:1900");
 	
 	acl::log::stdout_open(true);
 
-	std::vector<mythread*> threads;
-	for (int i = 0; i < max_threads; i++)
-	{
-		mythread* thread = new mythread(addr, count, length);
-		thread->set_detachable(false);
-		threads.push_back(thread);
-		thread->start();
-	}
+	//std::vector<mythread*> threads;
+	//for (int i = 0; i < max_threads; i++)
+	//{
+	//	mythread* thread = new mythread(addr, count, length);
+	//	thread->set_detachable(false);
+	//	threads.push_back(thread);
+	//	thread->start();
+	//}
 
-	for (std::vector<mythread*>::iterator it = threads.begin();
-		it != threads.end(); ++it)
-	{
-		if ((*it)->wait() == false)
-		{
-			printf("thread wait error: %s\r\n", acl::last_serror());
-			break;
-		}
+	//for (std::vector<mythread*>::iterator it = threads.begin();
+	//	it != threads.end(); ++it)
+	//{
+	//	if ((*it)->wait() == false)
+	//	{
+	//		printf("thread wait error: %s\r\n", acl::last_serror());
+	//		break;
+	//	}
 
-		delete *it;
-	}
-	/*
-	*/
+	//	delete *it;
+	//}
+
+	ServerEX ser;
+	ser.InitServer(addr);
+
+	ser.SendMsg_Online();
 }
