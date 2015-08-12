@@ -4,10 +4,16 @@
 #include "stdafx.h"
 #include <iostream>
 #include <assert.h>
+#include <map>
 #include "lib_acl.h"
 #include "acl_cpp/lib_acl.hpp"
+#include "acl_cpp/stdlib/log.hpp"
+#include "acl_cpp/stdlib/string.hpp"
 
+acl::log g_log;
 static int   __timeout = 0;
+std::map<acl::string, acl::aio_socket_stream *> g_clientlist;
+std::map<acl::string, acl::string> g_connecting;
 
 typedef enum
 {
@@ -65,52 +71,19 @@ public:
 
 			// 将网络字节序转为主机字节序
 			req_hdr->len = ntohl(req_hdr->len);
-			if (req_hdr->len <= 0)
+
+			if (!parsehdr(req_hdr))
 			{
-				printf("invalid len: %d\r\n", req_hdr->len);
+				g_log.error1("解析数据头失败！ip:%s", client_->get_peer());
 				return false;
 			}
-
-			printf("收到数据头，%s\r\n", req_hdr->cmd);
-
-			// 修改状态位，表明下一步需要读取数据体
-			status_ = STATUS_T_DAT;
-
-			// 异步读指定长度的数据
-			client_->read(req_hdr->len, __timeout);
-			return true;
 		}
 
-		if (status_ != STATUS_T_DAT)
+		if (status_ == STATUS_T_DAT)
 		{
-			printf("invalid status: %d\r\n", (int)status_);
-			return false;
+			handledat(data, len);
 		}
 
-		if (i_++ < 10)
-			printf("req len: %d, dat: %s\r\n", len, data);
-
-		// 向远程客户端回写收到的数据
-
-#define	OK	"+OK"
-		size_t dat_len = sizeof(OK)-1;
-
-		DAT_HDR res_hdr;
-
-		// 将主机字节序转为网络字节序
-		res_hdr.len = (int)htonl(dat_len);
-		ACL_SAFE_STRNCPY(res_hdr.cmd, "ok", sizeof(res_hdr.cmd));
-
-		// 异步写响应数据包: 数据头及数据体
-
-		client_->write(&res_hdr, sizeof(res_hdr));
-		client_->write(OK, (int)dat_len);
-
-		// 设置状态为读取下一个数据包
-		status_ = STATUS_T_HDR;
-
-		// 从异步流读数据包头
-		client_->read(sizeof(DAT_HDR), __timeout);
 
 		return true;
 	}
@@ -147,6 +120,78 @@ private:
 	status_t status_;
 	acl::aio_socket_stream* client_;
 	int   i_;
+
+	bool parsehdr(DAT_HDR *hdr)
+	{
+		acl::string strcmd = hdr->cmd;
+
+		//处理客户端上线消息
+		if (!strcmd.compare("MSG_ONLINE"))
+		{
+			if (g_clientlist.find(client_->get_peer()) == g_clientlist.end())
+			{
+				g_log.msg1("客户端上线,IP：%s", client_->get_peer(true));
+				g_clientlist[client_->get_peer(true)] = client_;
+			}
+
+			// 从异步流读数据包头
+			client_->read(sizeof(DAT_HDR), __timeout);
+
+			return true;
+		}
+
+		//处理客户端请求P2P连接命令
+		if (!strcmd.compare("CMD_CONN"))
+		{
+			status_ = STATUS_T_DAT;
+
+			// 异步读指定长度的数据
+			client_->read(hdr->len, __timeout);
+			return true;
+		}
+
+		//对目标机确认已发起P2P连接的处理(删除正在连接的记录)
+		if (!strcmd.compare("MSG_OK"))
+		{
+			std::map<acl::string, acl::string>::iterator it = g_connecting.find(client_->get_peer(true));
+			if (it != g_connecting.end())
+			{
+				g_log.msg1("P2P连接转发命令完成,源：%s, 目标：%s", it->second, it->first);
+				g_connecting.erase(it);
+			}
+		}
+	}
+
+	bool handledat(char* data, int len)
+	{
+		//处理打洞流程
+
+		//检查目标是否在线
+		if (g_clientlist.find(data) == g_clientlist.end())
+		{
+			g_log.warn1("客户端已下线：%s", client_->get_peer(true));
+			return false;
+		}
+
+		////////////////////////////////////////////////
+		//向目标下发P2P连接指令
+		acl::string cmd = "CMD_START_P2P";
+		DAT_HDR req_hdr;
+		req_hdr.len = htonl(cmd.length());        //长度直接设置为消息长度
+		ACL_SAFE_STRNCPY(req_hdr.cmd, cmd, sizeof(req_hdr.cmd));
+
+		acl::aio_socket_stream *ptarget = g_clientlist[data];
+		ptarget->write(&req_hdr, sizeof(req_hdr));           //写入请求头
+
+		acl::string addrsrc = client_->get_peer(true);
+		ptarget->write(&addrsrc, addrsrc.length());          //写入P2P连接目标地址
+
+
+		//保存正在尝试P2P连接的记录（收到目标机确认消息后删除）
+		g_connecting[ptarget->get_peer(true)] = client_->get_peer(true);
+
+		return true;
+	}
 };
 
 /**
@@ -168,6 +213,8 @@ public:
 	*/
 	bool accept_callback(acl::aio_socket_stream* client)
 	{
+		g_log.msg1("收到连接：%s", client->get_peer());
+
 		// 创建异步客户端流的回调对象并与该异步流进行绑定
 		io_callback* callback = new io_callback(client);
 
@@ -185,6 +232,7 @@ public:
 
 		// 从异步流读数据包头
 		client->read(sizeof(DAT_HDR), __timeout);
+
 		return (true);
 	}
 };
@@ -195,6 +243,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	bool use_kernel = false;
 	int  ch;
 	acl::string addr(":1900");
+	g_log.open("P2PServer.log", "P2PServer");
 
 	acl::log::stdout_open(true);
 
@@ -212,6 +261,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 		std::cout << "open " << addr.c_str() << " error!" << std::endl;
 		sstream->close();
+		g_log.error1("open %s error!", addr.c_str());
+
 		// XXX: 为了保证能关闭监听流，应在此处再 check 一下
 		handle.check();
 

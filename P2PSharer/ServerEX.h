@@ -16,6 +16,9 @@ public:
 	//发送在线消息
 	bool SendMsg_Online();
 
+	//发送请求连接其它客户端命令
+	bool ServerEX::SendCMD_CONN(acl::string &target);
+
 	//发送其它。。。
 
 
