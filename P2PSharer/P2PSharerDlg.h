@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "ServerEX.h"
 
 
 // CP2PSharerDlg 对话框
@@ -17,6 +18,9 @@ public:
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
+
+private:
+	ServerEX m_serEx;
 
 
 // 实现

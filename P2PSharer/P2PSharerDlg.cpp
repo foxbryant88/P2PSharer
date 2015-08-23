@@ -6,9 +6,6 @@
 #include "P2PSharer.h"
 #include "P2PSharerDlg.h"
 #include "afxdialogex.h"
-#include "define.h"
-#include "mythread.h"
-#include "ServerEX.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -102,6 +99,13 @@ BOOL CP2PSharerDlg::OnInitDialog()
 
 	g_log.open("mylog.log", "P2PServer");
 
+	acl::string addr("127.0.0.1:8888");
+	//acl::string addr("119.29.66.237:8888");
+
+	m_serEx.Init(addr);
+	m_serEx.set_detachable(true);
+	m_serEx.start();
+
 	// TODO:  在此添加额外的初始化代码
 
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
@@ -160,38 +164,9 @@ HCURSOR CP2PSharerDlg::OnQueryDragIcon()
 
 void CP2PSharerDlg::OnBnClickedButtonSearch()
 {
-	//int  count = 3, max_threads = 1, length = 256;
-	acl::string addr("127.0.0.1:1900");
-	//acl::string addr("119.29.66.237:1900");
-	
 	acl::log::stdout_open(true);
 
-	//std::vector<mythread*> threads;
-	//for (int i = 0; i < max_threads; i++)
-	//{
-	//	mythread* thread = new mythread(addr, count, length);
-	//	thread->set_detachable(false);
-	//	threads.push_back(thread);
-	//	thread->start();
-	//}
-
-	//for (std::vector<mythread*>::iterator it = threads.begin();
-	//	it != threads.end(); ++it)
-	//{
-	//	if ((*it)->wait() == false)
-	//	{
-	//		printf("thread wait error: %s\r\n", acl::last_serror());
-	//		break;
-	//	}
-
-	//	delete *it;
-	//}
-
-	ServerEX ser;
-	ser.InitServer(addr);
-	g_log.warn1("ServerEx init over");
-
-	ser.SendMsg_Online();
+	m_serEx.SendMsg_UserLogin();
 	g_log.warn1("SendMsg_Online over");
 
 }

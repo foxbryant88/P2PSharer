@@ -84,7 +84,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\..\acl\lib_acl_cpp\include;..\..\acl\lib_acl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\acl\lib_acl_cpp\include;..\..\acl\lib_acl\include;..\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -110,8 +110,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="define.h" />
-    <ClInclude Include="mythread.h" />
+    <ClInclude Include="..\common\CommonDefine.h" />
+    <ClInclude Include="..\common\PeerList.h" />
     <ClInclude Include="P2PSharer.h" />
     <ClInclude Include="P2PSharerDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -120,6 +120,9 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\common\PeerList.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="P2PSharer.cpp" />
     <ClCompile Include="P2PSharerDlg.cpp" />
     <ClCompile Include="ServerEX.cpp" />

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{5cb7411c-1b57-4829-bf99-9a5a3589e41b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -33,14 +36,14 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="define.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="mythread.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ServerEX.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\CommonDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\PeerList.h">
+      <Filter>common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="ServerEX.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\PeerList.cpp">
+      <Filter>common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
