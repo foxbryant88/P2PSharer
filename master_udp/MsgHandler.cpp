@@ -123,7 +123,7 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 	}
 }
 
-//客户端请求转发P2P连接消息
+//客户端请求转发P2P打洞消息
 void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock)
 {
 

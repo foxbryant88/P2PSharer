@@ -35,8 +35,6 @@ bool ServerEX::Init(const char* addr)
  
 	m_sockstream.set_rw_timeout(0);
 
-	SendMsg_UserLogin();
-
 	return true;
 }
 
@@ -61,13 +59,28 @@ void* ServerEX::run()
 		case eMSG_USERLOGINACK:
 			ProcMsgUserLoginAck(msg);
 			break;
+		case eMSG_P2PCONNECT:
+			break;
+		case eMSG_P2PCONNECTACK:
+			break;
+		case eMSG_P2PDATA:
+			break;
+		case  eMSG_P2PDATAACK:
+			break;
+		case eMSG_REQFILE:
+			break;
+		case eMSG_REQFILEACK:
+			break;
+		case eMSG_GETBLOCKS:
+			break;
+		case eMSG_GETBLOCKSACK:
+			break;
+		case eMSG_USERACTIVEQUERY:
+			break;
 		default:
+			g_log.error1("错误的消息类型：%d", msg->cMsgID);
 			break;
 		}
-		//MSGDef::TMSG_USERLOGINACK *Ack = (MSGDef::TMSG_USERLOGINACK*)buf;
-		//m_errmsg.format("收到来自：%s的数据：%s", m_sockstream.get_peer(true), buf);
-		//MessageBox(NULL, m_errmsg, "client", MB_OK);
-		//m_errmsg = "fds";
 	}
 
 	return NULL;

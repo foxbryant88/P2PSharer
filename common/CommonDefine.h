@@ -16,7 +16,7 @@ enum eMSG
 	eMSG_USERLOGIN,                // 用户登陆
 	eMSG_USERLOGINACK,			   // 发送确认用户登陆的信息
 	eMSG_P2PCONNECT,			   // 有用户请求让另一个用户向它发送打洞消息
-	eMSG_P2PCONNECTACK,            //
+	eMSG_P2PCONNECTACK,            // 确认打洞成功的消息
 	eMSG_P2PDATA,				   // 发送数据
 	eMSG_P2PDATAACK,               // 确认收到数据
 	eMSG_REQFILE,                  // 协商请求的文件

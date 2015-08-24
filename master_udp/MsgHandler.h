@@ -33,7 +33,7 @@ private:
 	//客户端登录消息
 	void ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
 
-	//客户端请求转发P2P连接消息
+	//客户端请求转发P2P打洞消息
 	void ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
 
 	//客户端注销登录消息
