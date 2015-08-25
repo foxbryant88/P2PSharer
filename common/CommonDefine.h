@@ -7,7 +7,7 @@
 #define MAX_TRY_NUMBER		10
 
 #define SERVER_PORT			9999
-#define MAX_PACKET_SIZE		1200
+#define MAX_PACKET_SIZE		1300
 
 // 各种消息标识
 enum eMSG
@@ -26,6 +26,12 @@ enum eMSG
 	eMSG_USERLOGOUT,			   // 通知server用户退出
 	eMSG_USERACTIVEQUERY,		   // 查询用户是否还存在
 };
+
+// Flag定义（因同时可能与多台客户端交互，故附带目标IP）
+#define FORMAT_FLAG_P2PCONN "P2P_CONNECT_%s"           // 打洞状态标记 参数：对方地址
+#define FORMAT_FLAG_P2PDATA "P2P_DATA_%s"              // 发送数据状态标记 参数：对方地址
+#define FORMAT_FLAG_REQFILE "REQ_FILE_%s_%d"           // 发送协商下载文件的标记 参数：对方地址、文件ID
+#define FORMAT_FLAG_GETBLOCKS "GET_BLOCKS_%s_%d"       // 发送请求下载块的标记 参数：对方地址、文件ID
 
 
 class MSGDef										// 定义消息的结构体
@@ -75,7 +81,7 @@ public:
 		: TMSG_HEADER
 	{
 		Peer_Info	PeerInfo;
-		//char		szUserName[MAX_USERNAME];       //请求连接的目标用户名
+		char ConnToAddr[22];           //连接的目标地址
 
 		TMSG_P2PCONNECT(const Peer_Info& rPeerInfo)
 			: TMSG_HEADER(eMSG_P2PCONNECT)

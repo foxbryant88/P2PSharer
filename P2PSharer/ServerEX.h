@@ -20,8 +20,9 @@ public:
 	//发送登录消息
 	bool SendMsg_UserLogin();
 
-	//发送请求连接其它客户端命令
-	bool SendCMD_CONN(acl::string &target);
+	//请求服务端转发P2P打洞请求
+	bool SendMsg_P2PConnect(const char *addr);
+
 
 	//发送其它。。。
 
@@ -34,7 +35,7 @@ private:
 	void ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data);
 
 	//收到确认打洞成功的消息
-	void ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data);
+	void ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
 
 	//服务方收到下载请求后，向客户发送数据
 	void ProcMsgP2PData(MSGDef::TMSG_HEADER *data);
@@ -57,14 +58,21 @@ private:
 	//收到查询是否存活消息
 	void ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data);
 
+	//向指定地址发送数据
+	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
 
-	acl::string addr_;              //服务端地址
-	Peer_Info m_peerInfo;           //本机信息
-	acl::string m_errmsg;           //错误信息
+	//循环检查标记是否为1
+	bool WaitFlag(const acl::string &flag);
+
+	acl::string server_addr_;              //服务端地址
+	Peer_Info m_peerInfo;                  //本机信息
+	acl::string m_errmsg;                  //错误信息
 	acl::socket_stream m_sockstream;
 	bool m_bExit;
+	acl::locker m_lockSockStream;
+	std::map<acl::string, byte> m_mapFlags;  //用于表明发送数据是否成功的各种标记
+	                                         //key:操作标记的名称 value：1表示已确认 0表示未确认
 
-	//向服务端写入信息
-	bool WriteDataToServer(const void* data, size_t size);
+	byte m_bLoginSucc;
 };
 

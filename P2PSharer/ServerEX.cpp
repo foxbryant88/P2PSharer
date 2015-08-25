@@ -10,6 +10,7 @@ ServerEX::ServerEX()
 {
 	logEx.open("mylog.log", "ServerEx");
 
+	m_bLoginSucc = false;
 	m_bExit = false;
 }
 
@@ -22,7 +23,7 @@ ServerEX::~ServerEX()
 //初始化本地UDP并记录服务端地址
 bool ServerEX::Init(const char* addr)
 {
-	addr_ = addr;
+	server_addr_ = addr;
 	acl::acl_cpp_init();
 
 	if (!m_sockstream.bind_udp("127.0.0.1:0"))
@@ -60,8 +61,10 @@ void* ServerEX::run()
 			ProcMsgUserLoginAck(msg);
 			break;
 		case eMSG_P2PCONNECT:
+			ProcMsgP2PConnect(msg);
 			break;
 		case eMSG_P2PCONNECTACK:
+			ProcMsgP2PConnectAck(msg, &m_sockstream);
 			break;
 		case eMSG_P2PDATA:
 			break;
@@ -86,27 +89,52 @@ void* ServerEX::run()
 	return NULL;
 }
 
-//发送登录消息
-bool ServerEX::SendMsg_UserLogin()
+//向指定地址发送数据
+bool ServerEX::SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr)
 {
-	if (!m_sockstream.set_peer(addr_))
+	m_lockSockStream.lock();
+
+	if (!stream->set_peer(addr))
 	{
-		MessageBox(NULL, "设置连接服务器失败", "client", MB_OK);
+		logEx.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
 		return false;
-	}
+	};
 
-	MSGDef::TMSG_USERLOGIN tMsgUserLogin(m_peerInfo);
-	memcpy(tMsgUserLogin.PeerInfo.P2PAddr, "test", 5);
-	memcpy(tMsgUserLogin.PeerInfo.IPAddr, "test1", 6);
-
-	if (m_sockstream.write(&tMsgUserLogin, sizeof(tMsgUserLogin), true) == -1)
+	if (stream->write(data, size) == -1)
 	{
-		m_errmsg.format("向%s发送上线消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
-		MessageBox(NULL, m_errmsg, "client", MB_OK);
+		logEx.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
 		return false;
 	}
 
 	return true;
+}
+
+//发送登录消息
+bool ServerEX::SendMsg_UserLogin()
+{
+	MSGDef::TMSG_USERLOGIN tMsgUserLogin(m_peerInfo);
+	//memcpy(tMsgUserLogin.PeerInfo.P2PAddr, "test", 5);
+	//memcpy(tMsgUserLogin.PeerInfo.IPAddr, "test1", 6);
+
+	m_bLoginSucc = false;
+	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
+	{
+		if (SendData(&tMsgUserLogin, sizeof(tMsgUserLogin), &m_sockstream, server_addr_))
+		{
+			Sleep(200);
+			if (m_bLoginSucc)
+			{
+				logEx.msg1("登录成功！");
+				return true;
+			}
+		}
+
+		Sleep(1000);
+	}
+
+	m_errmsg.format("向%s发送登录消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
+	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	return false;
 }
 
 //登录确认消息
@@ -115,57 +143,90 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 	MSGDef::TMSG_USERLOGINACK *msg = (MSGDef::TMSG_USERLOGINACK*)data;
 
 	m_peerInfo = msg->PeerInfo;
+
+	m_bLoginSucc = true;
+
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
 	g_log.msg1(m_errmsg);
 	MessageBox(NULL, m_errmsg, "client", MB_OK);
 }
 
-//发送请求连接其它客户端命令
-bool ServerEX::SendCMD_CONN(acl::string &target)
+//请求服务端转发P2P打洞请求
+bool ServerEX::SendMsg_P2PConnect(const char *addr)
 {
-// 	acl::string data = "CMD_CONN";
-// 	DAT_HDR req_hdr;
-// 	req_hdr.len = htonl(target.length());                      //消息头中指定目标客户端地址的长度
-// 	ACL_SAFE_STRNCPY(req_hdr.cmd, data, sizeof(req_hdr.cmd));
-// 
-// 	if (!WriteDataToServer(&req_hdr, sizeof(req_hdr)))
-// 	{
-// 		MessageBox(NULL, "请求P2P连接时，发送消息头失败!", "error", MB_OK);
-// 		logEx.error1("请求P2P连接时，发送消息头失败!");
-// 		return false;
-// 	}
-// 
-// 	if (!WriteDataToServer((void *)target.c_str(), target.length()))
-// 	{
-// 		MessageBox(NULL, "请求P2P连接时，发送目标地址失败!", "error", MB_OK);
-// 		logEx.error1("请求P2P连接时，发送目标地址失败!");
-// 		return false;
-// 	}
+	MSGDef::TMSG_P2PCONNECT tMsgConnect(m_peerInfo);
+	memcpy(tMsgConnect.ConnToAddr, addr, strlen(addr));
 
-	return true;
+	//初始化发送标记
+	acl::string flag;
+	flag.format(FORMAT_FLAG_P2PCONN, addr);
+	m_mapFlags[flag] = 0;
+
+	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
+	{
+		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, server_addr_) && WaitFlag(flag))
+		{
+			logEx.msg1("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
+			return true;
+		}
+
+		Sleep(1000);
+	}
+
+	m_errmsg.format("向服务端[%s]发送P2P打洞转发消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
+	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	return false;
 }
 
 
-//向服务端写入信息
-bool ServerEX::WriteDataToServer(const void* data, size_t size)
+//收到确认打洞成功的消息
+void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
 {
-	if (!m_sockstream.alive())
-	{		
-		if (!m_sockstream.set_peer(addr_))
-		{
-			m_errmsg.format("流对象未打开，设置服务器地址失败!");
-			MessageBox(NULL, m_errmsg.c_str(), "client", MB_OK);
-			return false;
-		}
-	}
-	acl::string buf = "hello, world";
-	size = buf.length();
-	if (m_sockstream.write(buf, true) == -1)
+	logEx.msg1("收到%s确认打洞成功的消息", stream->get_peer(true));
+
+	m_mapFlags[stream->get_peer(true)] = 1;
+}
+
+//收到请求P2P连接（打洞）的消息
+void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data)
+{
+	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT*)data;
+
+	logEx.msg1("收到来自[%s]的打洞请求，准备回复！", msg->PeerInfo.IPAddr);
+
+	MSGDef::TMSG_P2PCONNECTACK tMsgP2PConnectAck(m_peerInfo);
+	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
-		m_errmsg.format("发送数据失败：%d!", acl::last_error());
-		MessageBox(NULL, m_errmsg, "client", MB_OK);
-		return false;
+		if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, msg->PeerInfo.IPAddr))
+		{
+			logEx.msg1("向[%s]回复确认成功", msg->PeerInfo.IPAddr);
+			return ;
+		}
+
+		Sleep(1000);
 	}
 
-	return true;
+	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
+	g_log.msg1(m_errmsg);
+	MessageBox(NULL, m_errmsg, "client", MB_OK);
+
+}
+
+//循环检查标记是否为1 
+//成功返回true 否则false
+bool ServerEX::WaitFlag(const acl::string &flag)
+{
+#define WAIT_RETRY 100
+
+	for (int i = 0; i < WAIT_RETRY; i++)
+	{
+		if (m_mapFlags[flag] == 1)
+		{
+			return true;
+		}
+
+		Sleep(20);
+	}
+
+	return false;
 }

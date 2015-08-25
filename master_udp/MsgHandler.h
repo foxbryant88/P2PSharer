@@ -44,6 +44,7 @@ private:
 
 	acl::locker m_lockMsgData; 
 	acl::locker m_lockUserList;
+
 	std::vector<RECIEVE_DATA> m_vMsgData;     //收到的数据先缓存
 	PeerList m_lstOnlineUser;                 //在线客户端列表
 	acl::socket_stream m_SockStream;

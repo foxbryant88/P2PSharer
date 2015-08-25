@@ -46,7 +46,7 @@ struct Peer_Info
 	int        dwActiveTime;              // 活跃时间
 	int        nAddrNum;                  // 适配器数目
 	//acl::string  P2PAddr;                 // P2P连接地址
-	char P2PAddr[22];
+	char P2PAddr[22];  //暂未用
 	Peer_Info(); 
 
 	Peer_Info operator=(const Peer_Info& rPeerinfo);
