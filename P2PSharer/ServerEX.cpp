@@ -26,7 +26,7 @@ bool ServerEX::Init(const char* addr)
 	server_addr_ = addr;
 	acl::acl_cpp_init();
 
-	if (!m_sockstream.bind_udp("127.0.0.1:0"))
+	if (!m_sockstream.bind_udp("0.0.0.0:8888"))
 	{
 		logEx.fatal1("绑定本地UDP端口失败！%d", acl::last_error());
 		return false;
@@ -94,19 +94,22 @@ bool ServerEX::SendData(void *data, size_t size, acl::socket_stream *stream, con
 {
 	m_lockSockStream.lock();
 
-	if (!stream->set_peer(addr))
+	if (stream->set_peer(addr))
 	{
-		logEx.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
-		return false;
-	};
+		if (stream->write(data, size) > 0)
+		{
+			m_lockSockStream.unlock();
+			return true;
+		}
 
-	if (stream->write(data, size) == -1)
-	{
 		logEx.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
-		return false;
 	}
+	else
+    	logEx.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
 
-	return true;
+	m_lockSockStream.unlock();
+
+	return false;
 }
 
 //发送登录消息
@@ -162,6 +165,13 @@ bool ServerEX::SendMsg_P2PConnect(const char *addr)
 	flag.format(FORMAT_FLAG_P2PCONN, addr);
 	m_mapFlags[flag] = 0;
 
+	//先向目标发送打洞
+	for (int i = 0; i < 3; i++)
+	{
+		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, addr))
+			break;
+	}
+
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
 		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, server_addr_) && WaitFlag(flag))
@@ -183,6 +193,13 @@ bool ServerEX::SendMsg_P2PConnect(const char *addr)
 void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
 {
 	logEx.msg1("收到%s确认打洞成功的消息", stream->get_peer(true));
+
+	MSGDef::TMSG_P2PCONNECTACK *msg = (MSGDef::TMSG_P2PCONNECTACK *)data;
+	
+	//打洞成功的客户端存入列表
+	m_lockListUser.lock();
+	m_lstUser.AddPeer(msg->PeerInfo);
+	m_lockListUser.unlock();
 
 	m_mapFlags[stream->get_peer(true)] = 1;
 }
@@ -229,4 +246,31 @@ bool ServerEX::WaitFlag(const acl::string &flag)
 	}
 
 	return false;
+}
+
+//发送P2P数据，仅测试
+bool ServerEX::SendMsg_P2PData(const char *data, const char *toaddr)
+{
+	for (int iRetry = 0; iRetry < 3; iRetry++)
+	{
+		Peer_Info *peer = m_lstUser.GetAPeer(toaddr);
+		if (peer != NULL)
+		{
+			//尝试发送数据
+			for (int i = 0; i < 3; i++)
+			{
+				if (SendData((void*)data, strlen(data), &m_sockstream, toaddr))
+				{
+					logEx.msg1("向%s发送数据成功！", toaddr);
+					return true;
+				}
+
+				Sleep(1000);
+			}
+		}
+
+		//如果未连接或发送失败则开始打洞
+		SendMsg_P2PConnect(toaddr);
+		Sleep(500);
+	}
 }

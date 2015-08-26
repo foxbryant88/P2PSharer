@@ -4,6 +4,7 @@
 
 #pragma once
 #include "ServerEX.h"
+#include "afxwin.h"
 
 
 // CP2PSharerDlg ¶Ô»°¿ò
@@ -35,4 +36,5 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButtonSearch();
+	CEdit m_editKeyword;
 };

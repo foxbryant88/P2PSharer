@@ -56,6 +56,7 @@ CP2PSharerDlg::CP2PSharerDlg(CWnd* pParent /*=NULL*/)
 void CP2PSharerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_EDIT_KEYWORD, m_editKeyword);
 }
 
 BEGIN_MESSAGE_MAP(CP2PSharerDlg, CDialogEx)
@@ -99,8 +100,8 @@ BOOL CP2PSharerDlg::OnInitDialog()
 
 	g_log.open("mylog.log", "P2PServer");
 
-	acl::string addr("127.0.0.1:8888");
-	//acl::string addr("119.29.66.237:8888");
+	//acl::string addr("127.0.0.1:8888");
+	acl::string addr("119.29.66.237:8888");
 
 	m_serEx.Init(addr);
 	m_serEx.set_detachable(true);
@@ -167,6 +168,9 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	acl::log::stdout_open(true);
 
 	m_serEx.SendMsg_UserLogin();
-	g_log.warn1("SendMsg_Online over");
 
+	CString addr = "";
+	m_editKeyword.GetWindowTextA(addr);
+
+//	m_serEx.SendMsg_P2PData("hello, world", addr.GetBuffer());
 }

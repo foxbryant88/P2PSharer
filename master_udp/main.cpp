@@ -27,7 +27,8 @@ int main(int argc, char* argv[])
 	{
 #ifdef	WIN32
 		acl::log::stdout_open(true);  // 日志输出至标准输出
-		const char* addr = "127.0.0.1:8888, 127.0.0.1:8889";
+// 		const char* addr = "127.0.0.1:8888, 127.0.0.1:8889";
+		const char* addr = "10.251.57.59:8888, 10.251.57.59:8889";
 		printf("bind on: %s\r\n", addr);
 		ms.run_alone(addr, NULL, 0);  // 单独运行方式
 #else

@@ -126,7 +126,28 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 //客户端请求转发P2P打洞消息
 void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock)
 {
+	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT *)pMsgHeader;
 
+	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！", sock.get_peer(true), msg->ConnToAddr);
+	g_runlog.msg1(m_errmsg);
+
+// 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->ConnToAddr);
+// 	if (peer != NULL)
+// 	{
+	
+	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
+	{
+		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), &sock, msg->ConnToAddr))
+		{
+			g_runlog.msg1("向[%s]转发P2P打洞消息成功！", msg->ConnToAddr);
+			return;
+		}
+
+		Sleep(1000);
+	}
+	//}
+
+	g_runlog.msg1("向[%s]转发P2P打洞消息成功！", msg->ConnToAddr);
 }
 
 //客户端注销登录消息
@@ -168,4 +189,24 @@ void CMsgHandler::MaintainUserlist()
 			}
 		}
 	}
+}
+
+//向指定地址发送数据
+bool CMsgHandler::SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr)
+{
+	///////////////////////多线程调用需加锁!!!!///////////////////////////
+
+	if (!stream->set_peer(addr))
+	{
+		g_runlog.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
+		return false;
+	};
+
+	if (stream->write(data, size) == -1)
+	{
+		g_runlog.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
+		return false;
+	}
+
+	return true;
 }

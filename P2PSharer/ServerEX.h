@@ -4,6 +4,7 @@
 #include "lib_acl.h"
 #include "acl_cpp\lib_acl.hpp"
 #include "CommonDefine.h"
+#include "PeerList.h"
 
 class ServerEX: public acl::thread
 {
@@ -26,6 +27,8 @@ public:
 
 	//发送其它。。。
 
+	//发送P2P数据，仅测试
+	bool SendMsg_P2PData(const char *data, const char *toaddr);
 
 private:
 	//登录确认消息
@@ -72,6 +75,9 @@ private:
 	acl::locker m_lockSockStream;
 	std::map<acl::string, byte> m_mapFlags;  //用于表明发送数据是否成功的各种标记
 	                                         //key:操作标记的名称 value：1表示已确认 0表示未确认
+
+	acl::locker m_lockListUser;              //客户端列表锁
+	PeerList m_lstUser;                      //已与本机连接的客户端列表
 
 	byte m_bLoginSucc;
 };

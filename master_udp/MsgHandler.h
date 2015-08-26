@@ -30,6 +30,9 @@ private:
 	//从缓存取数据
 	bool GetMsgData(RECIEVE_DATA &rdata);
 
+	//向指定地址发送数据
+	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
+
 	//客户端登录消息
 	void ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
 
