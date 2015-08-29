@@ -4,8 +4,8 @@ Peer_Info::Peer_Info()
 	: dwActiveTime(0)
 	, nAddrNum(0)
 {
-	memset(IPAddr, 0, sizeof(IPAddr));
-	memset(P2PAddr, 0, sizeof(P2PAddr));
+	memset(IPAddr, 0, ADDR_SIZE);
+	memset(P2PAddr, 0, ADDR_SIZE);
 }
 
 Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
@@ -13,8 +13,8 @@ Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
 	if (&rPeerinfo == this)
 		return *this;
 
-	memcpy(IPAddr, rPeerinfo.IPAddr, sizeof(IPAddr));
-	memcpy(P2PAddr, rPeerinfo.P2PAddr, sizeof(P2PAddr));
+	memcpy(IPAddr, rPeerinfo.IPAddr, ADDR_SIZE);
+	memcpy(P2PAddr, rPeerinfo.P2PAddr, ADDR_SIZE);
 	dwActiveTime = rPeerinfo.dwActiveTime;
 	nAddrNum = rPeerinfo.nAddrNum;
 	//strcpy(szUserName, rPeerinfo.szUserName);
@@ -77,7 +77,7 @@ bool PeerList::DeleteAPeer(const char* addrInfo)
 		 Iter1 != Iter2;
 		 ++Iter1)
 	{
-		if (!_stricmp(Iter1->P2PAddr, addrInfo))
+		if (!strcmp(Iter1->IPAddr, addrInfo))
 		{
 			m_PeerInfoList.erase(Iter1);
 			return true;
@@ -95,7 +95,7 @@ Peer_Info* PeerList::GetAPeer(const char* addrInfo)
 		Iter1 != Iter2;
 		++Iter1)
 	{
-		if (!_stricmp(Iter1->P2PAddr, addrInfo))
+		if (!strcmp(Iter1->IPAddr, addrInfo))
 		{
 			return &(*Iter1);
 		}

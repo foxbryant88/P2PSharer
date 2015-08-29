@@ -67,7 +67,10 @@ void master_service::on_read(acl::socket_stream* stream)
 		g_runlog.msg1(m_err);
 		printf(m_err);
 
-		m_msghandler.CacheMsgData(rec);
+		//m_msghandler.CacheMsgData(rec);
+  		MSGDef::TMSG_HEADER *msg = (MSGDef::TMSG_HEADER*)buf;
+//  		m_msghandler.ProcUserLoginMsg(msg, *stream);
+		m_msghandler.DealMsg(msg, stream);
 	}
 }
 

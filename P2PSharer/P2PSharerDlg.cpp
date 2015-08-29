@@ -101,11 +101,15 @@ BOOL CP2PSharerDlg::OnInitDialog()
 	g_log.open("mylog.log", "P2PServer");
 
 	//acl::string addr("127.0.0.1:8888");
+	//acl::string addr("192.168.1.102:8888");
 	acl::string addr("119.29.66.237:8888");
 
 	m_serEx.Init(addr);
 	m_serEx.set_detachable(true);
 	m_serEx.start();
+
+	m_serEx.SendMsg_UserLogin();
+
 
 	// TODO:  在此添加额外的初始化代码
 
@@ -167,10 +171,8 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 {
 	acl::log::stdout_open(true);
 
-	m_serEx.SendMsg_UserLogin();
-
 	CString addr = "";
 	m_editKeyword.GetWindowTextA(addr);
 
-//	m_serEx.SendMsg_P2PData("hello, world", addr.GetBuffer());
+	m_serEx.SendMsg_P2PData("hello, world", addr.GetBuffer());
 }

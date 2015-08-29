@@ -41,7 +41,7 @@ bool CMsgHandler::GetMsgData(RECIEVE_DATA &rdata)
 void* CMsgHandler::run()
 {
 	RECIEVE_DATA recieve;
-	if (!m_SockStream.bind_udp("127.0.0.1:0"))
+	if (!m_SockStream.bind_udp("0.0.0.0:0"))
 	{
 		m_errmsg.format("bind本地端口失败,err:%s", acl::last_serror());
 		MessageBox(NULL, m_errmsg, "server", MB_OK);
@@ -64,37 +64,44 @@ void* CMsgHandler::run()
 			MessageBox(NULL, m_errmsg, "Error", MB_OK);
 		}
 
-		switch (msg->cMsgID)
-		{
-		case eMSG_USERLOGIN:
-			ProcUserLoginMsg(msg, m_SockStream);
-			break;
-
-		case eMSG_P2PCONNECT:
-			ProcP2PConnectMsg(msg, m_SockStream);
-			break;
-
-		case eMSG_USERLOGOUT:
-			ProcLogoutMsg(msg, m_SockStream);
-			break;
-
-		case eMSG_USERACTIVEQUERY:
-			ProcActiveMsg(msg, m_SockStream);
-			break;
-
-		default:
-			break;
-		}
+		DealMsg(msg, &m_SockStream);
 	}
 
 	return NULL;
 }
 
+//消息处理
+void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
+{
+	switch (msg->cMsgID)
+	{
+	case eMSG_USERLOGIN:
+		ProcUserLoginMsg(msg, sock);
+		break;
+
+	case eMSG_P2PCONNECT:
+		ProcP2PConnectMsg(msg, sock);
+		break;
+
+	case eMSG_USERLOGOUT:
+		ProcLogoutMsg(msg, sock);
+		break;
+
+	case eMSG_USERACTIVEQUERY:
+		ProcActiveMsg(msg, sock);
+		break;
+
+	default:
+		break;
+	}
+
+}
+
 //客户端登录消息
-void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock)
+void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
 	m_errmsg.clear();
-	m_errmsg.format("收到%s登录消息\r\n", sock.get_peer(true));
+	m_errmsg.format("收到%s登录消息\r\n", sock->get_peer(true));
 	g_runlog.msg1(m_errmsg);
 	printf(m_errmsg);
 
@@ -103,7 +110,7 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 	int nNum = pUserLogin->PeerInfo.nAddrNum;
 // 	pUserLogin->PeerInfo.IPAddr[nNum] = sock->get_peer(true);
 //	pUserLogin->PeerInfo.IPAddr = sock->get_peer(true);
-	acl::string ip = sock.get_peer(true);
+	acl::string ip = sock->get_peer(true);
 	memcpy(pUserLogin->PeerInfo.IPAddr, ip, ip.length());
 	//pUserLogin->PeerInfo.nAddrNum++;
 	pUserLogin->PeerInfo.dwActiveTime = GetTickCount();   // 登陆的时间为活跃时间
@@ -115,20 +122,23 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 
 	//回复登录确认消息
 	MSGDef::TMSG_USERLOGINACK tMsgUserLogAck(pUserLogin->PeerInfo);
- 	if (sock.write((void*)&tMsgUserLogAck, sizeof(tMsgUserLogAck), true) == -1)
+ 	if (sock->write((void*)&tMsgUserLogAck, sizeof(tMsgUserLogAck), true) == -1)
 	{
 		m_errmsg.format("向%s回复登录确认消息失败！\r\n", ip);
 		g_runlog.msg1(m_errmsg);
 		printf("%s", m_errmsg);
+		return;
 	}
+
+	printf("回复数据成功！目标：%s", ip.buf());
 }
 
 //客户端请求转发P2P打洞消息
-void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock)
+void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
 	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT *)pMsgHeader;
 
-	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！", sock.get_peer(true), msg->ConnToAddr);
+	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！", sock->get_peer(true), msg->ConnToAddr);
 	g_runlog.msg1(m_errmsg);
 
 // 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->ConnToAddr);
@@ -137,7 +147,7 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 	
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
-		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), &sock, msg->ConnToAddr))
+		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), sock, msg->ConnToAddr))
 		{
 			g_runlog.msg1("向[%s]转发P2P打洞消息成功！", msg->ConnToAddr);
 			return;
@@ -151,13 +161,13 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 }
 
 //客户端注销登录消息
-void CMsgHandler::ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock)
+void CMsgHandler::ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
 
 }
 
 //客户端注销登录消息
-void CMsgHandler::ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock)
+void CMsgHandler::ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
 
 }

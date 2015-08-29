@@ -26,6 +26,10 @@ public:
 	//维护在线列表
 	void MaintainUserlist();
 
+	//消息处理
+	void DealMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
+
+
 private:
 	//从缓存取数据
 	bool GetMsgData(RECIEVE_DATA &rdata);
@@ -33,17 +37,17 @@ private:
 	//向指定地址发送数据
 	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
 
-	//客户端登录消息
-	void ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
+ 	//客户端登录消息
+ 	void ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
 	//客户端请求转发P2P打洞消息
-	void ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
+	void ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
 	//客户端注销登录消息
-	void ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
+	void ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
 	//客户端注销登录消息
-	void ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream &sock);
+	void ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
 	acl::locker m_lockMsgData; 
 	acl::locker m_lockUserList;

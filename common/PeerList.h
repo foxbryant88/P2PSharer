@@ -11,6 +11,8 @@
 
 #define	MAX_USERNAME		15
 #define MAX_ADDNUM			5
+#define ADDR_SIZE           22
+
 
 //struct Addr_Info
 //{
@@ -41,12 +43,12 @@ struct Peer_Info
 	//                                      // 数组的第nAddrNum + 1个元素是本次
 	//                                      // 通讯server端分配的IP地址和端口号
 	//acl::string    IPAddr;
-	char IPAddr[22];
+	char IPAddr[ADDR_SIZE];
 // 	char       szUserName[MAX_USERNAME];  // 用户名
 	int        dwActiveTime;              // 活跃时间
 	int        nAddrNum;                  // 适配器数目
 	//acl::string  P2PAddr;                 // P2P连接地址
-	char P2PAddr[22];  //暂未用
+	char P2PAddr[ADDR_SIZE];  //暂未用
 	Peer_Info(); 
 
 	Peer_Info operator=(const Peer_Info& rPeerinfo);

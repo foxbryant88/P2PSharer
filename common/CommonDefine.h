@@ -4,7 +4,7 @@
 
 #include "PeerList.h"
 
-#define MAX_TRY_NUMBER		10
+#define MAX_TRY_NUMBER		2
 
 #define SERVER_PORT			9999
 #define MAX_PACKET_SIZE		1300
@@ -81,11 +81,12 @@ public:
 		: TMSG_HEADER
 	{
 		Peer_Info	PeerInfo;
-		char ConnToAddr[22];           //连接的目标地址
+		char ConnToAddr[ADDR_SIZE];           //连接的目标地址
 
 		TMSG_P2PCONNECT(const Peer_Info& rPeerInfo)
 			: TMSG_HEADER(eMSG_P2PCONNECT)
 		{
+			memset(ConnToAddr, 0, ADDR_SIZE);
 			PeerInfo = rPeerInfo;
 		}
 	};

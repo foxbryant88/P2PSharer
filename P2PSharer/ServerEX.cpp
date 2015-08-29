@@ -26,7 +26,7 @@ bool ServerEX::Init(const char* addr)
 	server_addr_ = addr;
 	acl::acl_cpp_init();
 
-	if (!m_sockstream.bind_udp("0.0.0.0:8888"))
+	if (!m_sockstream.bind_udp("0.0.0.0:0"))
 	{
 		logEx.fatal1("绑定本地UDP端口失败！%d", acl::last_error());
 		return false;
@@ -67,6 +67,7 @@ void* ServerEX::run()
 			ProcMsgP2PConnectAck(msg, &m_sockstream);
 			break;
 		case eMSG_P2PDATA:
+			ProcMsgP2PData(msg);
 			break;
 		case  eMSG_P2PDATAACK:
 			break;
@@ -124,11 +125,14 @@ bool ServerEX::SendMsg_UserLogin()
 	{
 		if (SendData(&tMsgUserLogin, sizeof(tMsgUserLogin), &m_sockstream, server_addr_))
 		{
-			Sleep(200);
-			if (m_bLoginSucc)
+			for (int iWait = 0; iWait < 20; iWait++)
 			{
-				logEx.msg1("登录成功！");
-				return true;
+				if (m_bLoginSucc)
+				{
+					logEx.msg1("登录成功！");
+					return true;
+				}
+				Sleep(100);
 			}
 		}
 
@@ -201,7 +205,10 @@ void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_strea
 	m_lstUser.AddPeer(msg->PeerInfo);
 	m_lockListUser.unlock();
 
-	m_mapFlags[stream->get_peer(true)] = 1;
+	acl::string flag;
+	flag.format(FORMAT_FLAG_P2PCONN, msg->PeerInfo.IPAddr);
+	m_mapFlags[flag] = 1;
+
 }
 
 //收到请求P2P连接（打洞）的消息
@@ -259,7 +266,9 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *toaddr)
 			//尝试发送数据
 			for (int i = 0; i < 3; i++)
 			{
-				if (SendData((void*)data, strlen(data), &m_sockstream, toaddr))
+				MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
+				memcpy(tMsgP2PData.szMsg, data, strlen(data));
+				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, toaddr))
 				{
 					logEx.msg1("向%s发送数据成功！", toaddr);
 					return true;
@@ -273,4 +282,11 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *toaddr)
 		SendMsg_P2PConnect(toaddr);
 		Sleep(500);
 	}
+}
+
+//服务方收到下载请求后，向客户发送数据
+void ServerEX::ProcMsgP2PData(MSGDef::TMSG_HEADER *data)
+{
+	MSGDef::TMSG_P2PDATA *msg = (MSGDef::TMSG_P2PDATA *)data;
+	MessageBox(NULL, msg->szMsg, "OK", MB_OK);
 }
