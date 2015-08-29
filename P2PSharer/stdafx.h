@@ -34,12 +34,14 @@
 #include <afxcontrolbars.h>     // 功能区和控件条的 MFC 支持
 
 #include "acl_cpp/stdlib/log.hpp"
+#include "CommonDefine.h"
+#include "ResourceMgr.h"
 
+acl::log g_clientlog;
+extern CResourceMgr g_resourceMgr;
 
-acl::log g_log;
-
-
-
+#define NAME_FILE_INFO_LIST    "list.txt"
+#define SPLITOR_OF_FILE_INFO   "|"
 
 #ifdef _UNICODE
 #if defined _M_IX86

@@ -4,11 +4,11 @@
 
 static int __timeout = 10;
 
-acl::log logEx;
+acl::log g_cli_exlog;
 
 ServerEX::ServerEX()
 {
-	logEx.open("mylog.log", "ServerEx");
+	g_cli_exlog.open("mylog.log", "ServerEx");
 
 	m_bLoginSucc = false;
 	m_bExit = false;
@@ -18,6 +18,7 @@ ServerEX::ServerEX()
 ServerEX::~ServerEX()
 {
 	m_bExit = true;
+	
 }
 
 //初始化本地UDP并记录服务端地址
@@ -28,11 +29,12 @@ bool ServerEX::Init(const char* addr)
 
 	if (!m_sockstream.bind_udp("0.0.0.0:0"))
 	{
-		logEx.fatal1("绑定本地UDP端口失败！%d", acl::last_error());
+		g_cli_exlog.fatal1("绑定本地UDP端口失败！%d", acl::last_error());
 		return false;
 	}
 
-	logEx.msg1("绑定本地UDP端口:%s", m_sockstream.get_local(true));
+	g_cli_exlog.msg1("绑定本地UDP端口:%s", m_sockstream.get_local(true));
+	memcpy(m_peerInfo.IPAddr_Local, m_sockstream.get_local(true), MAX_ADDR_LENGTH);
  
 	m_sockstream.set_rw_timeout(0);
 
@@ -50,7 +52,7 @@ void* ServerEX::run()
 		int iret = m_sockstream.read(buf, sizeof(buf), false);
 		if (iret < 0)
 		{
-			g_log.error1("读取数据失败：%s", m_sockstream.get_peer(true));
+			g_cli_exlog.error1("读取数据失败：%s", m_sockstream.get_peer(true));
 			continue;
 		}
 
@@ -80,9 +82,10 @@ void* ServerEX::run()
 		case eMSG_GETBLOCKSACK:
 			break;
 		case eMSG_USERACTIVEQUERY:
+			ProcMsgUserActiveQuery(msg, &m_sockstream);
 			break;
 		default:
-			g_log.error1("错误的消息类型：%d", msg->cMsgID);
+			g_cli_exlog.error1("错误的消息类型：%d", msg->cMsgID);
 			break;
 		}
 	}
@@ -103,10 +106,10 @@ bool ServerEX::SendData(void *data, size_t size, acl::socket_stream *stream, con
 			return true;
 		}
 
-		logEx.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
+		g_cli_exlog.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
 	}
 	else
-    	logEx.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
+    	g_cli_exlog.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
 
 	m_lockSockStream.unlock();
 
@@ -129,7 +132,7 @@ bool ServerEX::SendMsg_UserLogin()
 			{
 				if (m_bLoginSucc)
 				{
-					logEx.msg1("登录成功！");
+					g_cli_exlog.msg1("登录成功！");
 					return true;
 				}
 				Sleep(100);
@@ -154,7 +157,7 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 	m_bLoginSucc = true;
 
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
-	g_log.msg1(m_errmsg);
+	g_cli_exlog.msg1(m_errmsg);
 	MessageBox(NULL, m_errmsg, "client", MB_OK);
 }
 
@@ -180,7 +183,7 @@ bool ServerEX::SendMsg_P2PConnect(const char *addr)
 	{
 		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, server_addr_) && WaitFlag(flag))
 		{
-			logEx.msg1("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
+			g_cli_exlog.msg1("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
 			return true;
 		}
 
@@ -196,7 +199,7 @@ bool ServerEX::SendMsg_P2PConnect(const char *addr)
 //收到确认打洞成功的消息
 void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
 {
-	logEx.msg1("收到%s确认打洞成功的消息", stream->get_peer(true));
+	g_cli_exlog.msg1("收到%s确认打洞成功的消息", stream->get_peer(true));
 
 	MSGDef::TMSG_P2PCONNECTACK *msg = (MSGDef::TMSG_P2PCONNECTACK *)data;
 	
@@ -215,23 +218,30 @@ void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_strea
 void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data)
 {
 	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT*)data;
-
-	logEx.msg1("收到来自[%s]的打洞请求，准备回复！", msg->PeerInfo.IPAddr);
+	m_errmsg.format("收到来自[%s]的打洞请求，准备回复！\r\n", msg->PeerInfo.IPAddr);
+	g_cli_exlog.msg1(m_errmsg);
+	MessageBox(NULL, m_errmsg, "OK", MB_OK);
 
 	MSGDef::TMSG_P2PCONNECTACK tMsgP2PConnectAck(m_peerInfo);
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
 		if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, msg->PeerInfo.IPAddr))
 		{
-			logEx.msg1("向[%s]回复确认成功", msg->PeerInfo.IPAddr);
+			g_cli_exlog.msg1("向[%s]回复确认成功", msg->PeerInfo.IPAddr);
 			return ;
 		}
+
+		//if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, msg->PeerInfo.IPAddr_Local))
+		//{
+		//	logEx.msg1("向[%s]回复确认成功", msg->PeerInfo.IPAddr);
+		//	return;
+		//}
 
 		Sleep(1000);
 	}
 
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
-	g_log.msg1(m_errmsg);
+	g_cli_exlog.msg1(m_errmsg);
 	MessageBox(NULL, m_errmsg, "client", MB_OK);
 
 }
@@ -270,12 +280,14 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *toaddr)
 				memcpy(tMsgP2PData.szMsg, data, strlen(data));
 				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, toaddr))
 				{
-					logEx.msg1("向%s发送数据成功！", toaddr);
+					g_cli_exlog.msg1("向%s发送数据成功！", toaddr);
 					return true;
 				}
 
 				Sleep(1000);
 			}
+
+			ShowMsg("连接已不可用，尝试重新打洞！");
 		}
 
 		//如果未连接或发送失败则开始打洞
@@ -289,4 +301,16 @@ void ServerEX::ProcMsgP2PData(MSGDef::TMSG_HEADER *data)
 {
 	MSGDef::TMSG_P2PDATA *msg = (MSGDef::TMSG_P2PDATA *)data;
 	MessageBox(NULL, msg->szMsg, "OK", MB_OK);
+}
+
+//收到查询是否存活消息
+void ServerEX::ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
+{
+	MSGDef::TMSG_USERACTIVEQUERY tMsgUserActive(m_peerInfo);
+	//ShowMsg("收到存活检测消息!");
+
+	if (!SendData(&tMsgUserActive, sizeof(tMsgUserActive), stream, server_addr_))
+	{
+		ShowError("回复存活消息失败！");
+	}
 }

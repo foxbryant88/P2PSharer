@@ -1,20 +1,9 @@
-﻿生成启动时间为 2015/8/29 2:11:26。
+﻿生成启动时间为 2015/8/30 3:43:17。
      1>项目“D:\ThirdPartyCode\P2PSharer\master_udp\master_udp.vcxproj”在节点 3 上(Build 个目标)。
-     1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\acl\lib_acl_cpp\include /I..\..\acl\lib_acl\include /I..\common /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D VC2003 /D _USING_V110_SDK71_ /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\master_udp.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MsgHandler.cpp main.cpp master_service.cpp
-         MsgHandler.cpp
-         main.cpp
-         master_service.cpp
-         正在生成代码...
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\ThirdPartyCode\P2PSharer\Release\master_udp.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\acl\dist\lib\win32 ws2_32.lib wsock32.lib lib_acl_vc2012.lib lib_acl_cpp_vc2012.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\ThirdPartyCode\P2PSharer\Release\master_udp.pdb" /SUBSYSTEM:CONSOLE,"5.01" /OPT:REF /OPT:ICF /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\ThirdPartyCode\P2PSharer\Release\master_udp.lib" /MACHINE:X86 /SAFESEH Release\PeerList.obj
-         Release\main.obj
-         Release\master_service.obj
-         Release\MsgHandler.obj
-         Release\stdafx.obj
+     1>Link:
          master_udp.vcxproj -> D:\ThirdPartyCode\P2PSharer\Release\master_udp.exe
      1>已完成生成项目“D:\ThirdPartyCode\P2PSharer\master_udp\master_udp.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:07.35
+已用时间 00:00:00.41

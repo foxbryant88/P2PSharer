@@ -4,8 +4,9 @@ Peer_Info::Peer_Info()
 	: dwActiveTime(0)
 	, nAddrNum(0)
 {
-	memset(IPAddr, 0, ADDR_SIZE);
-	memset(P2PAddr, 0, ADDR_SIZE);
+	memset(IPAddr, 0, MAX_ADDR_LENGTH);
+	memset(IPAddr_Local, 0, MAX_ADDR_LENGTH);	
+	memset(P2PAddr, 0, MAX_ADDR_LENGTH);
 }
 
 Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
@@ -13,8 +14,9 @@ Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
 	if (&rPeerinfo == this)
 		return *this;
 
-	memcpy(IPAddr, rPeerinfo.IPAddr, ADDR_SIZE);
-	memcpy(P2PAddr, rPeerinfo.P2PAddr, ADDR_SIZE);
+	memcpy(IPAddr, rPeerinfo.IPAddr, MAX_ADDR_LENGTH);
+	memcpy(IPAddr_Local, rPeerinfo.IPAddr_Local, MAX_ADDR_LENGTH);
+	memcpy(P2PAddr, rPeerinfo.P2PAddr, MAX_ADDR_LENGTH);
 	dwActiveTime = rPeerinfo.dwActiveTime;
 	nAddrNum = rPeerinfo.nAddrNum;
 	//strcpy(szUserName, rPeerinfo.szUserName);

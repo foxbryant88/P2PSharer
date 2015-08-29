@@ -36,7 +36,7 @@ acl::master_int64_tbl var_conf_int64_tab[] = {
 
 master_service::master_service()
 {
-	g_runlog.open("p2pserver.log", "SERVER");
+	g_serlog.open("p2pserver.log", "SERVER");
 
 	m_bExit = false;
 	m_msghandler.set_detachable(true);
@@ -63,13 +63,12 @@ void master_service::on_read(acl::socket_stream* stream)
 		rec.data = buf;
 		rec.peerAddr = stream->get_peer(true);
 
-		m_err.format("收到来自：%s data： %s", rec.peerAddr.buf(), buf);
-		g_runlog.msg1(m_err);
-		printf(m_err);
+		m_err.format("收到来自：%s data： %s\r\n", rec.peerAddr.buf(), buf);
+		g_serlog.msg1(m_err);
+		//printf(m_err);
 
 		//m_msghandler.CacheMsgData(rec);
   		MSGDef::TMSG_HEADER *msg = (MSGDef::TMSG_HEADER*)buf;
-//  		m_msghandler.ProcUserLoginMsg(msg, *stream);
 		m_msghandler.DealMsg(msg, stream);
 	}
 }

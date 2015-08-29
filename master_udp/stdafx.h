@@ -13,7 +13,7 @@
 #include "acl_cpp/lib_acl.hpp"
 #include "lib_acl.h"
 
-acl::log g_runlog;
+acl::log g_serlog;
 
 
 #ifdef	WIN32

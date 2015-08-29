@@ -60,7 +60,7 @@ void* CMsgHandler::run()
 		if (!m_SockStream.set_peer(addr))
 		{
 			m_errmsg.format("设置远端地址：%s失败, err:%d", recieve.peerAddr.buf(), acl::last_error());
-			g_runlog.error1(m_errmsg);
+			g_serlog.error1(m_errmsg);
 			MessageBox(NULL, m_errmsg, "Error", MB_OK);
 		}
 
@@ -102,7 +102,7 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 {
 	m_errmsg.clear();
 	m_errmsg.format("收到%s登录消息\r\n", sock->get_peer(true));
-	g_runlog.msg1(m_errmsg);
+	g_serlog.msg1(m_errmsg);
 	printf(m_errmsg);
 
 	MSGDef::TMSG_USERLOGIN *pUserLogin = (MSGDef::TMSG_USERLOGIN*)pMsgHeader;
@@ -117,7 +117,8 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 
 	//加入在线列表
 	m_lockUserList.lock();
-	m_lstOnlineUser.AddPeer(pUserLogin->PeerInfo);
+	if (m_lstOnlineUser.GetAPeer(ip) == NULL)
+		m_lstOnlineUser.AddPeer(pUserLogin->PeerInfo);
 	m_lockUserList.unlock();
 
 	//回复登录确认消息
@@ -125,12 +126,12 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
  	if (sock->write((void*)&tMsgUserLogAck, sizeof(tMsgUserLogAck), true) == -1)
 	{
 		m_errmsg.format("向%s回复登录确认消息失败！\r\n", ip);
-		g_runlog.msg1(m_errmsg);
+		g_serlog.msg1(m_errmsg);
 		printf("%s", m_errmsg);
 		return;
 	}
 
-	printf("回复数据成功！目标：%s", ip.buf());
+	printf("回复数据成功！目标：%s.当前用户数：%d\r\n", ip.buf(), m_lstOnlineUser.GetCurrentSize());
 }
 
 //客户端请求转发P2P打洞消息
@@ -138,8 +139,8 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 {
 	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT *)pMsgHeader;
 
-	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！", sock->get_peer(true), msg->ConnToAddr);
-	g_runlog.msg1(m_errmsg);
+	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！\r\n", sock->get_peer(true), msg->ConnToAddr);
+	g_serlog.msg1(m_errmsg);
 
 // 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->ConnToAddr);
 // 	if (peer != NULL)
@@ -149,7 +150,7 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 	{
 		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), sock, msg->ConnToAddr))
 		{
-			g_runlog.msg1("向[%s]转发P2P打洞消息成功！", msg->ConnToAddr);
+			g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", msg->ConnToAddr);
 			return;
 		}
 
@@ -157,19 +158,36 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 	}
 	//}
 
-	g_runlog.msg1("向[%s]转发P2P打洞消息成功！", msg->ConnToAddr);
+	g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", msg->ConnToAddr);
 }
 
 //客户端注销登录消息
 void CMsgHandler::ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
+	m_errmsg.clear();
+	m_errmsg.format("收到%s注销消息\r\n", sock->get_peer(true));
+	g_serlog.msg1(m_errmsg);
+	printf(m_errmsg);
 
+	MSGDef::TMSG_USERLOGOUT *msg = (MSGDef::TMSG_USERLOGOUT *)pMsgHeader;
+	m_lockUserList.lock();
+	m_lstOnlineUser.DeleteAPeer(msg->PeerInfo.IPAddr);
+	m_lockUserList.unlock();
 }
 
-//客户端注销登录消息
+//收到客户端确认存活消息
 void CMsgHandler::ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
+	MSGDef::TMSG_USERACTIVEQUERY *msg = (MSGDef::TMSG_USERACTIVEQUERY *)pMsgHeader;
+	printf("收到存活确认消息, IP: %s \n", msg->PeerInfo.IPAddr);
 
+	m_lockUserList.lock();
+	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.IPAddr);
+	if (NULL != peer)
+	{
+		peer->dwActiveTime = GetTickCount();
+	}
+	m_lockUserList.unlock();
 }
 
 //维护在线列表
@@ -184,7 +202,7 @@ void CMsgHandler::MaintainUserlist()
 		{
 			if (dwTick - pPeerInfo->dwActiveTime >= 2 * 15 * 1000 + 600)
 			{
-				printf("Delete A Non-Active client, IP: %s \n", pPeerInfo->IPAddr);
+				printf("------删除下线客户端-----, IP: %s \n", pPeerInfo->IPAddr);
 				m_lockUserList.lock();
 				m_lstOnlineUser.DeleteAPeer(pPeerInfo->IPAddr);
 				m_lockUserList.unlock();
@@ -204,19 +222,22 @@ void CMsgHandler::MaintainUserlist()
 //向指定地址发送数据
 bool CMsgHandler::SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr)
 {
-	///////////////////////多线程调用需加锁!!!!///////////////////////////
+	m_lockSocket.lock();
 
-	if (!stream->set_peer(addr))
+	if (stream->set_peer(addr))
 	{
-		g_runlog.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
-		return false;
-	};
+		if (stream->write(data, size) > 0)
+		{
+			m_lockSocket.unlock();
+			return true;
+		}
 
-	if (stream->write(data, size) == -1)
-	{
-		g_runlog.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
-		return false;
+		g_serlog.error1("向[%s]发送数据失败,err:%d", addr, acl::last_error());
 	}
+	else
+		g_serlog.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
 
-	return true;
+	m_lockSocket.unlock();
+	
+	return false;
 }

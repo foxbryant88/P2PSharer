@@ -45,6 +45,15 @@
     <ClInclude Include="..\common\PeerList.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="FileScan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RedisClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="P2PSharer.cpp">
@@ -61,6 +70,15 @@
     </ClCompile>
     <ClCompile Include="..\common\PeerList.cpp">
       <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="FileScan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RedisClient.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

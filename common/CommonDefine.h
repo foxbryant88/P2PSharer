@@ -81,12 +81,12 @@ public:
 		: TMSG_HEADER
 	{
 		Peer_Info	PeerInfo;
-		char ConnToAddr[ADDR_SIZE];           //连接的目标地址
+		char ConnToAddr[MAX_ADDR_LENGTH];           //连接的目标地址
 
 		TMSG_P2PCONNECT(const Peer_Info& rPeerInfo)
 			: TMSG_HEADER(eMSG_P2PCONNECT)
 		{
-			memset(ConnToAddr, 0, ADDR_SIZE);
+			memset(ConnToAddr, 0, MAX_ADDR_LENGTH);
 			PeerInfo = rPeerInfo;
 		}
 	};
@@ -209,5 +209,15 @@ public:
 
 #pragma pack()
 };
+
+static void ShowMsg(acl::string msg)
+{
+	MessageBox(NULL, msg, "OK", MB_OK);
+}
+
+static void ShowError(acl::string msg)
+{
+	MessageBox(NULL, msg, "Error", MB_OK);
+}
 
 #endif // __COMMON_DEFINE_H__

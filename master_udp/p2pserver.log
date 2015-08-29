@@ -1,11 +1,13 @@
-2015/08/22 19:20:59 SERVER (pid=3508)(info): event_limit: max fdsize: 40000
-2015/08/22 19:20:59 SERVER (pid=3508)(info): master_service.cpp(79), master_service::proc_on_init: local addr: 127.0.0.1:8888, fd: 252
-2015/08/22 19:20:59 SERVER (pid=3508)(info): master_service.cpp(79), master_service::proc_on_init: local addr: 127.0.0.1:8889, fd: 260
-2015/08/22 19:21:29 SERVER (pid=3508)(info): 收到来自：127.0.0.1:60924 data： etest1
-2015/08/22 19:21:39 SERVER (pid=3508)(info): 收到127.0.0.1:60924登录消息
+2015/08/30 02:34:24 SERVER (pid=10048)(info): event_limit: max fdsize: 40000
+2015/08/30 02:34:24 SERVER (pid=10048)(info): master_service.cpp(82), master_service::proc_on_init: local addr: 0.0.0.0:8888, fd: 276
+2015/08/30 02:34:24 SERVER (pid=10048)(info): master_service.cpp(82), master_service::proc_on_init: local addr: 0.0.0.0:8889, fd: 280
+5/08/29 12:34:10 SERVER (pid=3560)(info): 收到来自：127.0.0.1:49237 data： e
 
+2015/08/29 12:34:11 SERVER (pid=3560)(info): 收到127.0.0.1:49237登录消息
 
-stream::set_peer: stream not opened yet!
-2015/08/22 15:53:11 SERVER (pid=2748)(error): 设置远端地址：127.0.0.1:55795失败, err:0
-2015/08/22 15:53:15 SERVER (pid=2748)(info): 收到登录消息
+2015/08/29 12:34:14 SERVER (pid=3560)(info): 收到来自：127.0.0.1:49237 data： e
+
+2015/08/29 12:34:15 SERVER (pid=3560)(info): 收到127.0.0.1:49237登录消息
+
+2015/08/29 12:34:43 SERVER (pid=3560)(info): 收到来自：127.0.0.1:49237 data： p127.0.0.1:49237
 

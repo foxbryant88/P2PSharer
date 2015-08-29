@@ -59,13 +59,14 @@ private:
 	void ProcMsgGetBlocksAck(MSGDef::TMSG_HEADER *data);
 
 	//收到查询是否存活消息
-	void ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data);
+	void ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
 
 	//向指定地址发送数据
 	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
 
 	//循环检查标记是否为1
 	bool WaitFlag(const acl::string &flag);
+
 
 	acl::string server_addr_;              //服务端地址
 	Peer_Info m_peerInfo;                  //本机信息

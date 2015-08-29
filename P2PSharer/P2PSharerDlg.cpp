@@ -12,6 +12,8 @@
 #endif
 
 
+CResourceMgr g_resourceMgr;
+
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
 class CAboutDlg : public CDialogEx
@@ -98,17 +100,25 @@ BOOL CP2PSharerDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
-	g_log.open("mylog.log", "P2PServer");
+	g_clientlog.open("mylog.log", "P2PServer");
 
-	//acl::string addr("127.0.0.1:8888");
-	//acl::string addr("192.168.1.102:8888");
-	acl::string addr("119.29.66.237:8888");
+	//启动资源管理对象
+	g_resourceMgr.Init("119.29.66.237:6379");
+	g_resourceMgr.set_detachable(true);
+	g_resourceMgr.start();
 
-	m_serEx.Init(addr);
-	m_serEx.set_detachable(true);
-	m_serEx.start();
 
-	m_serEx.SendMsg_UserLogin();
+	////启动与服务端的连接对象
+	////acl::string addr("127.0.0.1:8888");
+	////acl::string addr("192.168.1.102:8888");
+	//acl::string addr("119.29.66.237:8888");
+
+	//m_serEx.Init(addr);
+	//m_serEx.set_detachable(true);
+	//m_serEx.start();
+
+	//m_serEx.SendMsg_UserLogin();
+
 
 
 	// TODO:  在此添加额外的初始化代码

@@ -46,11 +46,12 @@ private:
 	//客户端注销登录消息
 	void ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
-	//客户端注销登录消息
+	//收到客户端确认存活消息
 	void ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
 	acl::locker m_lockMsgData; 
 	acl::locker m_lockUserList;
+	acl::locker m_lockSocket;
 
 	std::vector<RECIEVE_DATA> m_vMsgData;     //收到的数据先缓存
 	PeerList m_lstOnlineUser;                 //在线客户端列表
