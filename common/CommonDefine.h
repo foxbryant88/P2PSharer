@@ -220,4 +220,21 @@ static void ShowError(acl::string msg)
 	MessageBox(NULL, msg, "Error", MB_OK);
 }
 
+//获取本机MAC地址
+static acl::string GetMacAddr()
+{
+	char *file = "d:\\config.dat";
+	char buf[30] = { 0 };
+	GetPrivateProfileString("LocalInfo", "mac", "", buf, 30, file);
+
+	acl::string pseudoMac(buf);
+	if (pseudoMac == "")
+	{
+		srand((unsigned int)time(NULL));
+		pseudoMac.format("%02X-%02X-%02X-%02X-%02X-%02X", rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100);
+		WritePrivateProfileString("LocalInfo", "mac", pseudoMac, file);
+	}
+
+	return pseudoMac;
+}
 #endif // __COMMON_DEFINE_H__

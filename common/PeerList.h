@@ -9,7 +9,7 @@
 #include "lib_acl.h"
 #include "acl_cpp\lib_acl.hpp"
 
-#define	MAX_USERNAME		15
+#define	MAX_MACADDR_LEN		18
 #define MAX_ADDNUM			5
 #define MAX_ADDR_LENGTH           22
 
@@ -45,7 +45,7 @@ struct Peer_Info
 	//acl::string    IPAddr;
 	char IPAddr[MAX_ADDR_LENGTH];
 	char IPAddr_Local[MAX_ADDR_LENGTH];
-// 	char       szUserName[MAX_USERNAME];  // 用户名
+ 	char       szMAC[MAX_MACADDR_LEN];       // MAC地址作为用户名
 	int        dwActiveTime;              // 活跃时间
 	int        nAddrNum;                  // 适配器数目
 	//acl::string  P2PAddr;                 // P2P连接地址
@@ -78,9 +78,9 @@ public:
 	~PeerList();
 
 	bool		AddPeer(const Peer_Info& rPeerInfo);
-	bool		DeleteAPeer(const char* addrInfo);
+	bool		DeleteAPeer(const char* macAddr);
 	bool		DeleteAllPeer();
-	Peer_Info*	GetAPeer(const char* addrInfo);   //参数：P2P连接地址
+	Peer_Info*	GetAPeer(const char* macAddr);   //参数：P2P连接地址
 	int			GetCurrentSize();
 	Peer_Info*	operator[](int nIndex);
 

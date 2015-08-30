@@ -110,6 +110,23 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 	return true;
 }
 
+//查找资源文件可用的下载服务器个数
+//key : 文件MD5
+//返回拥有该文件的客户端个数
+int CRedisClient::GetResourceOwners(acl::string &key)
+{
+	acl::redis_set redis(m_redis);
+
+	int num = redis.scard(key);
+	if (-1 == num)
+	{
+		g_cli_redislog.error1("查询[%s]可用的客户端数量失败！err:%d", key, acl::last_error());
+		return 0;
+	}
+
+	return num;
+}
+
 //向资源文件的地址池中添加MAC（以set形式存储，key:文件MD5 members:MAC地址
 bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 {

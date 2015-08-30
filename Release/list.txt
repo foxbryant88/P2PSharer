@@ -1,0 +1,1795 @@
+boxed-correct.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-correct.avi|5141b7b625b634ce05223e3c1df1c5da|111320
+boxed-delete.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-delete.avi|45206809d456760a45ccc1dbdc118b11|48936
+boxed-join.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-join.avi|19fe5d3d6b488c5dc68e70999af9170d|46622
+boxed-split.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-split.avi|86622831f1c50028f7bdf18302437a4f|84190
+correct.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\correct.avi|f4e325d9e2d40852fe5697f8803d4332|180172
+delete.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\delete.avi|2146953995f7e9e97f24fd39982e1fbd|208408
+join.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\join.avi|ef45f1a446a3eb0350197372a1ae0e29|199994
+split.avi|C:\Program Files\Common Files\microsoft shared\ink\en-US\split.avi|d595592d7330a1c5652de811da81190f|181964
+FlickAnimation.avi|C:\Program Files\Common Files\microsoft shared\ink\FlickAnimation.avi|a99f357d1f52eb8437e0572e98ebb012|1600388
+StartMenu_Win10.mp4|C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.6121.23761.0_x64__8wekyb3d8bbwe\images\StartMenu_Win10.mp4|e75d071dc0416ab3f32de43ea7f12dca|125179
+StartMenu_Win10_RTL.mp4|C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.6121.23761.0_x64__8wekyb3d8bbwe\images\StartMenu_Win10_RTL.mp4|a1c9a1d2c2fa6c62ef9d998c97015ebc|118299
+OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|fe9c6de4c2f02f2b172e79522646a7c8|38782
+OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|3033c76c76e57991d59f751c8a6bed84|40765
+OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|d0aacd5352b78db65b3b9304e8fdacb0|40620
+OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|cd2f5a7d4f44b80a8938525a2b51b245|41129
+OneNoteFRE_CreateNotes_LTR_Phone.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Phone.mp4|5d8976acd4a5ad6bd6ce14f0c0a6694a|13167
+OneNoteFRE_CreateNotes_LTR_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Tablet.mp4|602fecd1f55e2c1d890e4fc438c7530c|15099
+OneNoteFRE_CreateNotes_RTL_Phone.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Phone.mp4|0ccc965fa7bb412251632a8c1709fd8a|13452
+OneNoteFRE_CreateNotes_RTL_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Tablet.mp4|6b7adf70f8da1bc527f717b1076a5f05|15326
+OneNoteFRE_PenClick_LTR_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_PenClick_LTR_Tablet.mp4|9d7dd0e99240ff6b65b323a3ac67c894|20949
+OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|fb1594f22bf98243477702d519e5fedb|31207
+OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|c84f7713e5cebf00504de478bd9f48b5|30210
+OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|b1a848d38b7a4d7089e4cce7f1708923|31758
+OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10071.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|514426586f6eef17930f808b36274e4e|30141
+DefaultAttract.wmv|C:\ProgramData\Microsoft\Windows\RetailDemo\OfflineContent\Microsoft\Content\Neutral\AttractContent\Microsoft.BasicAttractLoop_8wekyb3d8bbwe\DefaultAttract.wmv|47d245e1da1190fefecae4c3abed18ad|14343585
+OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|4458e4e9a6148cf0b08201d7c314a43c|369013
+OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|5f1029a0dcd8d5485bef7aa5c517f78f|385878
+OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|c4df7f43d343a0b0fbcaa0a5c2dc5567|372189
+OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|ccbe202b393991d38eb722740b18635e|392890
+OneNoteFRE_CreateNotes_LTR_Phone.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Phone.mp4|ef46250f38997bfbaa5418c28f49a467|236691
+OneNoteFRE_CreateNotes_LTR_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Tablet.mp4|c822b7b699bcdbca37579a7c186a5de8|257699
+OneNoteFRE_CreateNotes_RTL_Phone.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Phone.mp4|43720f8c02d933b2afd3b8eca1632bcf|236838
+OneNoteFRE_CreateNotes_RTL_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Tablet.mp4|bbdfdd7bda0e810c865d2ed9c00684bf|258506
+OneNoteFRE_PenClick_LTR_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_PenClick_LTR_Tablet.mp4|169be95dc97ed908b4a271dcb59e5beb|337834
+OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|5553d33902602bd8a3c4706cee631213|343458
+OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|5cdc4e8316d9fbae1a6ad1c0be49e8fa|357875
+OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|ae32e4d5a92cd3f4f2ba8df6e9ef45d8|345014
+OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|C:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|619d8c2769f3984dc66b81838a00b064|355004
+Clip_1080_5sec_10mbps_h264.mp4|C:\Windows\Performance\WinSAT\Clip_1080_5sec_10mbps_h264.mp4|5c3f6fcd49941b6c304ebe6c76effc4a|6198982
+Clip_1080_5sec_VC1_15mbps.wmv|C:\Windows\Performance\WinSAT\Clip_1080_5sec_VC1_15mbps.wmv|7152b82296316194836c5d210773ed98|10069125
+Clip_480_5sec_6mbps_h264.mp4|C:\Windows\Performance\WinSAT\Clip_480_5sec_6mbps_h264.mp4|77f7344d77e4fee542c92741756670cc|3771577
+winsat.wmv|C:\Windows\Performance\WinSAT\winsat.wmv|54546edc90b3b2073433a545cae3cd45|4645210
+winsatencode.wmv|C:\Windows\Performance\WinSAT\winsatencode.wmv|65ba62c88c979d3bc94224a97a69eed9|4175768
+DefaultAttract.wmv|C:\Windows\WinSxS\amd64_microsoft-windows-r..ent-content-neutral_31bf3856ad364e35_10.0.10240.16384_none_007cd5e14141557d\DefaultAttract.wmv|47d245e1da1190fefecae4c3abed18ad|14343585
+FlickAnimation.avi|C:\Windows\WinSxS\amd64_microsoft-windows-t..flicklearningwizard_31bf3856ad364e35_10.0.10240.16384_none_15821fdf0c715ed0\FlickAnimation.avi|a99f357d1f52eb8437e0572e98ebb012|1600388
+boxed-correct.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-correct.avi|5141b7b625b634ce05223e3c1df1c5da|111320
+boxed-delete.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-delete.avi|45206809d456760a45ccc1dbdc118b11|48936
+boxed-join.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-join.avi|19fe5d3d6b488c5dc68e70999af9170d|46622
+boxed-split.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-split.avi|86622831f1c50028f7bdf18302437a4f|84190
+correct.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\correct.avi|f4e325d9e2d40852fe5697f8803d4332|180172
+delete.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\delete.avi|2146953995f7e9e97f24fd39982e1fbd|208408
+join.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\join.avi|ef45f1a446a3eb0350197372a1ae0e29|199994
+split.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\split.avi|d595592d7330a1c5652de811da81190f|181964
+boxed-correct.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-correct.avi|5141b7b625b634ce05223e3c1df1c5da|111320
+boxed-delete.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-delete.avi|45206809d456760a45ccc1dbdc118b11|48936
+boxed-join.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-join.avi|19fe5d3d6b488c5dc68e70999af9170d|46622
+boxed-split.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-split.avi|86622831f1c50028f7bdf18302437a4f|84190
+correct.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\correct.avi|f4e325d9e2d40852fe5697f8803d4332|180172
+delete.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\delete.avi|2146953995f7e9e97f24fd39982e1fbd|208408
+join.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\join.avi|ef45f1a446a3eb0350197372a1ae0e29|199994
+split.avi|C:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\split.avi|d595592d7330a1c5652de811da81190f|181964
+Clip_1080_5sec_10mbps_h264.mp4|C:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\Clip_1080_5sec_10mbps_h264.mp4|5c3f6fcd49941b6c304ebe6c76effc4a|6198982
+Clip_1080_5sec_VC1_15mbps.wmv|C:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\Clip_1080_5sec_VC1_15mbps.wmv|7152b82296316194836c5d210773ed98|10069125
+Clip_480_5sec_6mbps_h264.mp4|C:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\Clip_480_5sec_6mbps_h264.mp4|77f7344d77e4fee542c92741756670cc|3771577
+winsat.wmv|C:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\winsat.wmv|54546edc90b3b2073433a545cae3cd45|4645210
+winsatencode.wmv|C:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\winsatencode.wmv|65ba62c88c979d3bc94224a97a69eed9|4175768
+buzhua.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\buzhua.mp3|b9d9f00ed6a696323ce4e1ba72dba189|5181
+dao.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\dao.mp3|b9f8d80c0bf771a30cd3b5d4726e455f|5851
+kanpai.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\kanpai.mp3|f9e935ff03e17bfb401e8701974f9410|3695
+la.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\la.mp3|88ecddc5a18d990271137915cd67c7da|2883
+lei.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\lei.mp3|b79eb5016daed7d1491652193a655dc3|6639
+menzhua.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\menzhua.mp3|60ea1a92e8c31e25286a8e5134a5fca9|7371
+wo.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\wo.mp3|040a401929e2be8c54bf8734c183e423|6201
+zhuadizhu.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Man\zhuadizhu.mp3|da1bb45cb8ea405a0fbcc225d4bf33e0|7890
+firecracker.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Special\firecracker.mp3|44ff3012112e2200edfa6cf55ca062d5|56456
+buzhua.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\buzhua.mp3|d5a6285b6d6365d00a8a7ecb744a5f8e|7804
+dao.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\dao.mp3|7f0eaf15adb4334b36f3d46b7ef6b04c|5192
+kanpai.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\kanpai.mp3|a2b6edf83ad2a76bd341cd139b032346|5197
+la.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\la.mp3|e4ea96b294dc6190baf941ffbcb13980|3206
+lei.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\lei.mp3|8b8b2cb1449c4397481dd71fa4a80ce7|4785
+menzhua.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\menzhua.mp3|ddefcb40aea4dd90ce90f32d9fe67ba5|8966
+wo.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\wo.mp3|04e2ed581882f1740e597c0389878202|4396
+zhuadizhu.mp3|G:\Program Files\腾讯游戏\QQGame\hlddzSDK\Sound\Woman\zhuadizhu.mp3|df1ad27d2be30cd0d2488ada35c4c522|7799
+[16][mic]0_00_40,574-0_00_41,469.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[16][mic]0_00_40,574-0_00_41,469.mp3|8756f387bc73ea4e9c9a20435eea3c3b|47229
+[1][mic]0_00_00,694-0_00_02,213.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[1][mic]0_00_00,694-0_00_02,213.mp3|ed8ce384d984cabcd053d17259ee910f|40960
+[21][mic]0_01_13,481-0_01_16,746.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[21][mic]0_01_13,481-0_01_16,746.mp3|20260cbb47a1ba1c8fe8f3b0e7f76118|37198
+[28][mic]0_01_30,063-0_01_32,312.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[28][mic]0_01_30,063-0_01_32,312.mp3|0a384a519408148ff99b6b99bafaf08e|45139
+[31][mic]0_01_40,219-0_01_41,722.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[31][mic]0_01_40,219-0_01_41,722.mp3|84743fa059ea2351626974c9bc7020ea|49737
+[34][mic]0_01_47,666-0_01_50,350.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[34][mic]0_01_47,666-0_01_50,350.mp3|a10b4ec4a7a1b132ea39443751f4cb2a|33854
+[37][mic]0_01_55,056-0_01_56,597.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[37][mic]0_01_55,056-0_01_56,597.mp3|7f49a51af1810994172fac4a4c70d26f|43467
+[8][mic]0_00_19,540-0_00_21,299.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[8][mic]0_00_19,540-0_00_21,299.mp3|ff3c67106db692b325950044c268c057|49737
+[9][mic]0_00_21,300-0_00_23,199.mp3|G:\Program Files (x86)\LangFly\VLearner\Users\Admin\000 family album usa 走遍美国（片断）\Record\[9][mic]0_00_21,300-0_00_23,199.mp3|b20a46185187515b9c465dcf8ea38c9d|45139
+001-Family Album USA.avi|G:\能飞英语\老友记(第一季)\demo\001-Family Album USA.avi|801e60b2722dfdfab08fa9b6733691ad|16646144
+002-I believe I can fly.mp3|G:\能飞英语\老友记(第一季)\demo\002-I believe I can fly.mp3|9214d3bd719d7cdca9550d1fdb9b10e9|5153694
+Friends - 1x01 - The One With It All Began.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x01 - The One With It All Began.avi|1339db62088d4c0d51245fc5ad773bf1|238289810
+Friends - 1x02 - The One With The Sonogram At The End.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x02 - The One With The Sonogram At The End.avi|ce1fe03af1fdcc3269a29201ca801b14|180147860
+Friends - 1x03 - The One With The Thumb.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x03 - The One With The Thumb.avi|99517cd305c17a84dba61f1112904e0b|180884830
+Friends - 1x04 - The One With George Stephanopoulos.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x04 - The One With George Stephanopoulos.avi|6e3087a6ef5681854a21c99f43c6c5c9|179936304
+Friends - 1x05 - The One With The East German Laundry Detergent.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x05 - The One With The East German Laundry Detergent.avi|e31e10ee1b27612dc61a6f8eefc93f54|179500928
+Friends - 1x06 - The One With The Butt.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x06 - The One With The Butt.avi|3f9c5e9bb43e55df12af3e5c598db222|162672280
+Friends - 1x07 - The One With The Blackout.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x07 - The One With The Blackout.avi|9788ba32df78f8deb1a390096f59bf04|154219064
+Friends - 1x08 - The One With Nana Dies Twice.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x08 - The One With Nana Dies Twice.avi|afa80c6d5df488f3fa97157099fd76ab|179839268
+Friends - 1x09 - The One With The Underdog Gets Away.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x09 - The One With The Underdog Gets Away.avi|e6be5a85bae0740d0080160c3f353cf3|179654782
+Friends - 1x10 - The One With The Monkey.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x10 - The One With The Monkey.avi|717c2114efffa64286d0560e9ea0f8f4|179232006
+Friends - 1x11 - The One With Mrs Bing.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x11 - The One With Mrs Bing.avi|4065fae821c0b9edeccc05d38f808234|176969544
+Friends - 1x12 - The One With The Dozen Lasagnes.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x12 - The One With The Dozen Lasagnes.avi|236037d7fa425d62f9a64086af274f71|179905762
+Friends - 1x13 - The One With The Boobies.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x13 - The One With The Boobies.avi|bd0dc9b9f36bacc769de03efb98e0e3f|179508296
+Friends - 1x14 - The One With The Candy Hearts.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x14 - The One With The Candy Hearts.avi|6ef664feadd671fe73aa29c8cdac0d6b|180127206
+Friends - 1x15 - The One With The Stoned Guy.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x15 - The One With The Stoned Guy.avi|eda74dbc593f44326fafb304c4306ed1|179662414
+Friends - 1x16 - The One With The Two Parts - 1.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x16 - The One With The Two Parts - 1.avi|60f4e01111dfff29c203c372f86d20f4|179283262
+Friends - 1x17 - The One With The Two Parts - 2.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x17 - The One With The Two Parts - 2.avi|53723de21a0479aa9844af727eccf80b|179834280
+Friends - 1x18 - The One With All The Poker.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x18 - The One With All The Poker.avi|e31c246bac914c906fcefe19aa7c47d5|180220240
+Friends - 1x19 - The One With The Monkey Gets Away.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x19 - The One With The Monkey Gets Away.avi|509d23911809e15e5a81c320b1e1fe38|179316914
+Friends - 1x20 - The One With The Evil Orthodontist.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x20 - The One With The Evil Orthodontist.avi|fe6f9ea1eac909992fe55ee8f05ae16b|179142882
+Friends - 1x21 - The One With The Fake Monica.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x21 - The One With The Fake Monica.avi|059cb5c37564dbf9e44223976f5758be|178629498
+Friends - 1x22 - The One With The Ick Factor.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x22 - The One With The Ick Factor.avi|22b8a963d4060a5a392cbddcb47dcb23|178715760
+Friends - 1x23 - The One With The Bird.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x23 - The One With The Bird.avi|aed708e4df4da1c80f671665b5a3d16e|177697256
+Friends - 1x24 - The One With Rachel Finds Out.avi|G:\能飞英语\老友记(第一季)\老友记（Friends）第一季\Friends - 1x24 - The One With Rachel Finds Out.avi|436c09277c62c47bedbc37c13d5c521c|179963398
+boxed-correct.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-correct.avi|5141b7b625b634ce05223e3c1df1c5da|111320
+boxed-delete.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-delete.avi|45206809d456760a45ccc1dbdc118b11|48936
+boxed-join.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-join.avi|19fe5d3d6b488c5dc68e70999af9170d|46622
+boxed-split.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\boxed-split.avi|86622831f1c50028f7bdf18302437a4f|84190
+correct.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\correct.avi|f4e325d9e2d40852fe5697f8803d4332|180172
+delete.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\delete.avi|2146953995f7e9e97f24fd39982e1fbd|208408
+join.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\join.avi|ef45f1a446a3eb0350197372a1ae0e29|199994
+split.avi|F:\Program Files\Common Files\microsoft shared\ink\en-US\split.avi|d595592d7330a1c5652de811da81190f|181964
+FlickAnimation.avi|F:\Program Files\Common Files\microsoft shared\ink\FlickAnimation.avi|a99f357d1f52eb8437e0572e98ebb012|1600388
+StartMenu_Win10.mp4|F:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.6106.23501.0_x64__8wekyb3d8bbwe\images\StartMenu_Win10.mp4|e75d071dc0416ab3f32de43ea7f12dca|125179
+StartMenu_Win10_RTL.mp4|F:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.6106.23501.0_x64__8wekyb3d8bbwe\images\StartMenu_Win10_RTL.mp4|a1c9a1d2c2fa6c62ef9d998c97015ebc|118299
+OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|fe9c6de4c2f02f2b172e79522646a7c8|38782
+OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|3033c76c76e57991d59f751c8a6bed84|40765
+OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|d0aacd5352b78db65b3b9304e8fdacb0|40620
+OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|cd2f5a7d4f44b80a8938525a2b51b245|41129
+OneNoteFRE_CreateNotes_LTR_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Phone.mp4|5d8976acd4a5ad6bd6ce14f0c0a6694a|13167
+OneNoteFRE_CreateNotes_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Tablet.mp4|602fecd1f55e2c1d890e4fc438c7530c|15099
+OneNoteFRE_CreateNotes_RTL_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Phone.mp4|0ccc965fa7bb412251632a8c1709fd8a|13452
+OneNoteFRE_CreateNotes_RTL_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Tablet.mp4|6b7adf70f8da1bc527f717b1076a5f05|15326
+OneNoteFRE_PenClick_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_PenClick_LTR_Tablet.mp4|9d7dd0e99240ff6b65b323a3ac67c894|20949
+OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|fb1594f22bf98243477702d519e5fedb|31207
+OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|c84f7713e5cebf00504de478bd9f48b5|30210
+OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|b1a848d38b7a4d7089e4cce7f1708923|31758
+OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10021.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|514426586f6eef17930f808b36274e4e|30141
+OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|fe9c6de4c2f02f2b172e79522646a7c8|38782
+OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|3033c76c76e57991d59f751c8a6bed84|40765
+OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|d0aacd5352b78db65b3b9304e8fdacb0|40620
+OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|cd2f5a7d4f44b80a8938525a2b51b245|41129
+OneNoteFRE_CreateNotes_LTR_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Phone.mp4|5d8976acd4a5ad6bd6ce14f0c0a6694a|13167
+OneNoteFRE_CreateNotes_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Tablet.mp4|602fecd1f55e2c1d890e4fc438c7530c|15099
+OneNoteFRE_CreateNotes_RTL_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Phone.mp4|0ccc965fa7bb412251632a8c1709fd8a|13452
+OneNoteFRE_CreateNotes_RTL_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Tablet.mp4|6b7adf70f8da1bc527f717b1076a5f05|15326
+OneNoteFRE_PenClick_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_PenClick_LTR_Tablet.mp4|9d7dd0e99240ff6b65b323a3ac67c894|20949
+OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|fb1594f22bf98243477702d519e5fedb|31207
+OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|c84f7713e5cebf00504de478bd9f48b5|30210
+OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|b1a848d38b7a4d7089e4cce7f1708923|31758
+OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|F:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.6027.10061.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|514426586f6eef17930f808b36274e4e|30141
+Cat.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Animal\Cat.mp3|f10171fe0e2cf7a7637896fdd54fa318|8194
+SeaLion.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Animal\SeaLion.mp3|2d4d584f384ecd2928f27cae31f81993|11203
+BalloonScratch.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Effects\BalloonScratch.mp3|4ede8df5ea7613e5c9d2686b6fc80ec7|32937
+DoorClose.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Effects\DoorClose.mp3|dafe6095dfa90c546709b4793846237d|24077
+SewingMachine.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Effects\SewingMachine.mp3|a660d05abd92214d86391aead7957dc4|16344
+Typing.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Effects\Typing.mp3|3ec45f3376f4931f61f2dc14e87d12e9|9741
+WaterDrop.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Effects\WaterDrop.mp3|c00e48f20ab06d5e3decaa3f159f71d9|2844
+WaterRunning.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Effects\WaterRunning.mp3|dffc218edd73661f9a2cae602833ed57|17807
+Peculiar.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Electronic\Peculiar.mp3|327a5f1f6715983fa6f8d1c18cfa75f9|61181
+BabyCry.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Human\BabyCry.mp3|413e1a0c3110bcb15a97d6384a6e7a87|21025
+Footsteps-2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Human\Footsteps-2.mp3|a0ecc7fbdd965d1e957339b1dfcc429c|18100
+Laugh-male3.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Human\Laugh-male3.mp3|56e1ca375da4ee39ec48db6adffb12c8|30137
+Scream-male2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Human\Scream-male2.mp3|18f7e6c9fbf5950adbe4e9b5dd5ae608|22196
+Slurp.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Human\Slurp.mp3|df8a4ac98616199d4853d12eea7a64ad|18434
+Dijjeridoo.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Instruments\Dijjeridoo.mp3|26c65225ad7eac66a3d3dbf2d263d6c7|33063
+Cave.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Cave.mp3|ad107e9de6b08f83df9fb09d4a6667f6|63574
+DripDrop.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\DripDrop.mp3|c9b7c37f10d6348a43a45057eddc2290|25236
+Drum.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Drum.mp3|0d0203ca5a97dd920b9a46ce242ecfd3|43094
+DrumMachine.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\DrumMachine.mp3|210dbca1698cf6ae72177dbb60f54f9e|38580
+DrumSet1.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\DrumSet1.mp3|4a6962aec8222a3ae56772fac7c240d1|16846
+DrumSet2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\DrumSet2.mp3|e2e36e7f70331ae060fea916db895dd7|13711
+Eggs.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Eggs.mp3|d6731939ecb7ad90ccae37c9f17cbf60|126515
+Garden.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Garden.mp3|d308e2247b535b2e1cda39e7e0d1a86f|134919
+GuitarChords1.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\GuitarChords1.mp3|f7ca7ea23ec68ff10e5c75c2e9ce282c|44849
+GuitarChords2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\GuitarChords2.mp3|b80274734bca2f03b2d932ed404826f5|57806
+HipHop.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\HipHop.mp3|50b40f5bf4d8a2adb88ecc8cb4c7e047|39625
+HumanBeatbox1.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\HumanBeatbox1.mp3|2230fe3e114d5ddc74c9643026b00933|37744
+HumanBeatbox2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\HumanBeatbox2.mp3|840c534723c36aa8774e8293c07d7b63|25026
+Jungle.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Jungle.mp3|fb146a3c9787411a50931e4280e7781b|27713
+Medieval1.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Medieval1.mp3|cc2a3b0e83050f5e9a1376da9854c882|81546
+Medieval2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Medieval2.mp3|e13c7b559e67de4d750639063a4b7eeb|117783
+Techno.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Techno.mp3|aa1073127a0631a1fa5e2470fe206c1b|63866
+Techno2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Techno2.mp3|a90fc550e93a92341a7f2a9faa1a1b2b|118828
+Triumph.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Triumph.mp3|5e2352bfe1c24f7cee0588a1a9f80e1b|36615
+Xylo1.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Xylo1.mp3|c11eab21f595e33d548ce85efd87b02e|88815
+Xylo2.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Xylo2.mp3|921b71851c83b94a63b66c77a951a518|91950
+Xylo3.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\Xylo3.mp3|8d78975b1032905b6b6beea60715eefa|78314
+xylo4.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Music Loops\xylo4.mp3|355001aeb018aa0e42dc5d5bfbfcdcbb|28131
+Come-and-play.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Come-and-play.mp3|5168b8f3c58a251fc99d69c7e9ccf867|18225
+Doy-doy-doy.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Doy-doy-doy.mp3|a8d3e4981b1615ea71ff479f7f5129f0|17180
+Got-inspiration.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Got-inspiration.mp3|953753c3c409385afeb191d432f6f7c9|25748
+Hey-yay-hey.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Hey-yay-hey.mp3|18b0ff9f0d583213b45a4acb46d7f2a7|23032
+Join-us.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Join-us.mp3|6c74bf4018ca62e7a433764c86995b36|9448
+Oooo-badada.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Oooo-badada.mp3|f1630ef0531e27511d9d499e2a841d5c|64828
+Sing-me-a-song.mp3|F:\Program Files (x86)\Scratch\Media\Sounds\Vocals\Sing-me-a-song.mp3|356bf4a47fe43f299d6646ef4717c654|32854
+buzhua.mp3|F:\Program Files (x86)\Tencent\QQGAME\hlddzSDK\Sound\Man\buzhua.mp3|b9d9f00ed6a696323ce4e1ba72dba189|5181
+zhuadizhu.mp3|F:\Program Files (x86)\Tencent\QQGAME\hlddzSDK\Sound\Man\zhuadizhu.mp3|da1bb45cb8ea405a0fbcc225d4bf33e0|7890
+firecracker.mp3|F:\Program Files (x86)\Tencent\QQGAME\hlddzSDK\Sound\Special\firecracker.mp3|44ff3012112e2200edfa6cf55ca062d5|56456
+buzhua.mp3|F:\Program Files (x86)\Tencent\QQGAME\hlddzSDK\Sound\Woman\buzhua.mp3|d5a6285b6d6365d00a8a7ecb744a5f8e|7804
+zhuadizhu.mp3|F:\Program Files (x86)\Tencent\QQGAME\hlddzSDK\Sound\Woman\zhuadizhu.mp3|df1ad27d2be30cd0d2488ada35c4c522|7799
+dictvoice[1].mp3|F:\Users\30706\AppData\Local\Microsoft\Windows\INetCache\IE\J75GFNQS\dictvoice[1].mp3|ab509cfd9f4e5e0bd66891c53889e4e4|25020
+h0200bsmslh.p202.1[1].mp4|F:\Users\30706\AppData\Local\Microsoft\Windows\INetCache\Low\IE\ITYUV630\h0200bsmslh.p202.1[1].mp4|908f1fbd6adf9eb76b1ebd5a005a2c54|828272
+snsvideodownload[1].mp4|F:\Users\30706\AppData\Local\Microsoft\Windows\INetCache\Low\IE\ITYUV630\snsvideodownload[1].mp4|71b922b9a1ec033df9d47e2cebe1ca1b|32463
+l0200m56kfg.p202.1[1].mp4|F:\Users\30706\AppData\Local\Microsoft\Windows\INetCache\Low\IE\J1HN52M1\l0200m56kfg.p202.1[1].mp4|1d53a4dc4a8a0ca7100c9ba829049493|926808
+snsvideodownload[1].mp4|F:\Users\30706\AppData\Local\Microsoft\Windows\INetCache\Low\IE\J1HN52M1\snsvideodownload[1].mp4|71b922b9a1ec033df9d47e2cebe1ca1b|32463
+v0161203pb9.p703.1[1].mp4|F:\Users\30706\AppData\Local\Microsoft\Windows\INetCache\Low\IE\TH3AWGW2\v0161203pb9.p703.1[1].mp4|7894c4637d6e41d5c4fb3aa578054e60|2422515
+photoShutter.mp3|F:\Users\30706\AppData\Roaming\360se6\User Data\Default\Extensions\dobbgecnokkloebjbcnjpgcopegjabpa\2.0.0.15_0\images\photoShutter.mp3|2b8d2e64e952ae56afc4f1d15d97567d|14661
+OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Phone.mp4|4458e4e9a6148cf0b08201d7c314a43c|369013
+OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_LTR_Tablet.mp4|5f1029a0dcd8d5485bef7aa5c517f78f|385878
+OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Phone.mp4|c4df7f43d343a0b0fbcaa0a5c2dc5567|372189
+OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_ClipAndAdd_RTL_Tablet.mp4|ccbe202b393991d38eb722740b18635e|392890
+OneNoteFRE_CreateNotes_LTR_Phone.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Phone.mp4|ef46250f38997bfbaa5418c28f49a467|236691
+OneNoteFRE_CreateNotes_LTR_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_LTR_Tablet.mp4|c822b7b699bcdbca37579a7c186a5de8|257699
+100_1513.mkv|H:\图片\2011新年留念\2011新视频\100_1513.mkv|af997167498d9a29111939056cccd682|9170283
+100_1520.mkv|H:\图片\2011新年留念\2011新视频\100_1520.mkv|f1ee165886bc26d19dd530e73e7c74cf|159537864
+100_1525.mkv|H:\图片\2011新年留念\2011新视频\100_1525.mkv|c735ede85542b5c07a5c7b5bab873de6|66124540
+100_1582.mkv|H:\图片\2011新年留念\2011新视频\100_1582.mkv|dd2e4d74e89a170da48eaf08ea824342|26080246
+100_1588.mkv|H:\图片\2011新年留念\2011新视频\100_1588.mkv|8a2cd93ace3688c369e92b6d41523ca1|126481457
+100_1809.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1809.MOV|117d91658915897de8b551b445d10ff0|104407998
+100_1813.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1813.MOV|5400061b79f8129ece776fad4ae2dac5|267299974
+100_1832.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1832.MOV|28d047277b7fcef7f268fd98ea610a04|53734378
+100_1868.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1868.MOV|82519be938757d9f664a75f6c74610bb|53410254
+100_1869.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1869.MOV|9e1e509d57660e888031f275cc053adf|1282494
+100_1942.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1942.MOV|43c38ef02307c285812ad7d2108cf181|46266350
+100_1943.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1943.MOV|088bf2548f901319f70a9ab7b077c70b|1543978
+100_1960.MOV|H:\图片\2011烟台的记忆\20110405大连\100_1960.MOV|f20883d15d61becd147b40e83b46b0e2|20602246
+100_2009.MOV|H:\图片\2011烟台的记忆\20110405大连\100_2009.MOV|ce3f8adca9d3ecc65e45ebaaaaa067ae|50425830
+MVI_0005.MOV|H:\图片\2011烟台的记忆\20110416我的伙伴们\MVI_0005.MOV|7b1ebaf7b1055d71ddc8c2ebd1221eca|240749707
+MVI_0006.MOV|H:\图片\2011烟台的记忆\20110416我的伙伴们\MVI_0006.MOV|964bbf65bcdc9ea9ef317024f8e7650e|37762689
+MVI_0022.MOV|H:\图片\2011烟台的记忆\20110416我的伙伴们\MVI_0022.MOV|898446fe45e17150d01f552e0cd790c9|233769225
+海豚&空中飞人.mkv|H:\图片\2011烟台的记忆\蓬莱20100501\海豚&空中飞人.mkv|601bb933f53a4cfefb881fc8036509aa|17705412
+海豚表演.mkv|H:\图片\2011烟台的记忆\蓬莱20100501\海豚表演.mkv|adafaf3a1e0d98582da66385b12225ce|100323531
+美洲狮表演.mkv|H:\图片\2011烟台的记忆\蓬莱20100501\美洲狮表演.mkv|e055507fb285dd50a282f7e539c98ba9|104356470
+2012-01-19_11-28-27_790.mkv|H:\图片\2012新年&深圳\新年\视频\2012-01-19_11-28-27_790.mkv|adbc6cbb65c24905a24358cc14db42b1|2111390
+2012-01-19_11-35-03_972.mkv|H:\图片\2012新年&深圳\新年\视频\2012-01-19_11-35-03_972.mkv|0496384a84db7863cbb4612660fcb0b4|2416065
+2012-01-20_12-56-50_192.mkv|H:\图片\2012新年&深圳\新年\视频\2012-01-20_12-56-50_192.mkv|99143601ffa42a2d6c023e47b01c6230|7623868
+100_3246.MOV|H:\图片\2012新年&深圳\深圳\世界之窗\100_3246.MOV|ea6025ec40d15a911e72ee3027891d39|112926090
+100_3248.MOV|H:\图片\2012新年&深圳\深圳\世界之窗\100_3248.MOV|884ed70f832620e2a3516be24d0f4af1|1303538
+100_2256.MOV|H:\图片\2012新年&深圳\深圳\增城两日游\100_2256.MOV|2652c29f8ee5b96c86232963199f8bf9|136382
+100_3367.MOV|H:\图片\2012新年&深圳\深圳\大梧桐山\100_3367.MOV|6b96628d6ab396acd0753c50878ca6a1|5089458
+2011-06-06_11-21-32_651.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2011-06-06_11-21-32_651.mkv|c6fa0352e65609871453419f8ce872ba|3596438
+2011-06-19_19-47-36_785.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2011-06-19_19-47-36_785.mkv|c3b509e3a9f6192baaa913fd5aa5f1a8|48616441
+2011-06-19_19-54-32_887.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2011-06-19_19-54-32_887.mkv|0a16e5e262549b38461200ae2117bc86|13224632
+2011-06-19_20-01-53_752.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2011-06-19_20-01-53_752.mkv|de8f2d6d7ee88c3463971e74ec58ce14|9869217
+2011-08-11_21-38-00_996.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2011-08-11_21-38-00_996.mkv|d0b79dc7a33f31b4514abbf1097e750f|5633229
+2012-06-28_21-08-01_714.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2012-06-28_21-08-01_714.mkv|6928a8304476f64fe673a73cafa75d45|33401275
+2012-09-16_15-54-53_313.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2012-09-16_15-54-53_313.mkv|48b8a85918c3edee0816909541785990|443648514
+2012-09-16_16-35-28_432.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2012-09-16_16-35-28_432.mkv|0ad98043cefaa911ffe5ae42092e329c|133443650
+2012-09-16_16-46-15_342.mkv|H:\图片\2012新年&深圳\深圳\手机拍摄\视频\2012-09-16_16-46-15_342.mkv|4f928faae8dba72ebfe803d6939e895e|288682254
+VID_20130413_153432.mkv|H:\图片\2013\东莞龙凤山庄0413\VID_20130413_153432.mkv|9625ce00b963e53398e1a71b3e10140a|16766782
+VID_20130413_153501.mkv|H:\图片\2013\东莞龙凤山庄0413\VID_20130413_153501.mkv|c7911a897ec48e1d21991e549cb39fcf|77692066
+VID_20130413_163404.mkv|H:\图片\2013\东莞龙凤山庄0413\VID_20130413_163404.mkv|2f7becd6606ace2e93aa87efa94218f3|6641194
+富康&梦洁视频(2010新年).avi|H:\图片\其它\富康&梦洁视频(2010新年).avi|a7828cdb263ae24a709ca27909975021|12112230
+任贤齐&徐熙媛-心肝宝贝.mp3|H:\图片\婚纱照\JFR1025490-何培田-韩利培_精修\任贤齐&徐熙媛-心肝宝贝.mp3|8bb7b14ed6bd56d365a9e387f4e24d64|9238738
+关之琳&刘德华-相约到永久.mp3|H:\图片\婚纱照\JFR1025490-何培田-韩利培_精修\关之琳&刘德华-相约到永久.mp3|2280d78c834f06dbd0383e95fc7c1558|6794992
+任贤齐&徐熙媛-心肝宝贝.mp3|H:\图片\婚纱照\任贤齐&徐熙媛-心肝宝贝.mp3|8bb7b14ed6bd56d365a9e387f4e24d64|9238738
+关之琳&刘德华-相约到永久.mp3|H:\图片\婚纱照\关之琳&刘德华-相约到永久.mp3|2280d78c834f06dbd0383e95fc7c1558|6794992
+MM.AVI|H:\电子书\程序\深入浅出MFC\Source\MM.AVI|2b595c649b2a91670b595d6f74a4854e|1806848
+365英语之086.请求.MP3|H:\英语资料\365天英语口语\365英语之086.请求.MP3|11ef24c6e4850cb45b32ae80db55e78c|2828753
+A Small Victory.MP3|H:\英语资料\优美文章\A Small Victory.MP3|23bfbbd538215951f96e80080153e6c0|6024882
+Love is just a thread.mp3|H:\英语资料\优美文章\Love is just a thread.mp3|8b9717c372835b41619f4f21659c1b52|5369520
+实用英语口语unit01.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit01.MP3|377ae20e4408924f6f89af611423712e|1493084
+实用英语口语unit02.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit02.MP3|b94791caa173b161bba855e803a74843|2537810
+实用英语口语unit03.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit03.MP3|cad12d9cc390fdebe91d73f43473b635|2028940
+实用英语口语unit04.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit04.MP3|cfb94b0d7345f7a9a528cd72466c52a7|1928460
+实用英语口语unit05.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit05.MP3|975d0f54232b8f3c9dad8cda4211af69|1848656
+实用英语口语unit06.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit06.MP3|b7d9985f58a34e467ca388eaebc24838|1723400
+实用英语口语unit07.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit07.MP3|a4dad3a78577090f6f9c9730b5bc24a4|1558150
+实用英语口语unit08.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit08.MP3|f6272f72eb42469e8400b983b8f7b7c0|1907760
+实用英语口语unit09.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit09.MP3|a2bf14b639f7e782a56b1b0620b05b7d|1975218
+实用英语口语unit10.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit10.MP3|f6f04df268e98cb059fac2b7f2566bbd|2015364
+实用英语口语unit11.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit11.MP3|83eedaebfe50e7fffd2ba39bfb13862d|3569640
+实用英语口语unit12.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit12.MP3|4d7aa216dfa8f261f37505eb1ae677e3|2572528
+实用英语口语unit13.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit13.MP3|b0eb46af4b59bb9a78dc2116767994b4|2103578
+实用英语口语unit14.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit14.MP3|793684fdcf99dde4dff44ab69b5935d9|2894882
+实用英语口语unit15.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit15.MP3|1e9193e953692da17a44e6596cb6a5f6|2220394
+实用英语口语unit16.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit16.MP3|61265eb0e1bccd4bb68bec347e66e3aa|2531566
+实用英语口语unit17(1).MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit17(1).MP3|39bf4d26e7f65aa1ba5f0364cbe77479|4311248
+实用英语口语unit17.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit17.MP3|39bf4d26e7f65aa1ba5f0364cbe77479|4311248
+实用英语口语unit18.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit18.MP3|3d92fcf9798334a8063770bd6b486589|2873178
+实用英语口语unit19.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit19.MP3|f039354631cadf3860f9bdf0d66e6dc0|3230030
+实用英语口语unit20.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit20.MP3|5918148b2c5a467006810c8eb880a08c|2981938
+实用英语口语unit21.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit21.MP3|a8627b7a1fa86156f44a45ac3237cb6a|4175374
+实用英语口语unit22a.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit22a.MP3|2a447e40618e69035ba6f8799f741f07|2408952
+实用英语口语unit22b.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit22b.MP3|61e50d4923ad43855fcb20626f2e3a1a|2878962
+实用英语口语unit23.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit23.MP3|be4c382362d13706e20da3b398dd58d4|2698050
+实用英语口语unit24.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit24.MP3|391bb72975eef39fb9b8861ce323dade|1971318
+实用英语口语unit25.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit25.MP3|d84424918dd483f791d4a44ffddf24f8|1945742
+实用英语口语unit26.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit26.MP3|64599f9e596bb34d363c21c09cdd3836|2060546
+实用英语口语unit27.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit27.MP3|c40a872d27bbff0d1428510aec2d610d|1935264
+实用英语口语unit28.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit28.MP3|5fe8ea150530e68c7444f5cde91b3b65|3223686
+实用英语口语unit29.MP3|H:\英语资料\实用英语口语(听力)\实用英语口语unit29.MP3|8766600e915b48b2253c5fc2b042ede2|2746796
+Section 6 Double checking 再次确认对方的意思.MP3|H:\英语资料\想说就说\Section 6 Double checking 再次确认对方的意思.MP3|eb555a8f6d05b582ef3ce4b01de93ba5|1941384
+孙鑫C++教程01.rmvb|H:\视频资料\VC++\孙鑫C++教程01.rmvb|913ea79179788e6295dfc8813dc8492b|270946816
+孙鑫C++教程02.rmvb|H:\视频资料\VC++\孙鑫C++教程02.rmvb|8dcc34beef8812554c7b97e3c0e787f0|116946870
+孙鑫C++教程03.rmvb|H:\视频资料\VC++\孙鑫C++教程03.rmvb|b6a7d91e3ee611a2d23a3f2cc4b92f76|196434647
+孙鑫C++教程04.rmvb|H:\视频资料\VC++\孙鑫C++教程04.rmvb|2c72306fa94cf921cc047bbce3168595|125580482
+孙鑫C++教程05.rmvb|H:\视频资料\VC++\孙鑫C++教程05.rmvb|bc2aff18beb4c322dae8295242a9d934|149976122
+孙鑫C++教程06.rmvb|H:\视频资料\VC++\孙鑫C++教程06.rmvb|461a09d156c75e366c76cfcfcb578a0b|369610600
+孙鑫C++教程07.rmvb|H:\视频资料\VC++\孙鑫C++教程07.rmvb|5ab107a468f44f7e5065ed0d026b5c6e|293249843
+孙鑫C++教程08.rmvb|H:\视频资料\VC++\孙鑫C++教程08.rmvb|2be43dbf4c9f99e09e2ebf002b5150ff|199977542
+孙鑫C++教程09.rmvb|H:\视频资料\VC++\孙鑫C++教程09.rmvb|a4f4161d00a305ea7cfb61011fe95546|327752238
+孙鑫C++教程10.rmvb|H:\视频资料\VC++\孙鑫C++教程10.rmvb|8b2bac7aa9493884f17ff4283c90538a|280599051
+孙鑫C++教程11.rmvb|H:\视频资料\VC++\孙鑫C++教程11.rmvb|a3edaf8df8d7022b83f9017aa38fe625|190866117
+孙鑫C++教程12.rmvb|H:\视频资料\VC++\孙鑫C++教程12.rmvb|600ca39e4eedf2e70f67a37ec72e5b74|204566703
+孙鑫C++教程13.rmvb|H:\视频资料\VC++\孙鑫C++教程13.rmvb|21f423faf7edff6ca2be4d8f28a38afe|194278091
+孙鑫C++教程14.rmvb|H:\视频资料\VC++\孙鑫C++教程14.rmvb|39cf3c2aef089c407b4e57ef41d921c9|145977967
+孙鑫C++教程15.rmvb|H:\视频资料\VC++\孙鑫C++教程15.rmvb|447e9c1a3d036157e1c0adc2048b6d2f|140884532
+孙鑫C++教程16.rmvb|H:\视频资料\VC++\孙鑫C++教程16.rmvb|e5a59552a42101b382c9ce9be494cf6c|151251488
+孙鑫C++教程17.rmvb|H:\视频资料\VC++\孙鑫C++教程17.rmvb|5480dd2b9bebf4e166cb066ea0f81a24|213456752
+孙鑫C++教程18.rmvb|H:\视频资料\VC++\孙鑫C++教程18.rmvb|cd3de1ab5609811b97bc1ecae35782af|145768245
+孙鑫C++教程19.rmvb|H:\视频资料\VC++\孙鑫C++教程19.rmvb|6274cd84fcc007eb55075da1ff09d2cf|104522492
+孙鑫C++教程20.rmvb|H:\视频资料\VC++\孙鑫C++教程20.rmvb|aba249c4fa483d82742b87f848d326c2|173794984
+論語心得（三）.mp4|H:\视频资料\員工關懷輔導系列課程\論語心得（三）.mp4|a43e39df9d20ac1545f27f95c00d6d33|721973240
+論語心得（二）.mp4|H:\视频资料\員工關懷輔導系列課程\論語心得（二）.mp4|bcd1528ec1acb653ed39329138be65bb|721822596
+論語心得（四）.mp4|H:\视频资料\員工關懷輔導系列課程\論語心得（四）.mp4|72807eedd55d9598b223b5accfee308a|722158014
+$I1501SA.mp4|J:\$RECYCLE.BIN\S-1-5-21-2737696223-3158702136-682807854-1000\$I1501SA.mp4|68ca96e02b714165a4f5acc9f2918a4b|194
+$I3PVIED.avi|J:\$RECYCLE.BIN\S-1-5-21-2737696223-3158702136-682807854-1000\$I3PVIED.avi|2c69ce18a0e3c621f5ddb722395a4b6c|152
+$I8UBEIZ.rmvb|J:\$RECYCLE.BIN\S-1-5-21-2737696223-3158702136-682807854-1000\$I8UBEIZ.rmvb|69395e33230806d46ac6746916cd7431|134
+$IB1LUZL.avi|J:\$RECYCLE.BIN\S-1-5-21-2737696223-3158702136-682807854-1000\$IB1LUZL.avi|4eb4a7f5a9341d8a73f03ff6ea1ced52|150
+$IXAIPIW.avi|J:\$RECYCLE.BIN\S-1-5-21-2737696223-3158702136-682807854-1000\$IXAIPIW.avi|bd061e0e6918ecc1c1785cec3b798f71|146
+dillo.avi|J:\临时文件\C++\MFC\general\CmnCtrl1\dillo.avi|763a7dc628d8dcc199c9f479e8b8aced|15872
+filecopy.avi|J:\临时文件\C++\MFC\general\CmnCtrl1\filecopy.avi|34b5bc08acda9850686b42c869e631a3|9484
+search.avi|J:\临时文件\C++\MFC\general\CmnCtrl1\search.avi|1fed116a1da1da7db8c531b96b342ba1|21020
+MFC2.AVI|J:\临时文件\C++\MFC\internet\MFCIE\res\MFC2.AVI|f88c743d6176241279b467bc80d521e4|195016
+《货币战争2金权天下》_1.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_1.mp3|869c350e4c56ae96f325041407b432c3|6282867
+《货币战争2金权天下》_10.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_10.mp3|f47747efa4e9752e26ff3f5b3ed0571b|23655653
+《货币战争2金权天下》_11.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_11.mp3|552d8b7103119f1c1187c66ad661b7cc|25338775
+《货币战争2金权天下》_12.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_12.mp3|53d42a840f2c5884eac15e71d9f05c27|23631830
+《货币战争2金权天下》_13.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_13.mp3|ebaa449a2098dfd85a59fce7de86daad|24066925
+《货币战争2金权天下》_14.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_14.mp3|4f288e5d1a14d3d7f26461c6e0e8842c|24051879
+《货币战争2金权天下》_15.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_15.mp3|fd3405615a9692624bcdf107273e887e|24096600
+《货币战争2金权天下》_16.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_16.mp3|ceb3225d6c35d23c57abffd0c0112d24|25372212
+《货币战争2金权天下》_17.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_17.mp3|505102e2d837553429b02dc881e717fa|23758471
+《货币战争2金权天下》_18.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_18.mp3|0fea27427d78f42c3d57dce4904a663a|23972884
+《货币战争2金权天下》_19.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_19.mp3|9a0f0ab65dcd3551c616aedf2ddc13f9|23728378
+《货币战争2金权天下》_2.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_2.mp3|1e228bf95a0cf259b3512916254dadd8|23926491
+《货币战争2金权天下》_20.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_20.mp3|10f0131c37617c65b3adfa20ebaac5af|24061074
+《货币战争2金权天下》_8.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_8.mp3|218c0dd730c28f6c00134373d25a4993|24064000
+《货币战争2金权天下》_9.mp3|J:\临时文件\tingshu\《货币战争2金权天下》_9.mp3|0766a2de4675ca6a55c9674f3d250331|23648548
+孔子是怎样炼成的_1.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_1.mp3|6f34d65f7df3b0edb6985ff90af5a2fa|9054080
+孔子是怎样炼成的_10.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_10.mp3|d98fdf78bcdcf0d349a25e5b79766698|8964416
+孔子是怎样炼成的_11.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_11.mp3|d14f1559a3ee094ba32bc95091a1cb45|8987072
+孔子是怎样炼成的_12.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_12.mp3|a7733e437d98f5c60428ba9219cf71bf|9073568
+孔子是怎样炼成的_18.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_18.mp3|355d3055ae3a7f7ad56844155f6523ea|8936288
+孔子是怎样炼成的_7.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_7.mp3|b8e9e0b616fb59e7dabb9373ef5900d7|9050240
+孔子是怎样炼成的_8.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_8.mp3|6234d8342087a9fc3364c0319677d42b|9016064
+孔子是怎样炼成的_9.mp3|J:\临时文件\tingshu\孔子是怎样炼成的_9.mp3|bde38cabe94196f6040973602617cdc6|8983904
+正说清朝二十四臣_和珅_1.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_1.mp3|3c9989ac9b4b962137a9916940f52b7b|5057620
+正说清朝二十四臣_和珅_10.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_10.mp3|5e20dc32322d8e37111a3bf83b97ca4b|4697443
+正说清朝二十四臣_和珅_2.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_2.mp3|3c5f5b5e3b8c42e807c7afb1d374d4de|5063784
+正说清朝二十四臣_和珅_3.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_3.mp3|d5be746f6622c28ac3425862bb05ef7f|5062635
+正说清朝二十四臣_和珅_4.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_4.mp3|2de5914f9dd5c224488d9608f4cdc6b8|5001927
+正说清朝二十四臣_和珅_5.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_5.mp3|e7cc87068737e19b1ea186e3b2e3ca8f|4700056
+正说清朝二十四臣_和珅_6.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_6.mp3|ac36f470667291021e9b56f5bb5833fd|4700891
+正说清朝二十四臣_和珅_7.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_7.mp3|dd236636d5e495006412f212ac0e452a|4698593
+正说清朝二十四臣_和珅_8.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_8.mp3|998aaa8a02934a9b806d66daf4e0c75e|4684487
+正说清朝二十四臣_和珅_9.mp3|J:\临时文件\tingshu\正说清朝二十四臣_和珅_9.mp3|e31f13946e2e9955e3516515fd077eac|4699533
+正说清朝二十四臣_纪晓岚_1.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_1.mp3|4bdd5b1b7bcf05566f0418d029aa2de7|4917394
+正说清朝二十四臣_纪晓岚_2.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_2.mp3|e4c573f04bd1efb869ba3111a7cdd5c4|4842893
+正说清朝二十四臣_纪晓岚_3.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_3.mp3|8df5c6eabad9087578d6f239e3e05a6c|4847595
+正说清朝二十四臣_纪晓岚_4.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_4.mp3|f543294c07db0805790e3f64e6838f16|4920842
+正说清朝二十四臣_纪晓岚_5.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_5.mp3|934747652d7cc5df1c393a5078e6220a|4840176
+正说清朝二十四臣_纪晓岚_6.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_6.mp3|307706068d5b9439c77e54fb47363fe2|4789708
+正说清朝二十四臣_纪晓岚_7.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_7.mp3|5bd7e9fadc793892f2e090dabfbc3ade|4789290
+正说清朝二十四臣_纪晓岚_8.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_8.mp3|ad9cb38aee8370bc20386808dda2056e|4788976
+正说清朝二十四臣_纪晓岚_9.mp3|J:\临时文件\tingshu\正说清朝二十四臣_纪晓岚_9.mp3|b59151ccecc40ab2dabe192cd6fb1b57|4785006
+马瑞芳说聊斋_1.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_1.mp3|b4b6cb1675557fa35c18362d6a8da655|5060859
+马瑞芳说聊斋_13.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_13.mp3|d8457f5394f7afc4e9aef9f823c9d217|4696294
+马瑞芳说聊斋_14.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_14.mp3|b1e94079aaa7a8cda8fa2e5a9d6c1dda|4560875
+马瑞芳说聊斋_15.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_15.mp3|96a008ea247d5ef5c1def5966ad7f2ca|4903706
+马瑞芳说聊斋_16.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_16.mp3|b6fbc0c91a246f864a165e750dd08fbc|4842684
+马瑞芳说聊斋_17.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_17.mp3|26f7e0aa88bb4348a7064ed40be74714|4379167
+马瑞芳说聊斋_18.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_18.mp3|432172775b7ec15622942b741c22c7b3|4380212
+马瑞芳说聊斋_19.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_19.mp3|bbc7324a1955c2cabc6bcfac1c579459|4300696
+马瑞芳说聊斋_2.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_2.mp3|e585e85187dda89421a4062b961648d2|5064725
+马瑞芳说聊斋_20.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_20.mp3|11f2dbb326a1edfff83f1e0c2137ca58|4909767
+马瑞芳说聊斋_21.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_21.mp3|b4e1e724e40072738bd26cfa9742b7a1|4919693
+马瑞芳说聊斋_23.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_23.mp3|30f5e26d46a33adf00aa97460e383837|4902034
+马瑞芳说聊斋_24.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_24.mp3|0cf3bd508e76f06bea3f7207915fd81b|9925799
+马瑞芳说聊斋_3.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_3.mp3|f414fa825e0a7025939a74640cc04b19|5053336
+马瑞芳说聊斋_4.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_4.mp3|d5cfdfa1104d3a0abd76c42802e34520|4975491
+马瑞芳说聊斋_6.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_6.mp3|7ecf4e92d1b0079476578e25fbba2942|4963161
+马瑞芳说聊斋_7.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_7.mp3|1d4c16af0004a8272b849a239ae7cc12|4751673
+马瑞芳说聊斋_8.mp3|J:\临时文件\tingshu\马瑞芳说聊斋_8.mp3|9c389681f8ef30cf018186b697f97b8d|4687935
+江南Style_hd.mp4|J:\临时文件\江南Style_hd.mp4|b026d97458ac3ceb6b199c05ee1d07b2|16731653
+[欧美][动画][怪物史莱克3][高清RMVB][1280×720][中英双字幕].RMVB|J:\动画\怪物史莱克\[欧美][动画][怪物史莱克3][高清RMVB][1280×720][中英双字幕].RMVB|4a2faf12b304811b6504c301e4313174|1223499669
+怪物史莱克1.rmvb|J:\动画\怪物史莱克\怪物史莱克1.rmvb|3c7e3970bf0160da44d6ed68dd58d601|433708395
+怪物史莱克2.rmvb|J:\动画\怪物史莱克\怪物史莱克2.rmvb|225648d37894fab06da93a225fc8467d|802159801
+猫和老鼠CD1-三只小猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-三只小猫.avi|7887b0e8fdb1d91b93f46018e0cad308|52595832
+猫和老鼠CD1-会跳舞的熊.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-会跳舞的熊.avi|0ab233a0a5ca9142cde6cd0d66692c30|46511870
+猫和老鼠CD1-保镖.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-保镖.avi|f6999dc07cbfaf688e87523c6cc5dffe|53093240
+猫和老鼠CD1-冲浪的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-冲浪的猫.avi|672f32a05a63ad0954b3ee6070a7bd1d|46146460
+猫和老鼠CD1-室内溜冰场.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-室内溜冰场.avi|e9236bbb22bf911458c1b4a8d0855c26|50316316
+猫和老鼠CD1-小孤儿.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-小孤儿.avi|011915f9566e2bea7fef526d4d141ee1|55928824
+猫和老鼠CD1-强力牛乳.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-强力牛乳.avi|2085cf1303537735a4ad251bcc3a0ba2|53514370
+猫和老鼠CD1-我的好妈咪.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-我的好妈咪.avi|d344afe1b8dc174f4608079ce1878afb|43754618
+猫和老鼠CD1-杰瑞的远亲.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-杰瑞的远亲.avi|011cf1994e6463402c19562414e51ca1|48208790
+猫和老鼠CD1-没有用的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-没有用的猫.avi|9251c5b2d729952e7027a15d93b36504|50742996
+猫和老鼠CD1-海底新乐园.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-海底新乐园.avi|e41d237019e4eee66a68deaf42a768d5|54531660
+猫和老鼠CD1-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-特别收录.avi|e331152763e853bf668da09a94bfc5f8|59819570
+猫和老鼠CD1-猫儿协奏曲.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-猫儿协奏曲.avi|b13cb7f1144b5a7e12bfe106c9c59f4a|53543148
+猫和老鼠CD1-船上的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-船上的猫.avi|b32c2bba7f4036abe2cdd0f928a083ac|45806200
+猫和老鼠CD1-西部牛仔.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-西部牛仔.avi|d6d82e2edd618722ad127dac8fc52a6f|48383730
+猫和老鼠CD1-飞行猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD1-飞行猫.avi|bb9d45d7e181bd35d79a678260c6f84b|48785620
+猫和老鼠CD10-会飞的巫婆.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-会飞的巫婆.avi|0a5c410513e56ef7b8e26e2e54f5cb5d|47093354
+猫和老鼠CD10-又香又干净的乖儿子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-又香又干净的乖儿子.avi|1414ab15bc81e9c83cdb99622eca02b7|45686430
+猫和老鼠CD10-忧郁的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-忧郁的猫.avi|12db36e15000871b40fcdc05293318ca|48484888
+猫和老鼠CD10-快乐的小鸭子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-快乐的小鸭子.avi|8de8ab04d0f18f50ce30a2f9666c1558|43874992
+猫和老鼠CD10-恶梦时分.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-恶梦时分.avi|de6b46cbef3af19fb77dab1edceb1e56|42277812
+猫和老鼠CD10-海滩上练肌肉.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-海滩上练肌肉.avi|d4fa1a6261c76ad4eba1fc103f8ed96b|47872240
+猫和老鼠CD10-消失的鸭子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-消失的鸭子.avi|c1eb3dcae034673b0ddc96e79ed5e0af|50906366
+猫和老鼠CD10-父子烤肉野餐.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-父子烤肉野餐.avi|3b3e182d01d81f69aadd9915d86314a0|47917698
+猫和老鼠CD10-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-特别收录.avi|fc73e3be276251ce4126a9e57089e5d4|63024144
+猫和老鼠CD10-皇帝的睡眠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-皇帝的睡眠.avi|1df72104927cf555a127af30b0998978|48003280
+猫和老鼠CD10-看管宝宝.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-看管宝宝.avi|26e508631daf05a67c241c5d3142ea5c|46953132
+OneNoteFRE_CreateNotes_RTL_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_CreateNotes_RTL_Tablet.mp4|bbdfdd7bda0e810c865d2ed9c00684bf|258506
+OneNoteFRE_PenClick_LTR_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_PenClick_LTR_Tablet.mp4|169be95dc97ed908b4a271dcb59e5beb|337834
+OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Phone.mp4|5553d33902602bd8a3c4706cee631213|343458
+OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_LTR_Tablet.mp4|5cdc4e8316d9fbae1a6ad1c0be49e8fa|357875
+OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Phone.mp4|ae32e4d5a92cd3f4f2ba8df6e9ef45d8|345014
+OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|F:\Windows\InfusedApps\Packages\Microsoft.Office.OneNote_17.4201.10091.0_x64__8wekyb3d8bbwe\videos\OneNoteFRE_SaveAutomatically_RTL_Tablet.mp4|619d8c2769f3984dc66b81838a00b064|355004
+Clip_1080_5sec_10mbps_h264.mp4|F:\Windows\Performance\WinSAT\Clip_1080_5sec_10mbps_h264.mp4|5c3f6fcd49941b6c304ebe6c76effc4a|6198982
+Clip_1080_5sec_VC1_15mbps.wmv|F:\Windows\Performance\WinSAT\Clip_1080_5sec_VC1_15mbps.wmv|7152b82296316194836c5d210773ed98|10069125
+Clip_480_5sec_6mbps_h264.mp4|F:\Windows\Performance\WinSAT\Clip_480_5sec_6mbps_h264.mp4|77f7344d77e4fee542c92741756670cc|3771577
+winsat.wmv|F:\Windows\Performance\WinSAT\winsat.wmv|54546edc90b3b2073433a545cae3cd45|4645210
+winsatencode.wmv|F:\Windows\Performance\WinSAT\winsatencode.wmv|65ba62c88c979d3bc94224a97a69eed9|4175768
+FlickAnimation.avi|F:\Windows\WinSxS\amd64_microsoft-windows-t..flicklearningwizard_31bf3856ad364e35_10.0.10240.16384_none_15821fdf0c715ed0\FlickAnimation.avi|a99f357d1f52eb8437e0572e98ebb012|1600388
+boxed-correct.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-correct.avi|1299cfab4582b64cc7b269eda39e9898|12
+boxed-delete.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-delete.avi|1299cfab4582b64cc7b269eda39e9898|12
+boxed-join.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-join.avi|1299cfab4582b64cc7b269eda39e9898|12
+boxed-split.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\boxed-split.avi|1299cfab4582b64cc7b269eda39e9898|12
+correct.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\correct.avi|1299cfab4582b64cc7b269eda39e9898|12
+delete.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\delete.avi|1299cfab4582b64cc7b269eda39e9898|12
+join.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\join.avi|1299cfab4582b64cc7b269eda39e9898|12
+split.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16384_none_198f8775122f97c2\split.avi|1299cfab4582b64cc7b269eda39e9898|12
+boxed-correct.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-correct.avi|5141b7b625b634ce05223e3c1df1c5da|111320
+boxed-delete.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-delete.avi|45206809d456760a45ccc1dbdc118b11|48936
+boxed-join.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-join.avi|19fe5d3d6b488c5dc68e70999af9170d|46622
+boxed-split.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\boxed-split.avi|86622831f1c50028f7bdf18302437a4f|84190
+correct.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\correct.avi|f4e325d9e2d40852fe5697f8803d4332|180172
+delete.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\delete.avi|2146953995f7e9e97f24fd39982e1fbd|208408
+join.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\join.avi|ef45f1a446a3eb0350197372a1ae0e29|199994
+split.avi|F:\Windows\WinSxS\amd64_microsoft-windows-tabletpc-inputpanel_31bf3856ad364e35_10.0.10240.16397_none_198f765f122fa8d8\split.avi|d595592d7330a1c5652de811da81190f|181964
+Clip_1080_5sec_10mbps_h264.mp4|F:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\Clip_1080_5sec_10mbps_h264.mp4|5c3f6fcd49941b6c304ebe6c76effc4a|6198982
+Clip_1080_5sec_VC1_15mbps.wmv|F:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\Clip_1080_5sec_VC1_15mbps.wmv|7152b82296316194836c5d210773ed98|10069125
+Clip_480_5sec_6mbps_h264.mp4|F:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\Clip_480_5sec_6mbps_h264.mp4|77f7344d77e4fee542c92741756670cc|3771577
+winsat.wmv|F:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\winsat.wmv|54546edc90b3b2073433a545cae3cd45|4645210
+winsatencode.wmv|F:\Windows\WinSxS\amd64_microsoft-windows-winsatmediafiles_31bf3856ad364e35_10.0.10240.16384_none_cd6acd7602723095\winsatencode.wmv|65ba62c88c979d3bc94224a97a69eed9|4175768
+猫和老鼠CD10-胆小的猫咪.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD10-胆小的猫咪.avi|d01ab204b056ac14163329f7e10126b8|49365138
+猫和老鼠CD2-万能指挥家.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-万能指挥家.avi|26a59f17bef768d8c27982c4980e1774|53139636
+猫和老鼠CD2-两个小印第安.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-两个小印第安.avi|72582ae104bf47e7c2a002cc84920313|48360124
+猫和老鼠CD2-倒霉的日子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-倒霉的日子.avi|9179ab4e5a9da72949800949c8626037|58763058
+猫和老鼠CD2-午睡纠纷.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-午睡纠纷.avi|70b507ff9a2ab58e046b270ee0ef23c2|51105806
+猫和老鼠CD2-古宝猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-古宝猫.avi|79ddc7956be7d488633577b54ad59487|50222350
+猫和老鼠CD2-周末夜之猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-周末夜之猫.avi|3a29fc04a9e8485f4364cde3793c4da4|46131912
+猫和老鼠CD2-噩梦成真.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-噩梦成真.avi|2816f6d03421ec1c7414f1934654de51|48678714
+猫和老鼠CD2-小海豹失踪记.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-小海豹失踪记.avi|0ce10ed7d91ea84f8e7b5c54ce7b626c|50526184
+猫和老鼠CD2-打嗝风波.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-打嗝风波.avi|6acd5b571569e94d9912c192bb5ebd29|45627860
+猫和老鼠CD2-捕鼠大队.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-捕鼠大队.avi|56474dae5d9119ff0457f3b2c183f95c|51144936
+猫和老鼠CD2-斑点猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-斑点猫.avi|ad9fa451f4e3ce598e55aebe551fe409|55207628
+猫和老鼠CD2-杰瑞与狮子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-杰瑞与狮子.avi|363f233695d1ea6f41bd2c5ff2bc1139|50616810
+猫和老鼠CD2-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-特别收录.avi|8f2a1b3b7b7ff4a6623edc5d8eadb470|64845960
+猫和老鼠CD2-猫卡通.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-猫卡通.avi|77fb2840902909e891da93af7511473a|51553144
+猫和老鼠CD2-老鼠遇险.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-老鼠遇险.avi|82fd30b660cfad630ee85268b87294a9|53193390
+猫和老鼠CD2-耶诞夜.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-耶诞夜.avi|7a42843886d84e3b55e0f8f87c1358e5|61775462
+猫和老鼠CD2-隐形墨水.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD2-隐形墨水.avi|2b4ba9d8c4be22d451722cee1ff1fd6a|53029446
+猫和老鼠CD3-保龄球馆里的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-保龄球馆里的猫.avi|183f48e051ee92617d69854d0c2270d2|57591904
+猫和老鼠CD3-午夜小点心.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-午夜小点心.avi|b58b08b5eb4c59b1d37fb9bf9b38dc65|64931192
+猫和老鼠CD3-可爱的猫女孩.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-可爱的猫女孩.avi|2b1100b2c7007b6089e8fcfd0edfa9db|52956728
+猫和老鼠CD3-宝贝猫咪.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-宝贝猫咪.avi|4a4fc2e7f8eb8cdd3927735334be6dfd|57119158
+猫和老鼠CD3-宠物之争.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-宠物之争.avi|81e14091f8877509e7ee120596a4d8ee|46162376
+猫和老鼠CD3-屋子里有医生吗.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-屋子里有医生吗.avi|64f73a863231f044b4dc8a8b3e5caec3|51436278
+猫和老鼠CD3-幽灵又出现.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-幽灵又出现.avi|4afdc05ab70b9b343c150ebee21d1b1f|58679874
+猫和老鼠CD3-扬杜老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-扬杜老鼠.avi|1c80dd4456de444d14c1a1354eb7c257|54536968
+猫和老鼠CD3-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-特别收录.avi|e2508c823be8d56b6b819892124ea2e1|55746030
+猫和老鼠CD3-狗屋.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-狗屋.avi|21e4248e624585f696065fc72a1eb640|43590068
+猫和老鼠CD3-狗惹麻烦.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-狗惹麻烦.avi|33843d630d1947f1345af36e59f78d76|56344286
+猫和老鼠CD3-甜蜜的家.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-甜蜜的家.avi|fd167d3226c66c438f38e9fe4e14edb5|65648384
+猫和老鼠CD3-祖鲁猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-祖鲁猫.avi|65dcce9c7b2ebe56782c8b00c784890a|51019822
+猫和老鼠CD3-约翰老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-约翰老鼠.avi|28007ebf7feeed0cb5732deed55fe9e3|57147606
+猫和老鼠CD3-饥饿的老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD3-饥饿的老鼠.avi|b448bb53d55706f3a3ab96a55cce538c|48381128
+猫和老鼠CD4-不收缩的老鼠杰瑞.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-不收缩的老鼠杰瑞.avi|c3dcbd23ca101ff66b2084b8da5ca05d|49614096
+猫和老鼠CD4-双人高尔夫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-双人高尔夫.avi|d4e67d086aec63ead842a1489b3a1790|50893012
+猫和老鼠CD4-寂寞的老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-寂寞的老鼠.avi|10947b20f294a5260ef4fbbc682177b6|58160912
+猫和老鼠CD4-寻梦小仔.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-寻梦小仔.avi|02594e6bb60e068d087299d5db645f35|55814480
+猫和老鼠CD4-小老鼠的生活故事.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-小老鼠的生活故事.avi|6d8f282fcf41da9ac00a7a21979fdaae|40881364
+猫和老鼠CD4-小雪人喜欢我.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-小雪人喜欢我.avi|bc8a2ee886303b511eea43de6b77921a|56739008
+猫和老鼠CD4-汤姆的能量.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-汤姆的能量.avi|e5c2b13c4742c2149b0b8bc91e2912b1|47687646
+猫和老鼠CD4-物以类聚.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-物以类聚.avi|972170cd0d0f534c49b01eb994d94b05|57258746
+猫和老鼠CD4-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-特别收录.avi|223cfb24978a11ec780725a41dfef787|65074910
+猫和老鼠CD4-猫儿钓鱼记.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-猫儿钓鱼记.avi|1afd5117af9b95e8f40b77e4273bd0ab|55677806
+猫和老鼠CD4-真假猎犬.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-真假猎犬.avi|41a291ce9bee48faf74d7d7a854ad0d8|50162956
+猫和老鼠CD4-请保持安静.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-请保持安静.avi|615f44841c357dee908e5a4d43e61600|55129274
+猫和老鼠CD4-超级猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-超级猫.avi|988098da0db0f8674bcfd22125a1bd18|56531714
+猫和老鼠CD4-鼠来晚餐.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD4-鼠来晚餐.avi|feef59bfb7ec950730fd1da19edfd7b2|52652084
+猫和老鼠CD5-决斗.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-决斗.avi|1568b22886276464ebdb32e6ad9e6e4f|43546762
+猫和老鼠CD5-四处蹿的杰瑞.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-四处蹿的杰瑞.avi|1cfc601f9bc8fdb9f148286a043efd5b|44601014
+猫和老鼠CD5-小犬显威.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-小犬显威.avi|e9e1985e06e77f0ae7b011845de30279|52650290
+猫和老鼠CD5-拿坡里老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-拿坡里老鼠.avi|be99d50704edb68da670bb5e12954ce2|52113108
+猫和老鼠CD5-捕鼠的烦恼.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-捕鼠的烦恼.avi|c5e1b8959dd3741d7955211acf34fcf0|49177046
+猫和老鼠CD5-操控老鼠的生活.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-操控老鼠的生活.avi|e0503b92b44d6287b6826a28d10ba5f1|48362194
+猫和老鼠CD5-有理的宝贝.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-有理的宝贝.avi|a47aea4360d3a0be5afdb5038e83f198|49798624
+猫和老鼠CD5-汤姆猫演唱会.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-汤姆猫演唱会.avi|917ef751521e7176264fd9b608f7dfca|47550238
+猫和老鼠CD5-爱护动物周.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-爱护动物周.avi|f73ba938addc6b7f3d59b32216a18f4d|47399790
+猫和老鼠CD5-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-特别收录.avi|948e8fde965dffed31cf29eeeb8d9f2f|61155060
+猫和老鼠CD5-猫的痛感.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-猫的痛感.avi|ecee04d1d76baa5ea7db86445d3cf686|43640886
+猫和老鼠CD5-神奇的老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-神奇的老鼠.avi|3a2a405f6e75dd680b3dfc32f93c32dd|49406506
+猫和老鼠CD5-秃鹰变奏曲.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-秃鹰变奏曲.avi|ae93aa050c486cccbcf8e0c8bee2d7d6|52833136
+猫和老鼠CD5-顶棚上的老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD5-顶棚上的老鼠.avi|039ddbfa4e6c26743f9792052f22b8c3|51250262
+猫和老鼠CD6-休战伤害.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-休战伤害.avi|bf8ccdbd928ec8f51aedb47e2ca610d2|57829790
+猫和老鼠CD6-倒霉的一天.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-倒霉的一天.avi|d727cc4602d78c70e86bef51824bb561|43728724
+猫和老鼠CD6-兼职朋友.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-兼职朋友.avi|7613cad8b6a07e1112f3a166df360173|56997066
+猫和老鼠CD6-博士教学班.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-博士教学班.avi|946c71bbd22ae4e5cfc4a0f2bfb517bc|54683414
+猫和老鼠CD6-天上普丝.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-天上普丝.avi|fc78bbe05ee5177311fa68fa376d4e68|56177518
+猫和老鼠CD6-小鬼难缠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-小鬼难缠.avi|49cf1d659c5f22a7e37f6c8b7595a196|54350648
+猫和老鼠CD6-我为杰瑞而疯狂.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-我为杰瑞而疯狂.avi|25cfc71c307c71168cbcdc7615ad1462|45777536
+猫和老鼠CD6-房子里的老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-房子里的老鼠.avi|ddad3983fc8117e191df7bf073b63a28|56822618
+猫和老鼠CD6-捕鼠兄弟.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-捕鼠兄弟.avi|ffbdbdb6afa60c755d6f1ea189ca9520|47709762
+猫和老鼠CD6-没有毛的束缚.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-没有毛的束缚.avi|6c47bb1ca0ea7f582ea4899f2f52ad32|45583360
+猫和老鼠CD6-海水玩具鸭.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-海水玩具鸭.avi|8f98381b155ef22b038b3933e11ba7ba|52417170
+猫和老鼠CD6-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-特别收录.avi|809a03b1eda0bf50039b3944280df91b|62755028
+猫和老鼠CD6-老摇椅上的汤姆.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-老摇椅上的汤姆.avi|f974927b877661be075ff391d092d3e3|54399174
+猫和老鼠CD6-老鼠打扫记.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-老鼠打扫记.avi|d49562acf79cc1b4035b22701c9401ce|50607526
+猫和老鼠CD6-麻烦的诞生.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD6-麻烦的诞生.avi|7b9e1e2168937f40e813b204352c6784|54993008
+猫和老鼠CD7-偷懒的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-偷懒的猫.avi|4fb29cb61d13b3178f890222085d585f|51388960
+猫和老鼠CD7-卡若瓦猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-卡若瓦猫.avi|fa8e063dc0cf693fbb3a7833342a14cf|50790824
+猫和老鼠CD7-小鸭子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-小鸭子.avi|1337fd33e7acc3bba706278d8cfdab38|51884282
+猫和老鼠CD7-杰瑞，如此执拗.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-杰瑞，如此执拗.avi|7245c7c359a0fd7e8a2407fe26fc24d1|47811922
+猫和老鼠CD7-汤姆小雪人.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-汤姆小雪人.avi|80fa404efc2d897ffb982d08aefbc60a|46330888
+猫和老鼠CD7-烹饪时间.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-烹饪时间.avi|7d6e97464eb4cd0dde99a86ac2e1de06|53350876
+猫和老鼠CD7-爆竹风波.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-爆竹风波.avi|220240b801f49678c32f35d97d33cfed|49534366
+猫和老鼠CD7-爱我就要爱我的老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-爱我就要爱我的老鼠.avi|0dd1d44ccacbae8584eeb0515c51e4df|45170352
+猫和老鼠CD7-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-特别收录.avi|03f9bf3b0a0b9756068d28ef015b6a31|49797142
+猫和老鼠CD7-猎鸭季.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-猎鸭季.avi|b88e5f934f241027d48ec8f7c2dda720|51600078
+猫和老鼠CD7-猫变老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-猫变老鼠.avi|e5b376c34c17295739e4bb4582ce0428|47275570
+猫和老鼠CD7-网球白痴.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-网球白痴.avi|2cd52b836f4c8d9725b88a8ca198e43e|49717352
+猫和老鼠CD7-老鼠年.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-老鼠年.avi|ff99202f5afe1657d52ed4cee8e711ed|44239570
+猫和老鼠CD7-荒岛假期.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-荒岛假期.avi|73a8104a8fbd2e30417bf477848b9739|48046808
+猫和老鼠CD7-贪吃的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD7-贪吃的猫.avi|fe565d42593a624e519075576f291517|52025246
+猫和老鼠CD8-两只猫的故事.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-两只猫的故事.avi|3c8ef7ef8479321b476ecc789e16e664|48010590
+猫和老鼠CD8-可怕的白鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-可怕的白鼠.avi|16faac114d67dc10b248731b200debc4|46635072
+猫和老鼠CD8-国王的侍卫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-国王的侍卫.avi|25663568519532d3083f834cd56adabb|52533258
+猫和老鼠CD8-太阳系的猫叫声.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-太阳系的猫叫声.avi|e35b1fdfcf6f08623e294a83b6794106|47527590
+猫和老鼠CD8-小说风波.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-小说风波.avi|33f85e093e18a0f0742fef02720ccf6a|53215778
+猫和老鼠CD8-有恩必报.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-有恩必报.avi|346ccb673efaaee97bdb176bb8379d84|50329226
+猫和老鼠CD8-机器猫风波.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-机器猫风波.avi|710bc52f12e0cf964abc5b86cd6a6b09|48128042
+猫和老鼠CD8-杰瑞与小象.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-杰瑞与小象.avi|8fe446d37404c1aabb45c6870130447b|50884352
+猫和老鼠CD8-杰瑞比猫咪聪明.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-杰瑞比猫咪聪明.avi|d672f90e28528c77c31b35c563ff7cd7|51081334
+猫和老鼠CD8-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-特别收录.avi|9cb3321c08550f3e17a3b48b98792b9e|58962444
+猫和老鼠CD8-行船猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-行船猫.avi|ce1835fc0fc6ecb42c2c4eea4341b2a3|51023768
+猫和老鼠CD8-西部大懒猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-西部大懒猫.avi|05d744a6d0b8717c95cd37bed59d1223|45735488
+猫和老鼠CD8-陷入绝境的猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-陷入绝境的猫.avi|84de59231d9bfc08fbd4a8a7cc5bb76b|46133346
+猫和老鼠CD8-鱼缸里的猫叫声.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD8-鱼缸里的猫叫声.avi|0199edd80a70c5963c102ac121bbd704|45696188
+猫和老鼠CD9-丑小鸭.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-丑小鸭.avi|aaf3f7997b7985f9aa6344819147451f|46907268
+猫和老鼠CD9-佩克斯.佩斯特.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-佩克斯.佩斯特.avi|3dd745e4f94411d0a72337f370344562|48148534
+猫和老鼠CD9-南飞的鸭子.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-南飞的鸭子.avi|59b3dee7f486231ce23daf5d3163374e|45183830
+猫和老鼠CD9-小狗的故事.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-小狗的故事.avi|2f118732741fbe005db11e7beefbb726|50319268
+猫和老鼠CD9-小狗野餐.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-小狗野餐.avi|3fdb648f272ded07502403f430a450e3|50142428
+猫和老鼠CD9-惊讶的猫咪.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-惊讶的猫咪.avi|daedb16d195f794667eddb199108d077|48167858
+猫和老鼠CD9-捕鼠陷阱.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-捕鼠陷阱.avi|798a8253063bd80c2fd33e7ea6810606|47705300
+猫和老鼠CD9-汤姆与小老鼠.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-汤姆与小老鼠.avi|00db759e4389dc96e7d961be8a2ea235|47897904
+猫和老鼠CD9-特别收录.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-特别收录.avi|b9b986a7d1869d4242cdb9a20c882509|69188350
+猫和老鼠CD9-老鼠出售.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-老鼠出售.avi|a74712bada5e444253787b1d89c522ca|49837382
+猫和老鼠CD9-老鼠罐头工厂.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-老鼠罐头工厂.avi|0fed0a795595452bc916456ca4409035|47670772
+猫和老鼠CD9-自作聪明的笨猫.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-自作聪明的笨猫.avi|6edd55c902d9c20ea6440b839743ab8d|49638578
+猫和老鼠CD9-进步与机械化.avi|J:\动画\猫和老鼠\猫和老鼠50周年10DVD珍藏版\猫和老鼠CD9-进步与机械化.avi|992e83695cb6544f72d038e75a724993|41713118
+01.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\01.asf|2faea172aa4f149c02f9a37ee45f7608|16931297
+02.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\02.asf|aa5f8b6993b2d495b304525936d31e4e|14627297
+03.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\03.asf|28282882d0ea5a2c7dbbe6f24b27a339|15587297
+04.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\04.asf|7d678f23836a665b2e80aa80d40d5c39|15072737
+05.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\05.asf|ebe6df532ee9b335607dd9107172bd22|13490657
+06.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\06.asf|c893e9b1d28bc59e53edba4d83860ef7|15364577
+07.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\07.asf|67d0ec015253ebf3bf10d6793b824de3|16078817
+08.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\08.asf|6d6c9721dbbff5843bc026d61b76f644|16040417
+09.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\09.asf|d3495cd46e54eed7bbbc48df7b35b86f|17491937
+10.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\10.asf|1fd435c591defcd34a28a096be01276c|13705697
+11.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\11.asf|072d72ba4f78380ef5f8259d055a7519|20855777
+12.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\12.asf|6d4e29b2bead8255e40a6cb022f97d4b|14681057
+13.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\13.asf|95b8ef96c150719b3c9a94176e151fcb|15667937
+14.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\14.asf|0bb20c26f256eaee3b1f3ee6ae2da569|16823777
+15.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\15.asf|796878699e946ed6ccd7a0c0d534896e|14773217
+16.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\16.asf|0b2f9f5dcc535d5ce346d8812a80b86f|17875937
+17.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\17.asf|138cb859b230f92a2111fc6a84e4b49f|15249377
+18.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\18.asf|4c3713be48466cdb9aefb320b6825b2e|14327777
+19.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\19.asf|0fcc484528bbc4c164b723a91fd936f8|15579617
+20.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\20.asf|37ca2fd303923530c5b4915dfb4d236f|17346017
+21.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\21.asf|79a3d562fd8bfca09417ef3e298a4040|17311457
+22.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\22.asf|7765f231cf83a290fcb9097bb3185a70|16739297
+23.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\23.asf|9e54f2510f9f20f0cb3de919154de5f3|14596577
+24.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\24.asf|e2b7f82db789eb602eb9e48f6ce078a3|16781537
+25.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\25.asf|adfe07aa3e162e0766b3445791272f40|15794657
+26.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\26.asf|67bfd3dfbf836583df03d5a49351e821|17872097
+27.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\27.asf|60c6b9d160ed51488f3fd35b2cc53d62|15153377
+28.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\28.asf|d73317773f250031b3fb1b6a5fcd3d09|16462817
+29.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\29.asf|39a4bf64b3aa6591a0c9903e61514c9d|16324577
+30.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\30.asf|28e3d9b4a2abc324736bc59ff17e74a5|16082657
+31.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\31.asf|4ac202fc57bcaf5641ecf5bc591d8ae5|16570337
+32.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\32.asf|2326208623ab166c94821cb7927decbe|13452257
+33.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\33.asf|cf5cc4884f621fd57a1c8f6a4358f3da|15986657
+34.asf|J:\动画\猫和老鼠\猫和老鼠东北版全集\34.asf|2f7b7dc828d087509c5413c44ea2b37b|15944417
+豫东调红脸王演唱会（下）.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）.mp3|b9cf390b4999630dbc5a80a8f210c940|61094797
+豫东调红脸王演唱会（下）1.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）1.mp3|1d33d07f1df71931dab7f51a950c3d56|6284466
+豫东调红脸王演唱会（下）10.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）10.mp3|e9b3ca1afc09d0749d15a08669a63ffc|4391111
+豫东调红脸王演唱会（下）2.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）2.mp3|726df36b5bd5fe0d2caec59777150287|6250193
+豫东调红脸王演唱会（下）3.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）3.mp3|41ba312dab02bf96f1a3999a9e2f2a39|6299094
+豫东调红脸王演唱会（下）4.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）4.mp3|9cd759c31c69a3d26bb6dd3e11c0507a|6341726
+豫东调红脸王演唱会（下）5.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）5.mp3|25ada54929d58c425bcded7b706422bb|6251865
+豫东调红脸王演唱会（下）6.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）6.mp3|c3b5203c85e6ada1bc90e7602fc990f7|6336293
+豫东调红脸王演唱会（下）7.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）7.mp3|aa082f83701d18580a1da4af1e084d7e|6341726
+豫东调红脸王演唱会（下）8.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）8.mp3|5382b52932aa3dae61a436e0fc845686|6315813
+豫东调红脸王演唱会（下）9.mp3|J:\戏曲\八大红脸\豫东调红脸王演唱会（下）9.mp3|87ac08eaf6feafca9e9a6eaa6ccfc08c|6334203
+豫剧八大红脸.mp3|J:\戏曲\八大红脸\豫剧八大红脸.mp3|f2319592315f1d3f380cdde6855c9e03|30677818
+豫剧八大红脸1.mp3|J:\戏曲\八大红脸\豫剧八大红脸1.mp3|e9671070da5885f91fa03ac7a3078885|6778494
+豫剧八大红脸2.mp3|J:\戏曲\八大红脸\豫剧八大红脸2.mp3|8f5ef5d3e85e1cfbb6b226d594d34608|6816528
+豫剧八大红脸3.mp3|J:\戏曲\八大红脸\豫剧八大红脸3.mp3|4144eab9d8f167f15ac7dd892587bbdb|6814856
+豫剧八大红脸4.mp3|J:\戏曲\八大红脸\豫剧八大红脸4.mp3|f054392945a5805475f8568c6681aebc|6803989
+豫剧八大红脸5.mp3|J:\戏曲\八大红脸\豫剧八大红脸5.mp3|4f80a92e06505e3d434988275cd3122b|3487065
+豫剧红脸王刘新民专辑.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑.mp3|4395bf7825de750bbb725a6a54ad3971|56501844
+豫剧红脸王刘新民专辑1.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑1.mp3|42bba93b6c82905c06a96be833e49e00|6392717
+豫剧红脸王刘新民专辑2.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑2.mp3|cb2127180b960475cde074c50163ead2|6725831
+豫剧红脸王刘新民专辑3.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑3.mp3|a3124bfae26452a487d1364a26aef3d4|6360952
+豫剧红脸王刘新民专辑4.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑4.mp3|dfdc5b450a13487e30a0af46cccffde6|6600861
+豫剧红脸王刘新民专辑5.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑5.mp3|b412e524bcd7a48f91332704d2420baa|5988551
+豫剧红脸王刘新民专辑6.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑6.mp3|9479a03a85021f068c1b7952c40b6149|6650180
+豫剧红脸王刘新民专辑7.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑7.mp3|85acf70c58b97e3e84877c4e9409f0e9|6055006
+豫剧红脸王刘新民专辑8.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑8.mp3|827521aa342ee458ea7a012567a174f8|6135672
+豫剧红脸王刘新民专辑9.mp3|J:\戏曲\八大红脸\豫剧红脸王刘新民专辑9.mp3|5352ea651deb7e0a28366eaa5b05fc5e|5637883
+MUSIC41.mp3|J:\戏曲\其它\A16撕蛤蟆\MUSIC41.mp3|4c1ff4612dbb9a5a872d4a188cac3805|25057939
+MUSIC42.mp3|J:\戏曲\其它\A16撕蛤蟆\MUSIC42.mp3|ae05cd8bc0152581b16dd39012fc4065|10053205
+01 赵钱孙李.mp3|J:\戏曲\其它\B23胡中花坠子精选\01 赵钱孙李.mp3|74c8d272a53718d40ed384eaa283556b|6958635
+02 九子图.mp3|J:\戏曲\其它\B23胡中花坠子精选\02 九子图.mp3|16fa157f0843cb10400fdf3dc59bea25|37542380
+03 大瞎话.mp3|J:\戏曲\其它\B23胡中花坠子精选\03 大瞎话.mp3|cd805f7d4ce20a397b972efee0669706|13334184
+04 韩湘子讨封.mp3|J:\戏曲\其它\B23胡中花坠子精选\04 韩湘子讨封.mp3|8b43359f5c8e582dc8d35c8bf3397cf4|34733695
+05 大姑娘妨女婿.mp3|J:\戏曲\其它\B23胡中花坠子精选\05 大姑娘妨女婿.mp3|b2815530e4443738a3fef3510341bdff|20427788
+06 傻子认扁.mp3|J:\戏曲\其它\B23胡中花坠子精选\06 傻子认扁.mp3|827c65b0fae3e67a46204632cba0617d|17808019
+07 蓝老抠.mp3|J:\戏曲\其它\B23胡中花坠子精选\07 蓝老抠.mp3|6d6fb1fda8b3d3a3e21d0a20b84dfceb|22373806
+08 王老八卖瓜.mp3|J:\戏曲\其它\B23胡中花坠子精选\08 王老八卖瓜.mp3|24b78a6a8798c453672c4211fef94e79|36596957
+王金豆借粮3.mp3|J:\戏曲\其它\Z2王金豆借粮（道情）\王金豆借粮3.mp3|2d7a74e8e14db931916d14970669cad3|78241575
+回龙传01.mp3|J:\戏曲\其它\回龙传\回龙传01.mp3|e62f53a82985d5a7a22731cb60af8ed5|45720588
+回龙传02.mp3|J:\戏曲\其它\回龙传\回龙传02.mp3|b1c8584821b371f15ab2fa9977cc0595|44428676
+回龙传03.mp3|J:\戏曲\其它\回龙传\回龙传03.mp3|c6784f2755f57e516a3c4f8fbfb406ed|47720522
+回龙传04.mp3|J:\戏曲\其它\回龙传\回龙传04.mp3|1528ea974fe49374a8656687e95aaca6|42889332
+回龙传05.mp3|J:\戏曲\其它\回龙传\回龙传05.mp3|2811db12260f323c860cbeed2c77325a|2554599
+回龙传06.mp3|J:\戏曲\其它\回龙传\回龙传06.mp3|f58bd63f8d70f85536831d74ac94a137|39035330
+回龙传07.mp3|J:\戏曲\其它\回龙传\回龙传07.mp3|30f560664c1abdb8ec9cfb063e5823c3|38729384
+回龙传08.mp3|J:\戏曲\其它\回龙传\回龙传08.mp3|c3219714e32036a492bde04112bf9ba8|39105548
+VVSEQ04.mp3|J:\戏曲\其它\民间大鼓\VVSEQ04.mp3|48bf12671ca965845ef2181343e0d5d7|10644199
+VVSEQ05.mp3|J:\戏曲\其它\民间大鼓\VVSEQ05.mp3|82d0436cba123f5571891d57f9d74b46|4244826
+VVSEQ07.mp3|J:\戏曲\其它\民间大鼓\VVSEQ07.mp3|fe15baaea20eb4d4b2376c396eb1f002|13170344
+VVSEQ08.mp3|J:\戏曲\其它\民间大鼓\VVSEQ08.mp3|a0548e9a3109220afbef91b1a0e016a4|8444062
+VVSEQ09.mp3|J:\戏曲\其它\民间大鼓\VVSEQ09.mp3|a8373ea964ce5d9fa3e8995a791a5878|553828
+VVSEQ10.mp3|J:\戏曲\其它\民间大鼓\VVSEQ10.mp3|ced4eb87d8d410504ef1b129f966fac2|22838158
+VVSEQ11.mp3|J:\戏曲\其它\民间大鼓\VVSEQ11.mp3|84aa71d3a4263e3d52339467efa5335e|14366544
+VVSEQ12.mp3|J:\戏曲\其它\民间大鼓\VVSEQ12.mp3|0a170617fdc9c76173adea4cbaa26767|6376836
+VVSEQ13.mp3|J:\戏曲\其它\民间大鼓\VVSEQ13.mp3|3fc82ef25fc5a70dfabf948a0bfa89da|7847634
+VVSEQ14.mp3|J:\戏曲\其它\民间大鼓\VVSEQ14.mp3|a8373ea964ce5d9fa3e8995a791a5878|553828
+李世民登龙位万民称颂 唐喜成 三哭殿.mp3|J:\戏曲\其它\选段\李世民登龙位万民称颂 唐喜成 三哭殿.mp3|4a5c24fbfc005a29a12d41b011011ac2|1038966
+河南坠子 回龙传 吴宗俭.mp3|J:\戏曲\其它\选段\河南坠子 回龙传 吴宗俭.mp3|ab66d71e5156475477c768d1e1954c67|46958929
+豫剧 刘忠河 打金枝 唱段.mp3|J:\戏曲\其它\选段\豫剧 刘忠河 打金枝 唱段.mp3|9c8740835322bb5ddd2b2b643f47d7c2|2663740
+豫剧 包青天 秦香莲抬头观 张宝英.mp3|J:\戏曲\其它\选段\豫剧 包青天 秦香莲抬头观 张宝英.mp3|b6d21f2c26e70370659a0ec34c32fc9f|691955
+豫剧 包龙图坐监 李斯忠.mp3|J:\戏曲\其它\选段\豫剧 包龙图坐监 李斯忠.mp3|76b8830fd03de2eaed84efb38e872081|12662976
+豫剧 卷席筒 未开言不由我肝肠寸断 牛得草.mp3|J:\戏曲\其它\选段\豫剧 卷席筒 未开言不由我肝肠寸断 牛得草.mp3|b2c15f14102c38799aab44157e7a6d81|1189901
+豫剧 唐喜成 三哭殿.mp3|J:\戏曲\其它\选段\豫剧 唐喜成 三哭殿.mp3|0ce08450876dc79a83342fec46524252|7938803
+豫剧 朝阳沟 咱两个在学校整整三年.mp3|J:\戏曲\其它\选段\豫剧 朝阳沟 咱两个在学校整整三年.mp3|fa0252c78d98a6221a0049ddff07b28c|2599287
+豫剧 马金凤 穆桂英挂帅(辕门外三声炮如同雷震).mp3|J:\戏曲\其它\选段\豫剧 马金凤 穆桂英挂帅(辕门外三声炮如同雷震).mp3|27d421c60dbb0fbeb5940d23b47366e6|1255907
+豫剧--朝阳沟好地方名不许传.mp3|J:\戏曲\其它\选段\豫剧--朝阳沟好地方名不许传.mp3|57bd0846f112a36708b231ca1af7a08d|2841989
+豫剧--申凤梅 收姜维(一支将令往下传).mp3|J:\戏曲\其它\选段\豫剧--申凤梅 收姜维(一支将令往下传).mp3|c65e9b547dd0e40a15b2b89d3898a14b|1074824
+豫剧-唐喜成-三哭殿.mp3|J:\戏曲\其它\选段\豫剧-唐喜成-三哭殿.mp3|0ce08450876dc79a83342fec46524252|7938803
+豫剧-打金枝。劝宫.mp3|J:\戏曲\其它\选段\豫剧-打金枝。劝宫.mp3|1861cd4011cfde9b6d337501f77f0b2e|1663760
+豫剧—劝爹娘莫难过.mp3|J:\戏曲\其它\选段\豫剧—劝爹娘莫难过.mp3|bff743b09270779601e10d92ba1cefe2|2222708
+豫剧《大祭桩》婆母娘且息怒(常香玉).mp3|J:\戏曲\其它\选段\豫剧《大祭桩》婆母娘且息怒(常香玉).mp3|cc9e8e406662953cf5ea75c8df4ba6f7|1261612
+豫剧红脸刘庸回北京全集.mp3|J:\戏曲\其它\选段\豫剧红脸刘庸回北京全集.mp3|bf4d06e6bac99f22f2146ac6aae1995f|5043960
+01.嘟啊嘟啊铃声.mp3|J:\歌曲\Love\01.嘟啊嘟啊铃声.mp3|64a0101b25f9822ebd2b0c0397b59616|2155584
+020.你怎么可以爱上别的男人_dj_阿玮rmx.mp3|J:\歌曲\Love\020.你怎么可以爱上别的男人_dj_阿玮rmx.mp3|c9832ee8dd341fffc828f1a6187d4e20|3622448
+067刘欢-从头再来.mp3|J:\歌曲\Love\067刘欢-从头再来.mp3|c28cef6e3e87407729e80b1f260ac5c8|3553906
+06_ Dragostea Din Tei Feat O-Zone.mp3|J:\歌曲\Love\06_ Dragostea Din Tei Feat O-Zone.mp3|b08b70977fd1559a5140b854755480d6|5864430
+078腾格尔-天堂..mp3|J:\歌曲\Love\078腾格尔-天堂..mp3|1a47e7538f5c10adb4a75e2bd6deb249|7288791
+1.天与地.MP3|J:\歌曲\Love\1.天与地.MP3|ce10453b92af1c8fca960fdf4775ac79|4508090
+110.李娜-信天游.mp3|J:\歌曲\Love\110.李娜-信天游.mp3|06054f3260659e4ddd09e55d962f3cd2|5800566
+156 到哪里找那么好的人 陈明真.mp3|J:\歌曲\Love\156 到哪里找那么好的人 陈明真.mp3|3eaf42713d7d8c36fd3da0eb5a98a2a2|1740204
+4.神秘的眼睛.MP3|J:\歌曲\Love\4.神秘的眼睛.MP3|19514bbc91229a3d918c97c765a00d2c|3553635
+5566 - 情人插曲 - mvp 滨崎步 难以言喻.mp3|J:\歌曲\Love\5566 - 情人插曲 - mvp 滨崎步 难以言喻.mp3|f66658645d10aae8a4b5a43a14cb3740|4577280
+beyond - 海阔天空 - beyond the story live 2005.mp3|J:\歌曲\Love\beyond - 海阔天空 - beyond the story live 2005.mp3|b17e7c4c40c18690bb51f467b0073455|8868399
+beyond、黄家驹 - 冷雨夜.mp3|J:\歌曲\Love\beyond、黄家驹 - 冷雨夜.mp3|35f3b69c8ce6af0909b36590db80eab9|4771968
+beyond、黄家驹 - 海阔天空.mp3|J:\歌曲\Love\beyond、黄家驹 - 海阔天空.mp3|498ffd010763b5b7f6b5dc637fd760e8|5148882
+disco.的士高-迪斯科和舞曲 - 这班人（最新舞厅dj领舞版）.mp3|J:\歌曲\Love\disco.的士高-迪斯科和舞曲 - 这班人（最新舞厅dj领舞版）.mp3|5ec9b221fc598638836c3320330b0d87|3518464
+DJ - 酒吧嗨曲原创.mp3|J:\歌曲\Love\DJ - 酒吧嗨曲原创.mp3|f4c1f3db69b7e66b616f3fd0233beb7d|4685477
+dj 波仔超快版全中文串烧 超长现场版.mp3|J:\歌曲\Love\dj 波仔超快版全中文串烧 超长现场版.mp3|78465790fdaa540965e0674f9f99ecc3|12990666
+dj 版 站台.mp3|J:\歌曲\Love\dj 版 站台.mp3|855b8ec6920c621e6775abc1e2e8c432|2696095
+dj 独一无二 劲爆狂 dj 舞厅现场的士高版.mp3|J:\歌曲\Love\dj 独一无二 劲爆狂 dj 舞厅现场的士高版.mp3|d051caed1cd9e5f26ca7ad21a64ec886|1679616
+dj 舞曲 摇头舞霸 迪斯科.mp3|J:\歌曲\Love\dj 舞曲 摇头舞霸 迪斯科.mp3|e19f0f1f684c157886830a5f8eba8c35|4631587
+dj-芭比娃娃－摇啊摇咧.mp3|J:\歌曲\Love\dj-芭比娃娃－摇啊摇咧.mp3|e346f7260b65ecbabae9100db540c9d1|2625169
+Don Ip-星空之城.mp3|J:\歌曲\Love\Don Ip-星空之城.mp3|07103c622bbba72ba481df20556c0505|9627009
+it's ok - dj - 超好听 经典非主流空间 慢摇歌曲.mp3|J:\歌曲\Love\it's ok - dj - 超好听 经典非主流空间 慢摇歌曲.mp3|3a75a545fcbb629f18d1b608a6cda133|1562667
+love love love.mp3|J:\歌曲\Love\love love love.mp3|a453890438360d4c7e206c74a6ee5e5c|3676037
+Rolling In The Deep .mp3|J:\歌曲\Love\Rolling In The Deep .mp3|9b21178c12f6e3452b473a8442a0e0f1|5192909
+T.R.Y-不是因为寂寞才想你.mp3|J:\歌曲\Love\T.R.Y-不是因为寂寞才想你.mp3|55c27a4e88d9b8abe88c285d8540b90f|4161906
+一首让郑智化坐了七年牢的歌.mp3|J:\歌曲\Love\一首让郑智化坐了七年牢的歌.mp3|c38b8291113c899e61cba1922a67303d|3811858
+丁童-等到来生再相遇.mp3|J:\歌曲\Love\丁童-等到来生再相遇.mp3|277893b9f3652c47fbe044b40cd96de2|3741130
+丁香花.mp3|J:\歌曲\Love\丁香花.mp3|93150a861af52736a2633ca975a14692|4024427
+下南京 刘墉下南京 刘新民.mp3|J:\歌曲\Love\下南京 刘墉下南京 刘新民.mp3|0182a02f953cdf4eea8111df670f19c1|3864626
+不愿放开你的手.mp3|J:\歌曲\Love\不愿放开你的手.mp3|a24bcbd968251ad143bf2e5cdebaef95|4112846
+于玄子 - 美丽的姑娘.mp3|J:\歌曲\Love\于玄子 - 美丽的姑娘.mp3|23ea9fc202929b9fba27911d12f6da6f|3063640
+亲爱的小孩.mp3|J:\歌曲\Love\亲爱的小孩.mp3|a0c64f86c1203d6054861fe3ab3d40cb|6721533
+仁青-格桑花开.mp3|J:\歌曲\Love\仁青-格桑花开.mp3|dd7cbf3244758f3152d7947b6fde2c57|5152968
+任贤齐 - 只爱你一个人.mp3|J:\歌曲\Love\任贤齐 - 只爱你一个人.mp3|b1ca2347bbdea91d7596785349eeec45|5174462
+任贤齐 - 很受伤.mp3|J:\歌曲\Love\任贤齐 - 很受伤.mp3|e36c309fbb768912e4982636a8b3f227|4511033
+任贤齐 - 我是一只小小鸟.mp3|J:\歌曲\Love\任贤齐 - 我是一只小小鸟.mp3|015e616f1b5f70d8df3d918dc30fbfed|5595845
+任贤齐 - 花太香.mp3|J:\歌曲\Love\任贤齐 - 花太香.mp3|cb4c8d36194bd965160e0dc4bcd58440|4478850
+任贤齐、徐熙媛-心肝宝贝.mp3|J:\歌曲\Love\任贤齐、徐熙媛-心肝宝贝.mp3|3bcb99190cb2a48c0186bde93213c6d3|4264147
+任贤齐、杨千桦- 花好月圆夜.mp3|J:\歌曲\Love\任贤齐、杨千桦- 花好月圆夜.mp3|36cebe85267d1131eef2f9efaf6f947b|3560721
+何曼婷、许嵩-素颜.mp3|J:\歌曲\Love\何曼婷、许嵩-素颜.mp3|66dae22d9a5d6c2c50afd2492e97b7ea|3822268
+何欣-我在追你在逃.mp3|J:\歌曲\Love\何欣-我在追你在逃.mp3|b35ca5ed7d34385ffa1ebe2ff5485564|5663654
+何海涛-离别的痛真的好伤悲.mp3|J:\歌曲\Love\何海涛-离别的痛真的好伤悲.mp3|85f03ebc4f882a5b142db94a018a94f5|5909963
+做你的爱人.mp3|J:\歌曲\Love\做你的爱人.mp3|c6fa83876775416ca0a5ed3fed8a5dc1|3458821
+做我老婆好不好 dj 舞曲.mp3|J:\歌曲\Love\做我老婆好不好 dj 舞曲.mp3|4688dfb4399132d2d92297a2109a3355|4528541
+六哲-多情的人总被无情的伤.mp3|J:\歌曲\Love\六哲-多情的人总被无情的伤.mp3|76467824b0ff38cb4cfbc8866465e8b7|5469413
+六哲-多想把你留住.mp3|J:\歌曲\Love\六哲-多想把你留住.mp3|bd19a2503e606fa3cadbd391d70959a4|4305437
+六哲陈娟儿 - 错错错.mp3|J:\歌曲\Love\六哲陈娟儿 - 错错错.mp3|e13319f6b31150c12c4b5e2558bd6692|4815190
+冰河时代 - 完整.mp3|J:\歌曲\Love\冰河时代 - 完整.mp3|1bcd3bef616fd45b885a6a5741201214|4733912
+凤凰传奇 - 一代天骄.mp3|J:\歌曲\Love\凤凰传奇 - 一代天骄.mp3|d7ec7b494b1bddebb287df8eaeb38d1d|4523699
+凤凰传奇 - 套马杆.mp3|J:\歌曲\Love\凤凰传奇 - 套马杆.mp3|be29e9c749b4d38c8f3fb565f0517168|4471574
+凤凰传奇 - 最炫民族风.mp3|J:\歌曲\Love\凤凰传奇 - 最炫民族风.mp3|8c3f0fa873617558999d516aa745ec63|6793770
+凤凰传奇 - 溜溜的情歌.mp3|J:\歌曲\Love\凤凰传奇 - 溜溜的情歌.mp3|ee66d323a2e794755d07722a03105c5b|5720157
+凤凰传奇 - 爱的狂怒.mp3|J:\歌曲\Love\凤凰传奇 - 爱的狂怒.mp3|36412d4696018b7475fbf78384d0f66f|4107830
+凤凰传奇 - 等爱的玖瑰.mp3|J:\歌曲\Love\凤凰传奇 - 等爱的玖瑰.mp3|da81df15b9b20b803ef8932337e445e7|6918002
+凤凰传奇-全是爱.mp3|J:\歌曲\Love\凤凰传奇-全是爱.mp3|10fa04b2da6a8cb539af5087d73e4dfd|4059681
+凤凰传奇-吉祥如意.mp3|J:\歌曲\Love\凤凰传奇-吉祥如意.mp3|885febf5d9da47d6dbbd4e597811ffa8|4466695
+凤凰传奇-我不是公主.mp3|J:\歌曲\Love\凤凰传奇-我不是公主.mp3|2a7e56b276626a8e67a73ec217d1dce0|3978736
+凤凰传奇-荷塘月色.mp3|J:\歌曲\Love\凤凰传奇-荷塘月色.mp3|3be0a6cd5ace0bc190e26f1fa581c361|10007032
+刀郎-守侯在凌晨两点的伤心酒吧.mp3|J:\歌曲\Love\刀郎-守侯在凌晨两点的伤心酒吧.mp3|f84df2021bc37e9c769a839c85393774|5157198
+刘和刚 - 父亲.mp3|J:\歌曲\Love\刘和刚 - 父亲.mp3|28c8e4f98759d10c5ae0dacd1a8d07c4|4529999
+刘德华 - 一起走过的日子 - 粤.mp3|J:\歌曲\Love\刘德华 - 一起走过的日子 - 粤.mp3|8610d87064889dcc03c5b9c8253b7fee|3815636
+刘德华 - 鸽子情缘.mp3|J:\歌曲\Love\刘德华 - 鸽子情缘.mp3|f8bbd9b47b7bb9040ea9e3b53fe3cddb|3545547
+刘德华-今天.mp3|J:\歌曲\Love\刘德华-今天.mp3|353ace735050677d89d990cb7ff7c91d|3623184
+刘德华-天意.mp3|J:\歌曲\Love\刘德华-天意.mp3|6f895aaf42234894bee666df20c64330|4352253
+刘德华、那英 - 东方之珠.mp3|J:\歌曲\Love\刘德华、那英 - 东方之珠.mp3|2f65769a353f22914c9bca012825d5ec|4193096
+刘思伟 - 老婆和老妈.mp3|J:\歌曲\Love\刘思伟 - 老婆和老妈.mp3|96789799aea7893861249fd6aab293df|4435968
+刘思伟-断翅的天使.mp3|J:\歌曲\Love\刘思伟-断翅的天使.mp3|8109f7bb03ed8cc0b849cbf1a0f00589|4249586
+刘栋升-我的泪为了谁.mp3|J:\歌曲\Love\刘栋升-我的泪为了谁.mp3|4f01eb4d354f6b96a37ce32c1aa64e2e|4408155
+刘欢 - 好汉歌水浒传主题歌.mp3|J:\歌曲\Love\刘欢 - 好汉歌水浒传主题歌.mp3|0380027e72198f46cc3d5210c101af55|3008512
+刘若英 - 为爱痴狂.mp3|J:\歌曲\Love\刘若英 - 为爱痴狂.mp3|92a3a26c6635f51ae11434a98e1678f8|5642855
+刘若英 - 后来.mp3|J:\歌曲\Love\刘若英 - 后来.mp3|94deae331691202f5511aa53dd33a7ce|5464064
+初百军 - 不管还有多少个明天 - dj 慢摇版.mp3|J:\歌曲\Love\初百军 - 不管还有多少个明天 - dj 慢摇版.mp3|80ce78975ae0f3d8baafc0358c4737bf|4644952
+北 郊.mp3|J:\歌曲\Love\北 郊.mp3|ec6bad95c09178bec7dc5e65036009c1|2497272
+华纳群星-祝福你.mp3|J:\歌曲\Love\华纳群星-祝福你.mp3|066f9e1675e19c3452280a9416641953|3137802
+南合文斗-让泪化作相思雨.mp3|J:\歌曲\Love\南合文斗-让泪化作相思雨.mp3|8caa5a59e6494bc565a9bd83f56e89ee|4622337
+叶倩文--潇洒走一回.mp3|J:\歌曲\Love\叶倩文--潇洒走一回.mp3|c22ac1e0b40cf3fd5b0b29b5b8e39421|4051072
+吕方 - 流浪花 - 国语.mp3|J:\歌曲\Love\吕方 - 流浪花 - 国语.mp3|7fd0defa845759a19a75c828ba4c879c|6047347
+听说爱情回来过.mp3|J:\歌曲\Love\听说爱情回来过.mp3|84486c2aef120abd6d8edf7f4ec7bc73|8529573
+吻别 Take Me To Your Heart 英文版.mp3|J:\歌曲\Love\吻别 Take Me To Your Heart 英文版.mp3|a6fafeeb5ac9f9aa61f1b8c5ba57aa73|6356328
+告白.mp3|J:\歌曲\Love\告白.mp3|adda08b72dc0d917c51595aabae0dfd9|5145033
+周华健 - 爱相随.mp3|J:\歌曲\Love\周华健 - 爱相随.mp3|3fc80eb3ab3146aeefaffe4eb14691f7|3539826
+周杰伦 - 彩虹.mp3|J:\歌曲\Love\周杰伦 - 彩虹.mp3|3d898febf7379d58c41fbc9548e54299|10549968
+周杰伦 - 稻香.mp3|J:\歌曲\Love\周杰伦 - 稻香.mp3|a6338f9466bcd102e6b41b5d8ae40710|8941500
+周杰伦-发如雪.mp3|J:\歌曲\Love\周杰伦-发如雪.mp3|627fb49111dc846f293b8eb422f14d08|7169605
+周桐同-花落谁家 - 副本.mp3|J:\歌曲\Love\周桐同-花落谁家 - 副本.mp3|b776d65f7db3975e5b9a85e911bfdeda|4152808
+周桐同-花落谁家.mp3|J:\歌曲\Love\周桐同-花落谁家.mp3|b776d65f7db3975e5b9a85e911bfdeda|4152808
+周艳泓-要嫁就嫁灰太狼.mp3|J:\歌曲\Love\周艳泓-要嫁就嫁灰太狼.mp3|0ff84f17cabea16d174551c3ecd6d3e3|5690755
+四千金-招财进宝.mp3|J:\歌曲\Love\四千金-招财进宝.mp3|5abed414428291d2c3b64abdb11e4c30|4080919
+在心里从此有个你.mp3|J:\歌曲\Love\在心里从此有个你.mp3|7ea213f28485e91bc34a3fcfc73409a1|6761244
+坐上了火车去拉萨 徐千雅正常版.mp3|J:\歌曲\Love\坐上了火车去拉萨 徐千雅正常版.mp3|169fb4684502057f5a72f8eb424b1aef|1683375
+坐上火车去拉萨原唱版.mp3|J:\歌曲\Love\坐上火车去拉萨原唱版.mp3|3c7bbbb1c853470c7bedb91056d691da|8460611
+大海.mp3|J:\歌曲\Love\大海.mp3|a4d14ded03ec3f20dc5c6a735535bf51|4441344
+天空之城 吟唱版.mp3|J:\歌曲\Love\天空之城 吟唱版.mp3|f43e5c4e64a3590f5d8e84108593da9c|5486340
+央金兰泽-爱的思念.mp3|J:\歌曲\Love\央金兰泽-爱的思念.mp3|38b1d036b5f612df954e402131226c91|6009828
+姜玉阳-你幸福你快乐.mp3|J:\歌曲\Love\姜玉阳-你幸福你快乐.mp3|4eafd1acbf8513b8c0a96a11983bef77|5631437
+姜鹏 - 男人的泪.mp3|J:\歌曲\Love\姜鹏 - 男人的泪.mp3|63d245aa1cf69ec597ca230a8f630dfc|5712000
+子冬-爱情休止符.mp3|J:\歌曲\Love\子冬-爱情休止符.mp3|c47ac401222bbc31580945dace558403|7922000
+孙悦、邰正宵 - 好人就有好梦.mp3|J:\歌曲\Love\孙悦、邰正宵 - 好人就有好梦.mp3|5482aeb0f207b78d0fa77209e70523f6|4204253
+孙燕姿 - 我也很想他 - 正式版.mp3|J:\歌曲\Love\孙燕姿 - 我也很想他 - 正式版.mp3|375786b0a738d35b5ec92632866feac9|6198188
+孙燕姿 - 眼泪成诗.mp3|J:\歌曲\Love\孙燕姿 - 眼泪成诗.mp3|62e030a7859a3f49591a495b64c555f3|8936483
+孟庭苇 - 没有情人的情人节 - 快乐下载.mp3|J:\歌曲\Love\孟庭苇 - 没有情人的情人节 - 快乐下载.mp3|6ce1e66eb7b06d4bb7ab2d6d9a9ad647|4210171
+宇桐非 - 感动天感动地.mp3|J:\歌曲\Love\宇桐非 - 感动天感动地.mp3|5926463abed24bbcd0ecc95350925657|4038656
+容中尔甲 - 扎西德勒.mp3|J:\歌曲\Love\容中尔甲 - 扎西德勒.mp3|ba2d5670e27873249bf1a582edc69ae9|3662160
+容中尔甲 - 雅鲁藏布情歌.mp3|J:\歌曲\Love\容中尔甲 - 雅鲁藏布情歌.mp3|c417fd0f775d70ceee1d179e28bb041d|6353442
+小二黑结婚 豫剧 柳兰芳 姚灵生 咱两个.mp3|J:\歌曲\Love\小二黑结婚 豫剧 柳兰芳 姚灵生 咱两个.mp3|c62cd70149f2a2d05fc225fb4781dc20|1024512
+小情歌.mp3|J:\歌曲\Love\小情歌.mp3|1b1673018f342484eb5dae8176141aaa|4486296
+小沈阳 - 求婚.mp3|J:\歌曲\Love\小沈阳 - 求婚.mp3|199f364d28f9ba7d01d7fc2ec7ec95ca|10810377
+屠洪刚-精忠报国.mp3|J:\歌曲\Love\屠洪刚-精忠报国.mp3|1a72f8180de83b84c96a7a2961ca2172|4364508
+崔健 - 一无所有.mp3|J:\歌曲\Love\崔健 - 一无所有.mp3|1c89a47e9a1da108036c72b2775bcaef|5287218
+幸福恋人.mp3|J:\歌曲\Love\幸福恋人.mp3|0533f10f113da3022d7563811cb3f6d0|3731103
+庞龙 - 人在世上飘.mp3|J:\歌曲\Love\庞龙 - 人在世上飘.mp3|e40ba834deb8ac74638d0ca73b934ae8|4155392
+庞龙 - 最亲爱亲爱的老婆.mp3|J:\歌曲\Love\庞龙 - 最亲爱亲爱的老婆.mp3|88b6c4920d556cafcc42c50168ae6f95|3152813
+庞龙-兄弟干杯.mp3|J:\歌曲\Love\庞龙-兄弟干杯.mp3|fa8ddf079dcf48e08bd3eac11500509c|5915922
+庞龙-让泪化做相思雨.mp3|J:\歌曲\Love\庞龙-让泪化做相思雨.mp3|36d376ac2b305c67842fe8aec008ee04|4685409
+庞龙-走了你还有谁.mp3|J:\歌曲\Love\庞龙-走了你还有谁.mp3|8981e2fd6de2311bcd97268a85266669|4658989
+张也-万事如意.mp3|J:\歌曲\Love\张也-万事如意.mp3|d97bbb6fb3591997871103beda35f0a2|3762849
+张卓行-是我不够好.mp3|J:\歌曲\Love\张卓行-是我不够好.mp3|4ce6fc91cfd4209a0213230c444f9354|5211574
+张宇 - 单恋一支花.mp3|J:\歌曲\Love\张宇 - 单恋一支花.mp3|5a8eb9f17f108a803f6692bfd2bc414c|3256320
+张志林-我爱我的老婆.mp3|J:\歌曲\Love\张志林-我爱我的老婆.mp3|97535ffc3111410fb702789b92be10a4|3686400
+张惠妹、张雨生 - 最爱的人伤我最深 - 情歌对唱.mp3|J:\歌曲\Love\张惠妹、张雨生 - 最爱的人伤我最深 - 情歌对唱.mp3|8b0eb78aee65abad640d9299ff07458f|4856194
+张栋梁-北极星的眼泪.mp3|J:\歌曲\Love\张栋梁-北极星的眼泪.mp3|95eb07158221da583637873f795d85c7|4189310
+张芯瑜 - 雨季开始了.mp3|J:\歌曲\Love\张芯瑜 - 雨季开始了.mp3|e32ea349d6158aec21feef7b8b1428c0|5571523
+张震岳 - 再见 - good bye 01 - good bye.mp3|J:\歌曲\Love\张震岳 - 再见 - good bye 01 - good bye.mp3|0e64c8b49b15b1a11a4f89e3520635e7|4520235
+弦子 - 醉清风 - 原创.mp3|J:\歌曲\Love\弦子 - 醉清风 - 原创.mp3|615206a2f5cfec47b969f6e5a8b555b8|4913400
+彭亮 - 渴死的鱼.mp3|J:\歌曲\Love\彭亮 - 渴死的鱼.mp3|f29b652a9f779a5c565fbb54a785dda9|5853391
+徐誉滕 - 天使的翅膀.mp3|J:\歌曲\Love\徐誉滕 - 天使的翅膀.mp3|748fc7cd8f750bc5b65e253b7c8218c9|3417696
+得到你的人却得不到你的心.mp3|J:\歌曲\Love\得到你的人却得不到你的心.mp3|98a83d87219b8e71277ce852f65ff89a|4167718
+慕容晓晓 - 黄梅戏.mp3|J:\歌曲\Love\慕容晓晓 - 黄梅戏.mp3|674ae9b364fd599a3544204d9722b8cb|5469103
+慢四 为爱伤心为你痛 女 绝对好听.mp3|J:\歌曲\Love\慢四 为爱伤心为你痛 女 绝对好听.mp3|0742b55cbac57dbb24e79797a080f4ab|9948515
+戊道子 - 爱到花开 - 原创.mp3|J:\歌曲\Love\戊道子 - 爱到花开 - 原创.mp3|23231a308cf91d96627067b6dd9f8fbb|4114015
+戊道子-爱到花开.mp3|J:\歌曲\Love\戊道子-爱到花开.mp3|0304222a5265685dfc785c06c0a6b1f2|4114015
+戏曲 豫剧 小苍娃我离了登封小县.mp3|J:\歌曲\Love\戏曲 豫剧 小苍娃我离了登封小县.mp3|37e879af076dc71b13ea63489419630b|6000961
+我操电话又来了.mp3|J:\歌曲\Love\我操电话又来了.mp3|4fb722d38e299d2ba49339c3a661d8fb|268164
+我要快乐.mp3|J:\歌曲\Love\我要快乐.mp3|cf54e117b304167a713f3aed501f3bd5|8122030
+扎西尼玛 - 心爱的姑娘.mp3|J:\歌曲\Love\扎西尼玛 - 心爱的姑娘.mp3|9ef5a7c291888f8a6dedba6b99660f5e|4022275
+打銮驾 下陈州 李斯忠 豫剧 李斯忠 张美贞.mp3|J:\歌曲\Love\打銮驾 下陈州 李斯忠 豫剧 李斯忠 张美贞.mp3|2798fda5b3fa6a606c208741232be94c|3254928
+摈崎步 myall.mp3|J:\歌曲\Love\摈崎步 myall.mp3|59820a50c859babd6475aa7f57cf89eb|5203218
+断了爱情的念头.mp3|J:\歌曲\Love\断了爱情的念头.mp3|9398a2bb8e90b1e398057331643921af|6410240
+无限.mp3|J:\歌曲\Love\无限.mp3|30609576e9d4fcc64eb8c14994507c14|7477625
+易欣 - 下辈子不要做男人.mp3|J:\歌曲\Love\易欣 - 下辈子不要做男人.mp3|040d7c6e5565dacae03a52fbd958a725|4544805
+星弟-相约在雨季.mp3|J:\歌曲\Love\星弟-相约在雨季.mp3|d4c76dbaeff0e49beda3234b37967f50|3682464
+春天里.mp3|J:\歌曲\Love\春天里.mp3|d8aff91207ab27159d8b5187f7b71c7c|4402262
+曾经心疼.mp3|J:\歌曲\Love\曾经心疼.mp3|e9e25c7271c9e53da37aa016212f29d4|4576444
+有没有人告诉你.mp3|J:\歌曲\Love\有没有人告诉你.mp3|4b058508b2e793e58230892f12032cd7|5507492
+李志洲-哥唱的是寂寞.mp3|J:\歌曲\Love\李志洲-哥唱的是寂寞.mp3|c17e009f996f03cbef36158badc8ab04|6026328
+李玲玉 - 相见时难别亦难 - 西游记.mp3|J:\歌曲\Love\李玲玉 - 相见时难别亦难 - 西游记.mp3|c90643fecdcf86aff704709cd904e7d7|3717517
+李茂山&林淑容-无言的结局.mp3|J:\歌曲\Love\李茂山&林淑容-无言的结局.mp3|7040a6a01178d554d431f78a24eb67f0|5751246
+李贞贤 - 独一无二.mp3|J:\歌曲\Love\李贞贤 - 独一无二.mp3|6f15159fe22a2d0b4ef282def2038b5d|3400475
+杨培安 - 我相信 - 完整版.mp3|J:\歌曲\Love\杨培安 - 我相信 - 完整版.mp3|b801f3b8587979fdee1565562f099ffc|7920604
+杨培安-爱上你是一个错.mp3|J:\歌曲\Love\杨培安-爱上你是一个错.mp3|a4f990f5a0bbbe5cc6cf695aaec8243e|5818389
+杨川平-一个人站在风中哭泣.mp3|J:\歌曲\Love\杨川平-一个人站在风中哭泣.mp3|b942b8a52ab6f61391cb66f4bbae5744|4977499
+杨臣刚-我是你老公.mp3|J:\歌曲\Love\杨臣刚-我是你老公.mp3|5b4dc6b065128222bb5de436bba28668|3642852
+林依晨 - 遇到 - 郑元畅.mp3|J:\歌曲\Love\林依晨 - 遇到 - 郑元畅.mp3|610230497bbd72e20d07ff12cfd39169|2951737
+林宥嘉 - 你是我的眼 - 精选.mp3|J:\歌曲\Love\林宥嘉 - 你是我的眼 - 精选.mp3|7a6a56da9d2255437f97104b86e89710|6475425
+林家小妹-我想抱着你.mp3|J:\歌曲\Love\林家小妹-我想抱着你.mp3|033fe7da951101a9f5ed9d3379bb0467|3438507
+林志炫 - 单身情歌.mp3|J:\歌曲\Love\林志炫 - 单身情歌.mp3|66fdccf9b145a68ccc75595a86e666cd|4426038
+林雨-你的道歉我不能接受.mp3|J:\歌曲\Love\林雨-你的道歉我不能接受.mp3|617d3e179bf21afe90fb72478974b763|5349701
+梁静茹 - 可惜不是你 - 4分 完整 cd version.mp3|J:\歌曲\Love\梁静茹 - 可惜不是你 - 4分 完整 cd version.mp3|950b5b218d117c240559638363b371a3|6875714
+梁静茹-迎春花.mp3|J:\歌曲\Love\梁静茹-迎春花.mp3|df1f5ffa24bdc4ff68a67cc0512fd598|3408039
+樱花草.mp3|J:\歌曲\Love\樱花草.mp3|b91cc0d43f542af59304aad4360a976d|6880667
+欢喜就好DJ.mp3|J:\歌曲\Love\欢喜就好DJ.mp3|26ada24b7cc37a5900c5d5ddf96e1bc1|4827562
+欢子 - 多想抱着你哭.mp3|J:\歌曲\Love\欢子 - 多想抱着你哭.mp3|ecf289ab7fd1a55b2645d3b94c904d53|4488880
+母亲.mp3|J:\歌曲\Love\母亲.mp3|13640cf27e693415d30292805d1d382c|4506372
+毛宁 - 涛声依旧.mp3|J:\歌曲\Love\毛宁 - 涛声依旧.mp3|508f89bac7ca88feedb8ed345353d0e2|4412481
+毛阿敏 - 烛光里的妈妈.mp3|J:\歌曲\Love\毛阿敏 - 烛光里的妈妈.mp3|3e351e31e4ae36485997278e278ea008|3695087
+水鸿-不是我不懂爱.mp3|J:\歌曲\Love\水鸿-不是我不懂爱.mp3|42658b4b0790d90dd32fbe9004c4cec3|4187034
+汤潮 - 好男儿.mp3|J:\歌曲\Love\汤潮 - 好男儿.mp3|b877269631b8bd29bc40dfdd3687f023|5558439
+汤潮 - 爱你我不后悔.mp3|J:\歌曲\Love\汤潮 - 爱你我不后悔.mp3|0f4cf0c246e2736a3f25c473a331d134|3894542
+浩瀚-你到底爱不爱我.mp3|J:\歌曲\Love\浩瀚-你到底爱不爱我.mp3|267b7fac710e893c809ed99b813e70ef|4221514
+渴望.mp3|J:\歌曲\Love\渴望.mp3|98aff1d8acd921ab3e31a77f9495a0f6|2581699
+满文军 - 懂你.mp3|J:\歌曲\Love\满文军 - 懂你.mp3|6383e68e44494498864d69b0a3598c5a|5209443
+潘广益-不愿再为你流泪.mp3|J:\歌曲\Love\潘广益-不愿再为你流泪.mp3|c4a902784e69a76a9defd4067f4670f3|4351659
+爱你爱不够 张小五的春天 插曲.mp3|J:\歌曲\Love\爱你爱不够 张小五的春天 插曲.mp3|f3c3d245b264f716e41075e81c35df65|4397491
+爱情里没有谁错谁对.mp3|J:\歌曲\Love\爱情里没有谁错谁对.mp3|b6909f8ccbbbc65f050994b38115af42|4530532
+牛奶@咖啡-越长大越孤单.mp3|J:\歌曲\Love\牛奶@咖啡-越长大越孤单.mp3|4f690d513f9879e055bac482b9cfe003|6060467
+犯错-蓝雪人(阿米哥)VS.mp3|J:\歌曲\Love\犯错-蓝雪人(阿米哥)VS.mp3|7437e91d162405f9e7f282761c171912|3089037
+王强-不想让你哭.mp3|J:\歌曲\Love\王强-不想让你哭.mp3|9369c8f0bfd8ee920e673567181ba6e3|5907145
+王杰、叶欢 - 你是我胸口永远的痛 - 男女情歌对唱.mp3|J:\歌曲\Love\王杰、叶欢 - 你是我胸口永远的痛 - 男女情歌对唱.mp3|f687a423658a45695e4593e325f53bd5|5034736
+王筝 - 想着你睡不着.mp3|J:\歌曲\Love\王筝 - 想着你睡不着.mp3|59339b954722b1d5670ba155259eb2f5|3373056
+王羽泽-姑娘我爱你.mp3|J:\歌曲\Love\王羽泽-姑娘我爱你.mp3|f09ec6eeb21ecaf66e1d6fcb886fe3d1|3111288
+王菲 - 爱上一个不回家的人.mp3|J:\歌曲\Love\王菲 - 爱上一个不回家的人.mp3|99b461d74e0bd40e762e99b5e0627f50|3764560
+王菲 - 红豆.mp3|J:\歌曲\Love\王菲 - 红豆.mp3|c45a5238ee8d8b1c0f8e895a213d80ec|4095710
+王键-飞蛾扑火.mp3|J:\歌曲\Love\王键-飞蛾扑火.mp3|8935b2fdbe2953f40fef769146bb179b|6482755
+王雪晶-嘻嘻哈哈过新年.mp3|J:\歌曲\Love\王雪晶-嘻嘻哈哈过新年.mp3|706374473f17f324e05a29142fd356dd|2430522
+王鹤铮-爱我就跟我走.mp3|J:\歌曲\Love\王鹤铮-爱我就跟我走.mp3|cf99a9676552731231aa26ac97247bf6|6080678
+琼瑶--高胜美-彩云伴海鸥(海鸥飞处彩云飞).mp3|J:\歌曲\Love\琼瑶--高胜美-彩云伴海鸥(海鸥飞处彩云飞).mp3|c8c995aadc09040a20d60bb84ce0b91c|3375786
+甘洛凡-至少我们曾经爱过.mp3|J:\歌曲\Love\甘洛凡-至少我们曾经爱过.mp3|d54e072bce52ab70933c26b8e9fb8f96|5743732
+生生世世爱 仙剑奇侠传三主题曲 cd version.mp3|J:\歌曲\Love\生生世世爱 仙剑奇侠传三主题曲 cd version.mp3|8f9b064a087199cea691f6e387c3903e|6795389
+甩葱歌-初音未来.mp3|J:\歌曲\Love\甩葱歌-初音未来.mp3|a1188a51248c98f82630adb43a80fd42|4845810
+田震 - 网络情缘 - 一首很感动人的歌曲.mp3|J:\歌曲\Love\田震 - 网络情缘 - 一首很感动人的歌曲.mp3|107ba5e3341017cee53a34bdcf1ba246|2524716
+田震 - 风雨彩虹铿锵玫瑰.mp3|J:\歌曲\Love\田震 - 风雨彩虹铿锵玫瑰.mp3|77f85f631dc65544fc7c6d82fcbd8917|3589724
+男人哭 吧不是罪.mp3|J:\歌曲\Love\男人哭 吧不是罪.mp3|2e6615077a83c8752eeae5176e1cfd78|4996629
+百鸟朝凤.mp3|J:\歌曲\Love\百鸟朝凤.mp3|204ef3bc0a58f8608135f8ff2a6b6adc|2162939
+相约到永久.mp3|J:\歌曲\Love\相约到永久.mp3|2443ec110b64c12bdae92a2dacda4e0e|4009984
+相聚别离两依依.mp3|J:\歌曲\Love\相聚别离两依依.mp3|254a512781769c214ced1dfe3dd5b4ff|4047936
+石梅-错过的情人.mp3|J:\歌曲\Love\石梅-错过的情人.mp3|fb86e6144805d90f05735c9fa610d2fd|9320576
+祝你一路顺风.mp3|J:\歌曲\Love\祝你一路顺风.mp3|49d665fda2d940a4d212a933f3840362|3576960
+空气_陈桂龙.mp3|J:\歌曲\Love\空气_陈桂龙.mp3|b743d5329240358e181a1eded69c6f6a|1676736
+童年.mp3|J:\歌曲\Love\童年.mp3|4ece7891633bb042f4637e5110f6ac6b|3774991
+符号 爱上你等于爱上了错.mp3|J:\歌曲\Love\符号 爱上你等于爱上了错.mp3|5fc9e178d81f7708e6a58d058775116c|3923641
+美观.mp3|J:\歌曲\Love\美观.mp3|b3bb33c524a9dd28a2dd1706d306549a|5754499
+群星 - 北京欢迎你 - 好听哦 推荐一下.mp3|J:\歌曲\Love\群星 - 北京欢迎你 - 好听哦 推荐一下.mp3|aedafd9b0a4f2c709de215d91ea1a858|3562394
+老婆有交代(新歌).mp3|J:\歌曲\Love\老婆有交代(新歌).mp3|a71dee6d969e7b02053b965193ae09dc|4129595
+胡锐-宁愿伤心一辈子.mp3|J:\歌曲\Love\胡锐-宁愿伤心一辈子.mp3|b3bf4e17234bb0204b67ec059da18e22|4225021
+舞曲 皇室非主流音乐 最新 qq 空间 dj 音.mp3|J:\歌曲\Love\舞曲 皇室非主流音乐 最新 qq 空间 dj 音.mp3|bb947d2889e879b40dadde300bf1363f|5130137
+艾歌-一生中最爱的人.mp3|J:\歌曲\Love\艾歌-一生中最爱的人.mp3|4c4a0a884510a7ae4f312ecaa3c8cd6a|5832910
+艾歌-你是我今生的唯一.mp3|J:\歌曲\Love\艾歌-你是我今生的唯一.mp3|c0b165308c6885b518dd5b546d51ca13|6604173
+芭比 - 喔喔喔 (Dj罗百吉).mp3|J:\歌曲\Love\芭比 - 喔喔喔 (Dj罗百吉).mp3|e957ef94b6a741023bc43a9d854bef9f|3676078
+花儿乐队-大喜宙.mp3|J:\歌曲\Love\花儿乐队-大喜宙.mp3|dd6429dfa6a307cda768a8ef36a5cfed|5945532
+花儿乐队-洗刷刷.mp3|J:\歌曲\Love\花儿乐队-洗刷刷.mp3|df4e54d7c7c172201f120d223411c769|5216256
+花火.mp3|J:\歌曲\Love\花火.mp3|9711f0dc78fe91b84048f2720515a362|6657684
+英文歌曲 的士高 disco 韩国冠军 舞曲 超好听.mp3|J:\歌曲\Love\英文歌曲 的士高 disco 韩国冠军 舞曲 超好听.mp3|552061950ffa546c09db47a01b560658|3566354
+英雄泪.mp3|J:\歌曲\Love\英雄泪.mp3|61d8f8cffac159ba55459953de45ec73|5001408
+萧敬腾 - 开到荼靡 - k.mp3|J:\歌曲\Love\萧敬腾 - 开到荼靡 - k.mp3|b60bce643d4ae486c3946199b815c723|4707723
+蒋大为 - 牡丹之歌.mp3|J:\歌曲\Love\蒋大为 - 牡丹之歌.mp3|d06777376f3090dcee430b308bbfff20|2502622
+蓝雨-第一千滴眼泪.mp3|J:\歌曲\Love\蓝雨-第一千滴眼泪.mp3|7f54f6ab18c23a50192daee94fca23f9|5732282
+蔡琴 - 你的眼神.mp3|J:\歌曲\Love\蔡琴 - 你的眼神.mp3|f7e238bed1e595025e67c884e414fd69|4024239
+袁咏琳、周杰伦-画沙.mp3|J:\歌曲\Love\袁咏琳、周杰伦-画沙.mp3|a22fd74a5406e88feb796f67ea59c11f|6547763
+记事本- 陈慧琳.mp3|J:\歌曲\Love\记事本- 陈慧琳.mp3|defc38fac27defdaf8efa64e009371ea|5920645
+许冠杰-财神到(粤).mp3|J:\歌曲\Love\许冠杰-财神到(粤).mp3|27592531e92596acc091eabe1e8128b0|3217118
+许嵩 - 半城烟沙.mp3|J:\歌曲\Love\许嵩 - 半城烟沙.mp3|55a55729ba71c47a9d0eaa3a26942236|11706036
+许巍 - 蓝莲花.mp3|J:\歌曲\Love\许巍 - 蓝莲花.mp3|f49d88f4dabdba4d628d32a05958d775|10816144
+许强-如何才能不想你.mp3|J:\歌曲\Love\许强-如何才能不想你.mp3|8b9942cb0bde13c5987183a438fd7e7f|4608359
+说谎.mp3|J:\歌曲\Love\说谎.mp3|736abf79860d50d09730e8666f7e6af6|5730626
+谁让我爱上你.Mp3|J:\歌曲\Love\谁让我爱上你.Mp3|962b22aee21a48d4aac967cfb6bd7d72|10244139
+谈欣-凌晨的眼泪.mp3|J:\歌曲\Love\谈欣-凌晨的眼泪.mp3|1a4f7364f1fd94f6e2d9d90777692b40|4582157
+谢军 - 打工行.mp3|J:\歌曲\Love\谢军 - 打工行.mp3|92c7b89772b2ccaeb39eb12a1201f87c|5850489
+谭圳-不愿想起你.mp3|J:\歌曲\Love\谭圳-不愿想起你.mp3|d7ac32291f3dfd296a9c890c43aaf70f|4300844
+贡维特-原来你从来没有真正爱过我.mp3|J:\歌曲\Love\贡维特-原来你从来没有真正爱过我.mp3|57dc1a1764775b0c8817ea7059ce4c8c|5787957
+贡维特-想你想到眼泪流.mp3|J:\歌曲\Love\贡维特-想你想到眼泪流.mp3|d761396b70fc76ac6a2087c36689b820|3749556
+贡维特-被爱融化的雪.mp3|J:\歌曲\Love\贡维特-被爱融化的雪.mp3|d4010fe5597b395cbe4391e3596b2472|5085274
+费玉清 - 南屏晚钟.mp3|J:\歌曲\Love\费玉清 - 南屏晚钟.mp3|23407e43aa55f0e636208646f7a3f0ee|3368461
+赵传-爱要怎么说出口.mp3|J:\歌曲\Love\赵传-爱要怎么说出口.mp3|201a49534e0503d79a68091382e3297d|4500296
+赵小南-错的时间错的地点遇到对的人.mp3|J:\歌曲\Love\赵小南-错的时间错的地点遇到对的人.mp3|fce622b1f0466c678a5471667a3dbbc3|4799655
+赵本山-咱们屯里人.mp3|J:\歌曲\Love\赵本山-咱们屯里人.mp3|43be1016fb4ef6605b727ba8e900987e|2585205
+赵薇 - 自从有了你 - 还珠格格插曲.mp3|J:\歌曲\Love\赵薇 - 自从有了你 - 还珠格格插曲.mp3|1f9437e614c0a9a27c4a6115de2faa7b|3282944
+超长 10分钟重低音中文串烧 dj.mp3|J:\歌曲\Love\超长 10分钟重低音中文串烧 dj.mp3|8c73085703f419098db7792e028cedc7|2558958
+路上有你_高春双.mp3|J:\歌曲\Love\路上有你_高春双.mp3|28e4f607b3b76322b364da865c7f41e3|10019847
+路灯下的小姑娘.mp3|J:\歌曲\Love\路灯下的小姑娘.mp3|f508de23a04e7361c9dcab0af0cf87bb|6656963
+辛小琪 - 领悟.mp3|J:\歌曲\Love\辛小琪 - 领悟.mp3|37e9daede833e63f2efb3985f02b2299|4685962
+迈克尔杰克逊-We Are The World.mp3|J:\歌曲\Love\迈克尔杰克逊-We Are The World.mp3|1b30145cb6196cd139c2311ce548fe65|6711296
+迟志强 - 四季流浪.mp3|J:\歌曲\Love\迟志强 - 四季流浪.mp3|8a09aa226b45df00e842379e702cb0d9|2677779
+迟志强 - 姑娘抛弃我.mp3|J:\歌曲\Love\迟志强 - 姑娘抛弃我.mp3|af3e89ae1622bf0c8aafaa2cbceef619|3327083
+邓丽君 - 酒醉的探戈.mp3|J:\歌曲\Love\邓丽君 - 酒醉的探戈.mp3|30839dbbaf1e218aaf538cfeb28d6b0f|4069132
+邓灵-不敢爱.mp3|J:\歌曲\Love\邓灵-不敢爱.mp3|304f2aada0daae6e56bfaab6dc727bcb|5525942
+那些曾为你流下的眼泪.mp3|J:\歌曲\Love\那些曾为你流下的眼泪.mp3|f79dfee7fd2cd1d9b40910e86e160262|6177224
+那滋味-汤潮.mp3|J:\歌曲\Love\那滋味-汤潮.mp3|ce464fe67b82fd19d8ff8d39018b06bb|4695990
+邵雨涵-快乐阿拉蕾.mp3|J:\歌曲\Love\邵雨涵-快乐阿拉蕾.mp3|484c78473fc73118f86f1eac698dec5a|6313648
+郑源-真情暖人间.mp3|J:\歌曲\Love\郑源-真情暖人间.mp3|783f11eb9e7ea1faeb333354738ea46e|4989927
+郭峰-甘心情愿(经典).mp3|J:\歌曲\Love\郭峰-甘心情愿(经典).mp3|385c753263d835897290c8d099c1d630|4835328
+郭盈莹-淡淡地想你 淡淡地流泪.mp3|J:\歌曲\Love\郭盈莹-淡淡地想你 淡淡地流泪.mp3|376dfd8a735c3ad89a2fc6576cb43337|5034714
+金泽-恨透爱情恨透你.mp3|J:\歌曲\Love\金泽-恨透爱情恨透你.mp3|2b0382b3f672e12aecabee7f1816c285|4309619
+长春虫子-不想看见你哭.mp3|J:\歌曲\Love\长春虫子-不想看见你哭.mp3|8725bb2c4bdf9ccb449d00b3431c1c25|3707975
+长春虫子-动了情伤了心.mp3|J:\歌曲\Love\长春虫子-动了情伤了心.mp3|0d7d14efe2a50168e8714ec5fbaf2332|4825317
+阳光总在风雨后.mp3|J:\歌曲\Love\阳光总在风雨后.mp3|f14ab0bf597fc097481bf8d2ef74521f|4874240
+阿木-梦想的方向.mp3|J:\歌曲\Love\阿木-梦想的方向.mp3|4c93b0600137dedf5ce72a3c410cf597|5076992
+阿清-爱一个人真的好累.mp3|J:\歌曲\Love\阿清-爱一个人真的好累.mp3|4f37e6e1da141261ac10d2884af57e35|5062300
+陈威-你是我最想亲吻的女人.mp3|J:\歌曲\Love\陈威-你是我最想亲吻的女人.mp3|01b9512646eef72c838a613b6448acef|5613968
+陈慧娴 - 千千阙歌 - 风中的承诺粤语版.mp3|J:\歌曲\Love\陈慧娴 - 千千阙歌 - 风中的承诺粤语版.mp3|f739b582f5a167cd0f25711e16dce770|4805739
+陈明 - 我要找到你.mp3|J:\歌曲\Love\陈明 - 我要找到你.mp3|8b0920de0ee06e729a3383fe9d548369|4077568
+陈星 - 伤心泪.mp3|J:\歌曲\Love\陈星 - 伤心泪.mp3|739c737b088c97e3a65365ed4c8afec3|4393169
+陈星 - 思乡酒.mp3|J:\歌曲\Love\陈星 - 思乡酒.mp3|2d8f9f1874d7a055cc859cad4529f82e|3631104
+陈星 - 新打工谣.mp3|J:\歌曲\Love\陈星 - 新打工谣.mp3|0e73f110c6761c4b9408e05276ccd91f|4114342
+陈星 - 望故乡.mp3|J:\歌曲\Love\陈星 - 望故乡.mp3|3b13248e05441053c0d3bcd5fb689662|4425728
+陈瑞 - 玫瑰花又开.mp3|J:\歌曲\Love\陈瑞 - 玫瑰花又开.mp3|a5be54869c905e9fec30db2967af9402|3723225
+陈飞彤 - 最后一滴留下的泪.mp3|J:\歌曲\Love\陈飞彤 - 最后一滴留下的泪.mp3|a2a9c9692a198b2247998df11d679ae0|4450780
+陈飞彤-不再为谁流眼泪.mp3|J:\歌曲\Love\陈飞彤-不再为谁流眼泪.mp3|14d23c383caeb41955c5ee52c8e0bf29|5107138
+雨天-我一直站在被你伤害的地方.mp3|J:\歌曲\Love\雨天-我一直站在被你伤害的地方.mp3|977dd95bf5d7cdcc8c927fbcdd2c9e0f|9999178
+雨天－不愿放开你的手.mp3|J:\歌曲\Love\雨天－不愿放开你的手.mp3|82fcdbd4b30655be5d4f53a4ab8f6d17|5167194
+零下36度_佟冬冬.mp3|J:\歌曲\Love\零下36度_佟冬冬.mp3|0bce1f10d943143feee499146437aae2|3330299
+雷龙 - 豆芽菜的爱.mp3|J:\歌曲\Love\雷龙 - 豆芽菜的爱.mp3|68822e8e893f2e34b1a6a25851a48475|5758976
+青藏高原.mp3|J:\歌曲\Love\青藏高原.mp3|3ea8f3950f152b78d501a5fc628d77ad|3304675
+韦唯 - 东方之珠.mp3|J:\歌曲\Love\韦唯 - 东方之珠.mp3|6ccb41132f4221ec22b731343725eae9|6217086
+韩国舞曲 - dj.mp3|J:\歌曲\Love\韩国舞曲 - dj.mp3|1f23ec9ccb6b2e92217d4f5be29ea630|6074446
+韩磊 - 我真的还想在活五百年.mp3|J:\歌曲\Love\韩磊 - 我真的还想在活五百年.mp3|c101ca7dd261f248a80aacf94094dae6|2824462
+韩红 - 坐着火车去拉萨.mp3|J:\歌曲\Love\韩红 - 坐着火车去拉萨.mp3|db5732a9f0612c7648880cb823ec5460|6053226
+韩红孙楠 - 美丽的神话.mp3|J:\歌曲\Love\韩红孙楠 - 美丽的神话.mp3|c216850d059d13f7bd2e2ef206893edb|8170489
+韩超-伤心酒吧街.mp3|J:\歌曲\Love\韩超-伤心酒吧街.mp3|0b177d05e8eb9a9f312bd0010ef96ab2|7778304
+韩雪 - 想起 - 韩 雪.mp3|J:\歌曲\Love\韩雪 - 想起 - 韩 雪.mp3|7cc9c4d43d15c432e266474116d14061|4311969
+顾峰-再说一次我爱你.mp3|J:\歌曲\Love\顾峰-再说一次我爱你.mp3|2c3d3e70ca43b244da591da17d9cd42e|4308337
+顾峰、斯琴高丽-犯错.mp3|J:\歌曲\Love\顾峰、斯琴高丽-犯错.mp3|d349c5bcabdab376436934b5cad15201|4608636
+风中有朵雨做的云.mp3|J:\歌曲\Love\风中有朵雨做的云.mp3|5756c836c5f3c048fcce60a817353f93|4596459
+飞儿乐团 - 千年之恋 - 飞儿乐队.mp3|J:\歌曲\Love\飞儿乐团 - 千年之恋 - 飞儿乐队.mp3|36036e9418f85dd2e08528fa120ff4e2|2303241
+飞儿乐团 - 我们的爱.mp3|J:\歌曲\Love\飞儿乐团 - 我们的爱.mp3|5b1dccd71fcb7ab3b87744b46aea8b55|8038528
+饶天亮-嫁给我你会幸福的.mp3|J:\歌曲\Love\饶天亮-嫁给我你会幸福的.mp3|73e1ff4ed4871ef50d3baae4cd01b9f3|7241864
+香香-香飘飘.mp3|J:\歌曲\Love\香香-香飘飘.mp3|09ce21a94fa0413929f44c2fa715f994|5460816
+高原红容中尔甲 - 永远的雪莲花.mp3|J:\歌曲\Love\高原红容中尔甲 - 永远的雪莲花.mp3|1c07e272f5bfa5f2c3a4d9b536265e00|3951054
+高娜 - 撕了那封信.mp3|J:\歌曲\Love\高娜 - 撕了那封信.mp3|9bf3c563aca08279d9c4db871ccb557a|3473024
+高林生 - 牵挂你的人是我.mp3|J:\歌曲\Love\高林生 - 牵挂你的人是我.mp3|f44e5970e6b60ec5dbe67b892af13a08|3936467
+高胜美 - 心湖雨又风 - 新白娘子传奇.mp3|J:\歌曲\Love\高胜美 - 心湖雨又风 - 新白娘子传奇.mp3|6d1efe5c0d9e9b42617b467fc2b29709|2070133
+高胜美 - 渡情 - 新白娘子传奇.mp3|J:\歌曲\Love\高胜美 - 渡情 - 新白娘子传奇.mp3|53e3ef0485a1c818ec6c854d0c6e63f9|3138541
+高胜美 - 笑拥江山梦 - 一代皇后大玉儿主题曲.mp3|J:\歌曲\Love\高胜美 - 笑拥江山梦 - 一代皇后大玉儿主题曲.mp3|237bbe44d52e7b0a1b05650da824371d|2569281
+高胜美-何止一句我爱你.mp3|J:\歌曲\Love\高胜美-何止一句我爱你.mp3|9f58e7167dace2e7e0f6fcac638918eb|8250641
+高胜美-缘.mp3|J:\歌曲\Love\高胜美-缘.mp3|09176d1e85f2f93b0c74e8343bc64c0c|4961344
+高胜美.心上人.mp3|J:\歌曲\Love\高胜美.心上人.mp3|3d1f8da71fd8cf1d358ea92dd76d2666|5003952
+高进 - 多想把你抱住.mp3|J:\歌曲\Love\高进 - 多想把你抱住.mp3|02c961a6bd88d5008cc4c75816b96db7|6778880
+高进-听着情歌流眼泪.mp3|J:\歌曲\Love\高进-听着情歌流眼泪.mp3|dfe3c50f0cf956e14c537bb424b5a4c0|4255774
+黄征、雨泉 - 奔跑 - 爱情诺曼底.mp3|J:\歌曲\Love\黄征、雨泉 - 奔跑 - 爱情诺曼底.mp3|7fbc5b02a1a5abf97179f67bdf3972fc|4636672
+龙千玉 - 等待你一生.mp3|J:\歌曲\Love\龙千玉 - 等待你一生.mp3|d94e2ca5a5527aec84b88078d443411e|5037330
+龙千玉 - 等爱的人.mp3|J:\歌曲\Love\龙千玉 - 等爱的人.mp3|ab93710da544e370789790ae6922a555|3641856
+龙千玉 - 胭脂水粉.mp3|J:\歌曲\Love\龙千玉 - 胭脂水粉.mp3|2443131b443591a84cd1aa685ada8c20|5178508
+龙千玉 - 雪花梦.mp3|J:\歌曲\Love\龙千玉 - 雪花梦.mp3|4962f4cd3e4d3ac35d349e850489a8ab|6722175
+龙川-爱你爱到无路可退.mp3|J:\歌曲\Love\龙川-爱你爱到无路可退.mp3|05c5a14d5d9bd9c6e04321796c7f3d4f|3523858
+龙晓飞 - 你是天使还是魔鬼.mp3|J:\歌曲\Love\龙晓飞 - 你是天使还是魔鬼.mp3|c0d034c4477b6e5e9bbb665b1dc38f4b|5072825
+龙晓飞 - 到底让我等多久.mp3|J:\歌曲\Love\龙晓飞 - 到底让我等多久.mp3|8beb669d6d0de532c4d612ace5e7f84f|6277000
+龙晓飞 - 爱你爱的好疲惫.mp3|J:\歌曲\Love\龙晓飞 - 爱你爱的好疲惫.mp3|cefe813d08d3898cc640ec750b26b7f5|7649192
+123木头人.mp3|J:\歌曲\Music\123木头人.mp3|d002a7217b8b6e2b1160345277dd25c3|6199701
+DOTA.MP3|J:\歌曲\Music\DOTA.MP3|e77ad7f0bd43ba9e0780950c196ccb16|391515
+gold is a girl.mp3|J:\歌曲\Music\gold is a girl.mp3|58d591f76693177f90f1302f98365064|4389528
+hunter_魂魄挽歌.mp3|J:\歌曲\Music\hunter_魂魄挽歌.mp3|db0ba929e357a7b7864441ebfbf4dffa|1455250
+I Will Always Love You.mp3|J:\歌曲\Music\I Will Always Love You.mp3|d25db678f710fc242902454518cfdf35|4294536
+lesson1.mp3|J:\歌曲\Music\lesson1.mp3|32f3e62f2d06b0ef6682aec12f87430d|2233185
+nottinghill.mp3|J:\歌曲\Music\nottinghill.mp3|389bd51981ba2bcf801b6197ecdcaf12|4078696
+qianshou.mp3|J:\歌曲\Music\qianshou.mp3|a1aef1d522c78f658c24310956a84457|5154124
+Ricky Martin - La Copa De La Vida.mp3|J:\歌曲\Music\Ricky Martin - La Copa De La Vida.mp3|3722c946a42f784f0bb54343fe5d142c|4452943
+See Who I Am.mp3|J:\歌曲\Music\See Who I Am.mp3|1ab5325e5d5d76036fd494e303f0ab31|11669888
+She.mp3|J:\歌曲\Music\She.mp3|f016fe8b690d8feba1a718587c99841d|7537213
+Trouble Is A Friend.mp3|J:\歌曲\Music\Trouble Is A Friend.mp3|1dd164fc2b88cf7b331a5d71a5541471|8617262
+[westlife]My love-Westlife.mp3|J:\歌曲\Music\[westlife]My love-Westlife.mp3|b2c953c4c8cbd0b6989ec769ee003b94|3755491
+[westlife]Seasons In The Sun－Westlife.mp3|J:\歌曲\Music\[westlife]Seasons In The Sun－Westlife.mp3|559128fb0dcf4a97399d7903930701f2|3965885
+[westlife]You Raise Me Up-Westlife.mp3|J:\歌曲\Music\[westlife]You Raise Me Up-Westlife.mp3|a9cdf8f108cda46c4fad5a2038d6b7d5|5879306
+[]wearetheworld.mp3|J:\歌曲\Music\[]wearetheworld.mp3|347eeba2fa9473e0d96ffae9c2fbd1e9|6905973
+[]倾国倾城-熊汝霖、阿宝.mp3|J:\歌曲\Music\[]倾国倾城-熊汝霖、阿宝.mp3|e5a5cff154c07ba8da9ef98f5968e950|4745514
+[仙剑奇侠传]此生不换-仙剑奇侠传.mp3|J:\歌曲\Music\[仙剑奇侠传]此生不换-仙剑奇侠传.mp3|0825c507c6ff384ad9ed0b61098670b7|4258629
+[伍佰]突然的自我-伍佰.mp3|J:\歌曲\Music\[伍佰]突然的自我-伍佰.mp3|66c01138f8ba54c89ee5025fd1c128be|5490630
+[刀郎]爱是你我 刀郎 云朵 王汉仪合唱 (新歌)-刀郎.mp3|J:\歌曲\Music\[刀郎]爱是你我 刀郎 云朵 王汉仪合唱 (新歌)-刀郎.mp3|89afa86658ce477d6784a2f0696cd32c|6457472
+[刘德华]冰雨-刘德华.mp3|J:\歌曲\Music\[刘德华]冰雨-刘德华.mp3|91acdca3f17ea9a9a6dfa86214efd1b0|6769500
+[张信哲]别怕我伤心-张信哲.mp3|J:\歌曲\Music\[张信哲]别怕我伤心-张信哲.mp3|538e5a98d851c0e0460822064549f095|4675839
+[张国荣]风再起时－张国荣.mp3|J:\歌曲\Music\[张国荣]风再起时－张国荣.mp3|03da6d68ec642959173477f3012dda6b|4313088
+[张学友]一千个伤心的理由-张学友.mp3|J:\歌曲\Music\[张学友]一千个伤心的理由-张学友.mp3|4f0b762da0a39c6e80b6d287257f528a|4452982
+[张芸京]偏爱-张芸京.mp3|J:\歌曲\Music\[张芸京]偏爱-张芸京.mp3|046dfb5e8dd026e7af622cc0602b3513|5099648
+[成龙]爸妈的话-成龙.mp3|J:\歌曲\Music\[成龙]爸妈的话-成龙.mp3|91cfbbb93bd6f02b98b17f715e91837c|4464191
+[斯琴高丽]爱上你-斯琴高丽.mp3|J:\歌曲\Music\[斯琴高丽]爱上你-斯琴高丽.mp3|20fe53f8aa8e12577eb3b3c9a241965e|4610008
+[林志玲]带我飞-林志玲.mp3|J:\歌曲\Music\[林志玲]带我飞-林志玲.mp3|be2d774199af630b97e892bc9dd77d0f|4294993
+[汪峰]勇敢的心-汪峰.mp3|J:\歌曲\Music\[汪峰]勇敢的心-汪峰.mp3|5e53cffabb810cb9e9e1670b0552621b|4832827
+[汪峰]怒放的生命 - 汪峰.mp3|J:\歌曲\Music\[汪峰]怒放的生命 - 汪峰.mp3|d21ec5229885490d24ddd26948117a46|4608190
+[汪峰]飞得更高-汪峰.mp3|J:\歌曲\Music\[汪峰]飞得更高-汪峰.mp3|dee8df5a1ad60d02962b9bdec079ec7f|6389307
+[田一龙]爱到花开-田一龙.mp3|J:\歌曲\Music\[田一龙]爱到花开-田一龙.mp3|ea1289a4746ec25701e056cfa61a7fe3|5165184
+[胡歌]胡歌-忘记时间.mp3|J:\歌曲\Music\[胡歌]胡歌-忘记时间.mp3|8ce45880f6643b235083a06a4e0d4407|4249357
+[萧煌奇]如果有一天，我也瞎了，你会不会成为我的眼？-萧煌奇.mp3|J:\歌曲\Music\[萧煌奇]如果有一天，我也瞎了，你会不会成为我的眼？-萧煌奇.mp3|b4ecb4a799f3e4e9c9e7005bab9b42e3|5144327
+[蔡琴]你的眼神 蔡琴.mp3|J:\歌曲\Music\[蔡琴]你的眼神 蔡琴.mp3|3b0c06d136c3df1c03bc40138d71e1b8|4024495
+[蔡琴]被遗忘的时光-蔡琴.mp3|J:\歌曲\Music\[蔡琴]被遗忘的时光-蔡琴.mp3|253aabde7562ae8d94abc4b9fb2cf59d|5639230
+[西城男孩]seasons in the sun-西城男孩.mp3|J:\歌曲\Music\[西城男孩]seasons in the sun-西城男孩.mp3|f0373ff83a15ae798ced3bdf09ef20b4|3966290
+[赵传]我终于失去了你-赵传.mp3|J:\歌曲\Music\[赵传]我终于失去了你-赵传.mp3|1ba4efef09ed88fe6d81e1ca7d965d38|4603904
+[陈百强]偏偏喜欢你-陈百强.MP3|J:\歌曲\Music\[陈百强]偏偏喜欢你-陈百强.MP3|998aa96961adf9e8cf42d13373932263|3395584
+[青鸟飞鱼]此生不换-青鸟飞鱼.mp3|J:\歌曲\Music\[青鸟飞鱼]此生不换-青鸟飞鱼.mp3|1262411219da3593a344ba6f8b4624c1|4241574
+一个像夏天一个像秋天.mp3|J:\歌曲\Music\一个像夏天一个像秋天.mp3|afa60c0171bac2c94e3b33fdcfb1a454|5983171
+乌兰托娅 - 我要去西藏 - 我要.mp3|J:\歌曲\Music\乌兰托娅 - 我要去西藏 - 我要.mp3|9ffbc473c8ab69e6badec0f11fece1c3|6639290
+云上青山.mp3|J:\歌曲\Music\云上青山.mp3|e7f756a272a679f9247dc1f02788a985|5907676
+他对你好吗.mp3|J:\歌曲\Music\他对你好吗.mp3|c525ceec2fcf917bfabafe75b4334c7d|3577284
+任贤齐 - 对折.mp3|J:\歌曲\Music\任贤齐\任贤齐 - 对折.mp3|4030ae1d3bcada90db1d8f7d3bfb0a48|2442072
+伍佰 - 把悲伤留给自己.mp3|J:\歌曲\Music\伍佰 - 把悲伤留给自己.mp3|24c9baf6aa319f1c0ceb9558a2a3c77c|4320026
+你知道我在等你吗.mp3|J:\歌曲\Music\你知道我在等你吗.mp3|2b544a89ec376249e5561ce7d35d2ebc|4029435
+六哲 - 多情的人总被无情的伤 - 伤感曲.mp3|J:\歌曲\Music\六哲 - 多情的人总被无情的伤 - 伤感曲.mp3|72cddc3e0ad4ed5ae1edc4059b9e13aa|2278382
+冷漠 - 小三.mp3|J:\歌曲\Music\冷漠\冷漠 - 小三.mp3|b5533dcb341cd0fb3237d106bad66085|4817545
+凤凰传奇 - 我们的歌谣.mp3|J:\歌曲\Music\凤凰传奇\凤凰传奇 - 我们的歌谣.mp3|d0efafeaf05797624eeef3a5c64a65c3|2511744
+刘沁 - i'm fine.mp3|J:\歌曲\Music\刘沁 - i'm fine.mp3|13057a9e2bb525dfbd0babc0629b64ae|4000959
+动力火车 - 背叛情歌 - 第一滴泪.mp3|J:\歌曲\Music\动力火车 - 背叛情歌 - 第一滴泪.mp3|d4a17e41251fb7e2b1701f3c5c81678f|6255484
+周桐同-花落谁家.mp3|J:\歌曲\Music\周桐同-花落谁家.mp3|b776d65f7db3975e5b9a85e911bfdeda|4152808
+因为爱情.mp3|J:\歌曲\Music\因为爱情.mp3|2b195a82be87482e2a6989231327a76b|3667604
+天下.mp3|J:\歌曲\Music\天下.mp3|3f0d34835958ddc20b1b698045899c36|3508729
+孙楠 - 你快回来.mp3|J:\歌曲\Music\孙楠 - 你快回来.mp3|fd2de7011fc7f79efc7b0303e5d69edd|4254812
+孙楠-拯救.mp3|J:\歌曲\Music\孙楠-拯救.mp3|29b5b82af97aa7bc168828801f2e5aa7|5318932
+寻找李慧珍.mp3|J:\歌曲\Music\寻找李慧珍.mp3|4370a316b20ffebb430ebcc406aa086a|4304270
+小沈阳-大笑江湖.mp3|J:\歌曲\Music\小沈阳-大笑江湖.mp3|46cd7b3ca90465eb98d4fdccdb949d42|3374130
+属于.mp3|J:\歌曲\Music\属于.mp3|06217de92c39528fe0bc86dfccd421db|9620734
+庞龙 - 草原香.mp3|J:\歌曲\Music\庞龙\庞龙 - 草原香.mp3|a7f08de61834ff05554474d495db4804|3652082
+张杰 - 秋天的童话.mp3|J:\歌曲\Music\张杰\张杰 - 秋天的童话.mp3|7ce5474d1b859acbb8ff01d1fea2256f|1969337
+张杰-我们都一样.mp3|J:\歌曲\Music\张杰-我们都一样.mp3|753e1cc3cfb44cd198f08b20969a14e3|4854639
+张芸京 - 偏爱.mp3|J:\歌曲\Music\张芸京 - 偏爱.mp3|27f3d6a293b47c7be8c7a65f7bf4115b|3409271
+张靓颖-如果这就是爱情.mp3|J:\歌曲\Music\张靓颖-如果这就是爱情.mp3|1a0ed946ea56406bba3ce235597c244e|4528560
+张韶涵 - 亲爱的那不是爱情.mp3|J:\歌曲\Music\张韶涵\张韶涵 - 亲爱的那不是爱情.mp3|ca7fa184fd84f6c9c63798f0599f7395|4112282
+弦子 - 心里有数.mp3|J:\歌曲\Music\弦子\弦子 - 心里有数.mp3|0ce98e3b63ba263bd0905ec3c34603d5|2016947
+徐千雅 - 彩云之南.mp3|J:\歌曲\Music\徐千雅\徐千雅 - 彩云之南.mp3|4aebbcf1f35e21160ed47d65868017df|1851328
+徐若萱 - 爱笑的眼睛.mp3|J:\歌曲\Music\徐若萱 - 爱笑的眼睛.mp3|750669ec1d9aa73403896fd9cca4e788|4325691
+想你的夜.mp3|J:\歌曲\Music\想你的夜.mp3|6301e10df646f1cac6f4e2e10adfa507|5698560
+慕容晓晓 - 花心男.mp3|J:\歌曲\Music\慕容晓晓\慕容晓晓 - 花心男.mp3|fcbf7d093ae54a4ea515e41da489c30d|3490780
+慢摇 - 弄你.mp3|J:\歌曲\Music\慢摇 - 弄你.mp3|a958afacfc1e1faff140b41f4694f2f0|1422006
+成龙 - 难说再见.mp3|J:\歌曲\Music\成龙 - 难说再见.mp3|4aa7cf357d104352887a42dd7f48de69|3702268
+我的好兄弟(正式版)-词曲_高进.mp3|J:\歌曲\Music\我的好兄弟(正式版)-词曲_高进.mp3|7c896b73207e1d91e7003cce75ad3977|6856957
+我终于失去了你.mp3|J:\歌曲\Music\我终于失去了你.mp3|9b90e1ec1af4222fed337716070023d3|4603904
+打动爱情.mp3|J:\歌曲\Music\打动爱情.mp3|ae9eb70728107a6361232d1c4b46c96e|3384678
+新不了情.mp3|J:\歌曲\Music\新不了情.mp3|cccab06a8923db641405125d63b7a7f6|5165924
+新贵妃醉酒.mp3|J:\歌曲\Music\新贵妃醉酒.mp3|bd1c42ea5c67fda749aed2c1562ad50f|4799401
+春节里.mp3|J:\歌曲\Music\春节里.mp3|6f70b242c7b4d77b0d1fb29c89107bb2|6504365
+最想念的季节.mp3|J:\歌曲\Music\最想念的季节.mp3|b8059c8073a8e70689770f1603687695|6150272
+月满荷塘 朱妍.MP3|J:\歌曲\Music\月满荷塘 朱妍.MP3|7b045308000f9feda866c82ddc73bef9|6841223
+李宇春 - 对不起,只是忽然好想你.mp3|J:\歌曲\Music\李宇春\李宇春 - 对不起,只是忽然好想你.mp3|aa8e91ce2b8bd56f5dcbd6b0e535fa1b|3776640
+杨幂 - 爱的供养.mp3|J:\歌曲\Music\杨幂\杨幂 - 爱的供养.mp3|bb021397cc68193714bdee08b15a1fc6|3329408
+林子路 - 谁是谁的谁.mp3|J:\歌曲\Music\林子路 - 谁是谁的谁.mp3|fd567de09fb9271211a9796bfbfe8ea6|3668275
+格格-火苗.mp3|J:\歌曲\Music\格格-火苗.mp3|20854dcf9de737497b77e1318bf5caf7|5254431
+梦里水乡.mp3|J:\歌曲\Music\梦里水乡.mp3|6e35b732a6553fbc811615efa23853ce|4793958
+水木年华 - 启程.mp3|J:\歌曲\Music\水木年华 - 启程.mp3|b87c4f0cc4ce0c39bf30173b9db140ab|4607982
+没有什么不同.mp3|J:\歌曲\Music\没有什么不同.mp3|c78c32231184b9a9b78f8f5ef72f20cb|4720342
+潘玮柏 - 我对天空说.mp3|J:\歌曲\Music\潘玮柏 - 我对天空说.mp3|71963fa2325b8efa70ea27b7ec1f8d0d|7831534
+爱情女神.mp3|J:\歌曲\Music\爱情女神.mp3|cae25b4e595e3b373c7a0ec6ae88353c|3079073
+爱戴 - 初次与你相遇.mp3|J:\歌曲\Music\爱戴\爱戴 - 初次与你相遇.mp3|58b869f663f7292e2c000a63ab6be722|3778754
+猪之歌-香香.mp3|J:\歌曲\Music\猪之歌-香香.mp3|eae0c8cf60b2b0b6dd382d2e04560b07|3184768
+王力宏 - 唯一.mp3|J:\歌曲\Music\王力宏 - 唯一.mp3|5c35d122e090582dc1fdf65da566a6a1|4204664
+王菲 - 传奇.mp3|J:\歌曲\Music\王菲\王菲 - 传奇.mp3|b3251c91f64c85c0c246182e8243743f|1922979
+王蓉 - 要抱抱.mp3|J:\歌曲\Music\王蓉\王蓉 - 要抱抱.mp3|77bc03ede4602a00edf8f55d3440ec12|3941746
+王麟 - 你是我的菜.mp3|J:\歌曲\Music\王麟\王麟 - 你是我的菜.mp3|b8ef5cf8b9bba676eba77fa1ddf0a62b|1654478
+画心.mp3|J:\歌曲\Music\画心.mp3|eae96ac93332e5d62b17b456ad57f1e4|6308302
+等你的季节.mp3|J:\歌曲\Music\等你的季节.mp3|df34ba06ded845f633ed17681e0b4238|1973479
+筷子组合 老男孩.mp3|J:\歌曲\Music\筷子组合 老男孩.mp3|eaa543d2fa1aa89b19273a54ae1e0b02|7201665
+红颜为你开放.mp3|J:\歌曲\Music\红颜为你开放.mp3|2fbb3df40049da06e2d5103ac86e900a|2123620
+胡歌 - 一念执着.mp3|J:\歌曲\Music\胡歌\胡歌 - 一念执着.mp3|60a6d17565ec614eccfead4f2b9f74f4|2090192
+苍宇 - 我愿意为你.mp3|J:\歌曲\Music\苍宇\苍宇 - 我愿意为你.mp3|02a13a5ac410194f1f0480748f577a6f|2014464
+范玮琪-是非题.MP3|J:\歌曲\Music\范玮琪-是非题.MP3|8085eca8974b5a56e02febe8d6064c4a|6187236
+蓝雨、龙梅子-我的爱情不见了.mp3|J:\歌曲\Music\蓝雨、龙梅子-我的爱情不见了.mp3|48af97f06f4c0d0c3a9d02e1fdab45ee|5752624
+蔡卓妍、林俊杰-小酒窝.mp3|J:\歌曲\Music\蔡卓妍、林俊杰-小酒窝.mp3|7b4a184017ea13076bf6a7b8a28a3a1e|5311196
+蔡淳佳 - 对不起我爱你.mp3|J:\歌曲\Music\蔡淳佳 - 对不起我爱你.mp3|1c294b9eb1178e8ccd77c986849cc4c7|5096178
+蝴蝶泉边(黄雅莉).mp3|J:\歌曲\Music\蝴蝶泉边(黄雅莉).mp3|a207349a852c10eeb1928b61b495d912|5954332
+许巍 - 旅行.mp3|J:\歌曲\Music\许巍 - 旅行.mp3|c8183be99f5a32678f8fe89de835c539|4353471
+许飞 - 我们终究会牵手旅行.mp3|J:\歌曲\Music\许飞\许飞 - 我们终究会牵手旅行.mp3|c98b55ee6caea055971fe0238ba1af61|2499977
+谢东 - 笑脸.mp3|J:\歌曲\Music\谢东 - 笑脸.mp3|a98e610911db8c0013b07fdde6d4833d|4146956
+谭咏麟 - 讲不出再见.mp3|J:\歌曲\Music\谭咏麟\谭咏麟 - 讲不出再见.mp3|b164cf4b35135909c800414e366080df|5769099
+费玉清 - 多情 - 总被无情伤.mp3|J:\歌曲\Music\费玉清 - 多情 - 总被无情伤.mp3|1e22b9c07fb93de1c3e593b76c172284|4738907
+走天涯-降央卓玛.mp3|J:\歌曲\Music\走天涯-降央卓玛.mp3|4d950bc290c6633a68f159dc988474c5|4322815
+迪克牛仔 - 三万英尺 - 一人一首成名曲.mp3|J:\歌曲\Music\迪克牛仔 - 三万英尺 - 一人一首成名曲.mp3|f65c2e6241dbdbd890a417821d3531ae|2263790
+遇上你是我的缘.mp3|J:\歌曲\Music\遇上你是我的缘.mp3|5a5ee94966124ba9af73de1de42af4b1|3309792
+那些年.mp3|J:\歌曲\Music\那些年.mp3|6a539f3fb24b8c129ce1cab0cc4556c8|5974972
+那片海.mp3|J:\歌曲\Music\那片海.mp3|8010933d6da973d78c31096b4818f3a4|4350945
+郁可唯 - 茶汤.mp3|J:\歌曲\Music\郁可唯\郁可唯 - 茶汤.mp3|ec7ae1a2d14ef7ab1c2574371c2c0e37|2449392
+难说再见.mp3|J:\歌曲\Music\难说再见.mp3|3cbc017b1a73d52215e480cc15816156|1850293
+面对.mp3|J:\歌曲\Music\面对.mp3|a166a428abf23544a80c2a371d194eed|3619512
+黄圣依 - 天音.mp3|J:\歌曲\Music\黄圣依\黄圣依 - 天音.mp3|e9c0b4c50b8253e557e53a9f8bf975e6|3563082
+齐秦 - 大约在冬季.mp3|J:\歌曲\Music\齐秦 - 大约在冬季.mp3|4e02bfb90b3940856876c02b2d35aedc|3734848
+Curiosity.mp3|J:\歌曲\Ring\Curiosity.mp3|8579691de47bc4e7b147b20316036429|5155669
+God is A Girl.mp3|J:\歌曲\Ring\God is A Girl.mp3|f91bb53afc644b18e01c327ac4d5aa3f|913239
+I Stay In Love.mp3|J:\歌曲\Ring\I Stay In Love.mp3|e39c371da4349b269cac13b4f9d64ac8|1698210
+个性短信音.mp3|J:\歌曲\Ring\个性短信音.mp3|f38ef6d15e9f61c245fbaf0dc3578bc9|120415
+中央领导用的铃声.mp3|J:\歌曲\Ring\中央领导用的铃声.mp3|e6e32ed25890904c7acbabc504f581bc|477312
+大哥那妞又来电话啦.mp3|J:\歌曲\Ring\大哥那妞又来电话啦.mp3|901cbcec58194e500128d070e428660e|602742
+小沈阳 - 我只是个传说.mp3|J:\歌曲\Ring\小沈阳 - 我只是个传说.mp3|3c17fefbe938b3f4e0eda0d314834d34|250047
+水声.mp3|J:\歌曲\Ring\水声.mp3|1ff48747d3e747ee53f2931a6e74f1ed|416287
+流水鸟鸣早晨闹钟彩铃.mp3|J:\歌曲\Ring\流水鸟鸣早晨闹钟彩铃.mp3|f7ca957bd933a8d0d0071b9433e7df70|464396
+清脆自然.mp3|J:\歌曲\Ring\清脆自然.mp3|25be4c3c2d13d89b584e8a56dd326568|258925
+牛鸡.mp3|J:\歌曲\Ring\牛鸡.mp3|84c30c5dec3aeafdaf6fcf7b3f914c2c|315184
+王力宏 - 唯一.mp3|J:\歌曲\Ring\王力宏 - 唯一.mp3|5c35d122e090582dc1fdf65da566a6a1|4204664
+甜蜜温馨闹铃.mp3|J:\歌曲\Ring\甜蜜温馨闹铃.mp3|89924b09b508defc0bdf5001987d03be|453529
+等不到的爱.mp3|J:\歌曲\Ring\等不到的爱.mp3|c3bc10ef0ba4dd8332e4782b9ab3dc6e|529243
+老大电话.mp3|J:\歌曲\Ring\老大电话.mp3|91949bd92cf8aae92eb3bf04a2052c6e|510533
+起床了.mp3|J:\歌曲\Ring\起床了.mp3|efee37d5baf9f755cc37028b118771a9|216049
+音乐 极品闹铃 清晨不吵人_yy190.com.mp3|J:\歌曲\Ring\音乐 极品闹铃 清晨不吵人_yy190.com.mp3|fe5440a356638de47563de9f1bb5246e|819200
+5566-我难过.mp3|J:\歌曲\一人一首成名歌\5566-我难过.mp3|1f34012a574cd206c5121a9bcef74098|4560896
+Beyond-光辉岁月.mp3|J:\歌曲\一人一首成名歌\Beyond-光辉岁月.mp3|4dc283c7ac7bd5d9bf9b72f167d4ec7d|4785590
+Big Bang-谎言.mp3|J:\歌曲\一人一首成名歌\Big Bang-谎言.mp3|3bfe6fd1056f985b3f6e3c3404afcd6d|5501515
+F4-流星雨.mp3|J:\歌曲\一人一首成名歌\F4-流星雨.mp3|03290b4f4d8519cd72eb24031662be7d|4425728
+Rain-Love Story.mp3|J:\歌曲\一人一首成名歌\Rain-Love Story.mp3|e806e8a4a5736cb667e97600c0e1ee33|9762749
+S.H.E-恋人未满.mp3|J:\歌曲\一人一首成名歌\S.H.E-恋人未满.mp3|b7b1c91ca4b85e48970c802ea3f2b2c7|4425351
+Super Junior-爱就是你.mp3|J:\歌曲\一人一首成名歌\Super Junior-爱就是你.mp3|5d110e6bb57b0c4744e290341166e109|5453952
+Tank-给我你的爱.mp3|J:\歌曲\一人一首成名歌\Tank-给我你的爱.mp3|a10af53a5a9a9522a8c624884ca53552|6823549
+Twins-爱情当入樽.mp3|J:\歌曲\一人一首成名歌\Twins-爱情当入樽.mp3|61947cea293a20dad01cf5d4478ab942|3030334
+丁小芹-如果我是男生.mp3|J:\歌曲\一人一首成名歌\丁小芹-如果我是男生.mp3|77bc69fbe571151c6ea7bb366ff170b8|3562148
+东方神起-My Little Princess.mp3|J:\歌曲\一人一首成名歌\东方神起-My Little Princess.mp3|3e2187828e3cf1baf223245cc38a09b7|7020638
+五月天-温柔.mp3|J:\歌曲\一人一首成名歌\五月天-温柔.mp3|d9f300e83030e9e85755acd085509cf6|4313176
+任贤齐-心太软.mp3|J:\歌曲\一人一首成名歌\任贤齐-心太软.mp3|2f207153b72291e856078edf0b6784c6|5623808
+伍佰-浪人情歌.mp3|J:\歌曲\一人一首成名歌\伍佰-浪人情歌.mp3|34a888782095caa12c39d4a48c9fd8e4|7966657
+伍思凯-特别的爱给特别的你.mp3|J:\歌曲\一人一首成名歌\伍思凯-特别的爱给特别的你.mp3|48580545778c0460b4a55b2b0d4eb905|4749323
+何洁-希望.mp3|J:\歌曲\一人一首成名歌\何洁-希望.mp3|1fc1ef9800ff03c6f7b99fc6f114ccf7|6589797
+何韵诗-天使蓝.mp3|J:\歌曲\一人一首成名歌\何韵诗-天使蓝.mp3|db9d38bc034fb02e81bc68890fe38599|3505455
+侧田-好人.mp3|J:\歌曲\一人一首成名歌\侧田-好人.mp3|7ff863be4c71469a4863f7af64b40115|6367735
+侯湘婷-秋天别来.mp3|J:\歌曲\一人一首成名歌\侯湘婷-秋天别来.mp3|ace5a86bb40f8aa321c329b613d1634f|4529972
+信乐团-死了都要爱.mp3|J:\歌曲\一人一首成名歌\信乐团-死了都要爱.mp3|3794a36568cdd468bc916384f1a0fd58|4286395
+元卫觉醒-靠近.mp3|J:\歌曲\一人一首成名歌\元卫觉醒-靠近.mp3|6dd4f5aafab78b33d6728470c9479d3b|5336759
+光良-第一次.mp3|J:\歌曲\一人一首成名歌\光良-第一次.mp3|c4ca5acce84bab28b5634f93c4d40f1d|5201107
+关心妍-乱了情人.mp3|J:\歌曲\一人一首成名歌\关心妍-乱了情人.mp3|b1a7880ced84256958138f46896c8b70|3602432
+关心妍-负担不起.mp3|J:\歌曲\一人一首成名歌\关心妍-负担不起.mp3|ca6784caff9309cf41880acd0c837807|4009984
+关淑怡-难得有情人.mp3|J:\歌曲\一人一首成名歌\关淑怡-难得有情人.mp3|d2a283a641bba6fd8a5e360ac50f10d0|3627136
+凤凰传奇-月亮之上.mp3|J:\歌曲\一人一首成名歌\凤凰传奇-月亮之上.mp3|12955b0a019901632619a1d38d7e3668|3623510
+刀郎-2002年的第一场雪.mp3|J:\歌曲\一人一首成名歌\刀郎-2002年的第一场雪.mp3|0b0b89d1865a7621e22c8893a5c6e152|6119049
+刘亦菲-放飞美丽.mp3|J:\歌曲\一人一首成名歌\刘亦菲-放飞美丽.mp3|c0e054ca655ff54d56b6840f14e5eb33|2960220
+刘力扬-提线木偶.mp3|J:\歌曲\一人一首成名歌\刘力扬-提线木偶.mp3|73c54ab586a2f4cff1b72a85fd4baf0f|4997248
+刘力扬-眼泪笑了.mp3|J:\歌曲\一人一首成名歌\刘力扬-眼泪笑了.mp3|b0880bb77f94ee708253b3d15e535ea0|5281518
+刘德华-一起走过的日子.mp3|J:\歌曲\一人一首成名歌\刘德华-一起走过的日子.mp3|5655c1cdb723bef5bee1d4fad8ad87a8|6973018
+动力火车-无情的情书.mp3|J:\歌曲\一人一首成名歌\动力火车-无情的情书.mp3|7dfcdbffb5a6c6e9691b152159e3c54a|9504425
+卓文萱-对你的爱.mp3|J:\歌曲\一人一首成名歌\卓文萱-对你的爱.mp3|d24292a085817b5fe6804d8df42565f0|6706286
+南拳妈妈-香草吧噗.mp3|J:\歌曲\一人一首成名歌\南拳妈妈-香草吧噗.mp3|ed38d9b04a357bc0071cb05933fa6d10|5453433
+卫兰-大哥.mp3|J:\歌曲\一人一首成名歌\卫兰-大哥.mp3|538d3f6320494665f45d81f99c0861ed|3783494
+厉娜-广州爱情故事.mp3|J:\歌曲\一人一首成名歌\厉娜-广州爱情故事.mp3|f17c6a98c18fcfd7ac40cec2a10e5e12|6007148
+古天乐-天命最高.mp3|J:\歌曲\一人一首成名歌\古天乐-天命最高.mp3|6f66567a347677362652ee953aa197f9|3110008
+古巨基-欢乐今宵.mp3|J:\歌曲\一人一首成名歌\古巨基-欢乐今宵.mp3|0f6c1c82de4187eb55fcdfe3615b9f11|3627008
+后弦-桥段.mp3|J:\歌曲\一人一首成名歌\后弦-桥段.mp3|805d44ce7462796a2e67c0b3fcd55fcd|4886744
+吴克群-将军令.mp3|J:\歌曲\一人一首成名歌\吴克群-将军令.mp3|b40c8c19badcda6bf123f4f0f2da690d|6322170
+吴卓羲-别怪她.mp3|J:\歌曲\一人一首成名歌\吴卓羲-别怪她.mp3|e53bf3df248f86ab83a7a9b34c0aeb6e|6247515
+吴听彻-后真空.mp3|J:\歌曲\一人一首成名歌\吴听彻-后真空.mp3|3eb4f142f3ec7d385f3040d84f4b39d0|4854003
+吴奇隆-一天一天等下去.mp3|J:\歌曲\一人一首成名歌\吴奇隆-一天一天等下去.mp3|a814eba5fde3fb7a996f0b1733630392|4774170
+吴雨霏-逼得太紧.mp3|J:\歌曲\一人一首成名歌\吴雨霏-逼得太紧.mp3|f9eb21260afc069c5cb17f14f6c74bcd|7793316
+周传雄-黄昏.mp3|J:\歌曲\一人一首成名歌\周传雄-黄昏.mp3|79485484b5c97e3c4eb0da3b274e6836|10025471
+周华健-让我欢喜让我忧.mp3|J:\歌曲\一人一首成名歌\周华健-让我欢喜让我忧.mp3|213e38108a7f425f06d0f7c37992931c|8276050
+周启生-天长地久.mp3|J:\歌曲\一人一首成名歌\周启生-天长地久.mp3|88d6b5623ec477344780559c1997c2db|3342506
+周慧敏-痴心换情深.mp3|J:\歌曲\一人一首成名歌\周慧敏-痴心换情深.mp3|f7f7f618c3b3a9d5ead3d7a2f066e8c3|7528304
+周杰伦-简单爱.mp3|J:\歌曲\一人一首成名歌\周杰伦-简单爱.mp3|3a166a3a15f7716b640bd36aa1bb8f4f|5421056
+周渝民-Make A Wish.mp3|J:\歌曲\一人一首成名歌\周渝民-Make A Wish.mp3|5614b629d1abcfca0a32d38c774826f7|4556800
+周笔畅-笔记.mp3|J:\歌曲\一人一首成名歌\周笔畅-笔记.mp3|98c29a3ed3640ada19dcc209675d27a4|4137088
+唐禹哲-分开以后.mp3|J:\歌曲\一人一首成名歌\唐禹哲-分开以后.mp3|b082d4c274900a020943952689c8e3bf|5848929
+大嘴巴-结果咧.mp3|J:\歌曲\一人一首成名歌\大嘴巴-结果咧.mp3|c749f5297fbad60f582315ed837e888b|3653926
+姜育恒-驿动的心.mp3|J:\歌曲\一人一首成名歌\姜育恒-驿动的心.mp3|b490aa408cd78ff1de5f44d1f38197d1|6927503
+孙楠-不见不散.mp3|J:\歌曲\一人一首成名歌\孙楠-不见不散.mp3|bd71893d0c412a383e606586994ffca3|3707425
+孙燕姿-天黑黑.mp3|J:\歌曲\一人一首成名歌\孙燕姿-天黑黑.mp3|928fcec7314c2ffe30f2990e352a327a|3737241
+孟庭苇-一个爱上浪漫的人.mp3|J:\歌曲\一人一首成名歌\孟庭苇-一个爱上浪漫的人.mp3|64ee4773524f21ce6cea41ba74be753b|3929351
+孟庭苇-你看你看月亮的脸.mp3|J:\歌曲\一人一首成名歌\孟庭苇-你看你看月亮的脸.mp3|b66647d83f720c875f17eb1af627ec40|9004107
+宇多田光-Automatic.mp3|J:\歌曲\一人一首成名歌\宇多田光-Automatic.mp3|af3ac6c2e5124bbc60d83d8d04407e8e|5257926
+小虎队-红蜻蜓.mp3|J:\歌曲\一人一首成名歌\小虎队-红蜻蜓.mp3|8d4828ee5816c4cf082f2c57bd6c821c|4606874
+尚雯婕-梦之浮桥.mp3|J:\歌曲\一人一首成名歌\尚雯婕-梦之浮桥.mp3|14c108d9c75db73f12e0e244b32a8e5c|4975848
+庾澄庆-让我一次爱个够.mp3|J:\歌曲\一人一首成名歌\庾澄庆-让我一次爱个够.mp3|4cc24939fc244ba4a10dce4946997382|7955093
+张信哲-爱如潮水.mp3|J:\歌曲\一人一首成名歌\张信哲-爱如潮水.mp3|f068da72bd890ddb549539872efb0f7d|7885876
+张国荣-风继续吹.mp3|J:\歌曲\一人一首成名歌\张国荣-风继续吹.mp3|bf38a6c5bb0b5943f7c2590787618700|5117578
+张学友-遥远的她.mp3|J:\歌曲\一人一首成名歌\张学友-遥远的她.mp3|61a031fbac8460d933554d2f57a68d89|5104900
+张宇-用心良苦.mp3|J:\歌曲\一人一首成名歌\张宇-用心良苦.mp3|9c8fc29b9e092b5ea61f991445d26655|8493623
+张悬-宝贝.mp3|J:\歌曲\一人一首成名歌\张悬-宝贝.mp3|b5e61014426456cee45de528d15f9a61|3488200
+张惠妹-听海.mp3|J:\歌曲\一人一首成名歌\张惠妹-听海.mp3|459a2a37c60ac5264f58b568425a9a7d|5085730
+张振宇-不要再来伤害我.mp3|J:\歌曲\一人一首成名歌\张振宇-不要再来伤害我.mp3|d9cfa3188f79d18d10fd69b737160257|7690975
+张敬轩-断点.mp3|J:\歌曲\一人一首成名歌\张敬轩-断点.mp3|92c923a39635642a6d6be6518074d6f6|4294656
+张杰-最美的太阳.mp3|J:\歌曲\一人一首成名歌\张杰-最美的太阳.mp3|613d647891d8795115e55e9534024989|5249746
+张柏芝-任何天气.mp3|J:\歌曲\一人一首成名歌\张柏芝-任何天气.mp3|cbca5be36f4e0cb18a3646c820ebed75|4060345
+张柏芝-星语心愿.mp3|J:\歌曲\一人一首成名歌\张柏芝-星语心愿.mp3|1a80a08dc58dfbedb90eff00a0ec600b|6635783
+张栋梁-当你孤单你会想起谁.mp3|J:\歌曲\一人一首成名歌\张栋梁-当你孤单你会想起谁.mp3|c12c4edf2c9d7ff78d663e790032ac63|6192658
+张洪量-你知道我在等你吗.mp3|J:\歌曲\一人一首成名歌\张洪量-你知道我在等你吗.mp3|7687fd7c4bb71b9f6b340dba9784733b|8044771
+张清芳-出嫁.mp3|J:\歌曲\一人一首成名歌\张清芳-出嫁.mp3|ef1ddcd880337513bb2970d78639c25b|7361254
+张艾嘉-爱的代价.mp3|J:\歌曲\一人一首成名歌\张艾嘉-爱的代价.mp3|3694909f739cde6346563fa73f4a0e01|4870104
+张芸京-黑裙子.mp3|J:\歌曲\一人一首成名歌\张芸京-黑裙子.mp3|4da935c95cf571c4442dfb7c5863655c|7204281
+张镐哲-不是我不小心.mp3|J:\歌曲\一人一首成名歌\张镐哲-不是我不小心.mp3|f1e46285baa870e99cde32b8bd7b10b4|8608697
+张雨生-我的未来不是梦.mp3|J:\歌曲\一人一首成名歌\张雨生-我的未来不是梦.mp3|a7fa4983fdc0b377db994c335082d69c|9259906
+张震岳-就是喜欢你.mp3|J:\歌曲\一人一首成名歌\张震岳-就是喜欢你.mp3|aeab26b4a1db0976b7247f6ade92a6f3|3603825
+张靓颖-这该死的爱.mp3|J:\歌曲\一人一首成名歌\张靓颖-这该死的爱.mp3|b21cd11f5c2c890f0df1afa9f4e3f265|8782186
+张韶涵-寓言.mp3|J:\歌曲\一人一首成名歌\张韶涵-寓言.mp3|c6677be8854fac94cd9d1c95662c750a|5924699
+弦子-舍不得.mp3|J:\歌曲\一人一首成名歌\弦子-舍不得.mp3|efd624e4785fe4204ea61158248b853e|5991756
+往前一步.mp3|J:\歌曲\一人一首成名歌\往前一步.mp3|4dc4cf78c2c835a6bf8ef9cd2b78af54|1533263
+徐佳莹-身骑白马.mp3|J:\歌曲\一人一首成名歌\徐佳莹-身骑白马.mp3|1f6aa63d37139415f2b2b88752077a18|4766544
+徐小凤-顺流逆流.mp3|J:\歌曲\一人一首成名歌\徐小凤-顺流逆流.mp3|74f4abb35106dab4be9c2bdfd4290b33|3589938
+徐怀钰-我是女生.mp3|J:\歌曲\一人一首成名歌\徐怀钰-我是女生.mp3|397561ed2fe3c30c1d3e58070f71abdb|4671616
+徐若瑄-不败的恋人.mp3|J:\歌曲\一人一首成名歌\徐若瑄-不败的恋人.mp3|67ef4005610726831452fb6a3099d90c|3562974
+徐誉滕-等一分钟.mp3|J:\歌曲\一人一首成名歌\徐誉滕-等一分钟.mp3|4de680265efe6a80a529d2577917d0b8|3781715
+戴佩妮-你要的爱.mp3|J:\歌曲\一人一首成名歌\戴佩妮-你要的爱.mp3|23960acc03d13ea1dfb5dc9b7a3ba42f|3879625
+方力申-好心好报.mp3|J:\歌曲\一人一首成名歌\方力申-好心好报.mp3|0206b89ba973ea831b689a1616e48131|5073802
+方大同-妹妹.mp3|J:\歌曲\一人一首成名歌\方大同-妹妹.mp3|4785b6d3f04d0a2cbdff6d3bbff29bec|5458128
+方季惟-爱情的故事.mp3|J:\歌曲\一人一首成名歌\方季惟-爱情的故事.mp3|6f4eb2a413aa737e5dea1ba1f462aca6|4510941
+无印良品-掌心.mp3|J:\歌曲\一人一首成名歌\无印良品-掌心.mp3|d1a148b0bf16283322af1344c3f57351|4243957
+曹格-背叛.mp3|J:\歌曲\一人一首成名歌\曹格-背叛.mp3|087dc26ffe50046815a09be3d275d741|8790623
+朴树-白桦林.mp3|J:\歌曲\一人一首成名歌\朴树-白桦林.mp3|f5a089af151443a09a47777379105409|3639279
+李丽芬-爱江山更爱美人.mp3|J:\歌曲\一人一首成名歌\李丽芬-爱江山更爱美人.mp3|2254c8ecbca8b1a7946d39c8dffd2862|5072896
+李克勤-一生不变.mp3|J:\歌曲\一人一首成名歌\李克勤-一生不变.mp3|a32eef22402a3f485886180333cc5e5f|4270793
+李克勤-红日.mp3|J:\歌曲\一人一首成名歌\李克勤-红日.mp3|10a88feb3f6c4a02185a75e439030e97|4643195
+李圣杰-痴心绝对.mp3|J:\歌曲\一人一首成名歌\李圣杰-痴心绝对.mp3|293be8991e7cb68f1e3c6350589b3bc5|7922604
+李孝利-10 Minutes.mp3|J:\歌曲\一人一首成名歌\李孝利-10 Minutes.mp3|414fe6ca0d8d5e79749865d041481da7|3790309
+李宇春-冬天快乐.mp3|J:\歌曲\一人一首成名歌\李宇春-冬天快乐.mp3|971d34c5965b209d72ab16562974119b|7708361
+李宗盛-寂寞难耐.mp3|J:\歌曲\一人一首成名歌\李宗盛-寂寞难耐.mp3|4aea1636918be1a88992217e0cb99adc|5330651
+李度-为爱犯了罪.mp3|J:\歌曲\一人一首成名歌\李度-为爱犯了罪.mp3|5b921c63e587ec5ab38f0adcadac1563|7595368
+李慧珍-在等待.mp3|J:\歌曲\一人一首成名歌\李慧珍-在等待.mp3|521694b812c60225fba5e92d7cb13513|5761024
+李玖哲-想太多.mp3|J:\歌曲\一人一首成名歌\李玖哲-想太多.mp3|a2c4471d82c330081b5b09ba4a154c99|5075370
+李玟-颜色.mp3|J:\歌曲\一人一首成名歌\李玟-颜色.mp3|fd7ea8cc99a6c3a9599c0356ecfb3902|3250468
+李翊君-风中的承诺.mp3|J:\歌曲\一人一首成名歌\李翊君-风中的承诺.mp3|cc3d6e6a7ec9fd3c561007feef70d3f7|9261872
+杜德伟-情人.mp3|J:\歌曲\一人一首成名歌\杜德伟-情人.mp3|854f36998111c7fff8cea4c9a0d0c60e|3494016
+杜德伟-无心伤害.mp3|J:\歌曲\一人一首成名歌\杜德伟-无心伤害.mp3|97badfc5114c285fe35242dc13506e68|4706766
+杨丞琳-暧昧.mp3|J:\歌曲\一人一首成名歌\杨丞琳-暧昧.mp3|2ae95b70fb352b23511dccd8c16f4d77|6045291
+杨千嬅-狼来了.mp3|J:\歌曲\一人一首成名歌\杨千嬅-狼来了.mp3|c8871e570ae16a9c1fd2240dfc5d4292|4004845
+杨宗纬-洋葱.mp3|J:\歌曲\一人一首成名歌\杨宗纬-洋葱.mp3|8a2ea11710bd3c51e3b9e18dfd73d9c9|7020174
+林俊杰-江南.mp3|J:\歌曲\一人一首成名歌\林俊杰-江南.mp3|ec1f9a15ac3c7a5c1ea811916a361753|8597504
+林宥嘉-残酷月光.mp3|J:\歌曲\一人一首成名歌\林宥嘉-残酷月光.mp3|bd9ba830b2399a95a3ba7dc04a106445|5960686
+林忆莲-爱上一个不回家的人.mp3|J:\歌曲\一人一首成名歌\林忆莲-爱上一个不回家的人.mp3|73a8f8cb355cbb9b9c5d9abb75937ecc|8587057
+林志炫-单身情歌.mp3|J:\歌曲\一人一首成名歌\林志炫-单身情歌.mp3|c4633582eaea5b70044f1d0678771770|7556264
+林志颖-不是每个恋曲都有美好回忆.mp3|J:\歌曲\一人一首成名歌\林志颖-不是每个恋曲都有美好回忆.mp3|4e6a7a3b987e32d9136e1ee4197deddb|4152903
+梁咏琪-短发.mp3|J:\歌曲\一人一首成名歌\梁咏琪-短发.mp3|e5ada3c3628b518be7fe51731d31f80f|4546560
+梁朝伟-一天一点爱恋.mp3|J:\歌曲\一人一首成名歌\梁朝伟-一天一点爱恋.mp3|ccdb936e24e52be78dd938451da85ee4|6477744
+梁静茹-勇气.mp3|J:\歌曲\一人一首成名歌\梁静茹-勇气.mp3|6ad398b5545e45eecc0585c0223f6d96|6852662
+梅艳芳-亲密爱人.mp3|J:\歌曲\一人一首成名歌\梅艳芳-亲密爱人.mp3|59674c17db549cc506625e0cfc9ba178|6452228
+棉花糖-小飞行.mp3|J:\歌曲\一人一首成名歌\棉花糖-小飞行.mp3|172032ddfc08a80655470eacdb11649e|4482521
+棒棒堂-哪里怕.mp3|J:\歌曲\一人一首成名歌\棒棒堂-哪里怕.mp3|e65a02ec32b6cb45b8bdcbe241f24249|5067251
+水木年华-一生有你.mp3|J:\歌曲\一人一首成名歌\水木年华-一生有你.mp3|a4bad51763b257c380eaef0c652ad35b|4595690
+江美琪-亲爱的你怎么不在我身边.mp3|J:\歌曲\一人一首成名歌\江美琪-亲爱的你怎么不在我身边.mp3|8e5ed9ab3f1bfa08af74ce3a7a8b01a6|4137047
+汪明荃-万水千山总是情.mp3|J:\歌曲\一人一首成名歌\汪明荃-万水千山总是情.mp3|ce29c1efa93e8686b327acd792be7ec7|4859407
+泳儿-感应.mp3|J:\歌曲\一人一首成名歌\泳儿-感应.mp3|4167100a106c8e25db02bfab1c1d1172|6041728
+海鸣威-老人与海.mp3|J:\歌曲\一人一首成名歌\海鸣威-老人与海.mp3|bfc46c7ea36f4c2961bf1e94b31f0a04|4263536
+温岚-蓝色雨.mp3|J:\歌曲\一人一首成名歌\温岚-蓝色雨.mp3|7c6b393c2bd4a867cf4a749cfe34c87a|4728832
+潘玮柏-壁虎漫步.mp3|J:\歌曲\一人一首成名歌\潘玮柏-壁虎漫步.mp3|d0205b553dff0619e425181357a4a035|4390789
+潘美辰-我想有个家.mp3|J:\歌曲\一人一首成名歌\潘美辰-我想有个家.mp3|efd041eb84e01e522ac7ee8dfeac0236|9712264
+潘越云-天天天蓝.mp3|J:\歌曲\一人一首成名歌\潘越云-天天天蓝.mp3|ece5ed12ea5ce1360ece1753033fbb92|3537317
+熊天平-爱情多瑙河.mp3|J:\歌曲\一人一首成名歌\熊天平-爱情多瑙河.mp3|387b378d0ad31308485aacbb5c92bd85|4058511
+王力宏-不可能错过你.mp3|J:\歌曲\一人一首成名歌\王力宏-不可能错过你.mp3|f5847ad53cf384b56ea3b4f58b8b698f|4757255
+王心凌-爱你.mp3|J:\歌曲\一人一首成名歌\王心凌-爱你.mp3|4ed094e9c962e5f6e6db7bd697c4d94b|5272683
+王杰-一场游戏一场梦.mp3|J:\歌曲\一人一首成名歌\王杰-一场游戏一场梦.mp3|171a1c02bf3c5d8e33ed9dec956c3c41|7087627
+王若琳-迷宫.mp3|J:\歌曲\一人一首成名歌\王若琳-迷宫.mp3|f1b4b875eb542c21795793f16671c89d|6229549
+王菲-容易受伤的女人.mp3|J:\歌曲\一人一首成名歌\王菲-容易受伤的女人.mp3|37944666b4e6ce05e5f29e7159c872ce|4132780
+王馨平-别问我是谁.mp3|J:\歌曲\一人一首成名歌\王馨平-别问我是谁.mp3|c622ac27780621ecd3167a21fa97bac0|8844563
+童安格-明天是否还是爱我.mp3|J:\歌曲\一人一首成名歌\童安格-明天是否还是爱我.mp3|55c1d4041701fce123438a8a83c4899e|8439732
+罗大佑-恋曲1990.mp3|J:\歌曲\一人一首成名歌\罗大佑-恋曲1990.mp3|04c3e41d7fe4ff36d846e397f5f447c8|5044446
+罗志祥-灰色空间.mp3|J:\歌曲\一人一首成名歌\罗志祥-灰色空间.mp3|c831fbd15fb1fb0aa1ba196189caaeee|5702037
+羽泉-最美.mp3|J:\歌曲\一人一首成名歌\羽泉-最美.mp3|f452f512fdf61710415f53c65aefa8c9|7190364
+老狼-同桌的你.mp3|J:\歌曲\一人一首成名歌\老狼-同桌的你.mp3|5f1dbf0f3746033703cce5d9d3a7252d|3695130
+胡彦斌-和尚.mp3|J:\歌曲\一人一首成名歌\胡彦斌-和尚.mp3|3292d614062e8208ddf7c8218a811591|4766534
+胡杨林-香水有毒.mp3|J:\歌曲\一人一首成名歌\胡杨林-香水有毒.mp3|2efc7bab7c8ec808d00e58ea57196f84|4662797
+花儿乐队-放学啦.mp3|J:\歌曲\一人一首成名歌\花儿乐队-放学啦.mp3|982c6db878783b9d8af3b7df97f7df85|2477652
+苏慧伦-鸭子.mp3|J:\歌曲\一人一首成名歌\苏慧伦-鸭子.mp3|3f24f6474d35128a03d911c652b10889|3245830
+苏打绿-小情歌.mp3|J:\歌曲\一人一首成名歌\苏打绿-小情歌.mp3|c9160ce3989635ce804fdcd772946b9c|6376645
+范玮琪-一比一.mp3|J:\歌曲\一人一首成名歌\范玮琪-一比一.mp3|50308a0fa0142034f96ccbad9f257b32|6135808
+范逸臣-I Believe.mp3|J:\歌曲\一人一首成名歌\范逸臣-I Believe.mp3|90580767762eed6a08662b676e9f04ec|4673801
+莫文蔚-盛夏的果实.mp3|J:\歌曲\一人一首成名歌\莫文蔚-盛夏的果实.mp3|f7aa39388cbc1daf3a7be6bff7b7d449|7034005
+萧亚轩-最熟悉的陌生人.mp3|J:\歌曲\一人一首成名歌\萧亚轩-最熟悉的陌生人.mp3|6b1df82d80f5e2358f02242f584de36a|6212463
+萧敬腾-王子的新衣.mp3|J:\歌曲\一人一首成名歌\萧敬腾-王子的新衣.mp3|d2600abbf2edad8b67c7c85bc93b10db|5867355
+萨顶顶-万物生.mp3|J:\歌曲\一人一首成名歌\萨顶顶-万物生.mp3|1a0e4de9f9a406123004dd410fff1350|4450474
+蓝又时-秘密.mp3|J:\歌曲\一人一首成名歌\蓝又时-秘密.mp3|6a77f7f9242f7af166840d578c9a8e73|6497783
+蓝心湄-一见钟情.mp3|J:\歌曲\一人一首成名歌\蓝心湄-一见钟情.mp3|f651d8601350f95f24842af466479ca7|7417585
+蔡依林-我知道你很难过.mp3|J:\歌曲\一人一首成名歌\蔡依林-我知道你很难过.mp3|bf66b5ec06591b2b0b1015409bf1b4fd|7481198
+蔡健雅-呼吸.mp3|J:\歌曲\一人一首成名歌\蔡健雅-呼吸.mp3|98176a23ae47745def502b09e3d612f7|4791194
+蔡国权-不装饰你的梦.mp3|J:\歌曲\一人一首成名歌\蔡国权-不装饰你的梦.mp3|6d52d8f8ab3e232ca21fee001b29ed38|7022767
+蔡旻佑-我可以.mp3|J:\歌曲\一人一首成名歌\蔡旻佑-我可以.mp3|b397ceb261a55d12c1a1a87d956db7dd|6915580
+蔡琴-恰似你的温柔.mp3|J:\歌曲\一人一首成名歌\蔡琴-恰似你的温柔.mp3|de3cf4214e456c7f707be6bdc504925d|4104958
+薛凯琪-奇洛里维斯的回信.mp3|J:\歌曲\一人一首成名歌\薛凯琪-奇洛里维斯的回信.mp3|bd9590b325b04bf23b884db29c8d6202|3958075
+裘海正-爱我的人和我爱的人.mp3|J:\歌曲\一人一首成名歌\裘海正-爱我的人和我爱的人.mp3|f614b096834fadcef127cf3be7de8474|8011972
+许冠杰-浪子心声.mp3|J:\歌曲\一人一首成名歌\许冠杰-浪子心声.mp3|25df982345c7e132ac0448be25892e94|2927890
+许嵩-城府.mp3|J:\歌曲\一人一首成名歌\许嵩-城府.mp3|3f29590bfeb22fe55d3d387e74702124|4743168
+许巍-我的秋天.mp3|J:\歌曲\一人一首成名歌\许巍-我的秋天.mp3|0171c9feeb8390b5d6c6b02d71695eb7|4386816
+许志安-为什么背着我爱别人.mp3|J:\歌曲\一人一首成名歌\许志安-为什么背着我爱别人.mp3|afa38c5812f11ff70fa7e23a7f8276ea|8775433
+许慧欣-孤单芭蕾.mp3|J:\歌曲\一人一首成名歌\许慧欣-孤单芭蕾.mp3|02d8cf3388780a06b0b4a56729a6caae|3779273
+许美静-城里的月光.mp3|J:\歌曲\一人一首成名歌\许美静-城里的月光.mp3|7f30ed33c1238459127cb0ae20f51a34|9232277
+许茹芸-独角戏.mp3|J:\歌曲\一人一首成名歌\许茹芸-独角戏.mp3|e3aa787f3ebc2ec01cc5a3921aa0eb45|8960838
+许飞-淡淡的歌.mp3|J:\歌曲\一人一首成名歌\许飞-淡淡的歌.mp3|23803b4f0992e1ea24167ada52843824|4242111
+谢安琪-钟无艳.mp3|J:\歌曲\一人一首成名歌\谢安琪-钟无艳.mp3|57e635a5c6bc13864f8a754b6d5a9249|6512397
+谢霆锋-坏习惯.mp3|J:\歌曲\一人一首成名歌\谢霆锋-坏习惯.mp3|865fd117c4791ef12a6b4575aedc9dc9|5644457
+谭咏麟-爱在深秋.mp3|J:\歌曲\一人一首成名歌\谭咏麟-爱在深秋.mp3|e33220917d978a42931bbcbba5de8ef4|3881255
+赵传-我很丑可是我很温柔.mp3|J:\歌曲\一人一首成名歌\赵传-我很丑可是我很温柔.mp3|a7bf704861de0ad8cc8f6f57e5506e66|6662987
+赵薇-天使旅行箱.mp3|J:\歌曲\一人一首成名歌\赵薇-天使旅行箱.mp3|c41bfafa7874ffa760ea5b21e2f949de|5889869
+辛晓琪-味道.mp3|J:\歌曲\一人一首成名歌\辛晓琪-味道.mp3|ee6e6cb34ca10c1c79c7c0b7835e4a3e|7037309
+迪克牛仔-我这个你不爱的人.mp3|J:\歌曲\一人一首成名歌\迪克牛仔-我这个你不爱的人.mp3|afaebd0b67e9d5dd0aaba9c4974c9994|4311908
+邓丽君-何日君再来.mp3|J:\歌曲\一人一首成名歌\邓丽君-何日君再来.mp3|232ec8b1682de987a67b6625644e9db1|3999504
+邓丽欣-电灯胆.mp3|J:\歌曲\一人一首成名歌\邓丽欣-电灯胆.mp3|1754ea8e5ce54f2e109be44dff0cce7b|3443610
+邓颖芝-苦情人.mp3|J:\歌曲\一人一首成名歌\邓颖芝-苦情人.mp3|393b1941e1403731f5357e9f14562da3|3714113
+邝美云-堆积感情.mp3|J:\歌曲\一人一首成名歌\邝美云-堆积感情.mp3|19ad93be2081d5ec21553f298b0fb81d|4398689
+那英-一笑而过.mp3|J:\歌曲\一人一首成名歌\那英-一笑而过.mp3|7f8e423a71dde84f8e98635adbf7ae8c|7873513
+邰正宵-九百九十九朵玫瑰.mp3|J:\歌曲\一人一首成名歌\邰正宵-九百九十九朵玫瑰.mp3|8cf5e353a89100c81aa938f492b7bb44|4043883
+郑中基-别爱我.mp3|J:\歌曲\一人一首成名歌\郑中基-别爱我.mp3|acb23b95f0aa0b7137aa1c5b512d7019|4426605
+郑伊健-直至消失天与地.mp3|J:\歌曲\一人一首成名歌\郑伊健-直至消失天与地.mp3|b2816bade1bddb5373081a787efd9a41|4437600
+郑智化-水手.mp3|J:\歌曲\一人一首成名歌\郑智化-水手.mp3|829093af0964645a8caffd83833d781e|4798717
+郑源-一万个理由.mp3|J:\歌曲\一人一首成名歌\郑源-一万个理由.mp3|3ff746edc84c3a437eebeb55a9d4bb4a|6366562
+郑秀文-舍不得你.mp3|J:\歌曲\一人一首成名歌\郑秀文-舍不得你.mp3|623c8124bf614b5deff39657423b6bf5|5349463
+郭采洁-I Remember.mp3|J:\歌曲\一人一首成名歌\郭采洁-I Remember.mp3|7ed8e920c12b816a9032f1d52df6e634|3463973
+郭静-下一个天亮.mp3|J:\歌曲\一人一首成名歌\郭静-下一个天亮.mp3|72634538d485261f62b687b222eda6c0|5785888
+郭静-我不想忘记你.mp3|J:\歌曲\一人一首成名歌\郭静-我不想忘记你.mp3|32abd496591753cd139d6035b1314577|5986432
+金莎-平行线.mp3|J:\歌曲\一人一首成名歌\金莎-平行线.mp3|b654cf372e3ac197ef4c6277934b8bf8|5548749
+钟镇涛-只要你过得比我好.mp3|J:\歌曲\一人一首成名歌\钟镇涛-只要你过得比我好.mp3|d233cd2ca0a01ef21c75a7d21772e19f|8477241
+阿杜-他一定很爱你.mp3|J:\歌曲\一人一首成名歌\阿杜-他一定很爱你.mp3|e5f9884624f65ab2ea9b46902fc603f6|3424256
+阿桑-叶子.mp3|J:\歌曲\一人一首成名歌\阿桑-叶子.mp3|e474d8c312369b83bb1da24d0b4862a1|7020295
+陈冠希-双手插袋.mp3|J:\歌曲\一人一首成名歌\陈冠希-双手插袋.mp3|7aa596d06483f812b3fa08e1aa8432ab|2678361
+陈奕迅-天下无双.mp3|J:\歌曲\一人一首成名歌\陈奕迅-天下无双.mp3|b5d1b05c3b0efdf688e5cbab3e01d76f|4171778
+陈小春-神啊救救我.mp3|J:\歌曲\一人一首成名歌\陈小春-神啊救救我.mp3|b84c7f1a2fc3da1f2f5507808b5abef0|3829918
+陈慧琳-一切很美只因有你.mp3|J:\歌曲\一人一首成名歌\陈慧琳-一切很美只因有你.mp3|732a7ce2fdb6dcb90c1d53896d3920fc|3098135
+陈文媛-羽毛.mp3|J:\歌曲\一人一首成名歌\陈文媛-羽毛.mp3|72c76ceaf08a1329e8adefea1232e2a8|4572141
+陈明真-我用自己的方式爱你.mp3|J:\歌曲\一人一首成名歌\陈明真-我用自己的方式爱你.mp3|0c4d4f7bab8f1858db3735949af4ba72|8878643
+陈星-离家的孩子.mp3|J:\歌曲\一人一首成名歌\陈星-离家的孩子.mp3|1d553cd036af2db3a2d2086cd4ce33f2|5367140
+陈晓东-心有独钟.mp3|J:\歌曲\一人一首成名歌\陈晓东-心有独钟.mp3|3262509b5b59a0413650c714139c051b|4381462
+陈楚生-有没有人告诉你.mp3|J:\歌曲\一人一首成名歌\陈楚生-有没有人告诉你.mp3|3eb8106affbbf2114ec8fc7dd2a13c6e|5503588
+陈淑桦-梦醒时分.mp3|J:\歌曲\一人一首成名歌\陈淑桦-梦醒时分.mp3|79424e67cd8e532f19e642586e81aef5|7270503
+陈瑞-白狐.mp3|J:\歌曲\一人一首成名歌\陈瑞-白狐.mp3|ee69949af78caac7203f0434302f346b|5686408
+陈百强-偏偏喜欢你.mp3|J:\歌曲\一人一首成名歌\陈百强-偏偏喜欢你.mp3|1aa14bf925cee4f193dfb4dd44e5949e|6556903
+陈绮贞-旅行的意义.mp3|J:\歌曲\一人一首成名歌\陈绮贞-旅行的意义.mp3|1ddc1862e3e95fbe66404ac5c2e56019|7480605
+陶喆-黑色柳丁.mp3|J:\歌曲\一人一首成名歌\陶喆-黑色柳丁.mp3|4623435037717ce4386f31d7a0830706|4087822
+韩宝仪-舞女泪.mp3|J:\歌曲\一人一首成名歌\韩宝仪-舞女泪.mp3|6b97b13fc2fb1e10f0903a63f3e2891b|3029752
+韩红-家乡.mp3|J:\歌曲\一人一首成名歌\韩红-家乡.mp3|f79bd54bbccaae8ba7ec63598f6acd59|3757581
+顺子-回家.mp3|J:\歌曲\一人一首成名歌\顺子-回家.mp3|62cc5ace747924c0db443d14e0112939|8498764
+飞轮海-爱到.mp3|J:\歌曲\一人一首成名歌\飞轮海-爱到.mp3|476088f5416f9bdfe75569eb1a4c1527|7613901
+马天宇-该死的温柔.mp3|J:\歌曲\一人一首成名歌\马天宇-该死的温柔.mp3|c443da61a8ae80b8093a7ae6cb79c707|3591097
+魏晨-一个人睡.mp3|J:\歌曲\一人一首成名歌\魏晨-一个人睡.mp3|1a57fb25cdcef982f325dc3c3df000e3|4327592
+黄凯芹-伤感的恋人.mp3|J:\歌曲\一人一首成名歌\黄凯芹-伤感的恋人.mp3|5a70fdd1a0af9bfcc0c730d2e20eb115|3983237
+黄品源-海浪.mp3|J:\歌曲\一人一首成名歌\黄品源-海浪.mp3|c2b1a29c9637d6901e9259d94d3cdfb3|8127663
+黄格选-纸月亮.mp3|J:\歌曲\一人一首成名歌\黄格选-纸月亮.mp3|67d780bff6cb201a70120857f9f09eec|4325043
+黄湘怡-等.mp3|J:\歌曲\一人一首成名歌\黄湘怡-等.mp3|1d1237059165d005183858fe415f41dd|2797829
+黄雅莉-蝴蝶泉边.mp3|J:\歌曲\一人一首成名歌\黄雅莉-蝴蝶泉边.mp3|a207349a852c10eeb1928b61b495d912|5954332
+黎明-今夜你会不会来.mp3|J:\歌曲\一人一首成名歌\黎明-今夜你会不会来.mp3|95ae07a9ca3ff91fe7a9e5211b674dc7|4028377
+黑Girl-123木头人.mp3|J:\歌曲\一人一首成名歌\黑Girl-123木头人.mp3|5fe6350f777b10814ef45b2a10cbcc7f|3741614
+齐秦-大约在冬季.mp3|J:\歌曲\一人一首成名歌\齐秦-大约在冬季.mp3|7c9f8d5242482cadb642690e2fafdfee|7241010
+齐豫-橄榄树.mp3|J:\歌曲\一人一首成名歌\齐豫-橄榄树.mp3|e39b8bf4f5a6a968f9362a2a595563f6|7085538
+A Change Is Gonna Come.mp3|J:\歌曲\中国好声音\A Change Is Gonna Come.mp3|471dcfe493af57361234c9cec950d44a|3990188
+Crazy.mp3|J:\歌曲\中国好声音\Crazy.mp3|53ccddba1b532e0ebbadb56a68161584|3395818
+Halo.mp3|J:\歌曲\中国好声音\Halo.mp3|46d14b0e4256ff11f4b9af80b3a96f0f|3627159
+I Feel Good.mp3|J:\歌曲\中国好声音\I Feel Good.mp3|267d01dc7500141aa7d359acbf56d8c4|3644674
+Rolling In The Deep.mp3|J:\歌曲\中国好声音\Rolling In The Deep.mp3|86d754174a4b857756b85c29c344d55e|3073586
+Sexy music+冬天里的一把火.mp3|J:\歌曲\中国好声音\Sexy music+冬天里的一把火.mp3|77c473bb6561daaa70fbbf9975edc734|4152941
+Trespassing.mp3|J:\歌曲\中国好声音\Trespassing.mp3|0d270c5f6ce3d00e12dfd7be5be904cc|4100527
+Whataya Want From Me.mp3|J:\歌曲\中国好声音\Whataya Want From Me.mp3|a40c7f885525e96098f38743d5b05fc9|5414617
+一个人生活.mp3|J:\歌曲\中国好声音\一个人生活.mp3|8ca28f96335c11a8874e89d7d3eeea37|3986395
+三天三夜.mp3|J:\歌曲\中国好声音\三天三夜.mp3|940064c823e269754d16040788a8edcf|4549728
+不要怕.mp3|J:\歌曲\中国好声音\不要怕.mp3|a848e5a393fce4a5060a3946611be844|5425221
+为爱痴狂.mp3|J:\歌曲\中国好声音\为爱痴狂.mp3|f5ea4a57c12ee0b39ce8b9e282c87c54|3462459
+亲爱的小孩(1).mp3|J:\歌曲\中国好声音\亲爱的小孩(1).mp3|ff98eb8b11b78d77a64b5e6b81cab8a0|4069150
+亲爱的小孩.mp3|J:\歌曲\中国好声音\亲爱的小孩.mp3|8b98d3c3f691635815be58bd29a668e3|6848378
+人质.mp3|J:\歌曲\中国好声音\人质.mp3|4703d533d5011d1bf6e19a0364c8b483|2579282
+会呼吸的痛.mp3|J:\歌曲\中国好声音\会呼吸的痛.mp3|1c07de16cd7844c72ff1cd71a5c754a6|3919244
+你懂得.mp3|J:\歌曲\中国好声音\你懂得.mp3|50b619f1bba9a3ced35d6d127dd728d5|6583144
+你把我灌醉.mp3|J:\歌曲\中国好声音\你把我灌醉.mp3|621ffd9d516ebc2486c1f664d544eeae|7459643
+你的背包.mp3|J:\歌曲\中国好声音\你的背包.mp3|e7ca16f089732ea38377cf558830c7a3|4046577
+像个孩子.mp3|J:\歌曲\中国好声音\像个孩子.mp3|6106f1dfa0fbf55fd9c2001dcb00446c|4051592
+兄弟.mp3|J:\歌曲\中国好声音\兄弟.mp3|7e46afdaec639c20129fc17c016ef436|6252778
+光明.mp3|J:\歌曲\中国好声音\光明.mp3|8c29f9d3db4a06279c156f9af2db6f7a|6382744
+冬天来了.mp3|J:\歌曲\中国好声音\冬天来了.mp3|ccfb6a3c2ea6ba0a52adab0f37a3d7a7|3959816
+北京北京.mp3|J:\歌曲\中国好声音\北京北京.mp3|6cd52cce9a7c9743ad11f13b69d2dd90|5736470
+千万次的问.mp3|J:\歌曲\中国好声音\千万次的问.mp3|5413ab35e5ee58e42099323806307aa7|5670350
+回来.mp3|J:\歌曲\中国好声音\回来.mp3|bb1c22189cfd3af0ba32e37cd7e73437|4726801
+天地在我心(1).mp3|J:\歌曲\中国好声音\天地在我心(1).mp3|1b5ab9d021342044273d6b7fec8a3211|5939944
+天地在我心.mp3|J:\歌曲\中国好声音\天地在我心.mp3|1b5ab9d021342044273d6b7fec8a3211|5939944
+如果没有你.mp3|J:\歌曲\中国好声音\如果没有你.mp3|16c1a91d31917f728cf87280d4703bb1|4694835
+寂寞先生.mp3|J:\歌曲\中国好声音\寂寞先生.mp3|49333d4b5d55793d696ec5060255b3d9|6714834
+小情歌.mp3|J:\歌曲\中国好声音\小情歌.mp3|b729b55ba4e54a5bcb076e07f00deea8|5486661
+山沟沟.mp3|J:\歌曲\中国好声音\山沟沟.mp3|4dda0a6b59412975761d323c12f02bd4|3769470
+带我到山顶.mp3|J:\歌曲\中国好声音\带我到山顶.mp3|8b721bf14c1b70c19d93caa4504020c2|4608947
+年轻的战场(1).mp3|J:\歌曲\中国好声音\年轻的战场(1).mp3|0832ea97d446506f0ee54f377007395c|7151806
+年轻的战场.mp3|J:\歌曲\中国好声音\年轻的战场.mp3|0832ea97d446506f0ee54f377007395c|7151806
+弯弯的月亮.mp3|J:\歌曲\中国好声音\弯弯的月亮.mp3|6ce3fd64a5fd94153e4c08881493ecd5|3741097
+心在跳.mp3|J:\歌曲\中国好声音\心在跳.mp3|ffc1326af471bc30230eb3b04fb00024|3961938
+忐忑+Bad.mp3|J:\歌曲\中国好声音\忐忑+Bad.mp3|83334e27a65d01ff0a5597b95355b496|3685456
+情深意长.mp3|J:\歌曲\中国好声音\情深意长.mp3|25bfa603b3fbb6a312e66015cae8fa84|5060968
+想你的夜.mp3|J:\歌曲\中国好声音\想你的夜.mp3|3b020a05b959b51cb52a9d518ca1f5b9|5698560
+慢慢.mp3|J:\歌曲\中国好声音\慢慢.mp3|8de24bfa4910b794a110c0d18344feec|3393676
+我想大声告诉你.mp3|J:\歌曲\中国好声音\我想大声告诉你.mp3|a19f7ec9bd30c08c71bfb74052dacd88|5599512
+我是不是你最疼爱的人.mp3|J:\歌曲\中国好声音\我是不是你最疼爱的人.mp3|dc1c0b4a7693aad3a77b607f9562bded|3307871
+我最亲爱的.mp3|J:\歌曲\中国好声音\我最亲爱的.mp3|05874a212830611e781995f7edf554b9|7655240
+我期待.mp3|J:\歌曲\中国好声音\我期待.mp3|91b6e102845b3db1fa9be1cbeddca2a6|5132622
+我爱你中国.mp3|J:\歌曲\中国好声音\我爱你中国.mp3|1180635b445a0c40fd0251cb80104917|5606408
+我的歌声里.mp3|J:\歌曲\中国好声音\我的歌声里.mp3|b3a5519c5a42cd2a5ec676db7f2248b3|2490280
+我要我们在一起.mp3|J:\歌曲\中国好声音\我要我们在一起.mp3|dc8d3bffec9ae476efb1a4ffef2fec52|3980592
+改变自己.mp3|J:\歌曲\中国好声音\改变自己.mp3|2bed88b8a650c25e2cef5ba1bcd50663|5134944
+暗香.mp3|J:\歌曲\中国好声音\暗香.mp3|1e2cd6932482e67827b99e46ae2477fd|5084536
+最浪漫的事.mp3|J:\歌曲\中国好声音\最浪漫的事.mp3|64abef13fc51d6976ad3d27d0ed6a33f|3530610
+梦想天空分外蓝.mp3|J:\歌曲\中国好声音\梦想天空分外蓝.mp3|adfec3403de6c6e64a2dbef3242fa518|2326807
+欢颜.mp3|J:\歌曲\中国好声音\欢颜.mp3|e5c158451db96e020139957011cb3624|3672917
+没那么简单.mp3|J:\歌曲\中国好声音\没那么简单.mp3|d8a295fb18c5e895d826285e88f2a012|3359456
+洋葱.mp3|J:\歌曲\中国好声音\洋葱.mp3|120c43c9bbf6c1dde846441dfad21334|3427784
+流星雨.mp3|J:\歌曲\中国好声音\流星雨.mp3|1b80ac5893541e0070382810c86257b9|4630884
+涛声依旧.mp3|J:\歌曲\中国好声音\涛声依旧.mp3|43f912a663931c588f00779e59726a22|3423972
+滚滚红尘.mp3|J:\歌曲\中国好声音\滚滚红尘.mp3|1ede7590cd8d819b7f8e8fdb31d79802|3768218
+爱要坦荡荡.mp3|J:\歌曲\中国好声音\爱要坦荡荡.mp3|17586254d459a0ee9f1edf706d577c1b|3327296
+爱要有你才完美.mp3|J:\歌曲\中国好声音\爱要有你才完美.mp3|fb0768f789f764d4c5c65b66ae317a52|7086615
+痒.mp3|J:\歌曲\中国好声音\痒.mp3|8d40632e4dc995d22ff04f037b2eddcb|3985503
+私奔.mp3|J:\歌曲\中国好声音\私奔.mp3|d0cab97f7aa9d997f29f23a0f91bc8be|3321204
+空城.mp3|J:\歌曲\中国好声音\空城.mp3|1e3ab252263fb67bf0508a0d5b9edb2f|3867270
+自己.mp3|J:\歌曲\中国好声音\自己.mp3|f3f0496bcf1afa8e06fc13468c9296f1|4105477
+花房姑娘.mp3|J:\歌曲\中国好声音\花房姑娘.mp3|e1c8603c71fa2e8753d46b56e9d297c0|4085457
+花火.mp3|J:\歌曲\中国好声音\花火.mp3|60887428544f99a20997ccf85dadf9e5|3008701
+被遗忘的时光.mp3|J:\歌曲\中国好声音\被遗忘的时光.mp3|7863c20ad0d27d4885b25cd776129a75|3839509
+走四方.mp3|J:\歌曲\中国好声音\走四方.mp3|0abbbca902415f7063e5997f465b64bc|3870779
+领悟.mp3|J:\歌曲\中国好声音\领悟.mp3|45945251c68d79664bcd9b2c07284299|4695652
+飞机场的10-30.mp3|J:\歌曲\中国好声音\飞机场的10-30.mp3|6840a340830dcfaf1e2776d29187cc60|3113056
+鸿雁.mp3|J:\歌曲\中国好声音\鸿雁.mp3|0462f2f112b8eeac4626a27d6048ff59|5169432
+中国娃娃-凤阳花鼓.mp3|J:\歌曲\新年歌曲\中国娃娃-凤阳花鼓.mp3|9b09f3f8a3bf539596454cbf34542f15|1400832
+中国娃娃-恭喜恭喜.mp3|J:\歌曲\新年歌曲\中国娃娃-恭喜恭喜.mp3|01b8a458c9d8397bf9721f8e9830e931|2142208
+中国娃娃-新年好.mp3|J:\歌曲\新年歌曲\中国娃娃-新年好.mp3|553538e4d9a61625158acdb714527730|4681787
+刘德华-恭喜发财.mp3|J:\歌曲\新年歌曲\刘德华-恭喜发财.mp3|69c69e20988da33ce7fa4c1bf3a1b4e6|4810005
+卓依婷 - 好运来 - 热歌辣舞贺新春 新年歌.mp3|J:\歌曲\新年歌曲\卓依婷 - 好运来 - 热歌辣舞贺新春 新年歌.mp3|3bdb35479775492ce4e31527c28f9976|4127685
+卓依婷-好运来.mp3|J:\歌曲\新年歌曲\卓依婷-好运来.mp3|3bdb35479775492ce4e31527c28f9976|4127685
+卓依婷-恭喜发财.mp3|J:\歌曲\新年歌曲\卓依婷-恭喜发财.mp3|845e76fa5b3ac3b2c0c06fdb7e387cf2|3344384
+卓依婷-新年喜洋洋.mp3|J:\歌曲\新年歌曲\卓依婷-新年喜洋洋.mp3|2610ec4ea1e13fc6f64463dfdbe7e58d|5136517
+卓依婷-正月初一过新年.mp3|J:\歌曲\新年歌曲\卓依婷-正月初一过新年.mp3|ca3747b8a06d164a67f7729cb2fbf692|3047806
+孙悦-欢乐中国年.mp3|J:\歌曲\新年歌曲\孙悦-欢乐中国年.mp3|3780ee7eda8f3fe5937e5a3df68cb9dd|4104737
+小虎队-新年快乐.mp3|J:\歌曲\新年歌曲\小虎队-新年快乐.mp3|f805579c4dc09911a4bd4e57d5f02bfc|5153032
+海蝶群星-新年到.mp3|J:\歌曲\新年歌曲\海蝶群星-新年到.mp3|00256a5f6bf1dc0d31ee2c006a885d5e|3125296
+纯音乐-贺新年炮竹声.mp3|J:\歌曲\新年歌曲\纯音乐-贺新年炮竹声.mp3|51070222e17f9720fac7827186dc1dec|2708053
+群星-新春颂献.mp3|J:\歌曲\新年歌曲\群星-新春颂献.mp3|f859964e8f0ac489ab359ee89c7946f2|5584199
+群星-让爱住我家.mp3|J:\歌曲\新年歌曲\群星-让爱住我家.mp3|20070a7510dc55acbd82fdfccb9d2fe7|4606414
+西单女孩-新年快乐.mp3|J:\歌曲\新年歌曲\西单女孩-新年快乐.mp3|22fb165fe581e7106f2f5f62ade4529e|4857988
+谢雨欣-新年快乐.mp3|J:\歌曲\新年歌曲\谢雨欣-新年快乐.mp3|479c05f231535401ca82255fde71627a|3213620
+谭晶-大团圆.mp3|J:\歌曲\新年歌曲\谭晶-大团圆.mp3|353f75e4c65a37798dffa8eb86317a98|3634241
+郭美美-新年快乐.mp3|J:\歌曲\新年歌曲\郭美美-新年快乐.mp3|a5dc3c3b046c0aa2b470506596baca2f|3342464
+钟盛忠-红红热闹闹.mp3|J:\歌曲\新年歌曲\钟盛忠-红红热闹闹.mp3|6f1fcf8d3fcff17774ab3df9538c633d|5653434
+钟盛忠-金狮狂舞.mp3|J:\歌曲\新年歌曲\钟盛忠-金狮狂舞.mp3|87cb1465e782779d01185716f36e0abd|4989288
+钟盛忠、雁卿-财神到我家.mp3|J:\歌曲\新年歌曲\钟盛忠、雁卿-财神到我家.mp3|fd76c96835f2939f81220321427eb4df|4482740
+I Still Believe 徐若瑄.mp3|J:\歌曲\经典对唱歌曲集锦\I Still Believe 徐若瑄.mp3|4ec12e983140d0c7cc6d93f2115fc3df|1501848
+nanana 吴克群.mp3|J:\歌曲\经典对唱歌曲集锦\nanana 吴克群.mp3|890bdba428367d7412b120d584d203d9|5100587
+一眼瞬间 张惠妹.mp3|J:\歌曲\经典对唱歌曲集锦\一眼瞬间 张惠妹.mp3|d6038062ffaeb88cfc020891d5549900|1501847
+两个人的荒岛 s.h.e.mp3|J:\歌曲\经典对唱歌曲集锦\两个人的荒岛 s.h.e.mp3|e84ab976d4a50c5ac69ec44eb8c06406|1501848
+今天你要嫁给我.mp3|J:\歌曲\经典对唱歌曲集锦\今天你要嫁给我.mp3|b3bd63d0c7ba6dbf1431a0fbd41f34ee|1505756
+做你的一半 戚薇.mp3|J:\歌曲\经典对唱歌曲集锦\做你的一半 戚薇.mp3|b2fe94df7368b97e27f5f54613978e00|2942223
+出嫁 张清芳.mp3|J:\歌曲\经典对唱歌曲集锦\出嫁 张清芳.mp3|6826317815511dcc11417931331c8b4c|4361372
+制造浪漫 郑中基.mp3|J:\歌曲\经典对唱歌曲集锦\制造浪漫 郑中基.mp3|2b379c4489ed810f05023947bb6df16d|2289148
+另一个天堂 王力宏.mp3|J:\歌曲\经典对唱歌曲集锦\另一个天堂 王力宏.mp3|f975c5e0ee4dff25470bae90cc2d86be|1501847
+只对你有感觉 飞轮海.mp3|J:\歌曲\经典对唱歌曲集锦\只对你有感觉 飞轮海.mp3|38a2ee0fb8d824556f8d37dd063d56be|1914641
+在我生命中的每一天 苏慧伦.mp3|J:\歌曲\经典对唱歌曲集锦\在我生命中的每一天 苏慧伦.mp3|b2d3c3881cb89c1a320a292f40d9de8a|1501847
+天下有情人 周华健.mp3|J:\歌曲\经典对唱歌曲集锦\天下有情人 周华健.mp3|011820d9c12857c104381656af459c5c|2375439
+夫妻脸 彭佳慧.mp3|J:\歌曲\经典对唱歌曲集锦\夫妻脸 彭佳慧.mp3|254191e29d85c881f4c4bf424cb18c88|4605468
+娜样纯杰的爱恋 张杰.mp3|J:\歌曲\经典对唱歌曲集锦\娜样纯杰的爱恋 张杰.mp3|968b77232bc02f53a67d0f2b8f69ad79|1501847
+小夫妻 蔡淳佳.mp3|J:\歌曲\经典对唱歌曲集锦\小夫妻 蔡淳佳.mp3|eeefb8c1643629b61b908ca8724ad5c8|1501847
+小酒窝 林俊杰.mp3|J:\歌曲\经典对唱歌曲集锦\小酒窝 林俊杰.mp3|89c89c9aa633e86b4bcbb0d4f73eb09c|1729479
+屋顶 温岚.mp3|J:\歌曲\经典对唱歌曲集锦\屋顶 温岚.mp3|7a0921ca6bff5806b27d9e58777f9929|2004527
+当你想着我 品冠.mp3|J:\歌曲\经典对唱歌曲集锦\当你想着我 品冠.mp3|2332b203182241a3d5eeb75279aea30f|1501771
+心会跟爱一起走 陈洁仪.mp3|J:\歌曲\经典对唱歌曲集锦\心会跟爱一起走 陈洁仪.mp3|40fe707b21f3409b922214a655a2ab24|8226602
+心愿便利贴 元若蓝.mp3|J:\歌曲\经典对唱歌曲集锦\心愿便利贴 元若蓝.mp3|09c6cc404914ebd869c4584f3f186ebc|2042763
+心肝宝贝 任贤齐.mp3|J:\歌曲\经典对唱歌曲集锦\心肝宝贝 任贤齐.mp3|0fec70fdb647317fe6a4d3418d23eb44|4053765
+恋爱达人 罗志祥.mp3|J:\歌曲\经典对唱歌曲集锦\恋爱达人 罗志祥.mp3|486e1e8d818b5ae4c0aa17b4930303ba|1683720
+恋爱频率 许志安.mp3|J:\歌曲\经典对唱歌曲集锦\恋爱频率 许志安.mp3|ac415e884fec3da926672a5400376b13|4269439
+想你的笑 田亮.mp3|J:\歌曲\经典对唱歌曲集锦\想你的笑 田亮.mp3|175c967a40c33cc571fa29608aa6d436|4042454
+我们的小世界 彭坦.mp3|J:\歌曲\经典对唱歌曲集锦\我们的小世界 彭坦.mp3|e0e8ffa255ebc9b61952f693a9cdbb3a|6109334
+有你的幸福 魏晨.mp3|J:\歌曲\经典对唱歌曲集锦\有你的幸福 魏晨.mp3|8df4c43d18a4e8572446d4d21f556183|3217494
+梁山伯与茱丽叶.mp3|J:\歌曲\经典对唱歌曲集锦\梁山伯与茱丽叶.mp3|ccb3813ce06e01843b1b3fc28c757aab|1865929
+水晶 任贤齐.mp3|J:\歌曲\经典对唱歌曲集锦\水晶 任贤齐.mp3|465df907cbacd199043a34d99d827ea5|1667826
+没有人比我更爱你 王筝.mp3|J:\歌曲\经典对唱歌曲集锦\没有人比我更爱你 王筝.mp3|6ecff69cd25eb3f78b1e5ef8dd599e5a|4550721
+深情相拥 张国荣.mp3|J:\歌曲\经典对唱歌曲集锦\深情相拥 张国荣.mp3|0e050e42343b9651bb3a82873a4bb118|1501848
+渡情 高胜美.mp3|J:\歌曲\经典对唱歌曲集锦\渡情 高胜美.mp3|d48e10b6879caf3836d88d07c807ce29|1501847
+满满 王铮亮.mp3|J:\歌曲\经典对唱歌曲集锦\满满 王铮亮.mp3|d9b12c3d216261c0ebe1ea3d7d7d38c3|1501781
+爱你让我勇敢 杜德伟.mp3|J:\歌曲\经典对唱歌曲集锦\爱你让我勇敢 杜德伟.mp3|69b2954eef0de1789563cdb68a3af112|1501847
+爱很美.mp3|J:\歌曲\经典对唱歌曲集锦\爱很美.mp3|657ea0e0ae38e8a4d2e1fa13b2a4d140|1501847
+爱情电影 许茹芸.mp3|J:\歌曲\经典对唱歌曲集锦\爱情电影 许茹芸.mp3|523ef942b99521edf4c347fc514c2073|1501847
+爱我 柯以敏.mp3|J:\歌曲\经典对唱歌曲集锦\爱我 柯以敏.mp3|71f19c0ca9bb80f248e3a8094d73074f|2320682
+爱的华尔兹 郑爽.mp3|J:\歌曲\经典对唱歌曲集锦\爱的华尔兹 郑爽.mp3|4c5b90e0cfb0544524201f8090ec50d6|6681913
+画沙 袁咏琳.mp3|J:\歌曲\经典对唱歌曲集锦\画沙 袁咏琳.mp3|785453fa1dbc0fabba7662532f995b5d|1501848
+知心爱人 任静.mp3|J:\歌曲\经典对唱歌曲集锦\知心爱人 任静.mp3|51664d5567979e02f117b89e7ff2f912|3881821
+私奔到月球 五月天.mp3|J:\歌曲\经典对唱歌曲集锦\私奔到月球 五月天.mp3|fae91643c6d8dbeddba028f42707a9d1|1814553
+美丽的神话 孙楠.mp3|J:\歌曲\经典对唱歌曲集锦\美丽的神话 孙楠.mp3|a7dcf1d37177571f60adf0582867f978|4639488
+花好月圆夜 任贤齐.mp3|J:\歌曲\经典对唱歌曲集锦\花好月圆夜 任贤齐.mp3|8ab25a2f8e93fe14b26621e88dc8442f|1139336
+让我取暖 彭羚.mp3|J:\歌曲\经典对唱歌曲集锦\让我取暖 彭羚.mp3|fc43fc78f11bf3d2feeb784cbbaf23cb|3667138
+让我爱你 周渝民.mp3|J:\歌曲\经典对唱歌曲集锦\让我爱你 周渝民.mp3|d3ac8318a7157b2db5d5ec9da13b8184|1501847
+败给你 罗志祥.mp3|J:\歌曲\经典对唱歌曲集锦\败给你 罗志祥.mp3|15ff00eb091374fbe1fd62fdd010e73d|1501848
+进行式 萧亚轩.mp3|J:\歌曲\经典对唱歌曲集锦\进行式 萧亚轩.mp3|408fbd502fd53246b67be7bf810fe2b7|1501847
+选择 叶倩文.mp3|J:\歌曲\经典对唱歌曲集锦\选择 叶倩文.mp3|27f4a3e2c4516234f33b3cd089d61ec1|4427411
+陷入爱里面 俞灏明.mp3|J:\歌曲\经典对唱歌曲集锦\陷入爱里面 俞灏明.mp3|8e190d54d471914364ac5ef645674965|1501771
+dj...英文版本--路灯下的小妹妹.mp3|J:\歌曲\经典舞曲\dj...英文版本--路灯下的小妹妹.mp3|0a3f1f6d9f6daf3a6bd524570e2a92b2|3549230
+千百惠 - 走过咖啡屋.mp3|J:\歌曲\经典舞曲\千百惠 - 走过咖啡屋.mp3|6b1baec8b6c0d8f50c6fb64980f1eb8e|2848515
+拉拉爱.mp3|J:\歌曲\经典舞曲\拉拉爱.mp3|b98c473d9be558c48756dead33607cd8|10293418
+无奈的思绪.mp3|J:\歌曲\经典舞曲\无奈的思绪.mp3|faadf8a404e3c91c247c7a869a109533|2729116
+林玉英 - 爱情一阵风.mp3|J:\歌曲\经典舞曲\林玉英 - 爱情一阵风.mp3|96e9a42a2c03efe87c0731ff8ae14203|3751980
+林玉英 - 痴情泪.mp3|J:\歌曲\经典舞曲\林玉英 - 痴情泪.mp3|67782fffd8ac64e39c92db2ad228d951|4098561
+林玉英 - 采槟榔.mp3|J:\歌曲\经典舞曲\林玉英 - 采槟榔.mp3|cc745c4de800a24d9c3d8434df99153f|3402732
+点燃一根烟.mp3|J:\歌曲\经典舞曲\点燃一根烟.mp3|62dc43bcef64e0ec3a3522158bee31f1|3603354
+石小倩 - 少女情怀.mp3|J:\歌曲\经典舞曲\石小倩 - 少女情怀.mp3|0f9d5e514e49df7f96a67b0b3cde4073|4761728
+石小倩 - 请你留下来.mp3|J:\歌曲\经典舞曲\石小倩 - 请你留下来.mp3|53f004a3156d6ef309eaaead59348e3c|3256865
+邓丽君 - 舞女泪.mp3|J:\歌曲\经典舞曲\邓丽君 - 舞女泪.mp3|fd46031a2e7549b2dc1a1d5ef4364441|3104958
+闽南语 - 爱人跟人走.mp3|J:\歌曲\经典舞曲\闽南语 - 爱人跟人走.mp3|e0b1bf02df75292727fb0e835ee5e718|4143234
+闽南语 - 爱拼才会赢.mp3|J:\歌曲\经典舞曲\闽南语 - 爱拼才会赢.mp3|16de279a06a4e99af9f225422d858281|3536898
+韩宝仪 - 除了你.mp3|J:\歌曲\经典舞曲\韩宝仪 - 除了你.mp3|0453175a56cbfe2e3a43f6497020b01e|2983143
+高胜美-情网.mp3|J:\歌曲\经典舞曲\高胜美-情网.mp3|f8c36374e05f0a8ce9ac921b8647284f|5716186
+龙飘飘 - 星夜的别离.mp3|J:\歌曲\经典舞曲\龙飘飘 - 星夜的别离.mp3|907e187bb59f5f927508b59cf1141a54|3472830
+龙飘飘-往日的旧梦.mp3|J:\歌曲\经典舞曲\龙飘飘-往日的旧梦.mp3|26b79b16337c950681592b913e058435|3772416
+龙飘飘-恨你情难守.mp3|J:\歌曲\经典舞曲\龙飘飘-恨你情难守.mp3|5341a500e854dba1eae03ab9b6ee010e|5759027
+龙飘飘-惜别的海岸.mp3|J:\歌曲\经典舞曲\龙飘飘-惜别的海岸.mp3|47bf7bcad186ae2fd2babde6a72ac816|3405906
+龙飘飘-成长的岁月.mp3|J:\歌曲\经典舞曲\龙飘飘-成长的岁月.mp3|39388c225ff7edfada6d08e541c1d7dd|3778688
+龙飘飘-最后一声爱你.mp3|J:\歌曲\经典舞曲\龙飘飘-最后一声爱你.mp3|b685f09b4487c7b940f00b5b12a5b91b|4056672
+龙飘飘-月儿像柠檬.mp3|J:\歌曲\经典舞曲\龙飘飘-月儿像柠檬.mp3|562c6611ef5a4b276d80cecf7d857582|3717120
+中国民族轻音乐 月光下的凤尾竹 傣族葫芦丝.mp3|J:\歌曲\轻音乐\中国民族轻音乐 月光下的凤尾竹 傣族葫芦丝.mp3|570660d462655e099394c9fc0fbd2ab1|4707774
+卡农钢琴曲.mp3|J:\歌曲\轻音乐\卡农钢琴曲.mp3|7263c252caa4a1640238541a496ffc72|5169865
+古筝 - 出水莲.mp3|J:\歌曲\轻音乐\古筝\古筝 - 出水莲.mp3|328f12f8b5d773781daaf8ae1e17fd4f|3910449
+古筝 - 梁祝.mp3|J:\歌曲\轻音乐\古筝\古筝 - 梁祝.mp3|a8e686f4b542061893d05c9cfd2c58a5|8565171
+古筝 - 梅花三弄.mp3|J:\歌曲\轻音乐\古筝\古筝 - 梅花三弄.mp3|4cd83f087ae60ee142dfde4e29ffb5b7|7587777
+古筝 - 渔舟唱晚.mp3|J:\歌曲\轻音乐\古筝\古筝 - 渔舟唱晚.mp3|f055fed3ac2c3c1af1d9bc80430ded60|5725728
+古筝 - 牧羊曲.mp3|J:\歌曲\轻音乐\古筝\古筝 - 牧羊曲.mp3|20cab8e08a6cfa83700f735be1172878|4664256
+古筝 - 草原之夜.mp3|J:\歌曲\轻音乐\古筝\古筝 - 草原之夜.mp3|896b8e2d0647f955a173c6073f502328|6345224
+古筝 - 高山流水.mp3|J:\歌曲\轻音乐\古筝\古筝 - 高山流水.mp3|c54be4e9f37d3c584c5ad793e8097a69|6733680
+古筝佛赞 - 云水禅心.mp3|J:\歌曲\轻音乐\古筝\古筝佛赞 - 云水禅心.mp3|837ac8c4f5d8519ef8fea47b94421547|14792552
+古筝佛赞 - 南无阿弥陀佛.mp3|J:\歌曲\轻音乐\古筝\古筝佛赞 - 南无阿弥陀佛.mp3|5afce1d0e356a50388eed0e2b08bd689|9045202
+古筝佛赞 - 禅院钟声.mp3|J:\歌曲\轻音乐\古筝\古筝佛赞 - 禅院钟声.mp3|b3824580bc20437747495891b972a426|12589908
+古筝佛赞 - 送别.mp3|J:\歌曲\轻音乐\古筝\古筝佛赞 - 送别.mp3|f27e48e768ef56c7a6794737dc9670a5|10061488
+纯音乐 - 小河淌水 flowing creek.mp3|J:\歌曲\轻音乐\古筝\纯音乐 - 小河淌水 flowing creek.mp3|280334bb3e83af14c943d88ea817e715|5922903
+彩云追月.mp3|J:\歌曲\轻音乐\彩云追月.mp3|f50c71d055e7f18f0c967bccc3ae2ebc|8724376
+情竹.mp3|J:\歌曲\轻音乐\情竹.mp3|834be70d9ae618bd5aeab4b6d0a368cf|4616192
+梁祝.mp3|J:\歌曲\轻音乐\梁祝.mp3|706b208d04608a87859c1a5aefb4ecd1|4062107
+竹笛恋曲 牵手.mp3|J:\歌曲\轻音乐\竹笛恋曲 牵手.mp3|49ae6018dc5e9e08ab21ff84c01ef789|5229215
+纯音乐 - 春江花月夜 - 中国古筝经典名曲.mp3|J:\歌曲\轻音乐\纯音乐 - 春江花月夜 - 中国古筝经典名曲.mp3|db050cb0b861cfaf3eacf4b7397ee003|16945871
+初雪TheFirstSnowflakes.mp3|J:\歌曲\轻音乐\钢琴曲\初雪TheFirstSnowflakes.mp3|26fec71b8c02cd1c8e8c4553c87e3cf3|1544384
+匈牙利舞曲第五号（勃拉姆斯.MP3|J:\歌曲\轻音乐\钢琴曲\匈牙利舞曲第五号（勃拉姆斯.MP3|2d71abe5e75290dade743878efb212d9|2590928
+卡农 Canon.mp3|J:\歌曲\轻音乐\钢琴曲\卡农 Canon.mp3|ca6d4190dda5445b7924458718caa251|1802235
+帕格尼尼主题狂想.mp3|J:\歌曲\轻音乐\钢琴曲\帕格尼尼主题狂想.mp3|c75666a2381485a312b3ee0389276e3c|4698774
+帕格尼尼大练习曲.mp3|J:\歌曲\轻音乐\钢琴曲\帕格尼尼大练习曲.mp3|2ca0350a9dceef12e0701fa87423da07|7970768
+李姆斯基  科萨科夫   野蜂飞舞   乐队版.mp3|J:\歌曲\轻音乐\钢琴曲\李姆斯基  科萨科夫   野蜂飞舞   乐队版.mp3|94a470a1dcc64436964e7faf921da33f|2998439
+梁祝.mp3|J:\歌曲\轻音乐\钢琴曲\梁祝.mp3|91a4a58fc70393d16242a74dc197a034|2790262
+爱之梦.mp3|J:\歌曲\轻音乐\钢琴曲\爱之梦.mp3|5169efdfe76c6af898ce2f6f01a491b3|3339068
+爱的纪念SouvenirsD'Enfance.mp3|J:\歌曲\轻音乐\钢琴曲\爱的纪念SouvenirsD'Enfance.mp3|cdc955bf48226eed391255ec701290d9|2747467
+眼泪 Tears.mp3|J:\歌曲\轻音乐\钢琴曲\眼泪 Tears.mp3|f642bb143d84d59d7b67fb14cb8db5c9|921916
+眼泪Tears.MP3|J:\歌曲\轻音乐\钢琴曲\眼泪Tears.MP3|f642bb143d84d59d7b67fb14cb8db5c9|921916
+神秘园之歌SecretGardenSongs.mp3|J:\歌曲\轻音乐\钢琴曲\神秘园之歌SecretGardenSongs.mp3|aea65f142b6888db7a502853c54600cc|3446404
+第一钢琴协奏曲.mp3|J:\歌曲\轻音乐\钢琴曲\第一钢琴协奏曲.mp3|056c9887d816cddcc8bf5782606b1c02|3285159
+肖邦 第三号波兰舞曲 军队.mp3|J:\歌曲\轻音乐\钢琴曲\肖邦 第三号波兰舞曲 军队.mp3|834ad1c881220ad9bd65ea20c288f821|7744253
+莫扎特第二十一钢琴协奏曲.mp3|J:\歌曲\轻音乐\钢琴曲\莫扎特第二十一钢琴协奏曲.mp3|a2226248bc5e4d9364a29321badf8f4a|7526234
+雨的印记 Kiss The Rain.mp3|J:\歌曲\轻音乐\钢琴曲\雨的印记 Kiss The Rain.mp3|e93fe59eba9760c9fa2a1173f2a3ddfa|2086242
+雪之梦Snowdreams.mp3|J:\歌曲\轻音乐\钢琴曲\雪之梦Snowdreams.mp3|34f79285008e2354eaf9def5f7a2f623|605939
+魂牵巴塞罗那ThemeFromLoveStory.mp3|J:\歌曲\轻音乐\钢琴曲\魂牵巴塞罗那ThemeFromLoveStory.mp3|6dab06df61dbe4f55e419d986ca660d0|3192902
+ - 大烟山.mp3|J:\歌曲\轻音乐-电视台背景音乐\ - 大烟山.mp3|ad3061215123c6d45998dfd6a1a39bdf|2398829
+ - 神思者 sens kaishin.mp3|J:\歌曲\轻音乐-电视台背景音乐\ - 神思者 sens kaishin.mp3|bf0040b41b1d661bd5da99569e83bcdd|3142285
+Eddie Higgins - Nightingale.mp3|J:\歌曲\轻音乐-电视台背景音乐\Eddie Higgins - Nightingale.mp3|9420e06adff98805a60b78d4498920ab|5194777
+Enya - Caribbean Blue.mp3|J:\歌曲\轻音乐-电视台背景音乐\Enya - Caribbean Blue.mp3|3ed935ef71df20c0383001114e0de1f3|6972918
+George Winston - Variations on the Kanon by Pachel.mp3|J:\歌曲\轻音乐-电视台背景音乐\George Winston - Variations on the Kanon by Pachel.mp3|bc12c70b6b922164d0ef2105d1f9d913|5144190
+George Winston - Variations on the Kanon by Pachelbel.mp3|J:\歌曲\轻音乐-电视台背景音乐\George Winston - Variations on the Kanon by Pachelbel.mp3|dcc402b2f3800fb133a982962f44a513|5210740
+Ron Carnel - North Gate(1).mp3|J:\歌曲\轻音乐-电视台背景音乐\Ron Carnel - North Gate(1).mp3|da1d9dcec01ae61e6a394df287d51170|8724480
+Ron Carnel - North Gate.mp3|J:\歌曲\轻音乐-电视台背景音乐\Ron Carnel - North Gate.mp3|da1d9dcec01ae61e6a394df287d51170|8724480
+The soong sister.mp3|J:\歌曲\轻音乐-电视台背景音乐\The soong sister.mp3|8cea66e07aea401464ea063860dc522a|4498828
+哼唱 - love songs feast(1).mp3|J:\歌曲\轻音乐-电视台背景音乐\哼唱 - love songs feast(1).mp3|f80a7676bc38a2e0b557d9997a2c2769|4775162
+哼唱 - love songs feast.mp3|J:\歌曲\轻音乐-电视台背景音乐\哼唱 - love songs feast.mp3|f80a7676bc38a2e0b557d9997a2c2769|4775162
+喜多郎 - Silk Road.mp3|J:\歌曲\轻音乐-电视台背景音乐\喜多郎 - Silk Road.mp3|0996c3dee630644893ef20d48e2ed36b|7554193
+王晓峰 - 永恒依然 ALWAYS AND FOREVER.mp3|J:\歌曲\轻音乐-电视台背景音乐\王晓峰 - 永恒依然 ALWAYS AND FOREVER.mp3|ae99a297e5828f22d1a586ffe60b6a18|2660225
+班得瑞 - Childhood Memory.mp3|J:\歌曲\轻音乐-电视台背景音乐\班得瑞 - Childhood Memory.mp3|0940f4be414ccac5be8213256a73a869|3168994
+班得瑞 - One Day in Spring.mp3|J:\歌曲\轻音乐-电视台背景音乐\班得瑞 - One Day in Spring.mp3|a0431891d302c69613dd410db41cbbd7|4303343
+班得瑞 - Song For The Lord.mp3|J:\歌曲\轻音乐-电视台背景音乐\班得瑞 - Song For The Lord.mp3|3c18262ef2b7ae6de6304726b64d068a|3444345
+班得瑞 - Star Of Baghdad.mp3|J:\歌曲\轻音乐-电视台背景音乐\班得瑞 - Star Of Baghdad.mp3|439c47b45b5cc7ba275c09cc75f02c43|4333018
+纯音乐 - Daydream.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - Daydream.mp3|2fc5ffc71458d1b95be5a78925f21954|5130086
+纯音乐 - Greek Meditation 古诗.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - Greek Meditation 古诗.mp3|558423a0f685cccae1906145a29786f6|4588700
+纯音乐 - Tears.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - Tears.mp3|2decebd19f8a61ab787e6be8b4391c0e|3695644
+纯音乐 - The Mass.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - The Mass.mp3|475f5e4076f0a45e26d36059534bba8c|3534149
+纯音乐 - through the arbor(1).mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - through the arbor(1).mp3|00855c27aa2977c0cb3599644cc7c4fd|3625194
+纯音乐 - through the arbor.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - through the arbor.mp3|46fdeb92663a3c9ad45d5ed019b074aa|3616520
+纯音乐 - Windancer.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - Windancer.mp3|d6fcca1c1fde40bb1f5b584c7bfa44af|3515531
+纯音乐 - 你的笑颜.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 你的笑颜.mp3|4bb587dbb855c9b7477543fe62d26dc0|2774910
+纯音乐 - 印度之花.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 印度之花.mp3|273b20c60da24f9d946048c784620601|4709476
+纯音乐 - 和兰花在一起.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 和兰花在一起.mp3|9a5468f47e0127f58a40591f4a3e0f66|4970041
+纯音乐 - 安妮的仙境.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 安妮的仙境.mp3|e0462a20cf5d64cd2ab8149949beb55c|3322441
+纯音乐 - 宋家王朝.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 宋家王朝.mp3|1cfd8d2b0547a953432b61ad929ab9c7|4511948
+纯音乐 - 故乡的原风景.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 故乡的原风景.mp3|44ac4ef6ab21bf23b567ba67392ad86e|4535782
+纯音乐 - 柔板.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 柔板.mp3|36ad40f167c7cc8f1cc7f0023621fef0|2816696
+纯音乐 - 渔舟唱晚 古筝独奏 笙伴奏.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 渔舟唱晚 古筝独奏 笙伴奏.mp3|dabaab15fd36e0c20bec4a4103a74ad9|4717298
+纯音乐 - 渔舟唱晚.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 渔舟唱晚.mp3|bddad7a45636b89c93664927c191d776|7643178
+纯音乐 - 火之战车.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 火之战车.mp3|e7531e97330125bfd510529722e64768|3442809
+纯音乐 - 爱的罗曼史.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 爱的罗曼史.mp3|a2f7b25394b683c46596cbf6e159053a|3057720
+纯音乐 - 神秘园之歌.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 神秘园之歌.mp3|f7efdffd6afc362c662fb14260b561ec|3431947
+纯音乐 - 简单的礼物.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 简单的礼物.mp3|17f397e9b17fb28c3ed3a23130b476f1|3631731
+纯音乐 - 英雄的黎明.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 英雄的黎明.mp3|88472d17a879624e786291db60995dc3|3452427
+纯音乐 - 豪勇七蛟龙.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 豪勇七蛟龙.mp3|8f645021335e465b25c76ff42f7bb5fb|3795989
+纯音乐 - 返璞归真.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 返璞归真.mp3|dd4fcfb9063f6e90acdf4363dbe69f7a|4693864
+纯音乐 - 闲云孤鹤.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 闲云孤鹤.mp3|fea5046d733113289450a952c922d5b7|5443264
+纯音乐 - 阿甘正传.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 阿甘正传.mp3|ee29566f5277333e6e62c7346e0e7b6b|2448779
+纯音乐 - 雪的梦幻.mp3|J:\歌曲\轻音乐-电视台背景音乐\纯音乐 - 雪的梦幻.mp3|2455776f1434eddc31f53bb5262d87fd|4709225
+网络歌手 - 王都炎上.mp3|J:\歌曲\轻音乐-电视台背景音乐\网络歌手 - 王都炎上.mp3|844e3dc7ad9290a506524378f4e91832|2631607
+舞曲 - 渔舟唱晚(天气预报主题曲)(DJ版).mp3|J:\歌曲\轻音乐-电视台背景音乐\舞曲 - 渔舟唱晚(天气预报主题曲)(DJ版).mp3|819e35a2015b39fb3e755fde640950ba|11248826
+詹姆斯·拉斯特 - Bluebird.mp3|J:\歌曲\轻音乐-电视台背景音乐\詹姆斯·拉斯特 - Bluebird.mp3|d7fe00d20d6242672740e26b92668d83|3462049
+足球音乐大合集 - 天下足球-看球听歌-Short trip home-Joshua Bell & Edgar Meyer-(橙色记忆-荷兰).mp3|J:\歌曲\轻音乐-电视台背景音乐\足球音乐大合集 - 天下足球-看球听歌-Short trip home-Joshua Bell & Edgar Meyer-(橙色记忆-荷兰).mp3|d0a1284529973b41ca587f02042435d9|3698885
+(印度)女(狂野) 精绝级收藏 高清.avi|J:\电影\Dowloads\新建文件夹\无码\(印度)女(狂野) 精绝级收藏 高清.avi|045764012f90089c3a5fa081972608a0|726355419
+3721-7-20_7元木ひなよ.rmvb|J:\电影\Dowloads\新建文件夹\无码\3721-7-20_7元木ひなよ.rmvb|d47f7b7797fc98b9e399abcc24f41e3e|255716877
+[H4610] Original 0807 武井 里桜 Rio Takei 19才 hd2.wmv|J:\电影\Dowloads\新建文件夹\无码\[H4610] Original 0807 武井 里桜 Rio Takei 19才 hd2.wmv|99b3c3bf5e729a9e345757ea60bca1b2|1300785363
+上原亚衣 Konoha (无码) +++ Konoha(空天使第146号降临 Sky Angel Vol.146).avi|J:\电影\Dowloads\新建文件夹\无码\上原亚衣 Konoha (无码) +++ Konoha(空天使第146号降临 Sky Angel Vol.146).avi|1c04fa447a5c1ef3ae589f5d00b8ff76|1113943176
+我喜欢 松野 佐佐木希 雪白的肉体.rmvb|J:\电影\Dowloads\新建文件夹\无码\我喜欢 松野 佐佐木希 雪白的肉体.rmvb|288f1ff090c5f9ed681de964c911855e|655175179
+新人 正統派美少女の登場！！(2011.03.11) 无码.avi|J:\电影\Dowloads\新建文件夹\无码\新人 正統派美少女の登場！！(2011.03.11) 无码.avi|9411cf9fc81ce5a9c61506b14b6bef23|1063216768
+最新一本道-黑木麻衣(花野真衣)-OL STYLE 女作家(无码).avi|J:\电影\Dowloads\新建文件夹\无码\最新一本道-黑木麻衣(花野真衣)-OL STYLE 女作家(无码).avi|fbe596b3f491b0b636fc4bf97b34e327|1937533118
+村上里沙 Risa Murakami (真宫梨沙子 Risako Mamiya) (村濑沙绪里 Saori Murase) [无码] - MODEL COLLECTION select…56 [潮吹][内射].avi|J:\电影\Dowloads\新建文件夹\无码\村上里沙 Risa Murakami (真宫梨沙子 Risako Mamiya) (村濑沙绪里 Saori Murase) [无码] - MODEL COLLECTION select…56 [潮吹][内射].avi|313a04b241c376ad12b1b4289c7fbba1|2001431764
+波多野结衣 Yui Natano [无码] - SKY ANGEL 93 B [1080].mkv|J:\电影\Dowloads\新建文件夹\无码\波多野结衣 Yui Natano [无码] - SKY ANGEL 93 B [1080].mkv|e5964ef4a668685421a1892221fc04cb|1461593814
+较好 高清.wmv|J:\电影\Dowloads\新建文件夹\无码\较好 高清.wmv|d047e497fb6eed9b3eaa50585e839ac9|2860918186
+AV-苍井空[原创] (S1六月最新片) - 超薄码系列~特别美乳.avi|J:\电影\Dowloads\新建文件夹\有码\AV-苍井空[原创] (S1六月最新片) - 超薄码系列~特别美乳.avi|63b82ffbee7dba81df57663a9dd3afbf|1498634240
+苍井空 小泽玛利亚 红音萤 北原多香子 松岛枫 饭岛爱 观月雏乃 松岛枫.avi|J:\电影\Dowloads\新建文件夹\有码\苍井空 小泽玛利亚 红音萤 北原多香子 松岛枫 饭岛爱 观月雏乃 松岛枫.avi|063fe7ed96be17599d9e951b18a1e8e7|1278948352
+苍井空 无码.avi|J:\电影\Dowloads\新建文件夹\有码\苍井空 无码.avi|518d577242c8cbc2c0a69125ee793e58|1370058240
+苍井空-超激cosplay诱惑 (Sex 每看必泄).rmvb|J:\电影\Dowloads\新建文件夹\有码\苍井空-超激cosplay诱惑 (Sex 每看必泄).rmvb|b6d13c40dbcca7bad3dcf7c046990020|632848814
+蒼井そら(蒼井空)-(s1)ギリモザ 犯された蒼井そら(Soe-019).avi|J:\电影\Dowloads\新建文件夹\有码\蒼井そら(蒼井空)-(s1)ギリモザ 犯された蒼井そら(Soe-019).avi|50c24874e48314d49756148aa6acc82c|1225757184
+www.dydao.com[哈利波特7之死亡圣器]SCR清晰中字无水印完整版.rmvb|J:\电影\哈利波特\www.dydao.com[哈利波特7之死亡圣器]SCR清晰中字无水印完整版.rmvb|908b9095720ed4dc8f53d668018ba719|783555439
+哈利·波特与混血王子 哈利波特：混血王子的背叛 哈利波特6 BD-R 1.68G 双字 美国 奇幻 悠悠鸟出品.RMVB|J:\电影\哈利波特\哈利·波特与混血王子 哈利波特：混血王子的背叛 哈利波特6 BD-R 1.68G 双字 美国 奇幻 悠悠鸟出品.RMVB|5d806e2a00e5a506b805d2c62eb84993|1805631494
+哈利波特1：魔法石BD中英双字1024高清版.RMVB|J:\电影\哈利波特\哈利波特1：魔法石BD中英双字1024高清版.RMVB|7e07460ed5bdc88f23c57f4d71018c93|1385001317
+哈利波特2：消失的密室BD中英双字1024高清版.RMVB|J:\电影\哈利波特\哈利波特2：消失的密室BD中英双字1024高清版.RMVB|d8d18cb9b838c578878a4e0d8619cb52|1455394631
+哈利波特3 DVD中英字幕高清晰1440x816版.RMVB|J:\电影\哈利波特\哈利波特3 DVD中英字幕高清晰1440x816版.RMVB|4e8cd95a463a47077624dbcba891fc31|1616022557
+哈利波特4：火焰杯BD中英双字1024高清版.RMVB|J:\电影\哈利波特\哈利波特4：火焰杯BD中英双字1024高清版.RMVB|1bff90bbfe820732da3dad341245dbad|1424531261
+哈利波特5：凤凰会的密令BD中英双字1024高清版.RMVB|J:\电影\哈利波特\哈利波特5：凤凰会的密令BD中英双字1024高清版.RMVB|279aaf07ee8e24272b6aeca1f32e99a2|1254040699
+奋斗II(幸福在哪里)01.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)01.rmvb|c240dc47a73bc076c1d63b53f82c2453|199980182
+奋斗II(幸福在哪里)02.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)02.rmvb|d3a1bb20e73f663158d6f9e6ee2fd888|199767009
+奋斗II(幸福在哪里)03.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)03.rmvb|77846c2c11887eff5c6df469293904bf|199580938
+奋斗II(幸福在哪里)04.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)04.rmvb|1517b3285debde0e9308ce61103d38b0|199976334
+奋斗II(幸福在哪里)05.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)05.rmvb|6fd860785dcc8f8a7d30c64be4550497|199915034
+奋斗II(幸福在哪里)06.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)06.rmvb|abd2cedb4a93738c55cbb7dfb215d051|199832863
+奋斗II(幸福在哪里)07.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)07.rmvb|713ad94f063af6137f1467bb07360daf|199907815
+奋斗II(幸福在哪里)08.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)08.rmvb|f865a2aee869a4499ae3a8e4d0fa946a|199887439
+奋斗II(幸福在哪里)09.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)09.rmvb|8edcbe520bd7494b46bbdfcdf2fcdfbc|199962077
+奋斗II(幸福在哪里)10.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)10.rmvb|2c00d8fe2d00ffc322815a994e1b83da|199896913
+奋斗II(幸福在哪里)11.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)11.rmvb|fbcf80f28a7fae05813abddb9b2b243a|199954730
+奋斗II(幸福在哪里)12.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)12.rmvb|39b986479adff6e990e385b6bb0b5ad9|199784528
+奋斗II(幸福在哪里)13.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)13.rmvb|365f94db8a6a8e0f8a0f4c78c3243166|199962877
+奋斗II(幸福在哪里)14.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)14.rmvb|00b79d305ae199953af418b293d08870|199902017
+奋斗II(幸福在哪里)15.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)15.rmvb|424b91da2c1069c4bcbb7ec8ac7e3b0b|199868873
+奋斗II(幸福在哪里)16.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)16.rmvb|7286946a88b184fd8cc6d940a56ef02e|199692898
+奋斗II(幸福在哪里)17.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)17.rmvb|1bd40a6829fa9da831522ec8a3e7b7dd|199589950
+奋斗II(幸福在哪里)18.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)18.rmvb|c435f6b75e10e885eaf3ddf9ca33370b|194885193
+奋斗II(幸福在哪里)19.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)19.rmvb|32791e192f1456bcf8c35c1b7c9c31ac|199855403
+奋斗II(幸福在哪里)20.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)20.rmvb|29496ccb9d8c38b111380835920feeec|199832823
+奋斗II(幸福在哪里)21.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)21.rmvb|80a89e8da9004de1926a0673fd94ad8f|199969678
+奋斗II(幸福在哪里)22.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)22.rmvb|e47e0c2b7afb90162b0117d0006cd3eb|199784698
+奋斗II(幸福在哪里)23.rmvb|J:\电影\电视剧\[国产][幸福在哪里(奋斗2)][国语字幕][23集全][vcd-rmvb]\奋斗II(幸福在哪里)23.rmvb|8c34043a87d195be93c3701e3d8add68|197748571
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第01集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第01集.mkv|9f6db2a27f365b44be8ea0975657e6d9|153295290
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第02集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第02集.mkv|d90e5ef7c9573799cac56c8440c10631|145860069
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第03集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第03集.mkv|c23980accebf29885b07d6630a0228a1|156730759
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第04集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第04集.mkv|efe40f62ab087f8d1e1c368df8923bf3|152940955
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第05集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第05集.mkv|4a27cddec07ce8f5b248a072908480d2|145732586
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第06集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第06集.mkv|8072f871e2ae5fa479486fbb21485bfd|156895102
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第07集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第07集.mkv|c098a7d9f0cb6822119ddc8cf88d5ad3|152500070
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第08集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第08集.mkv|8e5dc106746e3dad8de21b4dc7ab55bf|145588371
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第09集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第09集.mkv|05f21b3bc97257b1151d46a1baaf5d09|156375633
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第10集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第10集.mkv|5f89ba3f517840fceaf5e44f3b8d8a38|152702080
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第11集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第11集.mkv|0aa3e54048d2ced3586aae6a59f11f59|145970526
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第13集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第13集.mkv|8968ea26d428e69924fbf2f2ba2b9439|152849927
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第14集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第14集.mkv|2d5e6d26ba5e3029b4226e114e118f4d|145867548
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第15集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第15集.mkv|b17ce93e7a404272e9ba8c899e46c3a7|156961344
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第16集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第16集.mkv|856672200daa3bd41ac40995c15242ba|152668205
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第17集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第17集.mkv|9a3925569f03c6fd9cf1a24000080092|145582423
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第18集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第18集.mkv|50c229ccd0ec97c1048c74b7edaca432|156545891
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第19集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第19集.mkv|5edcca2f2225990b3e792ef07357d8ef|152448067
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第20集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第20集.mkv|c1b8bd0675ce14319d26dce7dd1f497c|145581352
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第21集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第21集.mkv|914ad48a7bd5cdc4c3c725f7637a2ace|156528379
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第22集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第22集.mkv|58e70e0c1186fde86f630143d744f81a|152044823
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第23集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第23集.mkv|1efb3f8e969a35bb60fef7a1060bfb0a|145622772
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第24集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第24集.mkv|b482b8a85d1bda9ac549b8e7052718e0|156241034
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第25集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第25集.mkv|59892a7d7c5b1c1f24b31f8436aa1803|152111128
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第26集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第26集.mkv|9ee4fda85e8322a27837724f3c603242|145284354
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第27集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第27集.mkv|4a965e7bba0dc628729d94174860f6f4|156292612
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第28集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第28集.mkv|e6e7ce5c6d32f906dd06b87446b95b60|152001480
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第29集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第29集.mkv|9d0f334c4b59afb088dfcf833dc3aa0c|145274598
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第30集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第30集.mkv|f3c0743b968214636ec4f0f8c6a6fe10|156686895
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第31集.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第31集.mkv|891d02459d1bbb78696ba43387d9d271|152831824
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第32集.mkv.td.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第32集.mkv.td.mkv|c8b7c564e7400be19a1d628a9fe07850|145874318
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第33集.mkv.td.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第33集.mkv.td.mkv|c972b4189fd56ad5a8d45f7b914c0c42|156486650
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第34集.mkv.td.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第34集.mkv.td.mkv|80c93239e46bef6c970934da9b6ab160|152827855
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第35集.mkv.td.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第35集.mkv.td.mkv|b8751cfd398042cdabe8f640e63e484a|145782144
+[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第36集.mkv.td.mkv|J:\电影\电视剧\媳妇的美好时代\[电影天堂www.dygod.cn]媳妇的美好时代.2009.中国.第36集.mkv.td.mkv|ac8c23c12a3664b97065158dbab8bb3b|156692620
+[电影天堂www.dygod.cn]爱情公寓01.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓01.rmvb|047e397306a927671c8d5780942be24a|271158071
+[电影天堂www.dygod.cn]爱情公寓02.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓02.rmvb|1f84e9776c275942abe0e55d3d77c53a|231048668
+[电影天堂www.dygod.cn]爱情公寓02[修正版].rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓02[修正版].rmvb|a2e6fec76f344e1870c7dd7cad3f423e|165896589
+[电影天堂www.dygod.cn]爱情公寓03.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓03.rmvb|0608cb4e345e5b51df25aeaf012b3808|234367463
+[电影天堂www.dygod.cn]爱情公寓04.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓04.rmvb|7c12e2bb6c1701afcf676811bf4ffe28|217297473
+[电影天堂www.dygod.cn]爱情公寓05.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓05.rmvb|f9b192d450d098dec30e1c92d15c53d6|172675905
+[电影天堂www.dygod.cn]爱情公寓06.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓06.rmvb|37e7bd58c40eb52a8cdbe9a837e13dad|163947042
+[电影天堂www.dygod.cn]爱情公寓07.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓07.rmvb|b07761b91bdb7ce4089e7f8d3efaa261|183198913
+[电影天堂www.dygod.cn]爱情公寓08.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓08.rmvb|49369506f544aec96a86d58ba1f5e522|173276416
+[电影天堂www.dygod.cn]爱情公寓09.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓09.rmvb|559e831f4649fb4db07eb358fb54f710|195987884
+[电影天堂www.dygod.cn]爱情公寓10.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓10.rmvb|cefc40a71b6ab8ca4e0317746a357006|177851331
+[电影天堂www.dygod.cn]爱情公寓11.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓11.rmvb|a0ad2a1ebc424862e6fd307f97483b6f|183642101
+[电影天堂www.dygod.cn]爱情公寓12.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓12.rmvb|3914884cd906678549c24fe4fa8a7de1|184250529
+[电影天堂www.dygod.cn]爱情公寓13.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓13.rmvb|2d0b438c63c44ed87d3546e383427eab|186492269
+[电影天堂www.dygod.cn]爱情公寓14.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓14.rmvb|7362164632624c9f6b0b5aef6246dec2|186972917
+[电影天堂www.dygod.cn]爱情公寓15.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓15.rmvb|0ca224530ab07de22d39aedbe59dc0ed|158357477
+[电影天堂www.dygod.cn]爱情公寓16.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓16.rmvb|3f4d919164394aef70c005f43b30d171|152701980
+[电影天堂www.dygod.cn]爱情公寓17.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓17.rmvb|f529f3c170e2b9a0d64e74401619369a|151649631
+[电影天堂www.dygod.cn]爱情公寓18.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓18.rmvb|570196c28c8c308326f587ae4684ff4f|139358853
+[电影天堂www.dygod.cn]爱情公寓19.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓19.rmvb|f917aa07c601e096986f86ff1628204e|146347682
+[电影天堂www.dygod.cn]爱情公寓20.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第一季\[电影天堂www.dygod.cn]爱情公寓20.rmvb|07026c576e1f125bd2f0e4b6ca33b5a5|163906324
+紫禁之巅.高清典藏版.1080p.mov|J:\电影\电视剧\爱情公寓\爱情公寓第三季\紫禁之巅.高清典藏版.1080p.mov|43f423d343e1d5ca2cf65eb743bcda11|513824273
+爱情公寓第二季01.wmv|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季01.wmv|9a9762a15317f66d7cf76510bc6a0e2d|202641261
+爱情公寓第二季02.wmv|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季02.wmv|5f73e46279be29f7b77d76e3aa08ddb7|301045618
+爱情公寓第二季03.wmv|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季03.wmv|d4236a246ec37fa0ee8421cdd8856bb8|213533943
+爱情公寓第二季04.wmv|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季04.wmv|203bdb8a51a1330c0810828ba5759474|323398848
+爱情公寓第二季05.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季05.rmvb|e275b9de2c2f1472f6cb7c85cea8108e|181855915
+爱情公寓第二季06.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季06.rmvb|ee19befaff652231d08ca6810a01ab8e|193681056
+爱情公寓第二季07.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季07.rmvb|bbdec226ba215d634d1562e0fe1796fd|178191779
+爱情公寓第二季08.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季08.rmvb|586ad5a43ab6498ae2444419d65aade6|174126553
+爱情公寓第二季09.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季09.rmvb|0a5967249862863636916297bcb7a052|178931654
+爱情公寓第二季10.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季10.rmvb|cb48f948a016cf3e1480407019a420cd|179770169
+爱情公寓第二季11.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季11.rmvb|de253170f7e061b2328bc542593d20c3|179547363
+爱情公寓第二季12.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季12.rmvb|59c91e58223d11cd457cd6df018e4222|179065438
+爱情公寓第二季13.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季13.rmvb|70741edb9db74f3fb898b7365186e6bc|171927526
+爱情公寓第二季14.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季14.rmvb|e9173213921121876ee465fef7138c64|176613665
+爱情公寓第二季15.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季15.rmvb|4b740b5353b1dea4496d414ba5097a65|178989318
+爱情公寓第二季16.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季16.rmvb|2c60e685b75542b1bc5ec40c0346c9d4|178789034
+爱情公寓第二季17.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季17.rmvb|ffb25c7c332a9359f75dd58d9aa18fb4|177141886
+爱情公寓第二季18.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季18.rmvb|c0830d16c7e9f56d68fe8191965cacf2|175953954
+爱情公寓第二季19.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季19.rmvb|7f6c4e47f41562b944724036c43eda48|167166852
+爱情公寓第二季20.rmvb|J:\电影\电视剧\爱情公寓\爱情公寓第二季\爱情公寓第二季\爱情公寓第二季20.rmvb|8058df052f18eca2a101184cdf196238|178925271
+红楼梦01.rmvb|J:\电影\电视剧\红楼梦\红楼梦01.rmvb|6554073ecf190c7c329ae40d4e158ffc|336989394
+红楼梦02.rmvb|J:\电影\电视剧\红楼梦\红楼梦02.rmvb|e10ccbd60268ed01aa23406ad9eae4ec|231755255
+红楼梦03.rmvb|J:\电影\电视剧\红楼梦\红楼梦03.rmvb|5fac213fe4f2bcb99e32094990d8d1c6|262999803
+红楼梦04.rmvb|J:\电影\电视剧\红楼梦\红楼梦04.rmvb|087120d63f67828916c563ea8bd3d03c|272315454
+红楼梦05.rmvb|J:\电影\电视剧\红楼梦\红楼梦05.rmvb|39376f96e7f6c85aefb2fec5260c287c|317878351
+红楼梦06.rmvb|J:\电影\电视剧\红楼梦\红楼梦06.rmvb|6be7e47eb547680b05693e4cb7944de0|344259522
+红楼梦07.rmvb|J:\电影\电视剧\红楼梦\红楼梦07.rmvb|9bafe58c852db64d9b9e76a882e820fe|283115015
+红楼梦08.rmvb|J:\电影\电视剧\红楼梦\红楼梦08.rmvb|929383dcc635682e0a6c424e4134de00|272294515
+红楼梦09.rmvb|J:\电影\电视剧\红楼梦\红楼梦09.rmvb|db20932ec9088b994075f8f83d0b28c4|260829564
+红楼梦10.rmvb|J:\电影\电视剧\红楼梦\红楼梦10.rmvb|94e47c93729573769339466202ad62e4|291210390
+红楼梦11.rmvb|J:\电影\电视剧\红楼梦\红楼梦11.rmvb|0d52815141368fbf25ebff43791064dc|269077441
+红楼梦12.rmvb|J:\电影\电视剧\红楼梦\红楼梦12.rmvb|6116ace0701e2994abbfe3cff02b8a11|377364430
+红楼梦13.rmvb|J:\电影\电视剧\红楼梦\红楼梦13.rmvb|8004e85e08d945143266b80f23bb8303|306541701
+红楼梦14.rmvb|J:\电影\电视剧\红楼梦\红楼梦14.rmvb|4643e716a48a3f1b81a51373e3f7755f|330268856
+红楼梦15.rmvb|J:\电影\电视剧\红楼梦\红楼梦15.rmvb|d4abc3fb4ffba4704e6815aae6f6a6a3|243522421
+红楼梦16.rmvb|J:\电影\电视剧\红楼梦\红楼梦16.rmvb|6b292a95f83b1950e6da013bac48a4d1|298890605
+红楼梦17.rmvb|J:\电影\电视剧\红楼梦\红楼梦17.rmvb|9e7247e105fb75175501c6a05117d92a|370780624
+红楼梦18.rmvb|J:\电影\电视剧\红楼梦\红楼梦18.rmvb|557077261e4350ec9132b3f718d6bd69|367320562
+红楼梦19.rmvb|J:\电影\电视剧\红楼梦\红楼梦19.rmvb|ece2309e970052d09c6f6157f9fef5ce|334204058
+红楼梦20.rmvb|J:\电影\电视剧\红楼梦\红楼梦20.rmvb|162188784eeeb6c51a53378d1301a558|293559360
+红楼梦21.rmvb|J:\电影\电视剧\红楼梦\红楼梦21.rmvb|97c4042178d62a3741d43cb11df8fa42|356816688
+红楼梦22.rmvb|J:\电影\电视剧\红楼梦\红楼梦22.rmvb|aea20bfe70751b674e15de7ba548f5da|267705205
+红楼梦23.rmvb|J:\电影\电视剧\红楼梦\红楼梦23.rmvb|576e31e2cae400db4dfbb4bf9f13d292|216331727
+红楼梦24.rmvb|J:\电影\电视剧\红楼梦\红楼梦24.rmvb|4e719c242947b8b29d8349cada1ddda3|298234255
+红楼梦25.rmvb|J:\电影\电视剧\红楼梦\红楼梦25.rmvb|5ddb6e01225ddc2dd7b1f0f5b0b42535|391962818
+红楼梦26.rmvb|J:\电影\电视剧\红楼梦\红楼梦26.rmvb|769e9fc343ef94e155d33923e332b6df|429414587
+红楼梦27.rmvb|J:\电影\电视剧\红楼梦\红楼梦27.rmvb|a45267b34f41bdf97b59d5aea40ad206|408127959
+红楼梦28.rmvb|J:\电影\电视剧\红楼梦\红楼梦28.rmvb|dfbcee310da001a9bc39f52125cbc9ac|380127578
+红楼梦29.rmvb|J:\电影\电视剧\红楼梦\红楼梦29.rmvb|ca89c9ff836c039027c5ae3c0996440b|273590772
+红楼梦30.rmvb|J:\电影\电视剧\红楼梦\红楼梦30.rmvb|e34f21e9adfd4931f615313eac42daa9|302019970
+红楼梦31.rmvb|J:\电影\电视剧\红楼梦\红楼梦31.rmvb|cb17306eb33ea26fbb31069aa8627eb1|292033525
+红楼梦32.rmvb|J:\电影\电视剧\红楼梦\红楼梦32.rmvb|931ce2c6de627e87fb17bc7559c8a53d|337878325
+红楼梦33.rmvb|J:\电影\电视剧\红楼梦\红楼梦33.rmvb|2daad325215fafef7cdcab9f1fceb4dd|445649507
+红楼梦34.rmvb|J:\电影\电视剧\红楼梦\红楼梦34.rmvb|7195bf248af854fc41be37c102dac50c|267846822
+红楼梦36[剧终].rmvb|J:\电影\电视剧\红楼梦\红楼梦36[剧终].rmvb|413efa354716c8d61e5edc0be516290b|296490921
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字01.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字01.rmvb|cebd0e71424afeb8feb1fd1330760a96|161741700
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字02.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字02.rmvb|6f217b88fd94dfc739007555bfe899f4|155896200
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字03.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字03.rmvb|b19b5f7d5acd861c1775d4d87e7bc66e|155997927
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字04.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字04.rmvb|69d9aa5c5ad0c1d2cc6726fc9c1a32f0|155709751
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字05.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字05.rmvb|79549114e9c9d0759699aaed0344d2a8|155979527
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字06.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字06.rmvb|c7ab124768e735e03321360f4dd5397f|155892560
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字07.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字07.rmvb|2648a4250b3f32281417e2742309b079|156705807
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字08.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字08.rmvb|cb5caebcd2012f433221d875fe599b46|156300267
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字09.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字09.rmvb|0f8a156920fb271f545d11f5e715ca98|162648972
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字10.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字10.rmvb|a97c35292b421d119a45d17e1a10b95a|162914674
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字11.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字11.rmvb|0004b2945a0c56f0dcbaa87c12703ead|156752017
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字12.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字12.rmvb|b9d56d4f7125b16b5adf15f3f2ad680d|161879683
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字13.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字13.rmvb|13726082c2ead4e1efe5c1920db4495a|158232536
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字14.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字14.rmvb|1a29b4aea6bb6f85a70e5bc97db100ba|157923590
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字15.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字15.rmvb|e65ef2841fdf0b6abfadecbd524b7f3d|160637685
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字16.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字16.rmvb|02895a2e979b771af0abb1fea5b33202|156036734
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字17.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字17.rmvb|d2e7e33355277cf01383aeb91f51700a|161822842
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字18.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字18.rmvb|a580fbe5e7d9e9d1c9c7698d28c6d1fa|156053360
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字19.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字19.rmvb|849c785655e36926e83ccd9183be6342|155928893
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字20.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字20.rmvb|649bb23a9c25f0d57d8b08f0e2778af2|182277751
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字21.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字21.rmvb|8fedb0063b65a4762ca7e43b734f2f68|156292059
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字22.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字22.rmvb|c495437d97a0beac815d1e943fef4a78|156215917
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字23.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字23.rmvb|bd2291bc4d656d3165f8520588c77930|156824893
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字24.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字24.rmvb|260437eb6099062463fcbd047b1d6a8b|177636457
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字25.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字25.rmvb|27259843323d4cc685998cc3a8c2065c|156078842
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字26.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字26.rmvb|8cc59bb16fa9f7fa5169e4fdcb20f758|155961847
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字27.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字27.rmvb|6f389ac0a887d6e49b503c288287630e|155878518
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字28.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字28.rmvb|7be11e4fc69e1a5586177e3a1771df8e|155768464
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字29.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字29.rmvb|637284de311ad11adac5e0965f21b445|162139616
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字30.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字30.rmvb|2b5420d75fb55f8293f1664ab7dd7e30|157105736
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字31.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字31.rmvb|7ce3e66e38afe3576f9fcbb1cce7272c|156607630
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字32.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字32.rmvb|87a96509b691a6c5d4aa790277358c46|156254185
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字33.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字33.rmvb|e3713e2f931cd64352d11bf2a37486f0|157184786
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字34.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字34.rmvb|59a1b5c3d4acc707b7c940ec1d732ba3|156443285
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字35.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字35.rmvb|b3e36f4e5971c1456ddf040ece4d2f00|156806650
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字36.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字36.rmvb|8341a7acb2be8a0a0d37ce661bfa1be4|168329021
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字37.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字37.rmvb|5f73ebbbc4bc108b95abdbac759aa9e6|156173932
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字38.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字38.rmvb|c78c717bb9aed67650a0a5c6b80b0fc6|156375277
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字39.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字39.rmvb|94f238db918e4dc855c5e81abe15e8cb|162006406
+【更多电视剧请去www.6vdy.net】雪豹DVD国语中字40.rmvb|J:\电影\电视剧\雪豹\【更多电视剧请去www.6vdy.net】雪豹DVD国语中字40.rmvb|ad7461db29cc9897076afc9aedf24f5e|175317181

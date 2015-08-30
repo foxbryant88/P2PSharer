@@ -148,7 +148,8 @@ bool CFileScan::IsVideoFile(const char *filename)
 			!_stricmp(ext, ".mov") ||
 			!_stricmp(ext, ".mpeg") ||
 			!_stricmp(ext, ".3gp") ||
-			!_stricmp(ext, ".asf"))
+			!_stricmp(ext, ".asf") ||
+			!_stricmp(ext, ".mp3"))
 		{
 			return true;
 		}

@@ -101,7 +101,7 @@ BOOL CP2PSharerDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
-	//MessageBox("Start");
+	MessageBox("Start");
 
 	m_listSearchResult.InsertColumn(0, "文件名", 0, 350);
 	m_listSearchResult.InsertColumn(1, "文件大小", 0, 100);
@@ -177,16 +177,16 @@ bool CP2PSharerDlg::Init(void)
 	g_resourceMgr->start();
 
 
-	////启动与服务端的连接对象
-	////acl::string addr("127.0.0.1:8888");
-	////acl::string addr("192.168.1.102:8888");
-	//acl::string addr("119.29.66.237:8888");
+	//启动与服务端的连接对象
+	//acl::string addr("127.0.0.1:8888");
+	//acl::string addr("192.168.1.102:8888");
+	acl::string addr("119.29.66.237:8888");
 
-	//m_serEx.Init(addr);
-	//m_serEx.set_detachable(true);
-	//m_serEx.start();
+	m_serEx.Init(addr);
+	m_serEx.set_detachable(true);
+	m_serEx.start();
 
-	//m_serEx.SendMsg_UserLogin();
+	m_serEx.SendMsg_UserLogin();
 
 	return true;
 }
@@ -198,6 +198,29 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 
 	CString addr = "";
 	m_editKeyword.GetWindowTextA(addr);
+// 	m_serEx.SendMsg_P2PData("hello, world", addr.GetBuffer());
 
-	m_serEx.SendMsg_P2PData("hello, world", addr.GetBuffer());
+	acl::string key = addr.GetBuffer();
+	std::map<acl::string, acl::string> mapResult;
+	CRedisClient *redis = g_resourceMgr->GetRedisClient();
+	if (!redis->FindResource(key, mapResult))
+	{
+		g_clientlog.error1("查找资源失败！");
+		return;
+	}
+
+	m_listSearchResult.DeleteAllItems();
+
+	//更新资源信息到搜索结果列表
+	//mapResult格式:  key:文件名|文件MD5，Value：文件大小
+	std::map<acl::string, acl::string>::iterator itResult = mapResult.begin();
+	for (; itResult != mapResult.end(); ++itResult)
+	{
+		acl::string temp = itResult->first;
+		std::vector<acl::string> vRes = temp.split2(SPLITOR_OF_FILE_INFO);
+		m_listSearchResult.InsertItem(0, vRes[0]);             //文件名
+		m_listSearchResult.InsertItem(1, itResult->second);    //文件大小
+		m_listSearchResult.InsertItem(2, acl::string(redis->GetResourceOwners(vRes[1])));
+	}
+
 }

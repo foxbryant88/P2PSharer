@@ -21,6 +21,9 @@ public:
 	//      mapResult 所有文件名中包含key的文件列表信息
 	bool FindResource(acl::string &keyword, std::map<acl::string, acl::string> &mapRes);
 
+	//查找资源文件可用的下载服务器个数
+	int GetResourceOwners(acl::string &key);
+
 	//向资源文件的地址池中添加MAC（以set形式存储，key:文件MD5 members:MAC地址
 	bool AddMACToResourceSet(acl::string &key, acl::string &mac);
 

@@ -16,6 +16,8 @@ public:
 	//获取文件信息,返回值格式：文件名|文件路径|MD5|文件大小
 	acl::string GetFileInfo(acl::string md5);
 
+	//返回Redis客户端对象
+	CRedisClient *GetRedisClient();
 private:
 
 	//加载文件列表
@@ -29,9 +31,6 @@ private:
 
 	//获取需要扫描的磁盘
 	bool GetDiskDrives(std::vector<acl::string > &vRes);
-
-	//获取本机MAC地址
-	acl::string GetMacAddr();
 
 	std::map<acl::string, acl::string > m_mapResource;       //资源列表 key：md5, value:文件名|文件路径|MD5|文件大小
 	std::map<acl::string, acl::string > m_mapResourceTemp;   //临时资源列表 key：md5, value:文件名|文件路径|MD5|文件大小

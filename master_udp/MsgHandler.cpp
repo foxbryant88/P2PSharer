@@ -100,14 +100,15 @@ void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
 //客户端登录消息
 void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
-	m_errmsg.clear();
-	m_errmsg.format("收到%s登录消息\r\n", sock->get_peer(true));
-	g_serlog.msg1(m_errmsg);
-	printf(m_errmsg);
 
 	MSGDef::TMSG_USERLOGIN *pUserLogin = (MSGDef::TMSG_USERLOGIN*)pMsgHeader;
 	 
-	int nNum = pUserLogin->PeerInfo.nAddrNum;
+	m_errmsg.clear();
+	m_errmsg.format("收到%s登录消息, ip:%s\r\n", pUserLogin->PeerInfo.szMAC, sock->get_peer(true));
+	g_serlog.msg1(m_errmsg);
+	printf(m_errmsg);
+
+	//int nNum = pUserLogin->PeerInfo.nAddrNum;
 // 	pUserLogin->PeerInfo.IPAddr[nNum] = sock->get_peer(true);
 //	pUserLogin->PeerInfo.IPAddr = sock->get_peer(true);
 	acl::string ip = sock->get_peer(true);
@@ -117,13 +118,13 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 
 	//加入在线列表
 	m_lockUserList.lock();
-	if (m_lstOnlineUser.GetAPeer(ip) == NULL)
+	if (m_lstOnlineUser.GetAPeer(pUserLogin->PeerInfo.szMAC) == NULL)
 		m_lstOnlineUser.AddPeer(pUserLogin->PeerInfo);
 	m_lockUserList.unlock();
 
 	//回复登录确认消息
 	MSGDef::TMSG_USERLOGINACK tMsgUserLogAck(pUserLogin->PeerInfo);
- 	if (sock->write((void*)&tMsgUserLogAck, sizeof(tMsgUserLogAck), true) == -1)
+	if (!SendData(&tMsgUserLogAck, sizeof(tMsgUserLogAck), sock, pUserLogin->PeerInfo.IPAddr))
 	{
 		m_errmsg.format("向%s回复登录确认消息失败！\r\n", ip);
 		g_serlog.msg1(m_errmsg);
@@ -142,36 +143,44 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！\r\n", sock->get_peer(true), msg->ConnToAddr);
 	g_serlog.msg1(m_errmsg);
 
-// 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->ConnToAddr);
-// 	if (peer != NULL)
-// 	{
-	
+	//根据MAC地址查找目标IP
+	Peer_Info *peer = NULL;
+	m_lockUserList.lock();
+	peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.szMAC);
+	m_lockUserList.unlock();
+
+	if (peer == NULL)
+	{
+		m_errmsg.format("找不到%s的目标IP，打洞失败！\r\n", msg->ConnToAddr);
+		g_serlog.msg1(m_errmsg);
+		printf(m_errmsg);
+		return;
+	}
+
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
-		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), sock, msg->ConnToAddr))
+		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), sock, peer->IPAddr))
 		{
-			g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", msg->ConnToAddr);
+			g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", peer->IPAddr);
 			return;
 		}
 
 		Sleep(1000);
 	}
-	//}
-
-	g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", msg->ConnToAddr);
 }
 
 //客户端注销登录消息
 void CMsgHandler::ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
+	MSGDef::TMSG_USERLOGOUT *msg = (MSGDef::TMSG_USERLOGOUT *)pMsgHeader;
+
 	m_errmsg.clear();
-	m_errmsg.format("收到%s注销消息\r\n", sock->get_peer(true));
+	m_errmsg.format("收到%s注销消息,ip:%s\r\n", msg->PeerInfo.szMAC, sock->get_peer(true));
 	g_serlog.msg1(m_errmsg);
 	printf(m_errmsg);
 
-	MSGDef::TMSG_USERLOGOUT *msg = (MSGDef::TMSG_USERLOGOUT *)pMsgHeader;
 	m_lockUserList.lock();
-	m_lstOnlineUser.DeleteAPeer(msg->PeerInfo.IPAddr);
+	m_lstOnlineUser.DeleteAPeer(msg->PeerInfo.szMAC);
 	m_lockUserList.unlock();
 }
 
@@ -179,10 +188,10 @@ void CMsgHandler::ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_str
 void CMsgHandler::ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
 	MSGDef::TMSG_USERACTIVEQUERY *msg = (MSGDef::TMSG_USERACTIVEQUERY *)pMsgHeader;
-	printf("收到存活确认消息, IP: %s \n", msg->PeerInfo.IPAddr);
+	printf("收到%s存活确认消息, IP: %s \n", msg->PeerInfo.szMAC, msg->PeerInfo.IPAddr);
 
 	m_lockUserList.lock();
-	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.IPAddr);
+	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.szMAC);
 	if (NULL != peer)
 	{
 		peer->dwActiveTime = GetTickCount();
@@ -202,18 +211,20 @@ void CMsgHandler::MaintainUserlist()
 		{
 			if (dwTick - pPeerInfo->dwActiveTime >= 2 * 15 * 1000 + 600)
 			{
-				printf("------删除下线客户端-----, IP: %s \n", pPeerInfo->IPAddr);
+				printf("------删除下线客户端-----, MAC:%s, IP: %s \n", pPeerInfo->szMAC, pPeerInfo->IPAddr);
 				m_lockUserList.lock();
-				m_lstOnlineUser.DeleteAPeer(pPeerInfo->IPAddr);
+				m_lstOnlineUser.DeleteAPeer(pPeerInfo->szMAC);
 				m_lockUserList.unlock();
 				--i;
 			}
 			else
 			{
 				MSGDef::TMSG_USERACTIVEQUERY tUserActiveQuery;
-				m_SockStream.set_peer(pPeerInfo->IPAddr);
-				m_SockStream.write(&tUserActiveQuery, sizeof(tUserActiveQuery));
-				printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
+				//m_SockStream.set_peer(pPeerInfo->IPAddr);
+				//m_SockStream.write(&tUserActiveQuery, sizeof(tUserActiveQuery));
+				//printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
+				if (SendData(&tUserActiveQuery, sizeof(tUserActiveQuery), &m_SockStream, pPeerInfo->IPAddr))
+					printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
 			}
 		}
 	}

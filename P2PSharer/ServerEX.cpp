@@ -35,7 +35,8 @@ bool ServerEX::Init(const char* addr)
 
 	g_cli_exlog.msg1("绑定本地UDP端口:%s", m_sockstream.get_local(true));
 	memcpy(m_peerInfo.IPAddr_Local, m_sockstream.get_local(true), MAX_ADDR_LENGTH);
- 
+	memcpy(m_peerInfo.szMAC, GetMacAddr().c_str(), MAX_MACADDR_LEN);
+
 	m_sockstream.set_rw_timeout(0);
 
 	return true;

@@ -30,11 +30,11 @@ bool CResourceMgr::Init(const char *addr)
 //功能:1.生成列表 2.更新文件列表到缓存 3.向Redis登记/注销文件
 void *CResourceMgr::run()
 {
-	//先加载旧的文件列表
-	LoadResourceList(m_mapResource);
+	////先加载旧的文件列表
+	//LoadResourceList(m_mapResource);
 
-	//更新文件列表
-	UpdateResourceList();
+	////更新文件列表
+	//UpdateResourceList();
 
 	//将最新的文件列表加载到临时map
 	LoadResourceList(m_mapResourceTemp);
@@ -49,6 +49,12 @@ void *CResourceMgr::run()
 acl::string CResourceMgr::GetFileInfo(acl::string md5)
 {
 	return m_mapResource[md5];
+}
+
+//返回Redis客户端对象
+CRedisClient *CResourceMgr::GetRedisClient()
+{
+	return &m_redisClient;
 }
 
 //加载文件列表
@@ -86,21 +92,20 @@ bool CResourceMgr::UpdateResourceList()
 
 	//////创建扫描对象并启动文件扫描
 	std::vector<CFileScan *> vScanObject;
-	//for (int i = 0; i < vDiskDrive.size(); i++)
-	//{
-	//	CFileScan *obj = new CFileScan();
-	//	obj->Init(vDiskDrive[i], , &m_mapResource);
-	//	obj->set_detachable(false);
-	//	obj->start();
+	for (int i = 0; i < vDiskDrive.size(); i++)
+	{
+		CFileScan *obj = new CFileScan();
+		obj->Init(vDiskDrive[i], &m_mapResource);
+		obj->set_detachable(false);
+		obj->start();
 
-	//	vScanObject.push_back(obj);
-	//}
- 	CFileScan *obj = new CFileScan();
- 	obj->Init("D:", &m_mapResource);
- 	obj->set_detachable(false);
- 	obj->start();
-
-	vScanObject.push_back(obj);
+		vScanObject.push_back(obj);
+	}
+//  	CFileScan *obj = new CFileScan();
+//  	obj->Init("D:", &m_mapResource);
+//  	obj->set_detachable(false);
+//  	obj->start();
+// 	vScanObject.push_back(obj);
 
 
 	//等待所有扫描结束
@@ -141,6 +146,8 @@ bool CResourceMgr::UpdateResourceToRedis()
 				g_resourceMgrlog.msg1("将MAC地址添加到名称为[%s]的SET失败！", itTemp->first.c_str());
 		}
 	}
+
+	g_resourceMgrlog.msg1("向Redis服务器登记/注销资源信息完毕！");
 
 	//暂未做注销文件操作，可能导致缓存中保存用户无法下载的无效文件信息
 	//...
@@ -194,22 +201,4 @@ bool CResourceMgr::GetDiskDrives(std::vector<acl::string > &vRes)
 		return true;
 	else
 		return false;
-}
-
-//获取本机MAC地址
-acl::string CResourceMgr::GetMacAddr()
-{
-	char *file = "d:\\config.dat";
-	char buf[30] = { 0 };
-	GetPrivateProfileString("LocalInfo", "mac", "", buf, 30, file);
-
-	acl::string pseudoMac(buf);
-	if (pseudoMac == "")
-	{
-		srand((unsigned int)time(NULL));
-		pseudoMac.format("%02X-%02X-%02X-%02X-%02X-%02X", rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100);
-		WritePrivateProfileString("LocalInfo", "mac", pseudoMac, file);
-	}
-
-	return pseudoMac;
 }

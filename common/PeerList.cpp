@@ -7,6 +7,7 @@ Peer_Info::Peer_Info()
 	memset(IPAddr, 0, MAX_ADDR_LENGTH);
 	memset(IPAddr_Local, 0, MAX_ADDR_LENGTH);	
 	memset(P2PAddr, 0, MAX_ADDR_LENGTH);
+	memset(szMAC, 0, MAX_MACADDR_LEN);
 }
 
 Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
@@ -17,6 +18,8 @@ Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
 	memcpy(IPAddr, rPeerinfo.IPAddr, MAX_ADDR_LENGTH);
 	memcpy(IPAddr_Local, rPeerinfo.IPAddr_Local, MAX_ADDR_LENGTH);
 	memcpy(P2PAddr, rPeerinfo.P2PAddr, MAX_ADDR_LENGTH);
+	memcpy(szMAC, rPeerinfo.szMAC, MAX_MACADDR_LEN);
+
 	dwActiveTime = rPeerinfo.dwActiveTime;
 	nAddrNum = rPeerinfo.nAddrNum;
 	//strcpy(szUserName, rPeerinfo.szUserName);
@@ -71,7 +74,7 @@ bool PeerList::DeleteAllPeer()
 	return true;
 }
 
-bool PeerList::DeleteAPeer(const char* addrInfo)
+bool PeerList::DeleteAPeer(const char* macAddr)
 {
 	PeerInfoListIter Iter1, Iter2;
 
@@ -79,7 +82,7 @@ bool PeerList::DeleteAPeer(const char* addrInfo)
 		 Iter1 != Iter2;
 		 ++Iter1)
 	{
-		if (!strcmp(Iter1->IPAddr, addrInfo))
+		if (!strcmp(Iter1->szMAC, macAddr))
 		{
 			m_PeerInfoList.erase(Iter1);
 			return true;
@@ -89,7 +92,7 @@ bool PeerList::DeleteAPeer(const char* addrInfo)
 	return false;
 }
 
-Peer_Info* PeerList::GetAPeer(const char* addrInfo)
+Peer_Info* PeerList::GetAPeer(const char* macAddr)
 {
 	PeerInfoListIter Iter1, Iter2;
 
@@ -97,7 +100,7 @@ Peer_Info* PeerList::GetAPeer(const char* addrInfo)
 		Iter1 != Iter2;
 		++Iter1)
 	{
-		if (!strcmp(Iter1->IPAddr, addrInfo))
+		if (!strcmp(Iter1->szMAC, macAddr))
 		{
 			return &(*Iter1);
 		}
