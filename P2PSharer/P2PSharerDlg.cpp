@@ -59,6 +59,7 @@ void CP2PSharerDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_EDIT_KEYWORD, m_editKeyword);
+	DDX_Control(pDX, IDC_LIST_RESOURCE, m_listSearchResult);
 }
 
 BEGIN_MESSAGE_MAP(CP2PSharerDlg, CDialogEx)
@@ -100,29 +101,17 @@ BOOL CP2PSharerDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
-	MessageBox("Start");
+	//MessageBox("Start");
+
+	m_listSearchResult.InsertColumn(0, "文件名", 0, 350);
+	m_listSearchResult.InsertColumn(1, "文件大小", 0, 100);
+	m_listSearchResult.InsertColumn(2, "资源数", 0, 100);
+	m_listSearchResult.InsertColumn(3, "下载进度", 0, 100);
+
 
 	g_clientlog.open("mylog.log", "P2PServer");
 
- 	//启动资源管理对象
-	g_resourceMgr = new CResourceMgr();
- 	g_resourceMgr->Init("119.29.66.237:6379");
- 	g_resourceMgr->set_detachable(true);
- 	g_resourceMgr->start();
-
-
-	////启动与服务端的连接对象
-	////acl::string addr("127.0.0.1:8888");
-	////acl::string addr("192.168.1.102:8888");
-	//acl::string addr("119.29.66.237:8888");
-
-	//m_serEx.Init(addr);
-	//m_serEx.set_detachable(true);
-	//m_serEx.start();
-
-	//m_serEx.SendMsg_UserLogin();
-
-
+	Init();
 
 	// TODO:  在此添加额外的初始化代码
 
@@ -178,6 +167,29 @@ HCURSOR CP2PSharerDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+//模块初始化
+bool CP2PSharerDlg::Init(void)
+{
+	//启动资源管理对象
+	g_resourceMgr = new CResourceMgr();
+	g_resourceMgr->Init("119.29.66.237:6379");
+	g_resourceMgr->set_detachable(true);
+	g_resourceMgr->start();
+
+
+	////启动与服务端的连接对象
+	////acl::string addr("127.0.0.1:8888");
+	////acl::string addr("192.168.1.102:8888");
+	//acl::string addr("119.29.66.237:8888");
+
+	//m_serEx.Init(addr);
+	//m_serEx.set_detachable(true);
+	//m_serEx.start();
+
+	//m_serEx.SendMsg_UserLogin();
+
+	return true;
+}
 
 
 void CP2PSharerDlg::OnBnClickedButtonSearch()

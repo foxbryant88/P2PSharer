@@ -5,6 +5,7 @@
 #pragma once
 #include "ServerEX.h"
 #include "afxwin.h"
+#include "afxcmn.h"
 
 
 // CP2PSharerDlg 对话框
@@ -23,6 +24,8 @@ public:
 private:
 	ServerEX m_serEx;
 
+	//模块初始化
+	bool Init(void);
 
 // 实现
 protected:
@@ -37,4 +40,5 @@ protected:
 public:
 	afx_msg void OnBnClickedButtonSearch();
 	CEdit m_editKeyword;
+	CListCtrl m_listSearchResult;
 };
