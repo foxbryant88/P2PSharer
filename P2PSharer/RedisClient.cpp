@@ -18,9 +18,38 @@ CRedisClient::~CRedisClient()
 {
 }
 
+void CRedisClient::Test()
+{
+	acl::string key = "C++视频讲解.avi|425632588965abe4";
+	acl::string val = "45123";
+	AddResourceToHashList(key, val);
+
+	key = "425632588965abe4";
+	val = "00-11-22-33-44-55";
+	AddMACToResourceSet(key, val);
+	
+	key = "J++视频讲解.avi|ff88a2588965abe4";
+	val = "3252";
+	AddResourceToHashList(key, val);
+
+	key = "飞行员.avi|dd21aa2588965abe4";
+	val = "53432";
+	AddResourceToHashList(key, val);
+	
+	key = "C++";
+	std::map<acl::string, acl::string> mapRes;
+	bool bFind = FindResource(key, mapRes);
+
+	key = "425632588965abe4";
+	val = "00-11-22-33-44-55";
+	RemoveMACFromResourceSet(key, val);
+}
+
 //初始化
 bool CRedisClient::Init(const char *addr)
 {
+	acl::acl_cpp_init();
+
 	m_addr = addr;
 
 	if (NULL == m_redis)
@@ -43,7 +72,7 @@ bool CRedisClient::AddResourceToHashList(acl::string &field, acl::string &value)
 
 	int ret = 0;
 	redis.clear();
-	if ((ret = redis.hsetnx(REDIS_KEY_RESOURCE_HASH_LIST, field, value)) < 0)
+ 	if ((ret = redis.hsetnx(REDIS_KEY_RESOURCE_HASH_LIST, field, value)) < 0)
 	{
 		g_cli_redislog.error1("向Hash表添加文件信息失败！文件名：%s, err:%d", field, acl::last_error());
 		return false;
@@ -62,7 +91,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 
 	std::map <acl::string, acl::string> mapTemp;
 	acl::string pattern;
-	pattern.format("*%s*|*)", keyword);   //文件名中包含key，忽略MD5
+	pattern.format("*%s*|*", keyword.c_str());   //文件名中包含key，忽略MD5
 
 	do 
 	{
@@ -85,7 +114,10 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 {
 	acl::redis_set redis(m_redis);
-	if (-1 == redis.sadd(key, mac))
+	std::vector<acl::string> members;
+	members.push_back(mac);
+
+ 	if (-1 == redis.sadd(key, members))
 	{
 		g_cli_redislog.error1("向文件[%s]的地址池中添加MAC失败！err:%d", key, acl::last_error());
 		return false;
@@ -98,7 +130,10 @@ bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 bool CRedisClient::RemoveMACFromResourceSet(acl::string &key, acl::string &mac)
 {
 	acl::redis_set redis(m_redis);
-	if (-1 == redis.srem(key, mac))
+	std::vector<acl::string> members;
+	members.push_back(mac);
+
+	if (-1 == redis.srem(key, members))
 	{
 		g_cli_redislog.error1("从文件[%s]的地址池中删除MAC地址失败！err:%d", key, acl::last_error());
 		return false;

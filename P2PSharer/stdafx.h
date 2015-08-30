@@ -38,9 +38,11 @@
 #include "ResourceMgr.h"
 
 acl::log g_clientlog;
-extern CResourceMgr g_resourceMgr;
+extern CResourceMgr *g_resourceMgr;
 
-#define NAME_FILE_INFO_LIST    "list.txt"
+#define NAME_FILE_INFO_LIST         "list.txt"
+#define NAME_FILE_INFO_LIST_LOCK    "listlock.txt"
+
 #define SPLITOR_OF_FILE_INFO   "|"
 
 #ifdef _UNICODE

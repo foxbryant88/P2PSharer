@@ -7,6 +7,9 @@ public:
 	CRedisClient();
 	~CRedisClient();
 
+	//测试接口
+	void Test();
+
 	//初始化
 	bool Init(const char *addr);
 

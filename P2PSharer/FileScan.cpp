@@ -1,14 +1,23 @@
 #include "stdafx.h"
 #include "FileScan.h"
 
-
 acl::log g_scanlog;
+
+// 去年路径前的 "./" 或 ".\"，因为在 WIN32 下
+#define SKIP(ptr) do  \
+{  \
+if (*ptr == '.' && *(ptr + 1) == '/')  \
+	ptr += 2;  \
+	else if (*ptr == '.' && *(ptr + 1) == '\\')  \
+	ptr += 2;  \
+} while (0)
+
 CFileScan::CFileScan()
 {
 	g_scanlog.open("scanlog.log");
-	if (!m_lockFilelist.open(NAME_FILE_INFO_LIST))
+	if (!m_lockFilelist.open(NAME_FILE_INFO_LIST_LOCK))
 	{
-		m_errmsg.format("创建文件锁失败：%s, err:%d", NAME_FILE_INFO_LIST, acl::last_error());
+		m_errmsg.format("创建文件锁失败：%s, err:%d", NAME_FILE_INFO_LIST_LOCK, acl::last_error());
 		g_scanlog.error1(m_errmsg);
 
 		ShowError(m_errmsg);
@@ -21,18 +30,26 @@ CFileScan::~CFileScan()
 	g_scanlog.close();
 }
 
+//初始化扫描对象
+void CFileScan::Init(acl::string dir, std::map<acl::string, acl::string > *oldMapResource)
+{ 
+	m_scandir = dir; 
+	m_mapOldResource = oldMapResource;
+}
 
 void *CFileScan::run()
 {
 	acl::scan_dir scan;
 
-	Scan(scan, m_scandir, true, true);
+	ScanVideo(scan, m_scandir, true, true);
+
+	WriteCacheToFile();
 
 	return NULL;
 }
 
 //扫描指定目录/磁盘下的所有视频文件
-void CFileScan::Scan(acl::scan_dir &scan, const char *dir, bool brecursive, bool bfullpath)
+void CFileScan::ScanVideo(acl::scan_dir &scan, const char *dir, bool brecursive, bool bfullpath)
 {
 	if (!scan.open(dir, brecursive))
 	{
@@ -41,14 +58,27 @@ void CFileScan::Scan(acl::scan_dir &scan, const char *dir, bool brecursive, bool
 	}
 
 	const char *filename;
-	bool isFile;
-	while ((filename = scan.next(true, &isFile)) != NULL)
+	bool is_file;
+	while (true)
 	{
-		if (isFile)
+		filename = scan.next(true, &is_file);
+		if (filename != NULL)
 		{
-			if (IsVideoFile(filename))
+			if (is_file)
 			{
-				CacheFileInfo(filename);
+				if (IsVideoFile(filename))
+				{
+					CacheFileInfo(filename);
+				}
+			}
+		}
+		else
+		{
+			//文件名为空可能是因为无权访问，当目录同时也为空时才认为遍历结束
+			if (scan.curr_path() == NULL)
+			{
+				g_scanlog.error1("遍历结束!");
+				break;
 			}
 		}
 	}
@@ -57,40 +87,23 @@ void CFileScan::Scan(acl::scan_dir &scan, const char *dir, bool brecursive, bool
 //缓存当前扫描到的文件信息
 void CFileScan::CacheFileInfo(const char *fullfile)
 {
-	acl::ifstream infile;
-	if (!infile.create(fullfile))
-	{
-		g_scanlog.error1("获取文件长度时，不能打开文件【%s】!err;%d", fullfile, acl::last_error());
-		return;
-	}
-
-	long long filesize = infile.fsize();;
-	infile.close();
+	struct _stat64 info;
+	_stat64(fullfile, &info);
+	long long filesize = info.st_size;
 
 	//格式：文件名|全路径|MD5|文件大小
 	acl::string temp;
-	temp.basename(fullfile);
+ 	acl::string fileInfo;
 
-	acl::string fileInfo;
-// 	fileInfo.format("%s%s%s%s%s%s%I64d", 
-// 		temp.basename(fullfile), 
-// 		SPLITOR_OF_FILE_INFO,
-// 		fullfile, 
-// 		SPLITOR_OF_FILE_INFO, 
-// 		CalcMd5(fullfile),
-// 		SPLITOR_OF_FILE_INFO, 
-// 		filesize);
-	
-	char buf[20] = { 0 };
-	_snprintf_s(buf, 20, "%I64d", filesize);
-	fileInfo.format("%s|%s|%s|%s",
-		"aaa",//temp,
-		"bbb",//fullfile,
-		"ccc",//CalcMd5(fullfile),
-		buf);
+	fileInfo << temp.basename(fullfile);
+	fileInfo << SPLITOR_OF_FILE_INFO;
+	fileInfo << fullfile;
+	fileInfo << SPLITOR_OF_FILE_INFO;
+	fileInfo << CalcMd5(fullfile);
+	fileInfo << SPLITOR_OF_FILE_INFO;
+	fileInfo << filesize;
 
-
-	g_scanlog.msg1("发现视频文件：%s", fileInfo);
+	g_scanlog.msg1("发现视频文件：%s", fileInfo.buf());
 
 	//小于100条时缓存，否则写入文件
 	if (m_vfileList.size() < 100)
@@ -108,7 +121,11 @@ void CFileScan::WriteCacheToFile()
 
 	for (int i = 0; i < m_vfileList.size(); i++)
 	{
-		file.puts(m_vfileList[i]);
+		//检测到新文件才写入文件列表
+		if (m_mapOldResource->find(m_vfileList[i]) == m_mapOldResource->end())
+		{
+			file.puts(m_vfileList[i]);
+		}
 	}
 
 	file.close();
@@ -121,18 +138,20 @@ bool CFileScan::IsVideoFile(const char *filename)
 {
 	acl::string file(filename);
 	char *ext = file.rfind(".");
-
-	if (!_stricmp(ext, ".avi") ||
-		!_stricmp(ext, ".rmvb") ||
-		!_stricmp(ext, ".wmv") ||
-		!_stricmp(ext, ".mkv") ||
-		!_stricmp(ext, ".mp4") ||
-		!_stricmp(ext, ".mov") ||
-		!_stricmp(ext, ".mpeg") ||
-		!_stricmp(ext, ".3gp") ||
-		!_stricmp(ext, ".asf"))
+	if (NULL != ext)
 	{
-		return true;
+		if (!_stricmp(ext, ".avi") ||
+			!_stricmp(ext, ".rmvb") ||
+			!_stricmp(ext, ".wmv") ||
+			!_stricmp(ext, ".mkv") ||
+			!_stricmp(ext, ".mp4") ||
+			!_stricmp(ext, ".mov") ||
+			!_stricmp(ext, ".mpeg") ||
+			!_stricmp(ext, ".3gp") ||
+			!_stricmp(ext, ".asf"))
+		{
+			return true;
+		}
 	}
 
 	return false;
@@ -144,9 +163,9 @@ acl::string CFileScan::CalcMd5(const char *fullfile)
 	char md5val[33] = { 0 };
 	if (acl::md5::md5_file(fullfile, NULL, NULL, md5val, 33) > 0)
 	{
-		g_scanlog.error1("计算文件【%s】MD5值失败, err:%d", fullfile, acl::last_error());
 		return md5val;
 	}
 
+	g_scanlog.error1("计算文件【%s】MD5值失败, err:%d", fullfile, acl::last_error());
 	return "";
 }

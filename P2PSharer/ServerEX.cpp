@@ -8,7 +8,7 @@ acl::log g_cli_exlog;
 
 ServerEX::ServerEX()
 {
-	g_cli_exlog.open("mylog.log", "ServerEx");
+	g_cli_exlog.open("serEx.log", "ServerEx");
 
 	m_bLoginSucc = false;
 	m_bExit = false;

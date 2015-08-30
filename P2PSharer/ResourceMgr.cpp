@@ -16,6 +16,7 @@ CResourceMgr::~CResourceMgr()
 //初始化
 bool CResourceMgr::Init(const char *addr)
 {
+
 	if (m_redisClient.Init(addr))
 		g_resourceMgrlog.msg1("初始化Redis成功！");
 	else
@@ -83,21 +84,21 @@ bool CResourceMgr::UpdateResourceList()
 		return false;
 	}
 
-	////创建扫描对象并启动文件扫描
+	//////创建扫描对象并启动文件扫描
 	std::vector<CFileScan *> vScanObject;
 	//for (int i = 0; i < vDiskDrive.size(); i++)
 	//{
 	//	CFileScan *obj = new CFileScan();
-	//	obj->Init(vDiskDrive[i]);
+	//	obj->Init(vDiskDrive[i], , &m_mapResource);
 	//	obj->set_detachable(false);
 	//	obj->start();
 
 	//	vScanObject.push_back(obj);
 	//}
-	CFileScan *obj = new CFileScan();
-	obj->Init("J:\\电影");
-	obj->set_detachable(false);
-	obj->start();
+ 	CFileScan *obj = new CFileScan();
+ 	obj->Init("D:", &m_mapResource);
+ 	obj->set_detachable(false);
+ 	obj->start();
 
 	vScanObject.push_back(obj);
 
@@ -122,16 +123,22 @@ bool CResourceMgr::UpdateResourceToRedis()
 	for (; itTemp != m_mapResourceTemp.end(); ++itTemp)
 	{
 		//临时列表中存在，但正式列表中不存在的说明是新增文件，需要添加到Redis
-		if (m_mapResource.find(itTemp->first) != m_mapResource.end())
+		if (m_mapResource.find(itTemp->first) == m_mapResource.end())
 		{
-			g_resourceMgrlog.msg1("发现新增文件：%s,提交Redis！", itTemp->second);
+			g_resourceMgrlog.msg1("发现新增文件：%s,提交Redis！", itTemp->second.c_str());
 
 			acl::string fileInfo(itTemp->second);
 			std::vector<acl::string> vRes = fileInfo.split2(SPLITOR_OF_FILE_INFO);
 						
-			field.format("%s%s%s", vRes[0], SPLITOR_OF_FILE_INFO, vRes[2]);
-			m_redisClient.AddResourceToHashList(field, vRes[3]);
-			m_redisClient.AddMACToResourceSet(vRes[2], m_macAddr);
+			field << vRes[0];
+			field << SPLITOR_OF_FILE_INFO;
+			field << vRes[2];
+
+			if (!m_redisClient.AddResourceToHashList(field, vRes[3]))
+				g_resourceMgrlog.msg1("将[%s]添加到Redis HashList失败！", field.c_str());
+
+			if (!m_redisClient.AddMACToResourceSet(vRes[2], m_macAddr))
+				g_resourceMgrlog.msg1("将MAC地址添加到名称为[%s]的SET失败！", itTemp->first.c_str());
 		}
 	}
 
@@ -159,22 +166,22 @@ bool CResourceMgr::GetDiskDrives(std::vector<acl::string > &vRes)
 			{
 			case DRIVE_FIXED:
 				vRes.push_back(drive);
-				g_resourceMgrlog.msg1("磁盘：%s, 类型为：固定磁盘，加入扫描！", drive);
+				g_resourceMgrlog.msg1("磁盘：%s, 类型为：固定磁盘，加入扫描！", drive.buf());
 				break;
 			case DRIVE_REMOVABLE:
-				g_resourceMgrlog.msg1("磁盘：%s, 类型为：移动磁盘,忽略", drive);
+				g_resourceMgrlog.msg1("磁盘：%s, 类型为：移动磁盘,忽略", drive.buf());
 				break;
 			case DRIVE_REMOTE:
-				g_resourceMgrlog.msg1("磁盘：%s, 类型为：远程磁盘,忽略", drive);
+				g_resourceMgrlog.msg1("磁盘：%s, 类型为：远程磁盘,忽略", drive.buf());
 				break;
 			case DRIVE_CDROM:
-				g_resourceMgrlog.msg1("磁盘：%s, 类型为：光盘,忽略", drive);
+				g_resourceMgrlog.msg1("磁盘：%s, 类型为：光盘,忽略", drive.buf());
 				break;
 			case DRIVE_RAMDISK:
-				g_resourceMgrlog.msg1("磁盘：%s, 类型为：RAMDISK,忽略", drive);
+				g_resourceMgrlog.msg1("磁盘：%s, 类型为：RAMDISK,忽略", drive.buf());
 				break;
 			default:
-				g_resourceMgrlog.msg1("磁盘：%s, 类型为：unknown,忽略", drive);
+				g_resourceMgrlog.msg1("磁盘：%s, 类型为：unknown,忽略", drive.buf());
 				break;
 			}
 		}

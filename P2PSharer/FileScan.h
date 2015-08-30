@@ -8,13 +8,13 @@ public:
 	~CFileScan();
 
 	//初始化扫描对象
-	void Init(acl::string dir){ m_scandir = dir; }
+	void Init(acl::string dir, std::map<acl::string, acl::string > *oldMapResource);
 
 	void *run();
 
 private:
 	//扫描指定目录/磁盘下的所有视频文件
-	void Scan(acl::scan_dir &scan, const char *dir, bool brecursive, bool bfullpath);
+	void ScanVideo(acl::scan_dir &scan, const char *dir, bool brecursive, bool bfullpath);
 
 	//是否是视频文件
 	bool IsVideoFile(const char *file);
@@ -34,6 +34,10 @@ private:
 	std::vector<acl::string> m_vfileList;        
 	acl::locker m_lockFilelist;   //文件锁
 	acl::string m_errmsg;
+
+	//旧的资源列表 用于确保写入到列表文件的信息不重复
+	//key：md5, value:文件名|文件路径|MD5|文件大小
+	std::map<acl::string, acl::string > *m_mapOldResource;       
 
 };
 
