@@ -55,19 +55,44 @@ bool CRedisClient::Init(const char *addr)
 	if (NULL == m_redis)
 		m_redis = new acl::redis_client(m_addr);
 
-	if (m_redis)
+	if (NULL != m_redis)
 	{
-		g_cli_redislog.msg1("连接Redis服务器[%s]成功！", addr);
+		g_cli_redislog.msg1("Redis初始化成功，addr:%s", m_addr);
 		return true;
 	}
 
-	g_cli_redislog.msg1("连接Redis服务器[%s]失败！", addr);
+	g_cli_redislog.msg1("Redis初始化失败，addr:%s", m_addr);
+	return false;
+}
+
+//连接Redis服务器
+bool CRedisClient::ConnectToRedisServer()
+{
+	if (m_redis)
+	{
+		if (m_redis->get_stream() == NULL)
+		{
+			g_cli_redislog.msg1("Redis连接已关闭！尝试重新初始化");
+
+			delete m_redis;
+			m_redis = NULL;
+
+			Init(m_addr);
+		}
+		else
+		{
+			return true;
+		}
+	}
+
 	return false;
 }
 
 //将资源添加到Hash表 key：HashResList，filed：文件名|文件MD5，Value：文件大小
 bool CRedisClient::AddResourceToHashList(acl::string &field, acl::string &value)
 {
+	ConnectToRedisServer();
+
 	acl::redis_hash redis(m_redis);
 
 	int ret = 0;
@@ -86,12 +111,15 @@ bool CRedisClient::AddResourceToHashList(acl::string &field, acl::string &value)
 //      mapResult 所有文件名中包含key的文件列表信息
 bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl::string> &mapResult)
 {
+	ConnectToRedisServer();
+
 	acl::redis_hash redis(m_redis);
 	int cursor = 0;
+	acl::string tmpstr;
 
 	std::map <acl::string, acl::string> mapTemp;
 	acl::string pattern;
-	pattern.format("*%s*|*", keyword.c_str());   //文件名中包含key，忽略MD5
+	pattern.format("*%s*", keyword.c_str());   //文件名中包含key，忽略MD5
 
 	do 
 	{
@@ -103,9 +131,19 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 			return false;
 		}
 
-		mapResult.insert(mapTemp.begin(), mapTemp.end());
+		//排除关键字仅在MD5中存在的记录
+		std::map<acl::string, acl::string>::iterator itMap = mapTemp.begin();
+		for (; itMap != mapTemp.end(); ++itMap)
+		{
+			//若关键词的位置在文件名与MD5值的分隔符后出现则排除
+			if (itMap->first.find(keyword) >itMap->first.find(SPLITOR_OF_FILE_INFO))
+				continue;
+			
+			mapResult.insert(*itMap);
+		}
 
 	} while (cursor > 0);
+
 
 	return true;
 }
@@ -115,6 +153,8 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 //返回拥有该文件的客户端个数
 int CRedisClient::GetResourceOwners(acl::string &key)
 {
+	ConnectToRedisServer();
+
 	acl::redis_set redis(m_redis);
 
 	int num = redis.scard(key);
@@ -130,6 +170,8 @@ int CRedisClient::GetResourceOwners(acl::string &key)
 //向资源文件的地址池中添加MAC（以set形式存储，key:文件MD5 members:MAC地址
 bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 {
+	ConnectToRedisServer();
+
 	acl::redis_set redis(m_redis);
 	std::vector<acl::string> members;
 	members.push_back(mac);
@@ -146,6 +188,8 @@ bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 //从资源文件的地址池中删除MAC（如本地文件变更）
 bool CRedisClient::RemoveMACFromResourceSet(acl::string &key, acl::string &mac)
 {
+	ConnectToRedisServer();
+
 	acl::redis_set redis(m_redis);
 	std::vector<acl::string> members;
 	members.push_back(mac);

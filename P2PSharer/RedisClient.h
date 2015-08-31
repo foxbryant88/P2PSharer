@@ -31,6 +31,10 @@ public:
 	bool RemoveMACFromResourceSet(acl::string &key, acl::string &mac);
 
 private:
+
+	//连接Redis服务器
+	bool ConnectToRedisServer();
+
 	acl::redis_client *m_redis;
 	acl::string m_addr;
 };

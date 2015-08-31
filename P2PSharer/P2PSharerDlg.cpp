@@ -103,6 +103,7 @@ BOOL CP2PSharerDlg::OnInitDialog()
 
 	MessageBox("Start");
 
+	m_listSearchResult.SetExtendedStyle(LVS_EX_FULLROWSELECT);
 	m_listSearchResult.InsertColumn(0, "文件名", 0, 350);
 	m_listSearchResult.InsertColumn(1, "文件大小", 0, 100);
 	m_listSearchResult.InsertColumn(2, "资源数", 0, 100);
@@ -209,6 +210,7 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 		return;
 	}
 
+	int iLines = 0;
 	m_listSearchResult.DeleteAllItems();
 
 	//更新资源信息到搜索结果列表
@@ -218,9 +220,41 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	{
 		acl::string temp = itResult->first;
 		std::vector<acl::string> vRes = temp.split2(SPLITOR_OF_FILE_INFO);
-		m_listSearchResult.InsertItem(0, vRes[0]);             //文件名
-		m_listSearchResult.InsertItem(1, itResult->second);    //文件大小
-		m_listSearchResult.InsertItem(2, acl::string(redis->GetResourceOwners(vRes[1])));
+
+		m_listSearchResult.InsertItem(iLines, "");
+		m_listSearchResult.SetItemText(iLines, 0, vRes[0]);
+		m_listSearchResult.SetItemText(iLines, 1, GetResourceFileSize(itResult->second));
+		m_listSearchResult.SetItemText(iLines, 2, IntToString(redis->GetResourceOwners(vRes[1])));
+		iLines++;
 	}
 
+}
+
+//获取文件大小以显示在搜索结果列表上，以GB/MB为单位
+acl::string CP2PSharerDlg::GetResourceFileSize(acl::string sizeInByte)
+{
+	long long bytes = atoll(sizeInByte);
+	double kbs = bytes / 1024;
+	double mbs = kbs / 1024;
+	double gbs = mbs / 1024;
+
+	acl::string result;
+	if (gbs > 1)
+	{
+		result.format("%0.2f GB", gbs);
+	}
+	else if (mbs > 1)
+	{
+		result.format("%0.2f MB", mbs);
+	}
+	else if (kbs > 1)
+	{
+		result.format("%0.2f KB", kbs);
+	}
+	else
+	{
+		result.format("%d B", bytes);
+	}
+
+	return result;
 }

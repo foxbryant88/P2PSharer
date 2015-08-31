@@ -27,6 +27,11 @@ private:
 	//模块初始化
 	bool Init(void);
 
+	//获取文件大小以显示在搜索结果列表上，以GB/MB为单位
+	acl::string GetResourceFileSize(acl::string sizeInByte);
+
+
+
 // 实现
 protected:
 	HICON m_hIcon;

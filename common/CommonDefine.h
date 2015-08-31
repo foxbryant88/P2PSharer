@@ -237,4 +237,12 @@ static acl::string GetMacAddr()
 
 	return pseudoMac;
 }
+
+static acl::string IntToString(int val)
+{
+	acl::string res;
+	res << val;
+
+	return res;
+}
 #endif // __COMMON_DEFINE_H__

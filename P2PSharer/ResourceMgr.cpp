@@ -39,8 +39,8 @@ void *CResourceMgr::run()
 	//将最新的文件列表加载到临时map
 	LoadResourceList(m_mapResourceTemp);
 
-	//比对新旧资源，更新Redis缓存
-	UpdateResourceToRedis();
+	////比对新旧资源，更新Redis缓存
+	//UpdateResourceToRedis();
 
 	return NULL;
 }
@@ -135,6 +135,7 @@ bool CResourceMgr::UpdateResourceToRedis()
 			acl::string fileInfo(itTemp->second);
 			std::vector<acl::string> vRes = fileInfo.split2(SPLITOR_OF_FILE_INFO);
 						
+			field = "";
 			field << vRes[0];
 			field << SPLITOR_OF_FILE_INFO;
 			field << vRes[2];
