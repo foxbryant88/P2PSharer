@@ -28,6 +28,7 @@ public:
 	bool AddMACToResourceSet(acl::string &key, acl::string &mac);
 
 	//从资源文件的地址池中删除MAC（如本地文件变更）
+	//key:文件MD5 mac:MAC地址
 	bool RemoveMACFromResourceSet(acl::string &key, acl::string &mac);
 
 private:

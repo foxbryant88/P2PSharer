@@ -54,6 +54,9 @@
     <ClInclude Include="RedisClient.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SearchResultMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="P2PSharer.cpp">
@@ -78,6 +81,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="RedisClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchResultMgr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

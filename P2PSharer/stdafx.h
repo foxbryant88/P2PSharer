@@ -45,6 +45,17 @@ extern CResourceMgr *g_resourceMgr;
 
 #define SPLITOR_OF_FILE_INFO   "|"
 
+
+#define UM_UPDATE_SEARCH_RESULT     WM_USER + 1
+
+typedef struct T_SEARCH_RESULT_INFO
+{
+	acl::string filemd5;              //MD5
+	acl::string filename;             //文件名称（解码后的）
+	acl::string filesize;             //文件大小
+	acl::string resource_count;       //资源数量
+};
+
 #ifdef _UNICODE
 #if defined _M_IX86
 #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df' language='*'\"")

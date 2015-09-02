@@ -6,6 +6,7 @@
 #include "ServerEX.h"
 #include "afxwin.h"
 #include "afxcmn.h"
+#include "SearchResultMgr.h"
 
 
 // CP2PSharerDlg 对话框
@@ -23,13 +24,14 @@ public:
 
 private:
 	ServerEX m_serEx;
+	//std::map<acl::string, acl::string> m_mapSearchResult;      //关键词搜索结果
+	CSearchResultMgr *m_objSearchMgr;
 
 	//模块初始化
 	bool Init(void);
 
 	//获取文件大小以显示在搜索结果列表上，以GB/MB为单位
 	acl::string GetResourceFileSize(acl::string sizeInByte);
-
 
 
 // 实现
@@ -46,4 +48,6 @@ public:
 	afx_msg void OnBnClickedButtonSearch();
 	CEdit m_editKeyword;
 	CListCtrl m_listSearchResult;
+	virtual BOOL OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT* pResult);
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 };

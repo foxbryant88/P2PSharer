@@ -245,4 +245,36 @@ static acl::string IntToString(int val)
 
 	return res;
 }
+
+//static char* Unicode2Utf8(const char* unicode)
+//{
+//	int len;
+//	len = WideCharToMultiByte(CP_UTF8, 0, (const wchar_t*)unicode, -1, NULL, 0, NULL, NULL);
+//	char *szUtf8 = (char*)malloc(len + 1);
+//	memset(szUtf8, 0, len + 1);
+//	WideCharToMultiByte(CP_UTF8, 0, (const wchar_t*)unicode, -1, szUtf8, len, NULL, NULL);
+//	return szUtf8;
+//}
+//
+//static char* Ansi2Unicode(const char* str)
+//{
+//	int dwUnicodeLen = MultiByteToWideChar(CP_ACP, 0, str, -1, NULL, 0);
+//	if (!dwUnicodeLen)
+//	{
+//		return strdup(str);
+//	}
+//	size_t num = dwUnicodeLen*sizeof(wchar_t);
+//	wchar_t *pwText = (wchar_t*)malloc(num);
+//	memset(pwText, 0, num);
+//	MultiByteToWideChar(CP_ACP, 0, str, -1, pwText, dwUnicodeLen);
+//	return (char*)pwText;
+//}
+//
+//static char* ConvertAnsiToUtf8(const char* str)
+//{
+//	char* unicode = Ansi2Unicode(str);
+//	char* utf8 = Unicode2Utf8(unicode);
+//	free(unicode);
+//	return utf8;
+//}
 #endif // __COMMON_DEFINE_H__

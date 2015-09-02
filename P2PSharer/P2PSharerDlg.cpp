@@ -195,39 +195,21 @@ bool CP2PSharerDlg::Init(void)
 
 void CP2PSharerDlg::OnBnClickedButtonSearch()
 {
-	acl::log::stdout_open(true);
-
-	CString addr = "";
-	m_editKeyword.GetWindowTextA(addr);
-// 	m_serEx.SendMsg_P2PData("hello, world", addr.GetBuffer());
-
-	acl::string key = addr.GetBuffer();
-	std::map<acl::string, acl::string> mapResult;
-	CRedisClient *redis = g_resourceMgr->GetRedisClient();
-	if (!redis->FindResource(key, mapResult))
-	{
-		g_clientlog.error1("查找资源失败！");
-		return;
-	}
-
 	int iLines = 0;
 	m_listSearchResult.DeleteAllItems();
 
-	//更新资源信息到搜索结果列表
-	//mapResult格式:  key:文件名|文件MD5，Value：文件大小
-	std::map<acl::string, acl::string>::iterator itResult = mapResult.begin();
-	for (; itResult != mapResult.end(); ++itResult)
-	{
-		acl::string temp = itResult->first;
-		std::vector<acl::string> vRes = temp.split2(SPLITOR_OF_FILE_INFO);
+	CString keyword = "";
+	m_editKeyword.GetWindowTextA(keyword);
 
-		m_listSearchResult.InsertItem(iLines, "");
-		m_listSearchResult.SetItemText(iLines, 0, vRes[0]);
-		m_listSearchResult.SetItemText(iLines, 1, GetResourceFileSize(itResult->second));
-		m_listSearchResult.SetItemText(iLines, 2, IntToString(redis->GetResourceOwners(vRes[1])));
-		iLines++;
+	if (NULL == m_objSearchMgr)
+	{
+		m_objSearchMgr = new CSearchResultMgr(m_hWnd, g_resourceMgr->GetRedisClient());
 	}
 
+	//启动搜索线程
+	m_objSearchMgr->SetSearchWord(keyword.GetBuffer());
+	m_objSearchMgr->set_detachable(true);
+	m_objSearchMgr->start();
 }
 
 //获取文件大小以显示在搜索结果列表上，以GB/MB为单位
@@ -257,4 +239,53 @@ acl::string CP2PSharerDlg::GetResourceFileSize(acl::string sizeInByte)
 	}
 
 	return result;
+}
+
+BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT* pResult)
+{
+	// TODO:  在此添加专用代码和/或调用基类
+	T_SEARCH_RESULT_INFO *resInfo = NULL;
+	int iLines = 0;
+	switch (message)
+	{
+	case UM_UPDATE_SEARCH_RESULT:
+		resInfo = (T_SEARCH_RESULT_INFO*)wParam;
+
+		iLines = m_listSearchResult.GetItemCount();
+
+		m_listSearchResult.InsertItem(iLines, resInfo->filemd5);    //MD5作为行标识
+ 		m_listSearchResult.SetItemText(iLines, 0, resInfo->filename);
+ 		m_listSearchResult.SetItemText(iLines, 1, resInfo->filesize);
+ 		m_listSearchResult.SetItemText(iLines, 2, resInfo->resource_count);
+
+		delete resInfo;
+		break;
+	default:
+		break;
+	}
+
+	return CDialogEx::OnWndMsg(message, wParam, lParam, pResult);
+}
+
+
+BOOL CP2PSharerDlg::PreTranslateMessage(MSG* pMsg)
+{
+	// TODO:  在此添加专用代码和/或调用基类
+	switch (pMsg->message)
+	{
+	case WM_KEYDOWN:
+		if (pMsg->wParam == VK_RETURN)
+		{
+			if (GetFocus()->GetDlgCtrlID() == IDC_EDIT_KEYWORD)
+			{
+				OnBnClickedButtonSearch();
+			}
+				
+			return TRUE;  //阻止窗口响应回车
+		}
+
+	default:
+		break;
+	}
+	return CDialogEx::PreTranslateMessage(pMsg);
 }

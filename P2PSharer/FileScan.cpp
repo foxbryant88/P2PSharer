@@ -95,9 +95,10 @@ void CFileScan::CacheFileInfo(const char *fullfile)
 	acl::string temp;
  	acl::string fileInfo;
 
-	fileInfo << temp.basename(fullfile);
+// 	fileInfo << temp.url_encode(temp.basename(fullfile));        //文件名可能为中文，所以进行编码
+	fileInfo << temp.url_encode(temp.basename(fullfile));        //文件名可能为中文，所以进行编码
 	fileInfo << SPLITOR_OF_FILE_INFO;
-	fileInfo << fullfile;
+	fileInfo << temp.url_encode(fullfile);                       //文件名可能为中文，所以进行编码
 	fileInfo << SPLITOR_OF_FILE_INFO;
 	fileInfo << CalcMd5(fullfile);
 	fileInfo << SPLITOR_OF_FILE_INFO;

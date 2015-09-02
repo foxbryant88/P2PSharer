@@ -20,29 +20,29 @@ CRedisClient::~CRedisClient()
 
 void CRedisClient::Test()
 {
-	acl::string key = "C++视频讲解.avi|425632588965abe4";
-	acl::string val = "45123";
-	AddResourceToHashList(key, val);
+	//acl::string key = "C++视频讲解.avi|425632588965abe4";
+	//acl::string val = "45123";
+	//AddResourceToHashList(key, val);
 
-	key = "425632588965abe4";
-	val = "00-11-22-33-44-55";
-	AddMACToResourceSet(key, val);
-	
-	key = "J++视频讲解.avi|ff88a2588965abe4";
-	val = "3252";
-	AddResourceToHashList(key, val);
+	//key = "425632588965abe4";
+	//val = "00-11-22-33-44-55";
+	//AddMACToResourceSet(key, val);
+	//
+	//key = "J++视频讲解.avi|ff88a2588965abe4";
+	//val = "3252";
+	//AddResourceToHashList(key, val);
 
-	key = "飞行员.avi|dd21aa2588965abe4";
-	val = "53432";
-	AddResourceToHashList(key, val);
-	
-	key = "C++";
-	std::map<acl::string, acl::string> mapRes;
-	bool bFind = FindResource(key, mapRes);
+	//key = "飞行员.avi|dd21aa2588965abe4";
+	//val = "53432";
+	//AddResourceToHashList(key, val);
+	//
+	//key = "C++";
+	//std::map<acl::string, acl::string> mapRes;
+	//bool bFind = FindResource(key, mapRes);
 
-	key = "425632588965abe4";
-	val = "00-11-22-33-44-55";
-	RemoveMACFromResourceSet(key, val);
+	//key = "425632588965abe4";
+	//val = "00-11-22-33-44-55";
+	//RemoveMACFromResourceSet(key, val);
 }
 
 //初始化
@@ -92,12 +92,12 @@ bool CRedisClient::ConnectToRedisServer()
 bool CRedisClient::AddResourceToHashList(acl::string &field, acl::string &value)
 {
 	ConnectToRedisServer();
-
+	
 	acl::redis_hash redis(m_redis);
 
 	int ret = 0;
 	redis.clear();
- 	if ((ret = redis.hsetnx(REDIS_KEY_RESOURCE_HASH_LIST, field, value)) < 0)
+	if ((ret = redis.hsetnx(REDIS_KEY_RESOURCE_HASH_LIST, field, value)) < 0)
 	{
 		g_cli_redislog.error1("向Hash表添加文件信息失败！文件名：%s, err:%d", field, acl::last_error());
 		return false;
@@ -115,10 +115,10 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 
 	acl::redis_hash redis(m_redis);
 	int cursor = 0;
-	acl::string tmpstr;
 
 	std::map <acl::string, acl::string> mapTemp;
 	acl::string pattern;
+	
 	pattern.format("*%s*", keyword.c_str());   //文件名中包含key，忽略MD5
 
 	do 
@@ -136,7 +136,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 		for (; itMap != mapTemp.end(); ++itMap)
 		{
 			//若关键词的位置在文件名与MD5值的分隔符后出现则排除
-			if (itMap->first.find(keyword) >itMap->first.find(SPLITOR_OF_FILE_INFO))
+			if (itMap->first.find(keyword) > itMap->first.find(SPLITOR_OF_FILE_INFO))
 				continue;
 			
 			mapResult.insert(*itMap);
@@ -186,6 +186,7 @@ bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 }
 
 //从资源文件的地址池中删除MAC（如本地文件变更）
+//key:文件MD5 mac:MAC地址
 bool CRedisClient::RemoveMACFromResourceSet(acl::string &key, acl::string &mac)
 {
 	ConnectToRedisServer();

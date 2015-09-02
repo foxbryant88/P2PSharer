@@ -33,14 +33,14 @@ void *CResourceMgr::run()
 	////先加载旧的文件列表
 	//LoadResourceList(m_mapResource);
 
-	////更新文件列表
-	//UpdateResourceList();
+	//更新文件列表
+	UpdateResourceList();
 
 	//将最新的文件列表加载到临时map
 	LoadResourceList(m_mapResourceTemp);
 
 	////比对新旧资源，更新Redis缓存
-	//UpdateResourceToRedis();
+	UpdateResourceToRedis();
 
 	return NULL;
 }
@@ -101,11 +101,11 @@ bool CResourceMgr::UpdateResourceList()
 
 		vScanObject.push_back(obj);
 	}
-//  	CFileScan *obj = new CFileScan();
-//  	obj->Init("D:", &m_mapResource);
-//  	obj->set_detachable(false);
-//  	obj->start();
-// 	vScanObject.push_back(obj);
+	//CFileScan *obj = new CFileScan();
+	//obj->Init("F:\\KuGou", &m_mapResource);
+	//obj->set_detachable(false);
+	//obj->start();
+	//vScanObject.push_back(obj);
 
 
 	//等待所有扫描结束
@@ -123,8 +123,6 @@ bool CResourceMgr::UpdateResourceToRedis()
 	std::map<acl::string, acl::string >::iterator itMapResource = m_mapResource.begin();
 	std::map<acl::string, acl::string >::iterator itTemp = m_mapResourceTemp.begin();
 
-	acl::string field;
-
 	for (; itTemp != m_mapResourceTemp.end(); ++itTemp)
 	{
 		//临时列表中存在，但正式列表中不存在的说明是新增文件，需要添加到Redis
@@ -132,10 +130,16 @@ bool CResourceMgr::UpdateResourceToRedis()
 		{
 			g_resourceMgrlog.msg1("发现新增文件：%s,提交Redis！", itTemp->second.c_str());
 
-			acl::string fileInfo(itTemp->second);
+ 			acl::string fileInfo = itTemp->second;
 			std::vector<acl::string> vRes = fileInfo.split2(SPLITOR_OF_FILE_INFO);
 						
-			field = "";
+			if (vRes.size() != 4)
+			{
+				g_resourceMgrlog.msg1("解析文件信息失败,得到%d组数据！文件：%s", vRes.size(), itTemp->second.c_str());
+				continue;
+			}
+
+			acl::string field;
 			field << vRes[0];
 			field << SPLITOR_OF_FILE_INFO;
 			field << vRes[2];
