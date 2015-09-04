@@ -67,6 +67,7 @@ BEGIN_MESSAGE_MAP(CP2PSharerDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON_SEARCH, &CP2PSharerDlg::OnBnClickedButtonSearch)
+	ON_NOTIFY(NM_DBLCLK, IDC_LIST_RESOURCE, &CP2PSharerDlg::OnNMDblclkListResource)
 END_MESSAGE_MAP()
 
 
@@ -101,9 +102,9 @@ BOOL CP2PSharerDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
-	MessageBox("Start");
+	//MessageBox("Start");
 
-	m_listSearchResult.SetExtendedStyle(LVS_EX_FULLROWSELECT);
+	m_listSearchResult.SetExtendedStyle(LVS_EX_GRIDLINES | LVS_EX_FULLROWSELECT);
 	m_listSearchResult.InsertColumn(0, "文件名", 0, 350);
 	m_listSearchResult.InsertColumn(1, "文件大小", 0, 100);
 	m_listSearchResult.InsertColumn(2, "资源数", 0, 100);
@@ -195,21 +196,43 @@ bool CP2PSharerDlg::Init(void)
 
 void CP2PSharerDlg::OnBnClickedButtonSearch()
 {
-	int iLines = 0;
-	m_listSearchResult.DeleteAllItems();
-
 	CString keyword = "";
 	m_editKeyword.GetWindowTextA(keyword);
 
-	if (NULL == m_objSearchMgr)
-	{
-		m_objSearchMgr = new CSearchResultMgr(m_hWnd, g_resourceMgr->GetRedisClient());
-	}
+	//SendUDPTest(keyword);
+	//return;
 
-	//启动搜索线程
-	m_objSearchMgr->SetSearchWord(keyword.GetBuffer());
-	m_objSearchMgr->set_detachable(true);
-	m_objSearchMgr->start();
+	if (keyword != "")
+	{
+		if (NULL == m_objSearchMgr)
+		{
+			m_objSearchMgr = new CSearchResultMgr(m_hWnd, g_resourceMgr->GetRedisClient());
+		}
+
+		//等待上次搜索结束，避免多线程同时调用问题
+		if (m_objSearchMgr->IsSearching())
+		{
+			MessageBox("正在搜索中，请等待搜索结束！");
+			return;
+		}
+
+
+		//释放旧的搜索结果
+		std::map<int, T_SEARCH_RESULT_INFO *> ::iterator itTmp = m_mapSearchResult.begin();
+		for (; itTmp != m_mapSearchResult.end(); ++itTmp)
+		{
+			delete itTmp->second;    //此内存在SearchResultMgr中分配，需删除
+		}
+		m_mapSearchResult.clear();
+		m_iSeachResultItems = 0;
+		m_listSearchResult.DeleteAllItems();
+		
+
+		//启动搜索线程
+		m_objSearchMgr->SetSearchWord(keyword.GetBuffer());
+		m_objSearchMgr->set_detachable(true);
+		m_objSearchMgr->start();
+	}
 }
 
 //获取文件大小以显示在搜索结果列表上，以GB/MB为单位
@@ -245,20 +268,25 @@ BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT
 {
 	// TODO:  在此添加专用代码和/或调用基类
 	T_SEARCH_RESULT_INFO *resInfo = NULL;
-	int iLines = 0;
 	switch (message)
 	{
 	case UM_UPDATE_SEARCH_RESULT:
 		resInfo = (T_SEARCH_RESULT_INFO*)wParam;
 
-		iLines = m_listSearchResult.GetItemCount();
+		m_iSeachResultItems = m_listSearchResult.GetItemCount();
 
-		m_listSearchResult.InsertItem(iLines, resInfo->filemd5);    //MD5作为行标识
- 		m_listSearchResult.SetItemText(iLines, 0, resInfo->filename);
- 		m_listSearchResult.SetItemText(iLines, 1, resInfo->filesize);
- 		m_listSearchResult.SetItemText(iLines, 2, resInfo->resource_count);
+		m_listSearchResult.InsertItem(m_iSeachResultItems, "");
+ 		m_listSearchResult.SetItemText(m_iSeachResultItems, 0, resInfo->filename);
+		m_listSearchResult.SetItemText(m_iSeachResultItems, 1, GetResourceFileSize(resInfo->filesize));
+ 		m_listSearchResult.SetItemText(m_iSeachResultItems, 2, resInfo->resource_count);
+		m_listSearchResult.SetItemData(m_iSeachResultItems, m_iSeachResultItems);         //每个Item标识与其序号相同
 
-		delete resInfo;
+		//保存搜索结果与显示条目的对应关系
+		m_mapSearchResult[m_iSeachResultItems] = resInfo;
+
+		m_iSeachResultItems++;
+
+		//delete resInfo;
 		break;
 	default:
 		break;
@@ -288,4 +316,25 @@ BOOL CP2PSharerDlg::PreTranslateMessage(MSG* pMsg)
 		break;
 	}
 	return CDialogEx::PreTranslateMessage(pMsg);
+}
+
+
+void CP2PSharerDlg::OnNMDblclkListResource(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
+	
+	int iSelectedItem = pNMItemActivate->iItem;
+	int iItemData = m_listSearchResult.GetItemData(iSelectedItem);
+	T_SEARCH_RESULT_INFO *pResultInfo = m_mapSearchResult[iItemData];
+
+
+	// TODO:  在此添加控件通知处理程序代码
+	*pResult = 0;
+}
+
+
+//UDP发送数据测试
+void CP2PSharerDlg::SendUDPTest(CString addr)
+{
+
 }

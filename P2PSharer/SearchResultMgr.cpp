@@ -4,6 +4,7 @@
 
 CSearchResultMgr::CSearchResultMgr(HWND hwnd, CRedisClient *redis)
 {
+	m_bSearching = false;
 	m_hNotifyWnd = hwnd;
 	m_redis = redis;
 }
@@ -22,6 +23,12 @@ bool CSearchResultMgr::SetSearchWord(const char *keyword)
 	return true;
 }
 
+//是否正在搜索
+bool CSearchResultMgr::IsSearching(void)
+{
+	return m_bSearching;
+}
+
 void *CSearchResultMgr::run()
 {
 	//对关键字进行URL编码
@@ -33,12 +40,14 @@ void *CSearchResultMgr::run()
 
 	std::map<acl::string, acl::string> mapTemp;
 
+	m_bSearching = true;
 	if (!m_redis->FindResource(key, mapTemp))
 	{
 		g_clientlog.error1("查找资源失败！");
+		m_bSearching = false;
 		return NULL;
 	}
-
+	
 	//对结果进行转换以使界面直接显示
 	acl::string temp;
 	std::map<acl::string, acl::string>::iterator itRes = mapTemp.begin();
@@ -56,6 +65,8 @@ void *CSearchResultMgr::run()
 		//发送给UI显示
 		SendMessage(m_hNotifyWnd, UM_UPDATE_SEARCH_RESULT, (WPARAM)item, NULL);
 	}
+
+	m_bSearching = false;
 
 	return NULL;
 }
