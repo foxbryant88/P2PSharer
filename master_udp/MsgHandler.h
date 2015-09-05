@@ -49,6 +49,9 @@ private:
 	//收到客户端确认存活消息
 	void ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
+	//收到请求指定客户端IP的消息
+	void ProcGetUserClientIP(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
+
 	acl::locker m_lockMsgData; 
 	acl::locker m_lockUserList;
 	acl::locker m_lockSocket;

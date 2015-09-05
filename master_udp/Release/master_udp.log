@@ -1,4 +1,4 @@
-﻿生成启动时间为 2015/8/31 1:10:35。
+﻿生成启动时间为 2015/9/5 12:04:47。
      1>项目“D:\ThirdPartyCode\P2PSharer\master_udp\master_udp.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\acl\lib_acl_cpp\include /I..\..\acl\lib_acl\include /I..\common /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D NDEBUG /D _CONSOLE /D VC2003 /D _USING_V110_SDK71_ /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\master_udp.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MsgHandler.cpp
@@ -14,4 +14,4 @@
 
 生成成功。
 
-已用时间 00:00:01.30
+已用时间 00:00:01.37

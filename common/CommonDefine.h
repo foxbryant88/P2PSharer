@@ -25,14 +25,34 @@ enum eMSG
 	eMSG_GETBLOCKSACK,             // 同意块数据请求
 	eMSG_USERLOGOUT,			   // 通知server用户退出
 	eMSG_USERACTIVEQUERY,		   // 查询用户是否还存在
+	eMSG_GETUSERCLIENTIP,          // 获取指定MAC用户的IP地址
+	eMSG_GETUSERCLIENTIPACK,       // 收到请求MAC所返回的对应IP地址
+	eMsg_FILEBLOCKDATA,            // 文件下载过程中的数据块
 };
 
 // Flag定义（因同时可能与多台客户端交互，故附带目标IP）
-#define FORMAT_FLAG_P2PCONN "P2P_CONNECT_%s"           // 打洞状态标记 参数：对方地址
-#define FORMAT_FLAG_P2PDATA "P2P_DATA_%s"              // 发送数据状态标记 参数：对方地址
-#define FORMAT_FLAG_REQFILE "REQ_FILE_%s_%d"           // 发送协商下载文件的标记 参数：对方地址、文件ID
-#define FORMAT_FLAG_GETBLOCKS "GET_BLOCKS_%s_%d"       // 发送请求下载块的标记 参数：对方地址、文件ID
+#define FORMAT_FLAG_P2PCONN "P2P_CONNECT_%s"                  // 打洞状态标记 参数：对方地址
+#define FORMAT_FLAG_P2PDATA "P2P_DATA_%s"                     // 发送数据状态标记 参数：对方地址
+#define FORMAT_FLAG_REQFILE "REQ_FILE_%s_%d"                  // 发送协商下载文件的标记 参数：对方地址、文件ID
+#define FORMAT_FLAG_GETBLOCKS "GET_BLOCKS_%s_%d"              // 发送请求下载块的标记 参数：对方地址、文件ID
+#define FORMAT_FLAG_GETCLIENTIP "GET_CLIENT_IP_OF_MAC_%s"     // 获取指定MAC的IP地址
+#define FORMAT_FLAG_LOGIN       "LOGIN_SERVER_%s"             // 发送登录请求标记
 
+#define EACH_BLOCK_SIZE  1200 //文件分片的大小
+
+struct BLOCK_DATA_INFO
+{
+	char md5[32];                          // 文件的MD5值
+	DWORD dwBlockNumber;                   // 数据块序号
+	char data[EACH_BLOCK_SIZE];
+
+	BLOCK_DATA_INFO(){ memset(md5, 0, 32); dwBlockNumber = 0; memset(data, 0, EACH_BLOCK_SIZE); };
+	//BLOCK_DATA_INFO operator=(const BLOCK_DATA_INFO& block)
+	//{
+	//	memcpy(md5, block.md5, 32);
+	//	dwBlockNumber = block.dwBlockNumber;
+	//};
+};
 
 class MSGDef										// 定义消息的结构体
 {
@@ -144,7 +164,7 @@ public:
 			FileInfo = rFileInfo;
 		}
 	};
-
+	 
 	// client收到另一个client发送的请求下载文件消息
 	struct TMSG_REQFILEACK
 		: TMSG_HEADER
@@ -181,6 +201,19 @@ public:
 		}
 	};
 
+	// 文件传输过程中的数据块
+	struct TMSG_FILEBLOCKDATA
+		: TMSG_HEADER
+	{
+		BLOCK_DATA_INFO info;
+
+		TMSG_FILEBLOCKDATA(const BLOCK_DATA_INFO &rblockInfo)
+			: TMSG_HEADER(eMsg_FILEBLOCKDATA)
+		{
+			info = rblockInfo;
+		}
+	};
+
 
 	// 通知server用户退出
 	struct TMSG_USERLOGOUT
@@ -202,6 +235,35 @@ public:
 
 		TMSG_USERACTIVEQUERY(const Peer_Info& rPeerInfo = Peer_Info())
 			: TMSG_HEADER(eMSG_USERACTIVEQUERY)
+		{
+			PeerInfo = rPeerInfo;
+		}
+	};
+
+	// 请求客户端IP
+	struct TMSG_GETUSERCLIENTIP
+		: TMSG_HEADER
+	{
+		Peer_Info PeerInfo;
+		char       szMAC[MAX_MACADDR_LEN];       // 目标客户端MAC地址
+
+		TMSG_GETUSERCLIENTIP(const Peer_Info& rPeerInfo = Peer_Info())
+			: TMSG_HEADER(eMSG_GETUSERCLIENTIP)
+		{
+			PeerInfo = rPeerInfo;
+		}
+	};
+
+
+	// 请求客户端IP得到的回复
+	struct TMSG_GETUSERCLIENTIPACK
+		: TMSG_HEADER
+	{
+		Peer_Info PeerInfo;
+		char       szMAC[MAX_MACADDR_LEN];       // 目标客户端MAC地址
+
+		TMSG_GETUSERCLIENTIPACK(const Peer_Info& rPeerInfo = Peer_Info())
+			: TMSG_HEADER(eMSG_GETUSERCLIENTIPACK)
 		{
 			PeerInfo = rPeerInfo;
 		}

@@ -114,12 +114,15 @@
     <ClInclude Include="..\common\CommonDefine.h" />
     <ClInclude Include="..\common\PeerList.h" />
     <ClInclude Include="FileScan.h" />
+    <ClInclude Include="FlagMgr.h" />
     <ClInclude Include="P2PSharer.h" />
     <ClInclude Include="P2PSharerDlg.h" />
+    <ClInclude Include="Reciever.h" />
     <ClInclude Include="RedisClient.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceMgr.h" />
     <ClInclude Include="SearchResultMgr.h" />
+    <ClInclude Include="Sender.h" />
     <ClInclude Include="ServerEX.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -129,11 +132,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="FileScan.cpp" />
+    <ClCompile Include="FlagMgr.cpp" />
     <ClCompile Include="P2PSharer.cpp" />
     <ClCompile Include="P2PSharerDlg.cpp" />
+    <ClCompile Include="Reciever.cpp" />
     <ClCompile Include="RedisClient.cpp" />
     <ClCompile Include="ResourceMgr.cpp" />
     <ClCompile Include="SearchResultMgr.cpp" />
+    <ClCompile Include="Sender.cpp" />
     <ClCompile Include="ServerEX.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

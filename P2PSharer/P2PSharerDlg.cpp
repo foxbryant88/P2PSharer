@@ -199,8 +199,8 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	CString keyword = "";
 	m_editKeyword.GetWindowTextA(keyword);
 
-	//SendUDPTest(keyword);
-	//return;
+	m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
+	return;
 
 	if (keyword != "")
 	{

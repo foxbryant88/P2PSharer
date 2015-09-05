@@ -33,7 +33,7 @@ Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
 
 File_Info::File_Info()
 {
-	nFileID = -1;
+	//nFileID = -1;
 	memset(md5, 0, sizeof(md5));
 }
 
@@ -44,7 +44,7 @@ File_Info File_Info::operator=(const File_Info& file)
 		return *this;
 	}
 
-	nFileID = file.nFileID;
+//	nFileID = file.nFileID;
 	memcpy(md5, file.md5, sizeof(md5));
 
 	return *this;

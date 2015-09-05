@@ -57,7 +57,7 @@ struct Peer_Info
 
 struct File_Info
 {
-	unsigned short nFileID;                // 文件ID，从1开始 传输数据时以此标示
+	//unsigned short nFileID;                // 文件ID，从1开始 传输数据时以此标示
 	char md5[32];                          // 文件的MD5值
 
 	File_Info();

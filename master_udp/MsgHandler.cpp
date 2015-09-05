@@ -91,6 +91,10 @@ void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
 		ProcActiveMsg(msg, sock);
 		break;
 
+	case eMSG_GETUSERCLIENTIP:
+		ProcGetUserClientIP(msg, sock);
+		break;
+
 	default:
 		break;
 	}
@@ -251,4 +255,23 @@ bool CMsgHandler::SendData(void *data, size_t size, acl::socket_stream *stream, 
 	m_lockSocket.unlock();
 	
 	return false;
+}
+
+//收到请求指定客户端IP的消息
+void CMsgHandler::ProcGetUserClientIP(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
+{
+	MSGDef::TMSG_GETUSERCLIENTIP *msg = (MSGDef::TMSG_GETUSERCLIENTIP *)pMsgHeader;
+	printf("收到请求[%s] IP地址的消息\n", msg->szMAC);
+	
+	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->szMAC);
+	if (NULL != peer)
+	{
+    	MSGDef::TMSG_GETUSERCLIENTIPACK tMsgGetClientIPAck(*peer);
+		SendData(&tMsgGetClientIPAck, sizeof(tMsgGetClientIPAck), sock,msg->PeerInfo.IPAddr);
+	}
+	else
+	{
+		MSGDef::TMSG_GETUSERCLIENTIPACK tMsgGetClientIPAck;
+		SendData(&tMsgGetClientIPAck, sizeof(tMsgGetClientIPAck), sock, msg->PeerInfo.IPAddr);
+	}
 }

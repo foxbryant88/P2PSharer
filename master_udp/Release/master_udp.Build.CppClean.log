@@ -1,10 +1,10 @@
 d:\thirdpartycode\p2psharer\master_udp\release\master_udp.pch
 d:\thirdpartycode\p2psharer\master_udp\release\vc120.pdb
 d:\thirdpartycode\p2psharer\master_udp\release\stdafx.obj
-d:\thirdpartycode\p2psharer\master_udp\release\msghandler.obj
+d:\thirdpartycode\p2psharer\master_udp\release\peerlist.obj
 d:\thirdpartycode\p2psharer\master_udp\release\master_service.obj
 d:\thirdpartycode\p2psharer\master_udp\release\main.obj
-d:\thirdpartycode\p2psharer\master_udp\release\peerlist.obj
+d:\thirdpartycode\p2psharer\master_udp\release\msghandler.obj
 d:\thirdpartycode\p2psharer\release\master_udp.exe
 d:\thirdpartycode\p2psharer\release\master_udp.pdb
 d:\thirdpartycode\p2psharer\master_udp\release\master_udp.tlog\cl.command.1.tlog

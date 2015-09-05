@@ -5,6 +5,8 @@
 #include "acl_cpp\lib_acl.hpp"
 #include "CommonDefine.h"
 #include "PeerList.h"
+#include "FlagMgr.h"
+#include "Reciever.h"
 
 class ServerEX: public acl::thread
 {
@@ -22,8 +24,10 @@ public:
 	bool SendMsg_UserLogin();
 
 	//请求服务端转发P2P打洞请求
-	bool SendMsg_P2PConnect(const char *addr);
+	bool SendMsg_P2PConnect(const char *mac);
 
+	//请求获取指定MAC的IP地址，以便进行打洞通信等操作
+	bool SendMsg_GetIPofMAC(const char *mac);
 
 	//发送其它。。。
 
@@ -61,25 +65,28 @@ private:
 	//收到查询是否存活消息
 	void ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
 
+	//收到所请求指定MAC的IP
+	void ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data);
+
+	//收到文件下载数据
+	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data);
+
 	//向指定地址发送数据
 	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
-
-	//循环检查标记是否为1
-	bool WaitFlag(const acl::string &flag);
 
 
 	acl::string server_addr_;              //服务端地址
 	Peer_Info m_peerInfo;                  //本机信息
 	acl::string m_errmsg;                  //错误信息
+
+	acl::locker m_lockSockStream;
 	acl::socket_stream m_sockstream;
 	bool m_bExit;
-	acl::locker m_lockSockStream;
-	std::map<acl::string, byte> m_mapFlags;  //用于表明发送数据是否成功的各种标记
-	                                         //key:操作标记的名称 value：1表示已确认 0表示未确认
 
 	acl::locker m_lockListUser;              //客户端列表锁
 	PeerList m_lstUser;                      //已与本机连接的客户端列表
 
-	byte m_bLoginSucc;
+	CFlagMgr *m_objFlagMgr;
+	CReciever *m_objReciever;                //文件接收对象
 };
 
