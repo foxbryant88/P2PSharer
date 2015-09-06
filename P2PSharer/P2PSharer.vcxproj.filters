@@ -60,10 +60,16 @@
     <ClInclude Include="FlagMgr.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Reciever.h">
+    <ClInclude Include="Downloader.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Sender.h">
+    <ClInclude Include="FileSender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ReqSender.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FileReciever.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -98,10 +104,16 @@
     <ClCompile Include="FlagMgr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Reciever.cpp">
+    <ClCompile Include="Downloader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Sender.cpp">
+    <ClCompile Include="FileSender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ReqSender.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FileReciever.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

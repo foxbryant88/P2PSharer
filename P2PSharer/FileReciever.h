@@ -1,19 +1,22 @@
+/////////////////////////////////////
+//文件接收类，负责对接收到的文件分块重新拼装
+/////////////////////////////////////
 #pragma once
 #include "acl_cpp\stdlib\thread.hpp"
 #include "CommonDefine.h"
 
-class CReciever :
+class CFileReciever :
 	public acl::thread
 {
 public:
-	CReciever();
-	~CReciever();
+	CFileReciever();
+	~CFileReciever();
 
 	//初始化文件信息
 	bool Init(acl::ofstream &files, char *md5, DWORD filesize);
 
 	//缓存数据,参数内存由调用者申请，本模块处理完毕后释放
-	void CacheData(const char *data);
+	void CacheData(void *data);
 
 	void *run();
 
@@ -26,7 +29,7 @@ private:
 
 // 	//处理数据
 // 	void DataProcess()
-	std::vector<const char *> m_vdata;
+	std::vector<void *> m_vdata;
 	acl::locker m_lockvdata;
 
 	acl::ofstream *m_fstream;

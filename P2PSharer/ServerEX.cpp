@@ -13,7 +13,7 @@ ServerEX::ServerEX()
 	m_bExit = false;
 
 	m_objFlagMgr = new CFlagMgr;
-	m_objReciever = new CReciever;
+	m_objReciever = new CFileReciever;
 }
 
 

@@ -87,6 +87,6 @@ private:
 	PeerList m_lstUser;                      //已与本机连接的客户端列表
 
 	CFlagMgr *m_objFlagMgr;
-	CReciever *m_objReciever;                //文件接收对象
+	CFileReciever *m_objReciever;                //文件接收对象
 };
 
