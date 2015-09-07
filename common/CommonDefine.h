@@ -19,8 +19,8 @@ enum eMSG
 	eMSG_P2PCONNECTACK,            // 确认打洞成功的消息
 	eMSG_P2PDATA,				   // 发送数据
 	eMSG_P2PDATAACK,               // 确认收到数据
-	eMSG_REQFILE,                  // 协商请求的文件
-	eMSG_REQFILEACK,               // 同意文件请求
+	//eMSG_REQFILE,                  // 协商请求的文件
+	//eMSG_REQFILEACK,               // 同意文件请求
 	eMSG_GETBLOCKS,                // 向服务方请求块数据的信息
 	eMSG_GETBLOCKSACK,             // 同意块数据请求
 	eMSG_USERLOGOUT,			   // 通知server用户退出
@@ -154,29 +154,29 @@ public:
 		}
 	};
 
-	// client收到另一个client发送的请求下载文件消息
-	struct TMSG_REQFILE
-		: TMSG_HEADER
-	{
-		File_Info FileInfo;
-		TMSG_REQFILE(const File_Info &rFileInfo)
-			: TMSG_HEADER(eMSG_REQFILE)
-		{
-			FileInfo = rFileInfo;
-		}
-	};
-	 
-	// client收到另一个client发送的请求下载文件消息
-	struct TMSG_REQFILEACK
-		: TMSG_HEADER
-	{
-		File_Info FileInfo;
-		TMSG_REQFILEACK(const File_Info &rFileInfo)
-			: TMSG_HEADER(eMSG_REQFILEACK)
-		{
-			FileInfo = rFileInfo;
-		}
-	};
+	//// client收到另一个client发送的请求下载文件消息
+	//struct TMSG_REQFILE
+	//	: TMSG_HEADER
+	//{
+	//	File_Info FileInfo;
+	//	TMSG_REQFILE(const File_Info &rFileInfo)
+	//		: TMSG_HEADER(eMSG_REQFILE)
+	//	{
+	//		FileInfo = rFileInfo;
+	//	}
+	//};
+	// 
+	//// client收到另一个client发送的请求下载文件消息
+	//struct TMSG_REQFILEACK
+	//	: TMSG_HEADER
+	//{
+	//	File_Info FileInfo;
+	//	TMSG_REQFILEACK(const File_Info &rFileInfo)
+	//		: TMSG_HEADER(eMSG_REQFILEACK)
+	//	{
+	//		FileInfo = rFileInfo;
+	//	}
+	//};
 
 	// client收到另一个client发送的请求下载块消息
 	struct TMSG_GETBLOCKS

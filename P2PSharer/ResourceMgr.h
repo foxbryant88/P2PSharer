@@ -1,5 +1,7 @@
 #pragma once
+#include "StructDef.h"
 #include "RedisClient.h"
+
 
 class CResourceMgr : public acl::thread
 {

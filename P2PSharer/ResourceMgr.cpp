@@ -63,7 +63,10 @@ bool CResourceMgr::GetFileInfo(acl::string &md5, T_LOCAL_FILE_INFO &fileInfo)
 		fileInfo.filemd5 = md5;
 		fileInfo.filename = vField[0];
 		fileInfo.fullpath = vField[1];
-		fileInfo.filesize = StrToInt64Ex(vField[2]);
+
+		long long size = 0;
+		StrToInt64Ex(vField[2], STIF_DEFAULT, &size);
+		fileInfo.filesize = size;
 
 		return true;
 	}

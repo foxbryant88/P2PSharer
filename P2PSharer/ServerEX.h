@@ -53,11 +53,11 @@ private:
 	//客户端收到数据后确认
 	void ProcMsgP2PDataAck(MSGDef::TMSG_HEADER *data);
 
-	//服务方收到协商请求下载的文件
-	void ProcMsgReqFile(MSGDef::TMSG_HEADER *data);
+	////服务方收到协商请求下载的文件
+	//void ProcMsgReqFile(MSGDef::TMSG_HEADER *data);
 
-	//协商请求下载的文件成功
-	void ProcMsgReqFileAck(MSGDef::TMSG_HEADER *data);
+	////协商请求下载的文件成功
+	//void ProcMsgReqFileAck(MSGDef::TMSG_HEADER *data);
 
 	//服务方收到客户方请求哪些块数据
 	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data);

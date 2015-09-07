@@ -36,9 +36,12 @@
 #include "acl_cpp/stdlib/log.hpp"
 #include "CommonDefine.h"
 #include "ResourceMgr.h"
+#include "StructDef.h"
+#include "Downloader.h"
 
 acl::log g_clientlog;
 extern CResourceMgr *g_resourceMgr;
+extern std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
 
 #define NAME_FILE_INFO_LIST         "list.txt"
 #define NAME_FILE_INFO_LIST_LOCK    "listlock.txt"
@@ -48,21 +51,6 @@ extern CResourceMgr *g_resourceMgr;
 
 #define UM_UPDATE_SEARCH_RESULT     WM_USER + 1
 
-typedef struct T_SEARCH_RESULT_INFO
-{
-	acl::string filemd5;              //MD5
-	acl::string filename;             //文件名称（解码后的）
-	acl::string filesize;             //文件大小
-	acl::string resource_count;       //资源数量
-};
-
-typedef struct T_LOCAL_FILE_INFO
-{
-	acl::string filemd5;              //MD5
-	acl::string filename;             //文件名称（解码后的）
-	acl::string fullpath;             //文件路径（解码后的）
-	long long filesize;               //文件大小
-};
 
 #ifdef _UNICODE
 #if defined _M_IX86

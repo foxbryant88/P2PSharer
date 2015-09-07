@@ -88,10 +88,10 @@ void* ServerEX::run()
 			break;
 		case  eMSG_P2PDATAACK:
 			break;
-		case eMSG_REQFILE:
-			break;
-		case eMSG_REQFILEACK:
-			break;
+		//case eMSG_REQFILE:
+		//	break;
+		//case eMSG_REQFILEACK:
+		//	break;
 		case eMSG_GETBLOCKS:
 			break;
 		case eMSG_GETBLOCKSACK:
@@ -367,6 +367,11 @@ void ServerEX::ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data, acl::socket_str
 	}
 }
 
+acl::socket_stream &ServerEX::GetSockStream()
+{
+	return m_sockstream;
+}
+
 //收到所请求指定MAC的IP
 void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 {
@@ -382,13 +387,22 @@ void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 	m_objFlagMgr->SetFlag(flag, 1);
 }
 
+//服务方收到客户方请求哪些块数据
+void ServerEX::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data)
+{
+
+}
+
 //收到文件下载数据
 void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 {
+	MSGDef::TMSG_FILEBLOCKDATA *msg = (MSGDef::TMSG_FILEBLOCKDATA *)data;
 
+	std::map<acl::string, CDownloader *>::iterator itTemp = g_mapFileDownloader.find(msg->info.md5);
+	if (itTemp != g_mapFileDownloader.end())
+	{
+		itTemp->second->Recieve(msg);
+	}
 }
 
-acl::socket_stream &ServerEX::GetSockStream()
-{
-	return m_sockstream;
-}
+

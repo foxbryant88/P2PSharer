@@ -61,7 +61,7 @@ void CDownloader::AddProvider(acl::string &addr)
 }
 
 //处理收到的分块数据,转发给FileReciver
-void CDownloader::Recieve(const char *data)
+void CDownloader::Recieve(void *data)
 {
 	MSGDef::TMSG_FILEBLOCKDATA *msg = (MSGDef::TMSG_FILEBLOCKDATA *)data;
 	BLOCK_DATA_INFO *block = &msg->info;
@@ -83,29 +83,31 @@ void CDownloader::Recieve(const char *data)
 void *CDownloader::run()
 {
 	std::vector<DWORD> vBlocks;
+
 	while (!m_bExit)
 	{
-		//确保分片队列中有分片
-		SplitFileSizeIntoBlockMap();
-
-
-		//为每个发送对象指定发送任务
-		for (int i = 0; i < m_vObjSender.size(); i++)
+		//存在可用的下载节点
+		if (UpdateServiceProvider())
 		{
-			if (GetBlocks(vBlocks))
+			//确保分片队列中有分片
+			SplitFileSizeIntoBlockMap();
+
+
+			//为每个发送对象指定发送任务
+			for (int i = 0; i < m_vObjSender.size(); i++)
 			{
-				if (m_vObjSender[i]->PushTask(vBlocks))
+				if (GetBlocks(vBlocks))
 				{
-					vBlocks.clear();
+					if (m_vObjSender[i]->PushTask(vBlocks))
+					{
+						vBlocks.clear();
+					}
 				}
 			}
+
+			//处理超时的分片请求
+			DealTimeoutBlockRequests();
 		}
-
-		//处理超时的分片请求
-		DealTimeoutBlockRequests();
-
-		//更新服务下载节点
-		UpdateServiceProvider();
 	}
 
 	//停止接收及分片请求对象
@@ -195,7 +197,7 @@ void CDownloader::DealTimeoutBlockRequests()
 }
 
 //每隔1分钟重新搜索一次服务节点
-void CDownloader::UpdateServiceProvider(void)
+bool CDownloader::UpdateServiceProvider(void)
 {
 	static DWORD dwLastUpdate = GetTickCount();
 
@@ -208,4 +210,9 @@ void CDownloader::UpdateServiceProvider(void)
 			AddProvider(vRes[i]);
 		}
 	}
+
+	if (m_vProvider.size() > 0)
+		return true;
+
+	return false;
 }

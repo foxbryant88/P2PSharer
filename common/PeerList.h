@@ -66,7 +66,8 @@ struct File_Info
 
 struct File_BLOCKS
 {
-	unsigned short nFileID;
+	//unsigned short nFileID;
+	char md5[32];                          // 文件的MD5值
 	DWORD block[295];       //确保包长度不超过1200
 };
 

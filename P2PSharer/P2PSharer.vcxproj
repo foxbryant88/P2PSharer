@@ -127,6 +127,7 @@
     <ClInclude Include="ReqSender.h" />
     <ClInclude Include="ServerEX.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StructDef.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>

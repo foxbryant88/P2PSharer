@@ -22,7 +22,7 @@ public:
 	bool Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis);
 
 	//处理收到的分块数据,转发给FileReciver
-	void Recieve(const char *data);
+	void Recieve(void *data);
 
 	//控制分片及请求
 	void *run();
@@ -41,7 +41,7 @@ private:
 	bool GetBlocks(std::vector<DWORD> &blockNums);
 
 	//每隔1分钟重新搜索一次服务节点
-	void UpdateServiceProvider(void);
+	bool UpdateServiceProvider(void);
 
 	//增加可用下载节点
 	void AddProvider(acl::string &addr);

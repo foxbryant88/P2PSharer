@@ -21,6 +21,8 @@ bool CFileReciever::Init(acl::ofstream &filestream, char *md5, DWORD filesize)
 	m_fstream = &filestream;
 	memcpy(m_md5, md5, 32);
 	m_dwFileSize = filesize;
+
+	return true;
 }
 
 //缓存数据,参数内存由调用者申请，本模块处理完毕后释放

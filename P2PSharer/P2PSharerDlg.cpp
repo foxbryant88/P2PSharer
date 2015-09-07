@@ -13,6 +13,7 @@
 
 
 CResourceMgr *g_resourceMgr;
+std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
@@ -327,13 +328,14 @@ void CP2PSharerDlg::OnNMDblclkListResource(NMHDR *pNMHDR, LRESULT *pResult)
 	int iItemData = m_listSearchResult.GetItemData(iSelectedItem);
 	T_SEARCH_RESULT_INFO *pResultInfo = m_mapSearchResult[iItemData];
 
-	//T_LOCAL_FILE_INFO loclInfo;
-	//g_resourceMgr->GetFileInfo(pResultInfo->filemd5, loclInfo);
+	T_LOCAL_FILE_INFO loclInfo;
+	g_resourceMgr->GetFileInfo(pResultInfo->filemd5, loclInfo);
 
-	//CDownloader *objDownloader = new CDownloader;
-	//objDownloader->set_detachable(true);
-	//objDownloader->Init(loclInfo, m_serEx.GetSockStream(), g_resourceMgr->GetRedisClient());
-	//objDownloader->start();
+	CDownloader *objDownloader = new CDownloader;
+	g_mapFileDownloader[loclInfo.filemd5] = objDownloader;
+	objDownloader->set_detachable(true);
+	objDownloader->Init(loclInfo, m_serEx.GetSockStream(), g_resourceMgr->GetRedisClient());
+	objDownloader->start();
 
 	// TODO:  在此添加控件通知处理程序代码
 	*pResult = 0;
