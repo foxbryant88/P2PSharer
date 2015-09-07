@@ -6,7 +6,7 @@
 #include "CommonDefine.h"
 #include "PeerList.h"
 #include "FlagMgr.h"
-#include "Reciever.h"
+#include "FileReciever.h"
 
 class ServerEX: public acl::thread
 {
@@ -19,6 +19,9 @@ public:
 
 	//接收数据的线程函数
 	void* run();
+
+	//返回socket，测试用？？？
+	acl::socket_stream &GetSockStream();
 
 	//发送登录消息
 	bool SendMsg_UserLogin();

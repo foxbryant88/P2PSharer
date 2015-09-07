@@ -25,7 +25,7 @@ public:
 
 private:
 	//从缓存取数据
-	const char *GetData();
+	void *GetData();
 
 // 	//处理数据
 // 	void DataProcess()

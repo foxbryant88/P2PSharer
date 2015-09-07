@@ -204,6 +204,35 @@ RETRY:
 	return num;
 }
 
+//查找资源文件可用的下载服务器
+//key : 文件MD5
+//返回拥有该文件的客户端个数
+int CRedisClient::GetResourceOwners(acl::string &key, std::vector<acl::string> &vRes)
+{
+	acl::redis_set redis(m_redis);
+
+	int iretry = 0;
+
+RETRY:
+	int num = redis.smembers(key, &vRes);
+	if (-1 == num)
+	{
+		g_cli_redislog.error1("查询[%s]可用的客户端失败！err:%d", key, acl::last_error());
+
+		//连接失败重试3次
+		if (iretry < 3)
+		{
+			Init(m_addr);
+			iretry++;
+			goto RETRY;
+		}
+
+		return 0;
+	}
+
+	return num;
+}
+
 //向资源文件的地址池中添加MAC（以set形式存储，key:文件MD5 members:MAC地址
 bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 {

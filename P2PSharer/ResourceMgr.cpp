@@ -51,6 +51,26 @@ acl::string CResourceMgr::GetFileInfo(acl::string md5)
 	return m_mapResource[md5];
 }
 
+bool CResourceMgr::GetFileInfo(acl::string &md5, T_LOCAL_FILE_INFO &fileInfo)
+{
+	acl::string info = GetFileInfo(md5);
+
+	//content格式：文件名|文件路径|MD5|文件大小
+	std::vector<acl::string> vField = info.split2(SPLITOR_OF_FILE_INFO);
+	if (vField.size() > 3)
+	{
+		//key：md5, value:文件名|文件路径|MD5|文件大小
+		fileInfo.filemd5 = md5;
+		fileInfo.filename = vField[0];
+		fileInfo.fullpath = vField[1];
+		fileInfo.filesize = StrToInt64Ex(vField[2]);
+
+		return true;
+	}
+
+	return false;
+}
+
 //返回Redis客户端对象
 CRedisClient *CResourceMgr::GetRedisClient()
 {

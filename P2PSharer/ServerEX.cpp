@@ -387,3 +387,8 @@ void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 {
 
 }
+
+acl::socket_stream &ServerEX::GetSockStream()
+{
+	return m_sockstream;
+}

@@ -15,6 +15,7 @@ public:
 
 	//获取文件信息,返回值格式：文件名|文件路径|MD5|文件大小
 	acl::string GetFileInfo(acl::string md5);
+	bool GetFileInfo(acl::string &md5, T_LOCAL_FILE_INFO &fileInfo);
 
 	//返回Redis客户端对象
 	CRedisClient *GetRedisClient();

@@ -18,6 +18,8 @@ bool CReqSender::Init(const char *toaddr, acl::socket_stream &sock)
 {
 	m_addr = toaddr;
 	m_sock = &sock;
+
+	return true;
 }
 
 //分配一批数据块序号给本对象下载,非空时失败返回false

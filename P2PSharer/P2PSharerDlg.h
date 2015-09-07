@@ -7,6 +7,7 @@
 #include "afxwin.h"
 #include "afxcmn.h"
 #include "SearchResultMgr.h"
+#include "Downloader.h"
 
 
 // CP2PSharerDlg 对话框
@@ -27,6 +28,7 @@ private:
 	//std::map<acl::string, acl::string> m_mapSearchResult;      //关键词搜索结果
 	CSearchResultMgr *m_objSearchMgr;
 	int m_iSeachResultItems;      //搜索结果条目数
+	std::map<acl::string, CDownloader *> m_mapFileDownloader;    //key：文件MD5 value：文件下载对象
 
 	std::map<int, T_SEARCH_RESULT_INFO *> m_mapSearchResult;   //保存搜索结果列表条目与文件的对应关系，以便找到用户双击下载的文件MD5值
 

@@ -14,7 +14,7 @@ CDownloader::~CDownloader()
 }
 
 //初始化
-bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock)
+bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis)
 {
 	m_fileInfo.filemd5 = fileinfo.filemd5;
 	m_fileInfo.filename = fileinfo.filename;
@@ -22,6 +22,7 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock)
 	m_fileInfo.fullpath = fileinfo.fullpath;
 
 	m_sock = &sock;
+	m_redis = redis;
 
 	acl::string localpath = "d:\\p2pfile\\";
 	localpath += m_fileInfo.filename;
@@ -32,16 +33,25 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock)
 		g_clientlog.error1("创建文件[%s]失败！err:%d", localpath, acl::last_error());
 		return false;
 	}
-	m_fstream->fseek(m_fileInfo.filesize);
+	m_fstream->fseek(m_fileInfo.filesize, SEEK_SET);
 	m_fstream->write(0);
 	
 	m_objReciever = new CFileReciever;
-	m_objReciever->Init(m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize);
+	m_objReciever->Init(*m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize);
 }
 
 //增加可用下载节点
-void CDownloader::AddProvider(const char *addr)
+void CDownloader::AddProvider(acl::string &addr)
 {
+	//已存在则不添加
+	for (int i = 0; i < m_vProvider.size(); ++i)
+	{
+		if (m_vProvider[i] == addr)
+		{
+			break;;
+		}
+	}
+
 	m_vProvider.push_back(addr);
 
 	CReqSender *psender = new CReqSender;
@@ -72,11 +82,37 @@ void CDownloader::Recieve(const char *data)
 //控制分片及请求
 void *CDownloader::run()
 {
+	std::vector<DWORD> vBlocks;
 	while (!m_bExit)
 	{
+		//确保分片队列中有分片
 		SplitFileSizeIntoBlockMap();
 
 
+		//为每个发送对象指定发送任务
+		for (int i = 0; i < m_vObjSender.size(); i++)
+		{
+			if (GetBlocks(vBlocks))
+			{
+				if (m_vObjSender[i]->PushTask(vBlocks))
+				{
+					vBlocks.clear();
+				}
+			}
+		}
+
+		//处理超时的分片请求
+		DealTimeoutBlockRequests();
+
+		//更新服务下载节点
+		UpdateServiceProvider();
+	}
+
+	//停止接收及分片请求对象
+	m_objReciever->Stop();
+	for (int i = 0; i < m_vObjSender.size(); i++)
+	{
+		m_vObjSender[i]->Stop();
 	}
 
 	return NULL;
@@ -98,6 +134,8 @@ bool CDownloader::SplitFileSizeIntoBlockMap()
 		{
 			if (m_dwLastBlockPos * EACH_BLOCK_SIZE > m_fileInfo.filesize)
 			{
+				//最后一个分片的处理！！！！
+				//。。。。。。。。。。
 				break;
 			}
 
@@ -111,6 +149,11 @@ bool CDownloader::SplitFileSizeIntoBlockMap()
 //获取一批分块
 bool CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
 {
+	if (blockNums.empty())
+	{
+		return false;
+	}
+
 	std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.begin();
 	for (; itTmp != m_mapFileBlocks.end(); ++itTmp)
 	{
@@ -119,9 +162,50 @@ bool CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
 			break;
 		}
 
-		blockNums.push_back(itTmp->first);
-		itTmp->second = GetTickCount();        //已分配标记
+		//分片时间戳为0表示未请求
+		if (itTmp->second == 0)
+		{
+			blockNums.push_back(itTmp->first);
+			itTmp->second = GetTickCount();        //已分配标记
+		}
 	}
 
 	return true;
+}
+
+//对超过5分钟未响应的分片重置其分片时间戳为0
+//以允许重新请求
+void CDownloader::DealTimeoutBlockRequests()
+{
+	static DWORD dwCheckTime = GetTickCount();
+
+	if (GetTickCount() - dwCheckTime > BLOCK_REQUEST_TIME_OUT)
+	{
+		dwCheckTime = GetTickCount();
+
+		std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.begin();
+		for (; itTmp != m_mapFileBlocks.end(); ++itTmp)
+		{
+			if (itTmp->second - dwCheckTime > BLOCK_REQUEST_TIME_OUT)
+			{
+				itTmp->second = 0;       //重新置0
+			}
+		}
+	}
+}
+
+//每隔1分钟重新搜索一次服务节点
+void CDownloader::UpdateServiceProvider(void)
+{
+	static DWORD dwLastUpdate = GetTickCount();
+
+	if (GetTickCount() - dwLastUpdate > UPDATE_SERVICE_PROVIDER_TIME)
+	{
+		std::vector<acl::string> vRes;
+		int num = m_redis->GetResourceOwners(m_fileInfo.filemd5, vRes);
+		for (int i = 0; i < num; i++)
+		{
+			AddProvider(vRes[i]);
+		}
+	}
 }
