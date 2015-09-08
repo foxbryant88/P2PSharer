@@ -36,7 +36,7 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CR
 	m_fstream->fseek(m_fileInfo.filesize, SEEK_SET);
 	m_fstream->write(0);
 	
-	m_objReciever = new CFileReciever;
+	m_objReciever = new CFileClient;
 	m_objReciever->Init(*m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize);
 }
 

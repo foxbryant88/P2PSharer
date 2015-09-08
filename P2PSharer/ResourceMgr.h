@@ -19,6 +19,9 @@ public:
 	acl::string GetFileInfo(acl::string md5);
 	bool GetFileInfo(acl::string &md5, T_LOCAL_FILE_INFO &fileInfo);
 
+	//根据MD5值返回文件全路径
+	acl::string GetFileFullPath(acl::string md5);
+
 	//返回Redis客户端对象
 	CRedisClient *GetRedisClient();
 private:

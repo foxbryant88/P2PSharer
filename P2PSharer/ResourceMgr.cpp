@@ -74,6 +74,21 @@ bool CResourceMgr::GetFileInfo(acl::string &md5, T_LOCAL_FILE_INFO &fileInfo)
 	return false;
 }
 
+//根据MD5值返回文件全路径
+acl::string CResourceMgr::GetFileFullPath(acl::string md5)
+{
+	acl::string info = GetFileInfo(md5);
+	std::vector<acl::string> vField = info.split2(SPLITOR_OF_FILE_INFO);
+	if (vField.size() > 3)
+	{
+		//key：md5, value:文件名|文件路径|MD5|文件大小
+
+		return vField[1];
+	}
+
+	return "";
+}
+
 //返回Redis客户端对象
 CRedisClient *CResourceMgr::GetRedisClient()
 {

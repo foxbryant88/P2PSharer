@@ -63,17 +63,17 @@
     <ClInclude Include="Downloader.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FileSender.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ReqSender.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FileReciever.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="StructDef.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="FileServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FileClient.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -110,13 +110,13 @@
     <ClCompile Include="Downloader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FileSender.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="ReqSender.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FileReciever.cpp">
+    <ClCompile Include="FileServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FileClient.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

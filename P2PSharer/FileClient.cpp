@@ -1,8 +1,8 @@
 #include "stdafx.h"
-#include "FileReciever.h"
+#include "FileClient.h"
 
 
-CFileReciever::CFileReciever()
+CFileClient::CFileClient()
 {
 	m_dwFileSize = 0;
 	memset(m_md5, 0, 32);
@@ -10,13 +10,13 @@ CFileReciever::CFileReciever()
 }
 
 
-CFileReciever::~CFileReciever()
+CFileClient::~CFileClient()
 {
 }
 
 
 //初始化文件信息
-bool CFileReciever::Init(acl::ofstream &filestream, char *md5, DWORD filesize)
+bool CFileClient::Init(acl::ofstream &filestream, char *md5, DWORD filesize)
 {
 	m_fstream = &filestream;
 	memcpy(m_md5, md5, 32);
@@ -26,7 +26,7 @@ bool CFileReciever::Init(acl::ofstream &filestream, char *md5, DWORD filesize)
 }
 
 //缓存数据,参数内存由调用者申请，本模块处理完毕后释放
-void CFileReciever::CacheData(void *data)
+void CFileClient::CacheData(void *data)
 {
 	m_lockvdata.lock();
 	m_vdata.push_back(data);
@@ -34,7 +34,7 @@ void CFileReciever::CacheData(void *data)
 }
 
 //从缓存取数据
-void *CFileReciever::GetData()
+void *CFileClient::GetData()
 {
 	if (m_vdata.empty())
 	{
@@ -51,12 +51,12 @@ void *CFileReciever::GetData()
 }
 
 //停止，缓存文件的已处理信息
-void CFileReciever::Stop()
+void CFileClient::Stop()
 {
 	m_bStop = true;
 }
 
-void *CFileReciever::run()
+void *CFileClient::run()
 {
 	void *data = NULL;
 	while (!m_bStop)

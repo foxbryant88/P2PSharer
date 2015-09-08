@@ -6,7 +6,7 @@
 #include "CommonDefine.h"
 #include "PeerList.h"
 #include "FlagMgr.h"
-#include "FileReciever.h"
+#include "FileClient.h"
 
 class ServerEX: public acl::thread
 {
@@ -53,14 +53,15 @@ private:
 	//客户端收到数据后确认
 	void ProcMsgP2PDataAck(MSGDef::TMSG_HEADER *data);
 
+	//收到请求下载数据块的消息
+	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
+
+
 	////服务方收到协商请求下载的文件
 	//void ProcMsgReqFile(MSGDef::TMSG_HEADER *data);
 
 	////协商请求下载的文件成功
 	//void ProcMsgReqFileAck(MSGDef::TMSG_HEADER *data);
-
-	//服务方收到客户方请求哪些块数据
-	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data);
 
 	//服务方收到客户方请求哪些块数据
 	void ProcMsgGetBlocksAck(MSGDef::TMSG_HEADER *data);
@@ -90,6 +91,6 @@ private:
 	PeerList m_lstUser;                      //已与本机连接的客户端列表
 
 	CFlagMgr *m_objFlagMgr;
-	CFileReciever *m_objReciever;                //文件接收对象
+	CFileClient *m_objReciever;                //文件接收对象
 };
 

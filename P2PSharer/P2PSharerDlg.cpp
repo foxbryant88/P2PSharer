@@ -14,6 +14,7 @@
 
 CResourceMgr *g_resourceMgr;
 std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
+std::map<acl::string, CFileServer *> g_mapFileServer;    //key：文件MD5 value：文件提供者对象
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 

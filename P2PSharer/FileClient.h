@@ -5,12 +5,12 @@
 #include "acl_cpp\stdlib\thread.hpp"
 #include "CommonDefine.h"
 
-class CFileReciever :
+class CFileClient :
 	public acl::thread
 {
 public:
-	CFileReciever();
-	~CFileReciever();
+	CFileClient();
+	~CFileClient();
 
 	//初始化文件信息
 	bool Init(acl::ofstream &files, char *md5, DWORD filesize);

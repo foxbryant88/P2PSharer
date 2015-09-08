@@ -7,7 +7,7 @@
 #include "acl_cpp\stdlib\thread.hpp"
 #include "CommonDefine.h"
 #include "ReqSender.h"
-#include "FileReciever.h"
+#include "FileClient.h"
 
 #define MAX_CACHE_BLOCKS  2048
 #define BLOCK_REQUEST_TIME_OUT          300000    //分片下载超时时间（默认5分钟）
@@ -57,7 +57,7 @@ private:
 	T_LOCAL_FILE_INFO m_fileInfo;
 	acl::ofstream *m_fstream;
 
-	CFileReciever *m_objReciever;
+	CFileClient *m_objReciever;
 	std::vector<CReqSender *> m_vObjSender;
 	bool m_bExit;
 };

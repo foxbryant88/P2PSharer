@@ -115,11 +115,11 @@
     <ClInclude Include="..\common\PeerList.h" />
     <ClInclude Include="Downloader.h" />
     <ClInclude Include="FileScan.h" />
-    <ClInclude Include="FileSender.h" />
+    <ClInclude Include="FileServer.h" />
     <ClInclude Include="FlagMgr.h" />
     <ClInclude Include="P2PSharer.h" />
     <ClInclude Include="P2PSharerDlg.h" />
-    <ClInclude Include="FileReciever.h" />
+    <ClInclude Include="FileClient.h" />
     <ClInclude Include="RedisClient.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceMgr.h" />
@@ -136,11 +136,11 @@
     </ClCompile>
     <ClCompile Include="Downloader.cpp" />
     <ClCompile Include="FileScan.cpp" />
-    <ClCompile Include="FileSender.cpp" />
+    <ClCompile Include="FileServer.cpp" />
     <ClCompile Include="FlagMgr.cpp" />
     <ClCompile Include="P2PSharer.cpp" />
     <ClCompile Include="P2PSharerDlg.cpp" />
-    <ClCompile Include="FileReciever.cpp" />
+    <ClCompile Include="FileClient.cpp" />
     <ClCompile Include="RedisClient.cpp" />
     <ClCompile Include="ResourceMgr.cpp" />
     <ClCompile Include="SearchResultMgr.cpp" />

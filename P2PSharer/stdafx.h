@@ -38,10 +38,12 @@
 #include "ResourceMgr.h"
 #include "StructDef.h"
 #include "Downloader.h"
+#include "FileServer.h"
 
 acl::log g_clientlog;
 extern CResourceMgr *g_resourceMgr;
 extern std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
+extern std::map<acl::string, CFileServer *> g_mapFileServer;    //key：文件MD5 value：文件提供者对象
 
 #define NAME_FILE_INFO_LIST         "list.txt"
 #define NAME_FILE_INFO_LIST_LOCK    "listlock.txt"

@@ -13,7 +13,7 @@ ServerEX::ServerEX()
 	m_bExit = false;
 
 	m_objFlagMgr = new CFlagMgr;
-	m_objReciever = new CFileReciever;
+	m_objReciever = new CFileClient;
 }
 
 
@@ -86,16 +86,16 @@ void* ServerEX::run()
 		case eMSG_P2PDATA:
 			ProcMsgP2PData(msg);
 			break;
-		case  eMSG_P2PDATAACK:
-			break;
+// 		case  eMSG_P2PDATAACK:
+// 			break;
 		//case eMSG_REQFILE:
 		//	break;
 		//case eMSG_REQFILEACK:
 		//	break;
 		case eMSG_GETBLOCKS:
 			break;
-		case eMSG_GETBLOCKSACK:
-			break;
+// 		case eMSG_GETBLOCKSACK:
+// 			break;
 		case eMSG_USERACTIVEQUERY:
 			ProcMsgUserActiveQuery(msg, &m_sockstream);
 			break;
@@ -387,12 +387,6 @@ void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 	m_objFlagMgr->SetFlag(flag, 1);
 }
 
-//服务方收到客户方请求哪些块数据
-void ServerEX::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data)
-{
-
-}
-
 //收到文件下载数据
 void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 {
@@ -405,4 +399,45 @@ void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 	}
 }
 
+//收到请求下载数据块的消息
+void ServerEX::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
+{
+	MSGDef::TMSG_GETBLOCKS *msg = (MSGDef::TMSG_GETBLOCKS *)data;
+	void *buf = new char[EACH_BLOCK_SIZE];
+	
+start:
 
+	std::map<acl::string, CFileServer *>::iterator itTmp = g_mapFileServer.find(msg->FileBlock.md5);
+	if (itTmp != g_mapFileServer.end())
+	{
+		for (int i = 0; i < sizeof(msg->FileBlock.block) / sizeof(DWORD); i++)
+		{
+			DWORD dwPos = msg->FileBlock.block[i];
+			if (dwPos == 0)
+			{
+				break;
+			}
+
+			int len = EACH_BLOCK_SIZE;
+			memset(buf, 0, EACH_BLOCK_SIZE);
+			if (itTmp->second->GetBlockData(dwPos, buf, len))
+			{
+				SendData(buf, len, stream, stream->get_peer());
+			}
+		}
+	}
+	else
+	{
+		acl::string fullPath;
+		fullPath.url_decode(g_resourceMgr->GetFileFullPath(msg->FileBlock.md5));
+		CFileServer *pFileServer = new CFileServer;
+		if (!pFileServer->Init(fullPath, EACH_BLOCK_SIZE))
+		{
+			g_clientlog.error1("准备文件[%s]失败!", fullPath);
+			return;
+		}
+
+		g_mapFileServer[msg->FileBlock.md5] = pFileServer;
+		goto start;
+	}
+}
