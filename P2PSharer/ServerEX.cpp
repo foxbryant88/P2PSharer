@@ -183,7 +183,7 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
 	g_cli_exlog.msg1(m_errmsg);
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	//MessageBox(NULL, m_errmsg, "client", MB_OK);
 }
 
 //请求服务端转发P2P打洞请求

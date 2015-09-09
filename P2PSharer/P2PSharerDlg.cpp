@@ -201,8 +201,8 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	CString keyword = "";
 	m_editKeyword.GetWindowTextA(keyword);
 
-	m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
-	return;
+	//m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
+	//return;
 
 	if (keyword != "")
 	{
@@ -330,7 +330,13 @@ void CP2PSharerDlg::OnNMDblclkListResource(NMHDR *pNMHDR, LRESULT *pResult)
 	T_SEARCH_RESULT_INFO *pResultInfo = m_mapSearchResult[iItemData];
 
 	T_LOCAL_FILE_INFO loclInfo;
-	g_resourceMgr->GetFileInfo(pResultInfo->filemd5, loclInfo);
+	//g_resourceMgr->GetFileInfo(pResultInfo->filemd5, loclInfo);
+	loclInfo.filemd5 = pResultInfo->filemd5;
+	loclInfo.filename = pResultInfo->filename;
+
+	long long size = 0;
+	StrToInt64Ex(pResultInfo->filesize, STIF_DEFAULT, &size);
+	loclInfo.filesize = size;
 
 	CDownloader *objDownloader = new CDownloader;
 	g_mapFileDownloader[loclInfo.filemd5] = objDownloader;

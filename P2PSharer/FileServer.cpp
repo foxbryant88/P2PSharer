@@ -17,7 +17,8 @@ CFileServer::~CFileServer()
 bool CFileServer::Init(const char *fullpath, int blocksize)
 {
 	m_nBlockSize = blocksize;
-	if (_access(fullpath, 4) != -1)
+
+	if (_access(fullpath, 0) != -1)
 	{
 		if (m_fstream.open_read(fullpath))
 		{
@@ -35,7 +36,7 @@ bool CFileServer::GetBlockData(DWORD dwPos, void *buf, int &len)
 {
 	if (m_fstream.fseek(dwPos * m_nBlockSize, SEEK_SET) >= 0)
 	{
-		int iRet = m_fstream.read(buf, len);
+		int iRet = m_fstream.read(buf, len, false);
 		if (iRet > 0)
 		{
 			len = iRet;

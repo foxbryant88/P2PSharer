@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Downloader.h"
+#include <io.h>
 
 
 CDownloader::CDownloader()
@@ -25,19 +26,30 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CR
 	m_redis = redis;
 
 	acl::string localpath = "d:\\p2pfile\\";
+	if (_access(localpath.c_str(), 0) != 0)
+	{
+		if (acl_make_dirs(localpath.c_str(), 0755) == -1)
+		{
+			g_clientlog.error1("create dirs: %s error: %s",
+				localpath.c_str(), acl::last_serror());
+			return false;
+		}
+	}
+
 	localpath += m_fileInfo.filename;
 
 	//创建指定大小的文件
-	if (!m_fstream->create(localpath))
+	if (!m_fstream.create(localpath.c_str()))
 	{
 		g_clientlog.error1("创建文件[%s]失败！err:%d", localpath, acl::last_error());
 		return false;
 	}
-	m_fstream->fseek(m_fileInfo.filesize, SEEK_SET);
-	m_fstream->write(0);
+	m_fstream.fseek(m_fileInfo.filesize, SEEK_SET);
+	//m_fstream.write(0);
 	
 	m_objReciever = new CFileClient;
-	m_objReciever->Init(*m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize);
+	m_objReciever->Init(m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize);
+	m_objReciever->start();
 }
 
 //增加可用下载节点
@@ -56,6 +68,7 @@ void CDownloader::AddProvider(acl::string &addr)
 
 	CReqSender *psender = new CReqSender;
 	psender->Init(addr, *m_sock);
+	psender->start();
 
 	m_vObjSender.push_back(psender);
 }
@@ -203,6 +216,8 @@ bool CDownloader::UpdateServiceProvider(void)
 
 	if (GetTickCount() - dwLastUpdate > UPDATE_SERVICE_PROVIDER_TIME)
 	{
+		dwLastUpdate = GetTickCount();
+
 		std::vector<acl::string> vRes;
 		int num = m_redis->GetResourceOwners(m_fileInfo.filemd5, vRes);
 		for (int i = 0; i < num; i++)

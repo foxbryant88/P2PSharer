@@ -55,7 +55,7 @@ private:
     CRedisClient *m_redis;
 
 	T_LOCAL_FILE_INFO m_fileInfo;
-	acl::ofstream *m_fstream;
+	acl::ofstream m_fstream;
 
 	CFileClient *m_objReciever;
 	std::vector<CReqSender *> m_vObjSender;
