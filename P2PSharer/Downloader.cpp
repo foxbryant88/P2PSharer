@@ -219,10 +219,14 @@ bool CDownloader::UpdateServiceProvider(void)
 		dwLastUpdate = GetTickCount();
 
 		std::vector<acl::string> vRes;
-		int num = m_redis->GetResourceOwners(m_fileInfo.filemd5, vRes);
+		int num = m_redis->GetResourceOwnersID(m_fileInfo.filemd5, vRes);
 		for (int i = 0; i < num; i++)
 		{
-			AddProvider(vRes[i]);
+			acl::string ipAddr;
+			if (g_serEx.SendMsg_GetIPofMAC(vRes[i], ipAddr))
+			{
+				AddProvider(ipAddr);
+			}
 		}
 	}
 

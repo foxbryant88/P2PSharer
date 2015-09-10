@@ -13,6 +13,7 @@
 
 
 CResourceMgr *g_resourceMgr;
+ServerEX g_serEx;
 std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
 std::map<acl::string, CFileServer *> g_mapFileServer;    //key：文件MD5 value：文件提供者对象
 
@@ -186,11 +187,11 @@ bool CP2PSharerDlg::Init(void)
 	//acl::string addr("192.168.1.102:8888");
 	acl::string addr("119.29.66.237:8888");
 
-	m_serEx.Init(addr);
-	m_serEx.set_detachable(true);
-	m_serEx.start();
+	g_serEx.Init(addr);
+	g_serEx.set_detachable(true);
+	g_serEx.start();
 
-	m_serEx.SendMsg_UserLogin();
+	g_serEx.SendMsg_UserLogin();
 
 	return true;
 }
@@ -201,6 +202,7 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	CString keyword = "";
 	m_editKeyword.GetWindowTextA(keyword);
 
+	g_serEx.SendMsg_UserLogin();
 	//m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
 	//return;
 
@@ -341,7 +343,7 @@ void CP2PSharerDlg::OnNMDblclkListResource(NMHDR *pNMHDR, LRESULT *pResult)
 	CDownloader *objDownloader = new CDownloader;
 	g_mapFileDownloader[loclInfo.filemd5] = objDownloader;
 	objDownloader->set_detachable(true);
-	objDownloader->Init(loclInfo, m_serEx.GetSockStream(), g_resourceMgr->GetRedisClient());
+	objDownloader->Init(loclInfo, g_serEx.GetSockStream(), g_resourceMgr->GetRedisClient());
 	objDownloader->start();
 
 	// TODO:  在此添加控件通知处理程序代码

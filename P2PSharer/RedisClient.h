@@ -22,11 +22,10 @@ public:
 	bool FindResource(acl::string &keyword, std::map<acl::string, acl::string> &mapRes);
 
 	//查找资源文件可用的下载服务器个数
-	int GetResourceOwners(acl::string &key);
+	int GetResourceOwnersID(acl::string &key);
 
-	//查找资源文件可用的下载服务器个数
-	int GetResourceOwners(acl::string &key, std::vector<acl::string> &vRes);
-
+	//查找资源文件可用的下载服务器个数及MAC地址
+	int GetResourceOwnersID(acl::string &key, std::vector<acl::string> &vRes);
 
 	//向资源文件的地址池中添加MAC（以set形式存储，key:文件MD5 members:MAC地址
 	bool AddMACToResourceSet(acl::string &key, acl::string &mac);

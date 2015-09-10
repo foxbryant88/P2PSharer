@@ -24,7 +24,7 @@ public:
 	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV 支持
 
 private:
-	ServerEX m_serEx;
+	//ServerEX g_serEx;
 	//std::map<acl::string, acl::string> m_mapSearchResult;      //关键词搜索结果
 	CSearchResultMgr *m_objSearchMgr;
 	int m_iSeachResultItems;      //搜索结果条目数

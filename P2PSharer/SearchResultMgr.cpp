@@ -60,7 +60,7 @@ void *CSearchResultMgr::run()
 		item->filename = temp.url_decode(vRes[0]);
 		item->filemd5 = vRes[1];
 		item->filesize = itRes->second;
-		item->resource_count = m_redis->GetResourceOwners(item->filemd5);
+		item->resource_count = m_redis->GetResourceOwnersID(item->filemd5);
 
 		//·¢ËÍ¸øUIÏÔÊ¾
 		SendMessage(m_hNotifyWnd, UM_UPDATE_SEARCH_RESULT, (WPARAM)item, NULL);

@@ -178,7 +178,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 //查找资源文件可用的下载服务器个数
 //key : 文件MD5
 //返回拥有该文件的客户端个数
-int CRedisClient::GetResourceOwners(acl::string &key)
+int CRedisClient::GetResourceOwnersID(acl::string &key)
 {
 	acl::redis_set redis(m_redis);
 
@@ -207,7 +207,7 @@ RETRY:
 //查找资源文件可用的下载服务器
 //key : 文件MD5
 //返回拥有该文件的客户端个数
-int CRedisClient::GetResourceOwners(acl::string &key, std::vector<acl::string> &vRes)
+int CRedisClient::GetResourceOwnersID(acl::string &key, std::vector<acl::string> &vRes)
 {
 	acl::redis_set redis(m_redis);
 

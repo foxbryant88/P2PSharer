@@ -39,9 +39,11 @@
 #include "StructDef.h"
 #include "Downloader.h"
 #include "FileServer.h"
+#include "ServerEX.h"
 
 acl::log g_clientlog;
 extern CResourceMgr *g_resourceMgr;
+extern ServerEX g_serEx;
 extern std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
 extern std::map<acl::string, CFileServer *> g_mapFileServer;    //key：文件MD5 value：文件提供者对象
 

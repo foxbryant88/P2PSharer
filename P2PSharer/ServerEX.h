@@ -31,6 +31,7 @@ public:
 
 	//请求获取指定MAC的IP地址，以便进行打洞通信等操作
 	bool SendMsg_GetIPofMAC(const char *mac);
+	bool SendMsg_GetIPofMAC(const char *mac, acl::string &ip);
 
 	//发送其它。。。
 

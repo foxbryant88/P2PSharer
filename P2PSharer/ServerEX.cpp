@@ -183,7 +183,7 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
 	g_cli_exlog.msg1(m_errmsg);
-	//MessageBox(NULL, m_errmsg, "client", MB_OK);
+	MessageBox(NULL, m_errmsg, "client", MB_OK);
 }
 
 //请求服务端转发P2P打洞请求
@@ -266,6 +266,20 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 	MessageBox(NULL, m_errmsg, "client", MB_OK);
 	return false;
 
+}
+
+//请求获取指定MAC的IP地址并返回
+bool ServerEX::SendMsg_GetIPofMAC(const char *mac, acl::string &ip)
+{
+	if (SendMsg_GetIPofMAC(mac))
+	{
+		Peer_Info *peer = m_lstUser.GetAPeer(mac);
+		ip = peer->IPAddr;
+
+		return true;
+	}
+
+	return false;
 }
 
 //收到确认打洞成功的消息
