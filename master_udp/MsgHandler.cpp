@@ -14,6 +14,12 @@ CMsgHandler::~CMsgHandler()
 	m_bExit = true;
 }
 
+//初始化
+void CMsgHandler::Init(acl::socket_stream *Sock)
+{
+	m_pSock = Sock;
+}
+
 //将收到的消息缓存
 void CMsgHandler::CacheMsgData(const RECIEVE_DATA &rdata)
 {
@@ -73,6 +79,8 @@ void* CMsgHandler::run()
 //消息处理
 void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
 {
+// 	m_pSock = sock;
+
 	switch (msg->cMsgID)
 	{
 	case eMSG_USERLOGIN:
@@ -227,8 +235,11 @@ void CMsgHandler::MaintainUserlist()
 				//m_SockStream.set_peer(pPeerInfo->IPAddr);
 				//m_SockStream.write(&tUserActiveQuery, sizeof(tUserActiveQuery));
 				//printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
-				if (SendData(&tUserActiveQuery, sizeof(tUserActiveQuery), &m_SockStream, pPeerInfo->IPAddr))
-					printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
+				if (m_pSock != NULL)
+				{
+					if (SendData(&tUserActiveQuery, sizeof(tUserActiveQuery), m_pSock, pPeerInfo->IPAddr))
+						printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
+				}
 			}
 		}
 	}

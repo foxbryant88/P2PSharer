@@ -39,8 +39,9 @@ master_service::master_service()
 	g_serlog.open("p2pserver.log", "SERVER");
 
 	m_bExit = false;
-	m_msghandler.set_detachable(true);
-	m_msghandler.start();
+	//m_msghandler.set_detachable(true);
+	//m_msghandler.start();
+
 }
 
 master_service::~master_service()
@@ -80,6 +81,10 @@ void master_service::proc_on_init()
 	for (; cit != sstreams.end(); ++cit)
 		logger("local addr: %s, fd: %d", (*cit)->get_local(true),
 			(*cit)->sock_handle());
+
+	m_msghandler.set_detachable(true);
+	m_msghandler.start();
+	m_msghandler.Init(sstreams[0]);
 }
 
 void master_service::proc_on_exit()

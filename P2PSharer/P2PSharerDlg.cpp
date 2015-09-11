@@ -202,7 +202,7 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	CString keyword = "";
 	m_editKeyword.GetWindowTextA(keyword);
 
-	g_serEx.SendMsg_UserLogin();
+	//g_serEx.SendMsg_UserLogin();
 	//m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
 	//return;
 

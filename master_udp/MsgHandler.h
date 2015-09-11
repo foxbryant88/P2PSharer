@@ -17,6 +17,9 @@ public:
 	CMsgHandler();
 	~CMsgHandler();
 
+	//初始化
+	void Init(acl::socket_stream *Sock);
+
 	//将收到的消息缓存
 	void CacheMsgData(const RECIEVE_DATA &rdata);
 
@@ -59,6 +62,7 @@ private:
 	std::vector<RECIEVE_DATA> m_vMsgData;     //收到的数据先缓存
 	PeerList m_lstOnlineUser;                 //在线客户端列表
 	acl::socket_stream m_SockStream;
+	acl::socket_stream *m_pSock;
 	bool m_bExit;
 	acl::string m_errmsg;
 };
