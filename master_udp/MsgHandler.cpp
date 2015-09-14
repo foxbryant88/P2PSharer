@@ -155,25 +155,25 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 	m_errmsg.format("收到来自：%s的打洞消息，目标：%s！\r\n", sock->get_peer(true), msg->ConnToAddr);
 	g_serlog.msg1(m_errmsg);
 
-	//根据MAC地址查找目标IP
-	Peer_Info *peer = NULL;
-	m_lockUserList.lock();
-	peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.szMAC);
-	m_lockUserList.unlock();
+	////根据MAC地址查找目标IP
+	//Peer_Info *peer = NULL;
+	//m_lockUserList.lock();
+	//peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.szMAC);
+	//m_lockUserList.unlock();
 
-	if (peer == NULL)
-	{
-		m_errmsg.format("找不到%s的目标IP，打洞失败！\r\n", msg->ConnToAddr);
-		g_serlog.msg1(m_errmsg);
-		printf(m_errmsg);
-		return;
-	}
+	//if (peer == NULL)
+	//{
+	//	m_errmsg.format("找不到%s的目标IP，打洞失败！\r\n", msg->ConnToAddr);
+	//	g_serlog.msg1(m_errmsg);
+	//	printf(m_errmsg);
+	//	return;
+	//}
 
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
-		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), sock, peer->IPAddr))
+		if (SendData(msg, sizeof(MSGDef::TMSG_P2PCONNECT), sock, msg->ConnToAddr))
 		{
-			g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", peer->IPAddr);
+			g_serlog.msg1("向[%s]转发P2P打洞消息成功！\r\n", msg->ConnToAddr);
 			return;
 		}
 
@@ -221,7 +221,7 @@ void CMsgHandler::MaintainUserlist()
 	{
 		if (NULL != (pPeerInfo = m_lstOnlineUser[i]))
 		{
-			if (dwTick - pPeerInfo->dwActiveTime >= 2 * 15 * 1000 + 600)
+			if (dwTick - pPeerInfo->dwActiveTime >= 15 * 1000 + 600)
 			{
 				printf("------删除下线客户端-----, MAC:%s, IP: %s \n", pPeerInfo->szMAC, pPeerInfo->IPAddr);
 				m_lockUserList.lock();
@@ -238,7 +238,7 @@ void CMsgHandler::MaintainUserlist()
 				if (m_pSock != NULL)
 				{
 					if (SendData(&tUserActiveQuery, sizeof(tUserActiveQuery), m_pSock, pPeerInfo->IPAddr))
-						printf("Sending Active Ack Message To %s\n", pPeerInfo->IPAddr);
+						printf("向客户端[%s]发送存活检测消息\n", pPeerInfo->IPAddr);
 				}
 			}
 		}

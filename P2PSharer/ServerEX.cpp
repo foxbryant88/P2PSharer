@@ -93,6 +93,7 @@ void* ServerEX::run()
 		//case eMSG_REQFILEACK:
 		//	break;
 		case eMSG_GETBLOCKS:
+			ProcMsgGetBlocks(msg, &m_sockstream);
 			break;
 // 		case eMSG_GETBLOCKSACK:
 // 			break;
@@ -183,10 +184,11 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
 	g_cli_exlog.msg1(m_errmsg);
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	//MessageBox(NULL, m_errmsg, "client", MB_OK);
 }
 
 //请求服务端转发P2P打洞请求
+//还需考虑目标客户端重新上线的情况（端口变化）!!!!!
 bool ServerEX::SendMsg_P2PConnect(const char *mac)
 {
 	Peer_Info *peer = m_lstUser.GetAPeer(mac);
@@ -197,7 +199,14 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 			g_cli_exlog.msg1("获取[%s]的IP地址失败！", mac);
 			return false;
 		}
+
+		peer = m_lstUser.GetAPeer(mac);
 	}
+	else if (strlen(peer->P2PAddr) > 1)
+	{
+		return true;
+	}
+
 
 	MSGDef::TMSG_P2PCONNECT tMsgConnect(m_peerInfo);
 	memcpy(tMsgConnect.ConnToAddr, peer->IPAddr, strlen(peer->IPAddr));
@@ -253,8 +262,8 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 			g_cli_exlog.msg1("向服务端[%s]发送请求[%s]的IP地址成功", server_addr_, mac);
 			m_objFlagMgr->RMFlag(flag);
 
-			m_errmsg.format("MAC [%s] 的IP为：%s", mac, m_lstUser.GetAPeer(mac)->IPAddr);
-			MessageBox(NULL, m_errmsg, "OK", MB_OK);
+// 			m_errmsg.format("MAC [%s] 的IP为：%s", mac, m_lstUser.GetAPeer(mac)->IPAddr);
+// 			MessageBox(NULL, m_errmsg, "OK", MB_OK);
 
 			return true;
 		}
@@ -262,7 +271,7 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 		Sleep(1000);
 	}
 
-	m_errmsg.format("向服务端[%s]发送请求[%s]的IP地址失败", server_addr_, mac);
+	m_errmsg.format("向服务端[%s]发送请求[%s]的IP地址失败", server_addr_.c_str(), mac);
 	MessageBox(NULL, m_errmsg, "client", MB_OK);
 	return false;
 
@@ -288,7 +297,8 @@ void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_strea
 	g_cli_exlog.msg1("收到%s确认打洞成功的消息", stream->get_peer(true));
 
 	MSGDef::TMSG_P2PCONNECTACK *msg = (MSGDef::TMSG_P2PCONNECTACK *)data;
-	
+	memcpy(msg->PeerInfo.P2PAddr, msg->PeerInfo.IPAddr, MAX_MACADDR_LEN);
+
 	//打洞成功的客户端存入列表
 	m_lockListUser.lock();
 	m_lstUser.AddPeer(msg->PeerInfo);
@@ -296,6 +306,8 @@ void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_strea
 
 	//设置打洞成功标记
 	m_objFlagMgr->SetFlag(m_objFlagMgr->GetFlag(FORMAT_FLAG_P2PCONN, msg->PeerInfo.IPAddr), 1);
+	ShowMsg("收到打洞确认消息");
+
 }
 
 //收到请求P2P连接（打洞）的消息
@@ -312,6 +324,12 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data)
 		if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, msg->PeerInfo.IPAddr))
 		{
 			g_cli_exlog.msg1("向[%s]回复确认成功", msg->PeerInfo.IPAddr);
+
+			//将请求打洞的客户端加入连接列表
+			m_lockListUser.lock();
+			m_lstUser.AddPeer(msg->PeerInfo);
+			m_lockListUser.unlock();
+
 			return ;
 		}
 
@@ -324,7 +342,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data)
 		Sleep(1000);
 	}
 
-	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.IPAddr);
+	m_errmsg.format("回复打洞消息失败！");
 	g_cli_exlog.msg1(m_errmsg);
 	MessageBox(NULL, m_errmsg, "client", MB_OK);
 
@@ -337,16 +355,16 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *toaddr)
 	for (int iRetry = 0; iRetry < 3; iRetry++)
 	{
 		Peer_Info *peer = m_lstUser.GetAPeer(toaddr);
-		if (peer != NULL)
+		if (peer != NULL && strlen(peer->P2PAddr) > 1)
 		{
 			//尝试发送数据
 			for (int i = 0; i < 3; i++)
 			{
 				MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
 				memcpy(tMsgP2PData.szMsg, data, strlen(data));
-				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, toaddr))
+				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, peer->IPAddr))
 				{
-					g_cli_exlog.msg1("向%s发送数据成功！", toaddr);
+					g_cli_exlog.msg1("向%s发送数据成功！", peer->IPAddr);
 					return true;
 				}
 
@@ -360,6 +378,38 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *toaddr)
 		SendMsg_P2PConnect(toaddr);
 		Sleep(500);
 	}
+}
+
+bool ServerEX::SendMsg_P2PData(void *data, size_t size, const char *toMac)
+{
+	for (int iRetry = 0; iRetry < 3; iRetry++)
+	{
+		Peer_Info *peer = m_lstUser.GetAPeer(toMac);
+		if (peer != NULL  && strlen(peer->P2PAddr) > 1)
+		{
+			//尝试发送数据
+			for (int i = 0; i < 3; i++)
+			{
+				if (SendData(data, size, &m_sockstream, peer->IPAddr))
+				{
+					g_cli_exlog.msg1("向%s  ip:%s发送数据成功！", toMac, peer->IPAddr);
+					return true;
+				}
+
+				Sleep(1000);
+			}
+
+			ShowMsg("连接已不可用，尝试重新打洞！");
+		}
+
+		//如果未连接或发送失败则开始打洞
+		if (SendMsg_P2PConnect(toMac))
+			continue;;
+
+		Sleep(500);
+	}
+
+	return false;
 }
 
 //服务方收到下载请求后，向客户发送数据
@@ -405,6 +455,7 @@ void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 {
 	MSGDef::TMSG_FILEBLOCKDATA *msg = (MSGDef::TMSG_FILEBLOCKDATA *)data;
+	ShowMsg("收到下载数据块，即将写入文件");
 
 	std::map<acl::string, CDownloader *>::iterator itTemp = g_mapFileDownloader.find(msg->info.md5);
 	if (itTemp != g_mapFileDownloader.end())
@@ -417,8 +468,10 @@ void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 void ServerEX::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
 {
 	MSGDef::TMSG_GETBLOCKS *msg = (MSGDef::TMSG_GETBLOCKS *)data;
-	void *buf = new char[EACH_BLOCK_SIZE];
-	
+	static void *buf = new char[EACH_BLOCK_SIZE];
+
+	ShowMsg("收到GetBlocks下载数据分块消息");
+
 start:
 
 	std::map<acl::string, CFileServer *>::iterator itTmp = g_mapFileServer.find(msg->FileBlock.md5);
@@ -436,7 +489,19 @@ start:
 			memset(buf, 0, EACH_BLOCK_SIZE);
 			if (itTmp->second->GetBlockData(dwPos, buf, len))
 			{
-				SendData(buf, len, stream, stream->get_peer());
+				ShowMsg("读取分块成功，即将开始传输！");
+
+				MSGDef::TMSG_FILEBLOCKDATA tdata;
+				memcpy(tdata.info.md5, msg->FileBlock.md5, 32);
+				tdata.info.dwBlockNumber = dwPos;
+				tdata.info.datalen = len;
+				memcpy(tdata.info.data, buf, EACH_BLOCK_SIZE);
+
+				SendData(&tdata, sizeof(tdata), stream, stream->get_peer());
+			}
+			else
+			{
+				ShowMsg("读取分块失败！");
 			}
 		}
 	}
@@ -444,10 +509,17 @@ start:
 	{
 		acl::string fullPath;
 		fullPath.url_decode(g_resourceMgr->GetFileFullPath(msg->FileBlock.md5));
+		
+		m_errmsg.format("文件下载路径为：%s", fullPath.c_str());
+		ShowMsg(m_errmsg);
+
 		CFileServer *pFileServer = new CFileServer;
 		if (!pFileServer->Init(fullPath, EACH_BLOCK_SIZE))
 		{
-			g_clientlog.error1("准备文件[%s]失败!", fullPath);
+			m_errmsg.format("初始化下载文件[%s]失败!", fullPath.c_str());
+			g_clientlog.error1(m_errmsg);
+
+			ShowError(m_errmsg);
 			return;
 		}
 

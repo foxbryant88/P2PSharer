@@ -68,11 +68,17 @@ void *CFileClient::run()
 			continue;
 		}
 
+		ShowMsg("即将对收到的数据分块写入文件！");
+
 		BLOCK_DATA_INFO *block = (BLOCK_DATA_INFO *)data;
 		if (!_stricmp(m_md5, block->md5))
 		{
 			m_fstream->fseek(block->dwBlockNumber * EACH_BLOCK_SIZE, SEEK_SET);
-			m_fstream->write((void*)block->data, EACH_BLOCK_SIZE, true);
+			int iret = m_fstream->write((void*)block->data, block->datalen, true);
+
+			acl::string errmsg;
+			errmsg.format("写入%d个字节", iret);
+			ShowMsg(errmsg);
 		}
 
 		delete block;

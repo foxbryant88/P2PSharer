@@ -16,8 +16,8 @@ CReqSender::~CReqSender()
 //初始化
 bool CReqSender::Init(const char *toaddr, acl::socket_stream &sock)
 {
-	m_addr = toaddr;
-	m_sock = &sock;
+	m_macAddr = toaddr;
+	//m_sock = &sock;
 
 	return true;
 }
@@ -40,6 +40,10 @@ bool CReqSender::PushTask(std::vector<DWORD> &blockNums)
 //拼装要请求下载数据块的数据包
 bool CReqSender::MakeRequestHeader(MSGDef::TMSG_GETBLOCKS &msg)
 {
+	if (m_vBlockNums.size() == 0)
+	{
+		return false;
+	}
 
 	for (int i = 0; i < m_vBlockNums.size(); i++)
 	{
@@ -65,12 +69,15 @@ void *CReqSender::run()
 			continue;
 		}
 
-		m_sock->set_peer(m_addr);
-
-		if (m_sock->write(&tMsg, sizeof(tMsg)) > 0)
+		if (!g_serEx.SendMsg_P2PData(&tMsg, sizeof(tMsg), m_macAddr))
 		{
-			return NULL;
+			//ShowMsg("CReqSender发送数据失败");
+			//return NULL;
+			Sleep(1000);
+			continue;
 		}
+
+		ShowMsg("CReqSender发送数据失败");
 
 		//清空上次记录
 		memset(&tMsg.FileBlock.block[0], 0, MAX_REQUEST_BLOCKS_COUNT * sizeof(DWORD));

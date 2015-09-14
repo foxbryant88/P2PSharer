@@ -48,10 +48,10 @@ private:
 
 
 	DWORD m_dwLastBlockPos;                     //最近的分片位置
-	std::vector<acl::string> m_vProvider;       //所有可用下载节点
+	std::vector<acl::string> m_vProviderMACs;       //所有可用下载节点
 // 	std::vector<DWORD> m_vBlocksCache;          //当前缓存的需要下载的分片
 	std::map<DWORD, DWORD> m_mapFileBlocks;     //已下发的分片 key:分片位置 value:分片下发的时间
-	acl::socket_stream *m_sock;
+	//acl::socket_stream *m_sock;
     CRedisClient *m_redis;
 
 	T_LOCAL_FILE_INFO m_fileInfo;

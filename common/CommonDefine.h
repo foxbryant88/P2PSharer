@@ -45,14 +45,10 @@ struct BLOCK_DATA_INFO
 {
 	char md5[32];                          // 文件的MD5值
 	DWORD dwBlockNumber;                   // 数据块序号
+	int datalen;                           // 数据长度
 	char data[EACH_BLOCK_SIZE];
 
-	BLOCK_DATA_INFO(){ memset(md5, 0, 32); dwBlockNumber = 0; memset(data, 0, EACH_BLOCK_SIZE); };
-	//BLOCK_DATA_INFO operator=(const BLOCK_DATA_INFO& block)
-	//{
-	//	memcpy(md5, block.md5, 32);
-	//	dwBlockNumber = block.dwBlockNumber;
-	//};
+	BLOCK_DATA_INFO(){ memset(md5, 0, 32); dwBlockNumber = 0; datalen = 0; memset(data, 0, EACH_BLOCK_SIZE); };
 };
 
 class MSGDef										// 定义消息的结构体
@@ -213,6 +209,7 @@ public:
 	{
 		BLOCK_DATA_INFO info;
 
+		TMSG_FILEBLOCKDATA() : TMSG_HEADER(eMsg_FILEBLOCKDATA){};
 		TMSG_FILEBLOCKDATA(const BLOCK_DATA_INFO &rblockInfo)
 			: TMSG_HEADER(eMsg_FILEBLOCKDATA)
 		{
@@ -256,6 +253,7 @@ public:
 		TMSG_GETUSERCLIENTIP(const Peer_Info& rPeerInfo = Peer_Info())
 			: TMSG_HEADER(eMSG_GETUSERCLIENTIP)
 		{
+			memset(szMAC, 0, MAX_MACADDR_LEN);
 			PeerInfo = rPeerInfo;
 		}
 	};

@@ -30,9 +30,9 @@ private:
 
 	acl::locker m_lockBlockNum;
 	std::vector<DWORD>  m_vBlockNums;        //需要下载的数据块序号
-	acl::string m_addr;                      //目标IP地址
+	acl::string m_macAddr;                      //目标IP地址
 	bool m_bExit;
 
-	acl::socket_stream *m_sock;              //先共享用同一个SOCKET，调通后再试独立的SOCKET？？？？？？？？？？？？？？？
+	//acl::socket_stream *m_sock;              //先共享用同一个SOCKET，调通后再试独立的SOCKET？？？？？？？？？？？？？？？
 };
 

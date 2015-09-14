@@ -60,8 +60,19 @@ void *CSearchResultMgr::run()
 		item->filename = temp.url_decode(vRes[0]);
 		item->filemd5 = vRes[1];
 		item->filesize = itRes->second;
-		item->resource_count = m_redis->GetResourceOwnersID(item->filemd5);
 
+		std::vector<acl::string> vOwners;
+		item->resource_count = m_redis->GetResourceOwnersID(item->filemd5, vOwners);
+
+		if (vOwners.size() > 0)
+			item->owerMac = vOwners[0];
+
+		for (int i = 1; i < vOwners.size(); i++)
+		{
+			item->owerMac.append("&");
+			item->owerMac.append(vOwners[i]);
+		}
+		
 		//∑¢ÀÕ∏¯UIœ‘ æ
 		SendMessage(m_hNotifyWnd, UM_UPDATE_SEARCH_RESULT, (WPARAM)item, NULL);
 	}

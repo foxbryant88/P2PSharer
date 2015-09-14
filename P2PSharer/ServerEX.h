@@ -37,6 +37,10 @@ public:
 
 	//发送P2P数据，仅测试
 	bool SendMsg_P2PData(const char *data, const char *toaddr);
+	bool SendMsg_P2PData(void *data, size_t size, const char *toMac);
+
+	//向指定地址发送数据
+	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
 
 private:
 	//登录确认消息
@@ -76,8 +80,8 @@ private:
 	//收到文件下载数据
 	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data);
 
-	//向指定地址发送数据
-	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
+	////向指定地址发送数据
+	//bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
 
 
 	acl::string server_addr_;              //服务端地址

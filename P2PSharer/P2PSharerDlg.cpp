@@ -112,6 +112,7 @@ BOOL CP2PSharerDlg::OnInitDialog()
 	m_listSearchResult.InsertColumn(1, "文件大小", 0, 100);
 	m_listSearchResult.InsertColumn(2, "资源数", 0, 100);
 	m_listSearchResult.InsertColumn(3, "下载进度", 0, 100);
+	m_listSearchResult.InsertColumn(4, "所有者MAC", 0, 200);
 
 
 	g_clientlog.open("mylog.log", "P2PServer");
@@ -202,6 +203,7 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	CString keyword = "";
 	m_editKeyword.GetWindowTextA(keyword);
 
+	//g_serEx.SendMsg_P2PData("hello", keyword.GetBuffer());
 	//g_serEx.SendMsg_UserLogin();
 	//m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
 	//return;
@@ -283,6 +285,7 @@ BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT
  		m_listSearchResult.SetItemText(m_iSeachResultItems, 0, resInfo->filename);
 		m_listSearchResult.SetItemText(m_iSeachResultItems, 1, GetResourceFileSize(resInfo->filesize));
  		m_listSearchResult.SetItemText(m_iSeachResultItems, 2, resInfo->resource_count);
+		m_listSearchResult.SetItemText(m_iSeachResultItems, 4, resInfo->owerMac);
 		m_listSearchResult.SetItemData(m_iSeachResultItems, m_iSeachResultItems);         //每个Item标识与其序号相同
 
 		//保存搜索结果与显示条目的对应关系
@@ -328,6 +331,9 @@ void CP2PSharerDlg::OnNMDblclkListResource(NMHDR *pNMHDR, LRESULT *pResult)
 	LPNMITEMACTIVATE pNMItemActivate = reinterpret_cast<LPNMITEMACTIVATE>(pNMHDR);
 	
 	int iSelectedItem = pNMItemActivate->iItem;
+	if (iSelectedItem < 0)
+		return;
+
 	int iItemData = m_listSearchResult.GetItemData(iSelectedItem);
 	T_SEARCH_RESULT_INFO *pResultInfo = m_mapSearchResult[iItemData];
 
