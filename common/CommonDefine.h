@@ -98,12 +98,12 @@ public:
 		: TMSG_HEADER
 	{
 		Peer_Info	PeerInfo;
-		char ConnToAddr[MAX_ADDR_LENGTH];           //连接的目标地址
+		char szMAC[MAX_MACADDR_LEN];           //连接的目标地址
 
 		TMSG_P2PCONNECT(const Peer_Info& rPeerInfo)
 			: TMSG_HEADER(eMSG_P2PCONNECT)
 		{
-			memset(ConnToAddr, 0, MAX_ADDR_LENGTH);
+			memset(szMAC, 0, MAX_MACADDR_LEN);
 			PeerInfo = rPeerInfo;
 		}
 	};

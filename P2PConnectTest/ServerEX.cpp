@@ -13,7 +13,7 @@ ServerEX::ServerEX()
 	m_bExit = false;
 
 	m_objFlagMgr = new CFlagMgr;
-	m_objReciever = new CFileClient;
+	
 }
 
 
@@ -24,17 +24,11 @@ ServerEX::~ServerEX()
 }
 
 //初始化本地UDP并记录服务端地址
-bool ServerEX::Init(const char* addr)
+bool ServerEX::Init(const char* addr, const char *name)
 {
 	if (NULL == m_objFlagMgr)
 	{
 		g_cli_exlog.fatal1("标记对象不能为空！");
-		return false;
-	}
-
-	if (NULL == m_objReciever)
-	{
-		g_cli_exlog.fatal1("文件接收对象不能为空！");
 		return false;
 	}
 
@@ -48,13 +42,13 @@ bool ServerEX::Init(const char* addr)
 	}
 
 	g_cli_exlog.msg1("绑定本地UDP端口:%s", m_sockstream.get_local(true));
-	memcpy(m_peerInfo.szMAC, GetMacAddr().c_str(), MAX_MACADDR_LEN);
+// 	memcpy(m_peerInfo.szMAC, GetMacAddr().c_str(), MAX_MACADDR_LEN);
+	memcpy(m_peerInfo.szMAC, name, MAX_MACADDR_LEN);
 
 	//获取所有网卡IP地址
 	acl::string tmpForPort = m_sockstream.get_local(true);
 	char *portInfo = tmpForPort.find(":");
 	GetLocalIPs(m_peerInfo, portInfo);
-
 	m_sockstream.set_rw_timeout(0);
 
 	return true;
@@ -79,6 +73,7 @@ void ServerEX::GetLocalIPs(Peer_Info &peerInfo, acl::string portInfo)
 		struct in_addr tmpIp;
 		memcpy(&tmpIp, pIP, pHost->h_length);
 		_snprintf_s(peerInfo.arrAddr[i].IPAddr, MAX_ADDR_LENGTH, "%s%s", inet_ntoa(tmpIp), portInfo.c_str());
+
 		++peerInfo.nAddrNum;
 	}
 }
@@ -113,25 +108,11 @@ void* ServerEX::run()
 		case eMSG_P2PDATA:
 			ProcMsgP2PData(msg);
 			break;
-// 		case  eMSG_P2PDATAACK:
-// 			break;
-		//case eMSG_REQFILE:
-		//	break;
-		//case eMSG_REQFILEACK:
-		//	break;
-		case eMSG_GETBLOCKS:
-			ProcMsgGetBlocks(msg, &m_sockstream);
-			break;
-// 		case eMSG_GETBLOCKSACK:
-// 			break;
 		case eMSG_USERACTIVEQUERY:
 			ProcMsgUserActiveQuery(msg, &m_sockstream);
 			break;
 		case eMSG_GETUSERCLIENTIPACK:
 			ProcMsgGetUserClientAck(msg);
-			break;
-		case eMsg_FILEBLOCKDATA:
-			ProcMsgFileBlockData(msg);
 			break;
 		default:
 			g_cli_exlog.error1("错误的消息类型：%d", msg->cMsgID);
@@ -165,6 +146,7 @@ bool ServerEX::SendData(void *data, size_t size, acl::socket_stream *stream, con
 	return false;
 }
 
+
 //发送登录消息
 bool ServerEX::SendMsg_UserLogin()
 {
@@ -183,6 +165,9 @@ bool ServerEX::SendMsg_UserLogin()
 				{
 					g_cli_exlog.msg1("登录成功！");
 					m_objFlagMgr->RMFlag(loginFlag);
+
+					cout << "登录成功！外网IP：" << m_peerInfo.arrAddr[m_peerInfo.nAddrNum - 1].IPAddr << endl;
+
 					return true;
 				}
 				Sleep(100);
@@ -193,9 +178,11 @@ bool ServerEX::SendMsg_UserLogin()
 	}
 
 	m_errmsg.format("向%s发送登录消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	//MessageBox(NULL, m_errmsg, "client", MB_OK);
+	cout << m_errmsg.c_str() << endl;
 	return false;
 }
+
 
 //登录确认消息
 void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
@@ -208,7 +195,7 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 	m_objFlagMgr->SetFlag(m_objFlagMgr->GetFlag(FORMAT_FLAG_LOGIN, server_addr_), 1);
 
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.arrAddr[m_peerInfo.nAddrNum - 1].IPAddr);
-	g_cli_exlog.msg1(m_errmsg);
+	cout << m_errmsg.c_str() << endl;
 	//MessageBox(NULL, m_errmsg, "client", MB_OK);
 }
 
@@ -221,18 +208,19 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 	{
 		if (!SendMsg_GetIPofMAC(mac))
 		{
-			g_cli_exlog.msg1("获取[%s]的IP地址失败！", mac);
+			cout << "获取IP地址失败，用户名：" << mac << endl;
 			return false;
 		}
 
 		peer = m_lstUser.GetAPeer(mac);
+		cout << "获取地址成功，用户名：" << mac << endl;
 	}
 
-	m_errmsg.format("准备发起打洞消息，目标：%s", peer->arrAddr[peer->nAddrNum - 1]);
-	ShowMsg(m_errmsg);
-	
+	m_errmsg.format("准备发起打洞消息，目标：%s", peer->arrAddr[peer->nAddrNum - 1].IPAddr);
+	cout << m_errmsg.c_str() << endl;
+
+
 	MSGDef::TMSG_P2PCONNECT tMsgConnect(m_peerInfo);
-	acl::string tmpIp = m_peerInfo.arrAddr[m_peerInfo.nAddrNum - 1].IPAddr;
 	memcpy(tMsgConnect.szMAC, mac, strlen(mac));
 
 	//初始化发送标记
@@ -252,8 +240,10 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 	{
 		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, server_addr_) && m_objFlagMgr->WaitFlag(flag))
 		{
-			g_cli_exlog.msg1("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
+			m_errmsg.format("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
 			m_objFlagMgr->RMFlag(flag);
+			cout << m_errmsg.c_str() << endl;
+
 			return true;
 		}
 
@@ -261,7 +251,7 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 	}
 
 	m_errmsg.format("向服务端[%s]发送P2P打洞转发消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	cout << m_errmsg.c_str() << endl;
 	return false;
 }
 
@@ -288,8 +278,9 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 			g_cli_exlog.msg1("向服务端[%s]发送请求[%s]的IP地址成功", server_addr_, mac);
 			m_objFlagMgr->RMFlag(flag);
 
+
  			m_errmsg.format("获取[%s]的客户端信息成功！", mac);
- 			MessageBox(NULL, m_errmsg, "OK", MB_OK);
+			cout << m_errmsg.c_str() << endl;
 
 			return true;
 		}
@@ -298,7 +289,7 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 	}
 
 	m_errmsg.format("向服务端[%s]发送请求[%s]的IP地址失败", server_addr_.c_str(), mac);
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	cout << m_errmsg.c_str() << endl;
 	return false;
 
 }
@@ -320,19 +311,25 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac, acl::string &ip)
 //收到确认打洞成功的消息
 void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
 {
-	g_cli_exlog.msg1("收到%s确认打洞成功的消息", stream->get_peer(true));
+	m_errmsg.format("----------收到%s确认打洞成功的消息", stream->get_peer(true));
+	cout << m_errmsg.c_str() << endl;
 
 	MSGDef::TMSG_P2PCONNECTACK *msg = (MSGDef::TMSG_P2PCONNECTACK *)data;
 	memcpy(msg->PeerInfo.P2PAddr, stream->get_peer(true), MAX_ADDR_LENGTH);
 
-	//打洞成功的客户端存入列表
-	m_lockListUser.lock();
-	m_lstUser.AddPeer(msg->PeerInfo);
-	m_lockListUser.unlock();
+	//仅在P2P地址变更时更新
+	if (0 != strcmp(m_lstUser.GetAPeer(msg->PeerInfo.szMAC)->P2PAddr, msg->PeerInfo.P2PAddr))
+	{
+		//删除旧的
+		m_lstUser.DeleteAPeer(msg->PeerInfo.szMAC);
+
+		//打洞成功的客户端存入列表
+		m_lstUser.AddPeer(msg->PeerInfo);
+	}
 
 	//设置打洞成功标记
 	m_objFlagMgr->SetFlag(m_objFlagMgr->GetFlag(FORMAT_FLAG_P2PCONN, msg->PeerInfo.arrAddr[msg->PeerInfo.nAddrNum - 1].IPAddr), 1);
-	ShowMsg("收到打洞确认消息");
+	cout << "收到打洞确认消息" << endl;
 
 }
 
@@ -341,11 +338,10 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 {
 	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT*)data;
 	m_errmsg.format("收到打洞请求，源：%s 准备回复！\r\n", stream->get_peer(true));
-	g_cli_exlog.msg1(m_errmsg);
-	MessageBox(NULL, m_errmsg, "OK", MB_OK);
+	cout << m_errmsg.c_str() << endl;
 
 	MSGDef::TMSG_P2PCONNECTACK tMsgP2PConnectAck(m_peerInfo);
-	if (stream->get_peer(true) == server_addr_)
+	if (!strcmp(stream->get_peer(true), server_addr_))
 	{
 		//服务器转发过来的，则向源请求方的所有IP回复
 		for (int i = 0; i < msg->PeerInfo.nAddrNum; ++i)
@@ -353,59 +349,53 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 			acl::string ip = msg->PeerInfo.arrAddr[i].IPAddr;
 			if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, ip))
 			{
-				g_cli_exlog.msg1("向[%s]回复确认成功", ip.c_str());
+				m_errmsg.format("向[%s]回复确认成功", ip);
 			}
 		}
 	}
 	else
 	{
 	    //客户端发送过来的，则直接回复
-		m_lockListUser.lock();
 		Peer_Info *peer = m_lstUser.GetAPeer(msg->PeerInfo.szMAC);
 		if (NULL != peer && strlen(peer->P2PAddr) <= 1)
 		{
 			memcpy(peer->P2PAddr, stream->get_peer(true), MAX_ADDR_LENGTH);
 		}
-		m_lockListUser.unlock();
 
 		SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, stream->get_peer(true));
 	}
-
-	m_errmsg.format("回复打洞消息失败！");
-	g_cli_exlog.msg1(m_errmsg);
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
-
 }
 
 
 //发送P2P数据，仅测试
 bool ServerEX::SendMsg_P2PData(const char *data, const char *tomac)
 {
-	for (int iRetry = 0; iRetry < 3; iRetry++)
+	for (int iRetry = 0; iRetry < 10; iRetry++)
 	{
 		Peer_Info *peer = m_lstUser.GetAPeer(tomac);
 		if (peer != NULL && strlen(peer->P2PAddr) > 1)
 		{
 			//尝试发送数据
-			for (int i = 0; i < 3; i++)
+			MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
+			memcpy(tMsgP2PData.szMsg, data, strlen(data));
+			if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, peer->P2PAddr))
 			{
-				MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
-				memcpy(tMsgP2PData.szMsg, data, strlen(data));
-				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, peer->P2PAddr))
-				{
-					g_cli_exlog.msg1("向%s发送数据成功！", peer->P2PAddr);
-					return true;
-				}
-
-				Sleep(1000);
+				//g_cli_exlog.msg1("向%s发送数据成功！", peer->IPAddr);
+				cout << "发送数据成功，目标：" << peer->P2PAddr << endl;
+				return true;
 			}
 
-			ShowMsg("连接已不可用，尝试重新打洞！");
+
+			cout << "连接已不可用，尝试重新打洞！" << endl;
+			//ShowMsg("连接已不可用，尝试重新打洞！");
+
+			memcpy(peer->P2PAddr, 0, MAX_ADDR_LENGTH);
 		}
+
 
 		//如果未连接或发送失败则开始打洞
 		SendMsg_P2PConnect(tomac);
-		Sleep(500);
+		Sleep(300);
 	}
 }
 
@@ -445,7 +435,7 @@ bool ServerEX::SendMsg_P2PData(void *data, size_t size, const char *toMac)
 void ServerEX::ProcMsgP2PData(MSGDef::TMSG_HEADER *data)
 {
 	MSGDef::TMSG_P2PDATA *msg = (MSGDef::TMSG_P2PDATA *)data;
-	MessageBox(NULL, msg->szMsg, "OK", MB_OK);
+	cout << "++++++++++ 收到数据：" << msg->szMsg << endl;
 }
 
 //收到查询是否存活消息
@@ -471,15 +461,16 @@ void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 	MSGDef::TMSG_GETUSERCLIENTIPACK *msg = (MSGDef::TMSG_GETUSERCLIENTIPACK *)data;
 
 	//加入用户列表
-	m_lockListUser.lock();
 	m_lstUser.AddPeer(msg->PeerInfo);
-	m_lockListUser.unlock();
 
 	//设置请求成功标记
 	acl::string flag = m_objFlagMgr->GetFlag(FORMAT_FLAG_GETCLIENTIP, msg->PeerInfo.szMAC);
 	m_objFlagMgr->SetFlag(flag, 1);
-}
 
+	m_errmsg.format("收到%s的客户端信息！", msg->PeerInfo.szMAC);
+	cout << m_errmsg.c_str() << endl;
+}
+/*
 //收到文件下载数据
 void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 {
@@ -556,3 +547,4 @@ start:
 		goto start;
 	}
 }
+*/

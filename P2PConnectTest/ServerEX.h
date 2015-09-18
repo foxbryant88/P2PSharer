@@ -6,7 +6,6 @@
 #include "CommonDefine.h"
 #include "PeerList.h"
 #include "FlagMgr.h"
-#include "FileClient.h"
 
 class ServerEX: public acl::thread
 {
@@ -15,7 +14,7 @@ public:
 	~ServerEX();
 
 	//初始化本地UDP并记录服务端地址
-	bool Init(const char* server_addr);
+	bool Init(const char* server_addr, const char *name);
 
 	//接收数据的线程函数
 	void* run();
@@ -61,8 +60,8 @@ private:
 	//客户端收到数据后确认
 	void ProcMsgP2PDataAck(MSGDef::TMSG_HEADER *data);
 
-	//收到请求下载数据块的消息
-	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
+// 	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
+// 	//收到请求下载数据块的消息
 
 
 	////服务方收到协商请求下载的文件
@@ -71,8 +70,8 @@ private:
 	////协商请求下载的文件成功
 	//void ProcMsgReqFileAck(MSGDef::TMSG_HEADER *data);
 
-	//服务方收到客户方请求哪些块数据
-	void ProcMsgGetBlocksAck(MSGDef::TMSG_HEADER *data);
+// 	//服务方收到客户方请求哪些块数据
+// 	void ProcMsgGetBlocksAck(MSGDef::TMSG_HEADER *data);
 
 	//收到查询是否存活消息
 	void ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
@@ -80,8 +79,8 @@ private:
 	//收到所请求指定MAC的IP
 	void ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data);
 
-	//收到文件下载数据
-	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data);
+// 	//收到文件下载数据
+// 	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data);
 
 	////向指定地址发送数据
 	//bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
@@ -95,10 +94,8 @@ private:
 	acl::socket_stream m_sockstream;
 	bool m_bExit;
 
-	acl::locker m_lockListUser;              //客户端列表锁
 	PeerList m_lstUser;                      //已与本机连接的客户端列表
 
 	CFlagMgr *m_objFlagMgr;
-	CFileClient *m_objReciever;                //文件接收对象
 };
 

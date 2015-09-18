@@ -4,8 +4,11 @@ Peer_Info::Peer_Info()
 	: dwActiveTime(0)
 	, nAddrNum(0)
 {
-	memset(IPAddr, 0, MAX_ADDR_LENGTH);
-	memset(IPAddr_Local, 0, MAX_ADDR_LENGTH);	
+	for (int i = 0; i < MAX_ADDNUM; i++)
+	{
+		memset(arrAddr[i].IPAddr, 0, MAX_ADDR_LENGTH);
+	}
+
 	memset(P2PAddr, 0, MAX_ADDR_LENGTH);
 	memset(szMAC, 0, MAX_MACADDR_LEN);
 }
@@ -15,18 +18,16 @@ Peer_Info Peer_Info::operator=(const Peer_Info& rPeerinfo)
 	if (&rPeerinfo == this)
 		return *this;
 
-	memcpy(IPAddr, rPeerinfo.IPAddr, MAX_ADDR_LENGTH);
-	memcpy(IPAddr_Local, rPeerinfo.IPAddr_Local, MAX_ADDR_LENGTH);
+	for (int i = 0; i < MAX_ADDNUM; ++i)
+	{
+		memcpy(arrAddr[i].IPAddr, rPeerinfo.arrAddr[i].IPAddr, MAX_ADDR_LENGTH);
+	}
+
 	memcpy(P2PAddr, rPeerinfo.P2PAddr, MAX_ADDR_LENGTH);
 	memcpy(szMAC, rPeerinfo.szMAC, MAX_MACADDR_LEN);
 
 	dwActiveTime = rPeerinfo.dwActiveTime;
 	nAddrNum = rPeerinfo.nAddrNum;
-	//strcpy(szUserName, rPeerinfo.szUserName);
-// 	for (int i = 0; i < nAddrNum; ++i)
-// 	{
-// 		IPAddr[i] = rPeerinfo.IPAddr[i];
-// 	}
 
 	return *this;
 }
@@ -62,7 +63,9 @@ PeerList::~PeerList()
 
 bool PeerList::AddPeer(const Peer_Info& rPeerInfo)
 {
+	m_lockListUser.lock();
 	m_PeerInfoList.push_back(rPeerInfo);
+	m_lockListUser.unlock();
 
 	return true;
 }
@@ -78,6 +81,7 @@ bool PeerList::DeleteAPeer(const char* macAddr)
 {
 	PeerInfoListIter Iter1, Iter2;
 
+	m_lockListUser.lock();
 	for (Iter1 = m_PeerInfoList.begin(), Iter2 = m_PeerInfoList.end();
 		 Iter1 != Iter2;
 		 ++Iter1)
@@ -85,10 +89,12 @@ bool PeerList::DeleteAPeer(const char* macAddr)
 		if (!strcmp(Iter1->szMAC, macAddr))
 		{
 			m_PeerInfoList.erase(Iter1);
+			m_lockListUser.unlock();
 			return true;
 		}
 	}
 
+	m_lockListUser.unlock();
 	return false;
 }
 
@@ -96,16 +102,20 @@ Peer_Info* PeerList::GetAPeer(const char* macAddr)
 {
 	PeerInfoListIter Iter1, Iter2;
 
+	m_lockListUser.lock();
+
 	for (Iter1 = m_PeerInfoList.begin(), Iter2 = m_PeerInfoList.end();
 		Iter1 != Iter2;
 		++Iter1)
 	{
 		if (!strcmp(Iter1->szMAC, macAddr))
 		{
+			m_lockListUser.unlock();
 			return &(*Iter1);
 		}
 	}
 
+	m_lockListUser.unlock();
 	return NULL;
 }
 
