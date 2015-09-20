@@ -204,8 +204,8 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 	m_editKeyword.GetWindowTextA(keyword);
 
 	g_serEx.SendMsg_P2PData("hello", keyword.GetBuffer());
-	//g_serEx.SendMsg_UserLogin();
-	//m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
+	//////g_serEx.SendMsg_UserLogin();
+	//////m_serEx.SendMsg_GetIPofMAC("22-22-22-22-22-22");
 	return;
 
 	if (keyword != "")

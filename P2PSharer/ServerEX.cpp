@@ -79,6 +79,7 @@ void ServerEX::GetLocalIPs(Peer_Info &peerInfo, acl::string portInfo)
 		struct in_addr tmpIp;
 		memcpy(&tmpIp, pIP, pHost->h_length);
 		_snprintf_s(peerInfo.arrAddr[i].IPAddr, MAX_ADDR_LENGTH, "%s%s", inet_ntoa(tmpIp), portInfo.c_str());
+
 		++peerInfo.nAddrNum;
 	}
 }
@@ -113,17 +114,9 @@ void* ServerEX::run()
 		case eMSG_P2PDATA:
 			ProcMsgP2PData(msg);
 			break;
-// 		case  eMSG_P2PDATAACK:
-// 			break;
-		//case eMSG_REQFILE:
-		//	break;
-		//case eMSG_REQFILEACK:
-		//	break;
 		case eMSG_GETBLOCKS:
 			ProcMsgGetBlocks(msg, &m_sockstream);
 			break;
-// 		case eMSG_GETBLOCKSACK:
-// 			break;
 		case eMSG_USERACTIVEQUERY:
 			ProcMsgUserActiveQuery(msg, &m_sockstream);
 			break;
@@ -197,6 +190,7 @@ bool ServerEX::SendMsg_UserLogin()
 	return false;
 }
 
+
 //登录确认消息
 void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 {
@@ -228,11 +222,10 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 		peer = m_lstUser.GetAPeer(mac);
 	}
 
-	m_errmsg.format("准备发起打洞消息，目标：%s", peer->arrAddr[peer->nAddrNum - 1]);
+	m_errmsg.format("准备发起打洞消息，目标：%s", peer->arrAddr[peer->nAddrNum - 1].IPAddr);
 	ShowMsg(m_errmsg);
 	
 	MSGDef::TMSG_P2PCONNECT tMsgConnect(m_peerInfo);
-	acl::string tmpIp = m_peerInfo.arrAddr[m_peerInfo.nAddrNum - 1].IPAddr;
 	memcpy(tMsgConnect.szMAC, mac, strlen(mac));
 
 	//初始化发送标记
@@ -325,10 +318,15 @@ void ServerEX::ProcMsgP2PConnectAck(MSGDef::TMSG_HEADER *data, acl::socket_strea
 	MSGDef::TMSG_P2PCONNECTACK *msg = (MSGDef::TMSG_P2PCONNECTACK *)data;
 	memcpy(msg->PeerInfo.P2PAddr, stream->get_peer(true), MAX_ADDR_LENGTH);
 
-	//打洞成功的客户端存入列表
-	m_lockListUser.lock();
-	m_lstUser.AddPeer(msg->PeerInfo);
-	m_lockListUser.unlock();
+	//仅在P2P地址变更时更新
+	if (0 != strcmp(m_lstUser.GetAPeer(msg->PeerInfo.szMAC)->P2PAddr, msg->PeerInfo.P2PAddr))
+	{
+		//删除旧的
+		m_lstUser.DeleteAPeer(msg->PeerInfo.szMAC);
+
+		//打洞成功的客户端存入列表
+		m_lstUser.AddPeer(msg->PeerInfo);
+	}
 
 	//设置打洞成功标记
 	m_objFlagMgr->SetFlag(m_objFlagMgr->GetFlag(FORMAT_FLAG_P2PCONN, msg->PeerInfo.arrAddr[msg->PeerInfo.nAddrNum - 1].IPAddr), 1);
@@ -345,7 +343,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 	MessageBox(NULL, m_errmsg, "OK", MB_OK);
 
 	MSGDef::TMSG_P2PCONNECTACK tMsgP2PConnectAck(m_peerInfo);
-	if (stream->get_peer(true) == server_addr_)
+	if (!strcmp(stream->get_peer(true), server_addr_))
 	{
 		//服务器转发过来的，则向源请求方的所有IP回复
 		for (int i = 0; i < msg->PeerInfo.nAddrNum; ++i)
@@ -360,13 +358,11 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 	else
 	{
 	    //客户端发送过来的，则直接回复
-		m_lockListUser.lock();
 		Peer_Info *peer = m_lstUser.GetAPeer(msg->PeerInfo.szMAC);
 		if (NULL != peer && strlen(peer->P2PAddr) <= 1)
 		{
 			memcpy(peer->P2PAddr, stream->get_peer(true), MAX_ADDR_LENGTH);
 		}
-		m_lockListUser.unlock();
 
 		SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, stream->get_peer(true));
 	}
@@ -381,14 +377,12 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 //发送P2P数据，仅测试
 bool ServerEX::SendMsg_P2PData(const char *data, const char *tomac)
 {
-	for (int iRetry = 0; iRetry < 3; iRetry++)
+	for (int iRetry = 0; iRetry < 10; iRetry++)
 	{
 		Peer_Info *peer = m_lstUser.GetAPeer(tomac);
 		if (peer != NULL && strlen(peer->P2PAddr) > 1)
 		{
 			//尝试发送数据
-			for (int i = 0; i < 3; i++)
-			{
 				MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
 				memcpy(tMsgP2PData.szMsg, data, strlen(data));
 				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, peer->P2PAddr))
@@ -397,15 +391,14 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *tomac)
 					return true;
 				}
 
-				Sleep(1000);
-			}
 
 			ShowMsg("连接已不可用，尝试重新打洞！");
+			memcpy(peer->P2PAddr, 0, MAX_ADDR_LENGTH);
 		}
 
 		//如果未连接或发送失败则开始打洞
 		SendMsg_P2PConnect(tomac);
-		Sleep(500);
+		Sleep(300);
 	}
 }
 
@@ -471,9 +464,7 @@ void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 	MSGDef::TMSG_GETUSERCLIENTIPACK *msg = (MSGDef::TMSG_GETUSERCLIENTIPACK *)data;
 
 	//加入用户列表
-	m_lockListUser.lock();
 	m_lstUser.AddPeer(msg->PeerInfo);
-	m_lockListUser.unlock();
 
 	//设置请求成功标记
 	acl::string flag = m_objFlagMgr->GetFlag(FORMAT_FLAG_GETCLIENTIP, msg->PeerInfo.szMAC);

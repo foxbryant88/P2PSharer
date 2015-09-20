@@ -95,7 +95,6 @@ private:
 	acl::socket_stream m_sockstream;
 	bool m_bExit;
 
-	acl::locker m_lockListUser;              //客户端列表锁
 	PeerList m_lstUser;                      //已与本机连接的客户端列表
 
 	CFlagMgr *m_objFlagMgr;
