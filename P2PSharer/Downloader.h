@@ -44,7 +44,7 @@ private:
 	bool UpdateServiceProvider(void);
 
 	//增加可用下载节点
-	void AddProvider(acl::string &addr);
+	void AddProvider(acl::string &addr, acl::string &md5);
 
 
 	DWORD m_dwLastBlockPos;                     //最近的分片位置

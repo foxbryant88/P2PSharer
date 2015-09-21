@@ -512,7 +512,7 @@ start:
 				ShowMsg("读取分块成功，即将开始传输！");
 
 				MSGDef::TMSG_FILEBLOCKDATA tdata;
-				memcpy(tdata.info.md5, msg->FileBlock.md5, 32);
+				memcpy(tdata.info.md5, msg->FileBlock.md5, 33);
 				tdata.info.dwBlockNumber = dwPos;
 				tdata.info.datalen = len;
 				memcpy(tdata.info.data, buf, EACH_BLOCK_SIZE);

@@ -50,7 +50,7 @@ void* CMsgHandler::run()
 	if (!m_SockStream.bind_udp("0.0.0.0:0"))
 	{
 		m_errmsg.format("bind±æµÿ∂Àø⁄ ß∞‹,err:%s", acl::last_serror());
-		MessageBox(NULL, m_errmsg, "server", MB_OK);
+		ShowError(m_errmsg);
 	}
 
 	while (!m_bExit)
@@ -67,7 +67,7 @@ void* CMsgHandler::run()
 		{
 			m_errmsg.format("…Ë÷√‘∂∂Àµÿ÷∑£∫%s ß∞‹, err:%d", recieve.peerAddr.buf(), acl::last_error());
 			g_serlog.error1(m_errmsg);
-			MessageBox(NULL, m_errmsg, "Error", MB_OK);
+			ShowError(m_errmsg);
 		}
 
 		DealMsg(msg, &m_SockStream);

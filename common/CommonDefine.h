@@ -43,12 +43,12 @@ enum eMSG
 
 struct BLOCK_DATA_INFO
 {
-	char md5[32];                          // 文件的MD5值
+	char md5[33];                          // 文件的MD5值
 	DWORD dwBlockNumber;                   // 数据块序号
 	int datalen;                           // 数据长度
 	char data[EACH_BLOCK_SIZE];
 
-	BLOCK_DATA_INFO(){ memset(md5, 0, 32); dwBlockNumber = 0; datalen = 0; memset(data, 0, EACH_BLOCK_SIZE); };
+	BLOCK_DATA_INFO(){ memset(md5, 0, 33); dwBlockNumber = 0; datalen = 0; memset(data, 0, EACH_BLOCK_SIZE); };
 };
 
 class MSGDef										// 定义消息的结构体
@@ -278,7 +278,10 @@ public:
 
 static void ShowMsg(acl::string msg)
 {
-	MessageBox(NULL, msg, "OK", MB_OK);
+	if (0)
+	{
+		MessageBox(NULL, msg, "OK", MB_OK);
+	}
 }
 
 static void ShowError(acl::string msg)

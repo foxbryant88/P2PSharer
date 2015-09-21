@@ -5,7 +5,7 @@
 CFileClient::CFileClient()
 {
 	m_dwFileSize = 0;
-	memset(m_md5, 0, 32);
+	memset(m_md5, 0, 33);
 	m_bStop = false;
 }
 
@@ -19,7 +19,7 @@ CFileClient::~CFileClient()
 bool CFileClient::Init(acl::ofstream &filestream, char *md5, DWORD filesize)
 {
 	m_fstream = &filestream;
-	memcpy(m_md5, md5, 32);
+	memcpy(m_md5, md5, 33);
 	m_dwFileSize = filesize;
 
 	return true;

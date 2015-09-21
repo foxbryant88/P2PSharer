@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "ServerEX.h"
-
+#include <io.h>
 
 static int __timeout = 10;
 
@@ -186,7 +186,7 @@ bool ServerEX::SendMsg_UserLogin()
 	}
 
 	m_errmsg.format("向%s发送登录消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	ShowError(m_errmsg);
 	return false;
 }
 
@@ -254,7 +254,7 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 	}
 
 	m_errmsg.format("向服务端[%s]发送P2P打洞转发消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	ShowError(m_errmsg);
 	return false;
 }
 
@@ -282,7 +282,7 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 			m_objFlagMgr->RMFlag(flag);
 
  			m_errmsg.format("获取[%s]的客户端信息成功！", mac);
- 			MessageBox(NULL, m_errmsg, "OK", MB_OK);
+			ShowMsg(m_errmsg);
 
 			return true;
 		}
@@ -291,7 +291,7 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 	}
 
 	m_errmsg.format("向服务端[%s]发送请求[%s]的IP地址失败", server_addr_.c_str(), mac);
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
+	ShowError(m_errmsg);
 	return false;
 
 }
@@ -340,8 +340,8 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 	MSGDef::TMSG_P2PCONNECT *msg = (MSGDef::TMSG_P2PCONNECT*)data;
 	m_errmsg.format("收到打洞请求，源：%s 准备回复！\r\n", stream->get_peer(true));
 	g_cli_exlog.msg1(m_errmsg);
-	MessageBox(NULL, m_errmsg, "OK", MB_OK);
-
+	ShowMsg(m_errmsg);
+	
 	MSGDef::TMSG_P2PCONNECTACK tMsgP2PConnectAck(m_peerInfo);
 	if (!strcmp(stream->get_peer(true), server_addr_))
 	{
@@ -349,7 +349,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 		for (int i = 0; i < msg->PeerInfo.nAddrNum; ++i)
 		{
 			acl::string ip = msg->PeerInfo.arrAddr[i].IPAddr;
-			if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, ip))
+			if (!SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, ip))
 			{
 				g_cli_exlog.msg1("向[%s]回复确认成功", ip.c_str());
 			}
@@ -364,13 +364,13 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 			memcpy(peer->P2PAddr, stream->get_peer(true), MAX_ADDR_LENGTH);
 		}
 
-		SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, stream->get_peer(true));
+		if (!SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, stream->get_peer(true)))			
+		{
+			g_cli_exlog.msg1("向[%s]回复确认成功", stream->get_peer(true));
+		}
 	}
 
-	m_errmsg.format("回复打洞消息失败！");
-	g_cli_exlog.msg1(m_errmsg);
-	MessageBox(NULL, m_errmsg, "client", MB_OK);
-
+	return;
 }
 
 
@@ -438,7 +438,7 @@ bool ServerEX::SendMsg_P2PData(void *data, size_t size, const char *toMac)
 void ServerEX::ProcMsgP2PData(MSGDef::TMSG_HEADER *data)
 {
 	MSGDef::TMSG_P2PDATA *msg = (MSGDef::TMSG_P2PDATA *)data;
-	MessageBox(NULL, msg->szMsg, "OK", MB_OK);
+	ShowMsg(msg->szMsg);
 }
 
 //收到查询是否存活消息
@@ -500,10 +500,6 @@ start:
 		for (int i = 0; i < sizeof(msg->FileBlock.block) / sizeof(DWORD); i++)
 		{
 			DWORD dwPos = msg->FileBlock.block[i];
-			if (dwPos == 0)
-			{
-				break;
-			}
 
 			int len = EACH_BLOCK_SIZE;
 			memset(buf, 0, EACH_BLOCK_SIZE);
@@ -512,12 +508,14 @@ start:
 				ShowMsg("读取分块成功，即将开始传输！");
 
 				MSGDef::TMSG_FILEBLOCKDATA tdata;
-				memcpy(tdata.info.md5, msg->FileBlock.md5, 32);
+				memcpy(tdata.info.md5, msg->FileBlock.md5, 33);
 				tdata.info.dwBlockNumber = dwPos;
 				tdata.info.datalen = len;
 				memcpy(tdata.info.data, buf, EACH_BLOCK_SIZE);
 
 				SendData(&tdata, sizeof(tdata), stream, stream->get_peer());
+
+				Sleep(6000);
 			}
 			else
 			{
@@ -531,7 +529,13 @@ start:
 		fullPath.url_decode(g_resourceMgr->GetFileFullPath(msg->FileBlock.md5));
 		
 		m_errmsg.format("文件下载路径为：%s", fullPath.c_str());
-		ShowMsg(m_errmsg);
+		if (_access(fullPath.c_str(), 0) != 0)
+		{
+			acl::string msgText;
+			msgText.format("打开供应文件[%s]出错，MD5：%s", fullPath.c_str(), msg->FileBlock.md5);
+			ShowError(msgText);
+			return;
+		}
 
 		CFileServer *pFileServer = new CFileServer;
 		if (!pFileServer->Init(fullPath, EACH_BLOCK_SIZE))
@@ -540,6 +544,7 @@ start:
 			g_clientlog.error1(m_errmsg);
 
 			ShowError(m_errmsg);
+			delete pFileServer;
 			return;
 		}
 

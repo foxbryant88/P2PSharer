@@ -14,7 +14,7 @@ public:
 	~CReqSender();
 
 	//初始化
-	bool Init(const char *toaddr, acl::socket_stream &sock);
+	bool Init(const char *toaddr, acl::socket_stream &sock, acl::string &md5);
 
 	//分配一批数据块序号给本对象下载,非空时失败返回false
 	bool PushTask(std::vector<DWORD> &blockNums);
@@ -30,7 +30,8 @@ private:
 
 	acl::locker m_lockBlockNum;
 	std::vector<DWORD>  m_vBlockNums;        //需要下载的数据块序号
-	acl::string m_macAddr;                      //目标IP地址
+	acl::string m_macAddr;                   //目标IP地址
+	acl::string m_fileMD5;                   //与该类对象绑定的文件MD5标记
 	bool m_bExit;
 
 	//acl::socket_stream *m_sock;              //先共享用同一个SOCKET，调通后再试独立的SOCKET？？？？？？？？？？？？？？？

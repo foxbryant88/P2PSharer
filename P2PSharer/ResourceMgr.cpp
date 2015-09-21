@@ -31,7 +31,7 @@ bool CResourceMgr::Init(const char *addr)
 void *CResourceMgr::run()
 {
 	////先加载旧的文件列表
-	//LoadResourceList(m_mapResource);
+	LoadResourceList(m_mapResource);
 
 	//更新文件列表
 	UpdateResourceList();

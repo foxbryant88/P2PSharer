@@ -55,7 +55,7 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CR
 }
 
 //增加可用下载节点
-void CDownloader::AddProvider(acl::string &addr)
+void CDownloader::AddProvider(acl::string &addr, acl::string &md5)
 {
 	//已存在则不添加
 	for (int i = 0; i < m_vProviderMACs.size(); ++i)
@@ -69,7 +69,7 @@ void CDownloader::AddProvider(acl::string &addr)
 	m_vProviderMACs.push_back(addr);
 
 	CReqSender *psender = new CReqSender;
-	psender->Init(addr, g_serEx.GetSockStream());
+	psender->Init(addr, g_serEx.GetSockStream(), md5);
 	psender->start();
 
 	m_vObjSender.push_back(psender);
@@ -235,7 +235,7 @@ bool CDownloader::UpdateServiceProvider(void)
 // 			acl::string ipAddr;
 // 			if (g_serEx.SendMsg_GetIPofMAC(vRes[i], ipAddr))
 // 			{
-				AddProvider(vRes[i]);
+				AddProvider(vRes[i], m_fileInfo.filemd5);
 //			}
 		}
 	}

@@ -14,10 +14,11 @@ CReqSender::~CReqSender()
 }
 
 //≥ı ºªØ
-bool CReqSender::Init(const char *toaddr, acl::socket_stream &sock)
+bool CReqSender::Init(const char *toaddr, acl::socket_stream &sock, acl::string &md5)
 {
 	m_macAddr = toaddr;
 	//m_sock = &sock;
+	m_fileMD5 = md5;
 
 	return true;
 }
@@ -60,6 +61,7 @@ bool CReqSender::MakeRequestHeader(MSGDef::TMSG_GETBLOCKS &msg)
 void *CReqSender::run()
 {
 	MSGDef::TMSG_GETBLOCKS tMsg;
+	memcpy(tMsg.FileBlock.md5, m_fileMD5.c_str(), 33);
 
 	while (!m_bExit)
 	{

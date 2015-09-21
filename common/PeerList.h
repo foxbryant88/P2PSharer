@@ -35,7 +35,7 @@ struct Peer_Info
 struct File_Info
 {
 	//unsigned short nFileID;                // 文件ID，从1开始 传输数据时以此标示
-	char md5[32];                          // 文件的MD5值
+	char md5[33];                          // 文件的MD5值
 
 	File_Info();
 	File_Info operator=(const File_Info& file);
@@ -44,7 +44,7 @@ struct File_Info
 struct File_BLOCKS
 {
 	//unsigned short nFileID;
-	char md5[32];                          // 文件的MD5值
+	char md5[33];                          // 文件的MD5值
 	DWORD block[295];       //确保包长度不超过1200
 };
 

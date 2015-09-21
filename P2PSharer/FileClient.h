@@ -33,7 +33,7 @@ private:
 	acl::locker m_lockvdata;
 
 	acl::ofstream *m_fstream;
-	char m_md5[32];
+	char m_md5[33];
 	DWORD m_dwFileSize;
 
 	bool m_bStop;
