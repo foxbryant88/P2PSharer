@@ -72,7 +72,7 @@ BOOL CP2PSharerApp::InitInstance()
 
 	CP2PSharerDlg dlg;
 	m_pMainWnd = &dlg;
-	INT_PTR nResponse = dlg.DoModal();
+ 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
 	{
 		// TODO:  在此放置处理何时用

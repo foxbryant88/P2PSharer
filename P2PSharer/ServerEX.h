@@ -36,8 +36,9 @@ public:
 	//发送其它。。。
 
 	//发送P2P数据，仅测试
-	bool SendMsg_P2PData(const char *data, const char *tomac);
-	bool SendMsg_P2PData(void *data, size_t size, const char *toMac);
+	bool SendMsg_P2PData_BaseMAC(const char *data, const char *tomac);
+	bool SendMsg_P2PData_BaseMAC(void *data, size_t size, const char *toMac);
+	bool SendMsg_P2PData_BaseIP(void *data, size_t size, const char *ip);
 
 	//向指定地址发送数据
 	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
@@ -86,6 +87,8 @@ private:
 	////向指定地址发送数据
 	//bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
 
+	//根据IP获取MAC地址
+	const char *GetMACFromIP(const char *ip);
 
 	acl::string server_addr_;              //服务端地址
 	Peer_Info m_peerInfo;                  //本机信息

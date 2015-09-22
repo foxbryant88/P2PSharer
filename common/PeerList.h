@@ -59,6 +59,7 @@ public:
 	bool		DeleteAPeer(const char* macAddr);
 	bool		DeleteAllPeer();
 	Peer_Info*	GetAPeer(const char* macAddr);   //参数：P2P连接地址
+	Peer_Info*	GetAPeerBasedOnIP(const char* ip);
 	int			GetCurrentSize();
 	Peer_Info*	operator[](int nIndex);
 

@@ -71,7 +71,7 @@ void *CReqSender::run()
 			continue;
 		}
 
-		if (!g_serEx.SendMsg_P2PData(&tMsg, sizeof(tMsg), m_macAddr))
+		if (!g_serEx.SendMsg_P2PData_BaseMAC(&tMsg, sizeof(tMsg), m_macAddr))
 		{
 			//ShowMsg("CReqSender·¢ËÍÊý¾ÝÊ§°Ü");
 			//return NULL;

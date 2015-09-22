@@ -62,7 +62,7 @@ void CDownloader::AddProvider(acl::string &addr, acl::string &md5)
 	{
 		if (m_vProviderMACs[i] == addr)
 		{
-			break;;
+			return;
 		}
 	}
 
@@ -151,12 +151,11 @@ bool CDownloader::SplitFileSizeIntoBlockMap()
 		{
 			if (m_dwLastBlockPos * EACH_BLOCK_SIZE > m_fileInfo.filesize)
 			{
-				ShowMsg("已达到最后一个分片！");
-				m_mapFileBlocks[m_dwLastBlockPos * EACH_BLOCK_SIZE] = 0;				
+				ShowMsg("已达到最后一个分片！");			
 				break;
 			}
 
-			m_mapFileBlocks[m_dwLastBlockPos * EACH_BLOCK_SIZE] = 0;
+			m_mapFileBlocks[m_dwLastBlockPos] = 0;
 			m_dwLastBlockPos++;
 		}
 	}

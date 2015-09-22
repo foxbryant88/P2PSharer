@@ -119,6 +119,31 @@ Peer_Info* PeerList::GetAPeer(const char* macAddr)
 	return NULL;
 }
 
+Peer_Info*	PeerList::GetAPeerBasedOnIP(const char* ip)
+{
+	PeerInfoListIter Iter1, Iter2;
+
+	m_lockListUser.lock();
+
+	for (Iter1 = m_PeerInfoList.begin(), Iter2 = m_PeerInfoList.end();
+		Iter1 != Iter2;
+		++Iter1)
+	{
+		for (int i = 0; i < Iter1->nAddrNum; i++)
+		{
+			if (!strcmp(Iter1->arrAddr[i].IPAddr, ip))
+			{
+				m_lockListUser.unlock();
+				return &(*Iter1);
+			}
+		}
+	}
+
+	m_lockListUser.unlock();
+	return NULL;
+
+}
+
 int PeerList::GetCurrentSize()
 {
 	return (int)m_PeerInfoList.size();

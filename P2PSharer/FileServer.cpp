@@ -32,9 +32,9 @@ bool CFileServer::Init(const char *fullpath, int blocksize)
 
 //获取指定分块的数据 length传入时表示想要获取的字节数
 //返回时表示实际获取字节数
-bool CFileServer::GetBlockData(DWORD dwPos, void *buf, int &len)
+bool CFileServer::GetBlockData(DWORD dwBlockNum, void *buf, int &len)
 {
-	if (m_fstream.fseek(dwPos * m_nBlockSize, SEEK_SET) >= 0)
+ 	if (m_fstream.fseek(dwBlockNum * EACH_BLOCK_SIZE, SEEK_SET) >= 0)
 	{
 		int iRet = m_fstream.read(buf, len, false);
 		if (iRet > 0)

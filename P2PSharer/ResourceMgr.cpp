@@ -31,7 +31,7 @@ bool CResourceMgr::Init(const char *addr)
 void *CResourceMgr::run()
 {
 	////先加载旧的文件列表
-	LoadResourceList(m_mapResource);
+	//LoadResourceList(m_mapResource);
 
 	//更新文件列表
 	UpdateResourceList();
@@ -128,22 +128,22 @@ bool CResourceMgr::UpdateResourceList()
 		return false;
 	}
 
-	//////创建扫描对象并启动文件扫描
-	std::vector<CFileScan *> vScanObject;
-	for (int i = 0; i < vDiskDrive.size(); i++)
-	{
-		CFileScan *obj = new CFileScan();
-		obj->Init(vDiskDrive[i], &m_mapResource);
-		obj->set_detachable(false);
-		obj->start();
-
-		vScanObject.push_back(obj);
-	}
-	//CFileScan *obj = new CFileScan();
-	//obj->Init("F:\\KuGou", &m_mapResource);
-	//obj->set_detachable(false);
-	//obj->start();
-	//vScanObject.push_back(obj);
+// 	//////创建扫描对象并启动文件扫描
+ 	std::vector<CFileScan *> vScanObject;
+// 	for (int i = 0; i < vDiskDrive.size(); i++)
+// 	{
+// 		CFileScan *obj = new CFileScan();
+// 		obj->Init(vDiskDrive[i], &m_mapResource);
+// 		obj->set_detachable(false);
+// 		obj->start();
+// 
+// 		vScanObject.push_back(obj);
+// 	}
+	CFileScan *obj = new CFileScan();
+	obj->Init("D:\\KuGou_P2PTest", &m_mapResource);
+	obj->set_detachable(false);
+	obj->start();
+	vScanObject.push_back(obj);
 
 
 	//等待所有扫描结束

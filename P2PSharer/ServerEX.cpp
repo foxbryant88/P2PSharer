@@ -349,7 +349,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 		for (int i = 0; i < msg->PeerInfo.nAddrNum; ++i)
 		{
 			acl::string ip = msg->PeerInfo.arrAddr[i].IPAddr;
-			if (!SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, ip))
+			if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, ip))
 			{
 				g_cli_exlog.msg1("向[%s]回复确认成功", ip.c_str());
 			}
@@ -364,7 +364,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 			memcpy(peer->P2PAddr, stream->get_peer(true), MAX_ADDR_LENGTH);
 		}
 
-		if (!SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, stream->get_peer(true)))			
+		if (SendData(&tMsgP2PConnectAck, sizeof(tMsgP2PConnectAck), &m_sockstream, stream->get_peer(true)))			
 		{
 			g_cli_exlog.msg1("向[%s]回复确认成功", stream->get_peer(true));
 		}
@@ -375,7 +375,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 
 
 //发送P2P数据，仅测试
-bool ServerEX::SendMsg_P2PData(const char *data, const char *tomac)
+bool ServerEX::SendMsg_P2PData_BaseMAC(const char *data, const char *tomac)
 {
 	for (int iRetry = 0; iRetry < 10; iRetry++)
 	{
@@ -402,7 +402,7 @@ bool ServerEX::SendMsg_P2PData(const char *data, const char *tomac)
 	}
 }
 
-bool ServerEX::SendMsg_P2PData(void *data, size_t size, const char *toMac)
+bool ServerEX::SendMsg_P2PData_BaseMAC(void *data, size_t size, const char *toMac)
 {
 	for (int iRetry = 0; iRetry < 3; iRetry++)
 	{
@@ -429,6 +429,29 @@ bool ServerEX::SendMsg_P2PData(void *data, size_t size, const char *toMac)
 			continue;;
 
 		Sleep(500);
+	}
+
+	return false;
+}
+
+bool ServerEX::SendMsg_P2PData_BaseIP(void *data, size_t size, const char *ip)
+{
+	for (int iRetry = 0; iRetry < 3; iRetry++)
+	{
+		if (strlen(ip) > 1)
+		{
+			//尝试发送数据
+			for (int i = 0; i < 3; i++)
+			{
+				if (SendData(data, size, &m_sockstream, ip))
+				{
+					g_cli_exlog.msg1("向ip:%s发送数据成功！", ip);
+					return true;
+				}
+
+				Sleep(1000);
+			}
+		}
 	}
 
 	return false;
@@ -499,27 +522,25 @@ start:
 	{
 		for (int i = 0; i < sizeof(msg->FileBlock.block) / sizeof(DWORD); i++)
 		{
-			DWORD dwPos = msg->FileBlock.block[i];
+			DWORD dwBlock = msg->FileBlock.block[i];
 
 			int len = EACH_BLOCK_SIZE;
 			memset(buf, 0, EACH_BLOCK_SIZE);
-			if (itTmp->second->GetBlockData(dwPos, buf, len))
+			if (itTmp->second->GetBlockData(dwBlock, buf, len))
 			{
 				ShowMsg("读取分块成功，即将开始传输！");
 
 				MSGDef::TMSG_FILEBLOCKDATA tdata;
 				memcpy(tdata.info.md5, msg->FileBlock.md5, 33);
-				tdata.info.dwBlockNumber = dwPos;
+				tdata.info.dwBlockNumber = dwBlock;
 				tdata.info.datalen = len;
 				memcpy(tdata.info.data, buf, EACH_BLOCK_SIZE);
 
-				SendData(&tdata, sizeof(tdata), stream, stream->get_peer());
-
-				Sleep(6000);
+				SendData(&tdata, sizeof(tdata), &m_sockstream, stream->get_peer(true));
 			}
 			else
 			{
-				ShowMsg("读取分块失败！");
+				ShowError("读取分块失败！");
 			}
 		}
 	}
@@ -551,4 +572,11 @@ start:
 		g_mapFileServer[msg->FileBlock.md5] = pFileServer;
 		goto start;
 	}
+}
+
+//根据IP获取MAC地址
+const char *ServerEX::GetMACFromIP(const char *ip)
+{
+	Peer_Info *peer = m_lstUser.GetAPeerBasedOnIP(ip);
+	return peer->szMAC;
 }
