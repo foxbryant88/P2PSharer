@@ -10,7 +10,7 @@
 #include "FileClient.h"
 
 #define MAX_CACHE_BLOCKS  2048
-#define BLOCK_REQUEST_TIME_OUT          300000    //分片下载超时时间（默认5分钟）
+#define BLOCK_REQUEST_TIME_OUT          5000    //分片下载超时时间（默认5分钟）
 #define UPDATE_SERVICE_PROVIDER_TIME    60000     //更新服务下载节点的时间
 class CDownloader : public acl::thread
 {
@@ -19,7 +19,7 @@ public:
 	~CDownloader();
 
 	//初始化
-	bool Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis);
+	bool Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis, HWND hNotifyWnd);
 
 	//处理收到的分块数据,转发给FileReciver
 	void Recieve(void *data);
@@ -51,6 +51,7 @@ private:
 	std::vector<acl::string> m_vProviderMACs;       //所有可用下载节点
 // 	std::vector<DWORD> m_vBlocksCache;          //当前缓存的需要下载的分片
 	std::map<DWORD, DWORD> m_mapFileBlocks;     //已下发的分片 key:分片位置 value:分片下发的时间
+	acl::locker m_lockFileBlocks;               //保护分片列表
 	//acl::socket_stream *m_sock;
     CRedisClient *m_redis;
 

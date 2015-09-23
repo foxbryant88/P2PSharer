@@ -30,6 +30,7 @@ private:
 	int m_iSeachResultItems;      //搜索结果条目数
 
 	std::map<int, T_SEARCH_RESULT_INFO *> m_mapSearchResult;   //保存搜索结果列表条目与文件的对应关系，以便找到用户双击下载的文件MD5值
+	std::map<acl::string, int> m_mapFileItemByMD5;             //MD5与文件所在位置的映射关系
 
 	//模块初始化
 	bool Init(void);

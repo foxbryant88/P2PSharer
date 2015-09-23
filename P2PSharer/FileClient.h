@@ -13,7 +13,7 @@ public:
 	~CFileClient();
 
 	//初始化文件信息
-	bool Init(acl::ofstream &files, char *md5, DWORD filesize);
+	bool Init(acl::ofstream &files, char *md5, DWORD filesize, HWND hNotifyWnd);
 
 	//缓存数据,参数内存由调用者申请，本模块处理完毕后释放
 	void CacheData(void *data);
@@ -35,6 +35,8 @@ private:
 	acl::ofstream *m_fstream;
 	char m_md5[33];
 	DWORD m_dwFileSize;
+	DWORD m_dwRecievedBlocks;         //已接收到的数据块个数，用于计算下载进度
+	HWND m_hWndProgressNotify;        //接收下载进度的窗口句柄
 
 	bool m_bStop;
 };

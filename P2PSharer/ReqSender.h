@@ -19,7 +19,7 @@ public:
 	//分配一批数据块序号给本对象下载,非空时失败返回false
 	bool PushTask(std::vector<DWORD> &blockNums);
 
-	void *run();
+	virtual void *run();
 
 	//停止
 	void Stop();

@@ -15,7 +15,7 @@ CDownloader::~CDownloader()
 }
 
 //初始化
-bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis)
+bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis, HWND hNotifyWnd)
 {
 	m_fileInfo.filemd5 = fileinfo.filemd5;
 	m_fileInfo.filename = fileinfo.filename;
@@ -50,7 +50,7 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CR
 	//m_fstream.write(0);
 	
 	m_objReciever = new CFileClient;
-	m_objReciever->Init(m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize);
+	m_objReciever->Init(m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize, hNotifyWnd);
 	m_objReciever->start();
 }
 
@@ -80,6 +80,8 @@ void CDownloader::Recieve(void *data)
 {
 	MSGDef::TMSG_FILEBLOCKDATA *msg = (MSGDef::TMSG_FILEBLOCKDATA *)data;
 	BLOCK_DATA_INFO *block = &msg->info;
+
+	m_lockFileBlocks.lock();
 	std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.find(block->dwBlockNumber);
 
 	if (itTmp != m_mapFileBlocks.end())
@@ -92,6 +94,8 @@ void CDownloader::Recieve(void *data)
 		//从已成功下载的分片序号从列表中移除
 		m_mapFileBlocks.erase(itTmp);
 	}
+
+	m_lockFileBlocks.unlock();
 }
 
 //控制分片及请求
@@ -147,6 +151,7 @@ bool CDownloader::SplitFileSizeIntoBlockMap()
 	//分片不足一半时重新分配
 	if (m_mapFileBlocks.size() < MAX_CACHE_BLOCKS / 2)
 	{
+		m_lockFileBlocks.lock();
 		for (int i = m_mapFileBlocks.size(); i < MAX_CACHE_BLOCKS; i++)
 		{
 			if (m_dwLastBlockPos * EACH_BLOCK_SIZE > m_fileInfo.filesize)
@@ -158,6 +163,7 @@ bool CDownloader::SplitFileSizeIntoBlockMap()
 			m_mapFileBlocks[m_dwLastBlockPos] = 0;
 			m_dwLastBlockPos++;
 		}
+		m_lockFileBlocks.unlock();
 	}
 	
 	return true;
@@ -178,6 +184,7 @@ bool CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
 		return true;
 	}
 
+	m_lockFileBlocks.lock();
 	std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.begin();
 	for (; itTmp != m_mapFileBlocks.end(); ++itTmp)
 	{
@@ -193,6 +200,7 @@ bool CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
 			itTmp->second = GetTickCount();        //已分配标记
 		}
 	}
+	m_lockFileBlocks.unlock();
 
 	return true;
 }
@@ -207,6 +215,7 @@ void CDownloader::DealTimeoutBlockRequests()
 	{
 		dwCheckTime = GetTickCount();
 
+		m_lockFileBlocks.lock();
 		std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.begin();
 		for (; itTmp != m_mapFileBlocks.end(); ++itTmp)
 		{
@@ -215,6 +224,7 @@ void CDownloader::DealTimeoutBlockRequests()
 				itTmp->second = 0;       //重新置0
 			}
 		}
+		m_lockFileBlocks.unlock();
 	}
 }
 

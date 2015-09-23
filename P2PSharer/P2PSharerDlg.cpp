@@ -274,6 +274,10 @@ BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT
 {
 	// TODO:  在此添加专用代码和/或调用基类
 	T_SEARCH_RESULT_INFO *resInfo = NULL;
+	int iItem = 0;
+	acl::string text;
+	std::map<acl::string, CDownloader *>::iterator itDownloader;
+
 	switch (message)
 	{
 	case UM_UPDATE_SEARCH_RESULT:
@@ -290,10 +294,30 @@ BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT
 
 		//保存搜索结果与显示条目的对应关系
 		m_mapSearchResult[m_iSeachResultItems] = resInfo;
+		m_mapFileItemByMD5[resInfo->filemd5] = m_iSeachResultItems;
 
 		m_iSeachResultItems++;
 
 		//delete resInfo;
+		break;
+
+	case UM_UPDATE_DOWNLOAD_PROGRESS:
+		iItem = m_mapFileItemByMD5[(char *)lParam];
+		{
+			acl::string text = (char *)wParam;
+			m_listSearchResult.SetItemText(iItem, 3, text);
+		}
+
+		break;
+
+	case UM_DOWNLOAD_FINISHED:
+		itDownloader = g_mapFileDownloader.find((char *)lParam);
+		if (itDownloader != g_mapFileDownloader.end())
+		{
+			itDownloader->second->Stop();
+			g_mapFileDownloader.erase(itDownloader);
+		}
+
 		break;
 	default:
 		break;
@@ -349,7 +373,7 @@ void CP2PSharerDlg::OnNMDblclkListResource(NMHDR *pNMHDR, LRESULT *pResult)
 	CDownloader *objDownloader = new CDownloader;
 	g_mapFileDownloader[loclInfo.filemd5] = objDownloader;
 	objDownloader->set_detachable(true);
-	objDownloader->Init(loclInfo, g_serEx.GetSockStream(), g_resourceMgr->GetRedisClient());
+	objDownloader->Init(loclInfo, g_serEx.GetSockStream(), g_resourceMgr->GetRedisClient(), m_hWnd);
 	objDownloader->start();
 
 	// TODO:  在此添加控件通知处理程序代码

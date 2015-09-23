@@ -46,12 +46,12 @@ bool CReqSender::MakeRequestHeader(MSGDef::TMSG_GETBLOCKS &msg)
 		return false;
 	}
 
+	m_lockBlockNum.lock();
 	for (int i = 0; i < m_vBlockNums.size(); i++)
 	{
 		msg.FileBlock.block[i] = m_vBlockNums[i];
 	}
 
-	m_lockBlockNum.lock();
 	m_vBlockNums.clear();
 	m_lockBlockNum.unlock();
 
