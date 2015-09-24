@@ -21,8 +21,9 @@ CRedisClient::~CRedisClient()
 ////连接Redis服务器
 bool CRedisClient::Init(const char *addr)
 {
-	acl::acl_cpp_init();
+	m_locker.lock();
 
+	acl::acl_cpp_init();
 	m_addr = addr;
 
 	if (NULL != m_redis)
@@ -36,9 +37,12 @@ bool CRedisClient::Init(const char *addr)
 	if (NULL != m_redis)
 	{
 		g_cli_redislog.msg1("Redis初始化成功，addr:%s", m_addr);
+		m_locker.unlock();
 		return true;
 	}
 
+	m_locker.unlock();
+	
 	g_cli_redislog.msg1("Redis初始化失败，addr:%s", m_addr);
 	return false;
 }
@@ -46,10 +50,12 @@ bool CRedisClient::Init(const char *addr)
 //将资源添加到Hash表 key：HashResList，filed：文件名|文件MD5，Value：文件大小
 bool CRedisClient::AddResourceToHashList(acl::string &field, acl::string &value)
 {
+	m_locker.lock();
 	acl::redis_hash redis(m_redis);
 
 	int ret = 0;
 	int iretry = 0; 
+	bool bret = true;
 
 RETRY:
 	redis.clear();
@@ -65,10 +71,11 @@ RETRY:
 			goto RETRY;
 		}
 
-		return false;
+		bret = false;
 	}
 
-	return true;
+	m_locker.unlock();
+	return bret;
 }
 
 //在资源列表中查找资源文件
@@ -76,6 +83,8 @@ RETRY:
 //      mapResult 所有文件名中包含key的文件列表信息
 bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl::string> &mapResult)
 {
+	m_locker.lock();
+
 	acl::redis_hash redis(m_redis);
 	int cursor = 0;
 
@@ -85,8 +94,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 	pattern.format("*%s*", keyword.c_str());   //文件名中包含key，忽略MD5
 
 	int iretry = 0;
-
-
+	
 	do 
 	{
 		mapTemp.clear();
@@ -105,6 +113,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 				goto RETRY;
 			}
 
+			m_locker.unlock();
 			return false;
 		}
 
@@ -121,7 +130,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 
 	} while (cursor > 0);
 
-
+	m_locker.unlock();
 	return true;
 }
 
@@ -130,6 +139,7 @@ bool CRedisClient::FindResource(acl::string &keyword, std::map<acl::string, acl:
 //返回拥有该文件的客户端个数
 int CRedisClient::GetResourceOwnersID(acl::string &key)
 {
+	m_locker.lock();
 	acl::redis_set redis(m_redis);
 
 	int iretry = 0;
@@ -147,10 +157,9 @@ RETRY:
 			iretry++;
 			goto RETRY;
 		}
-
-		return 0;
 	}
 
+	m_locker.unlock();
 	return num;
 }
 
@@ -159,10 +168,7 @@ RETRY:
 //返回拥有该文件的客户端个数
 int CRedisClient::GetResourceOwnersID(acl::string &key, std::vector<acl::string> &vRes)
 {
-	if (key == "")
-	{
-		ShowError("redis key is 空");
-	}
+	m_locker.lock();
 	acl::redis_set redis(m_redis);
 
 	int iretry = 0;
@@ -180,21 +186,23 @@ RETRY:
 			iretry++;
 			goto RETRY;
 		}
-
-		return 0;
 	}
 
+	m_locker.unlock();
 	return num;
 }
 
 //向资源文件的地址池中添加MAC（以set形式存储，key:文件MD5 members:MAC地址
 bool CRedisClient::AddMACToResourceSet(acl::string &key, acl::string &mac)
 {
+	m_locker.lock();
+
 	acl::redis_set redis(m_redis);
 	std::vector<acl::string> members;
 	members.push_back(mac);
 
 	int iretry = 0;
+	bool bret = true;
 
 RETRY:
  	if (-1 == redis.sadd(key, members))
@@ -209,21 +217,24 @@ RETRY:
 			goto RETRY;
 		}
 
-		return false;
+		bret = false;
 	}
-	
-	return true;
+
+	m_locker.unlock();
+	return bret;
 }
 
 //从资源文件的地址池中删除MAC（如本地文件变更）
 //key:文件MD5 mac:MAC地址
 bool CRedisClient::RemoveMACFromResourceSet(acl::string &key, acl::string &mac)
 {
+	m_locker.lock();
 	acl::redis_set redis(m_redis);
 	std::vector<acl::string> members;
 	members.push_back(mac);
 
 	int iretry = 0;
+	bool bret = true;
 
 RETRY:
 	if (-1 == redis.srem(key, members))
@@ -238,8 +249,9 @@ RETRY:
 			goto RETRY;
 		}
 
-		return false;
+		bret = false;
 	}
 
-	return true;
+	m_locker.unlock();
+	return bret;
 }
