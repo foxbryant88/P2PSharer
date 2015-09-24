@@ -10,7 +10,7 @@
 #include "FileClient.h"
 
 #define MAX_CACHE_BLOCKS  2048
-#define BLOCK_REQUEST_TIME_OUT          5000    //分片下载超时时间（默认5分钟）
+#define BLOCK_REQUEST_TIME_OUT          2000    //分片下载超时时间（默认5分钟）
 #define UPDATE_SERVICE_PROVIDER_TIME    60000     //更新服务下载节点的时间
 class CDownloader : public acl::thread
 {
@@ -54,6 +54,7 @@ private:
 	acl::locker m_lockFileBlocks;               //保护分片列表
 	//acl::socket_stream *m_sock;
     CRedisClient *m_redis;
+	DWORD m_dwProviderLastUpdateTime;
 
 	T_LOCAL_FILE_INFO m_fileInfo;
 	acl::ofstream m_fstream;

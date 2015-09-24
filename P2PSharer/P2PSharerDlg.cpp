@@ -315,6 +315,7 @@ BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT
 		if (itDownloader != g_mapFileDownloader.end())
 		{
 			itDownloader->second->Stop();
+			delete itDownloader->second;
 			g_mapFileDownloader.erase(itDownloader);
 		}
 

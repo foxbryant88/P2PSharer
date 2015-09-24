@@ -18,33 +18,6 @@ CRedisClient::~CRedisClient()
 {
 }
 
-void CRedisClient::Test()
-{
-	//acl::string key = "C++视频讲解.avi|425632588965abe4";
-	//acl::string val = "45123";
-	//AddResourceToHashList(key, val);
-
-	//key = "425632588965abe4";
-	//val = "00-11-22-33-44-55";
-	//AddMACToResourceSet(key, val);
-	//
-	//key = "J++视频讲解.avi|ff88a2588965abe4";
-	//val = "3252";
-	//AddResourceToHashList(key, val);
-
-	//key = "飞行员.avi|dd21aa2588965abe4";
-	//val = "53432";
-	//AddResourceToHashList(key, val);
-	//
-	//key = "C++";
-	//std::map<acl::string, acl::string> mapRes;
-	//bool bFind = FindResource(key, mapRes);
-
-	//key = "425632588965abe4";
-	//val = "00-11-22-33-44-55";
-	//RemoveMACFromResourceSet(key, val);
-}
-
 ////连接Redis服务器
 bool CRedisClient::Init(const char *addr)
 {
@@ -69,29 +42,6 @@ bool CRedisClient::Init(const char *addr)
 	g_cli_redislog.msg1("Redis初始化失败，addr:%s", m_addr);
 	return false;
 }
-
-////连接Redis服务器
-//bool CRedisClient::ConnectToRedisServer()
-//{
-//	if (m_redis)
-//	{
-//		if (m_redis->get_stream() == NULL)
-//		{
-//			g_cli_redislog.msg1("Redis连接已关闭！尝试重新初始化");
-//
-//			delete m_redis;
-//			m_redis = NULL;
-//
-//			Init(m_addr);
-//		}
-//		else
-//		{
-//			return true;
-//		}
-//	}
-//
-//	return false;
-//}
 
 //将资源添加到Hash表 key：HashResList，filed：文件名|文件MD5，Value：文件大小
 bool CRedisClient::AddResourceToHashList(acl::string &field, acl::string &value)
@@ -209,6 +159,10 @@ RETRY:
 //返回拥有该文件的客户端个数
 int CRedisClient::GetResourceOwnersID(acl::string &key, std::vector<acl::string> &vRes)
 {
+	if (key == "")
+	{
+		ShowError("redis key is 空");
+	}
 	acl::redis_set redis(m_redis);
 
 	int iretry = 0;

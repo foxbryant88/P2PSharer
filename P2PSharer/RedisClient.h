@@ -7,9 +7,6 @@ public:
 	CRedisClient();
 	~CRedisClient();
 
-	//测试接口
-	void Test();
-
 	//初始化
 	bool Init(const char *addr);
 
@@ -41,5 +38,6 @@ private:
 
 	acl::redis_client *m_redis;
 	acl::string m_addr;
+	acl::locker m_locker;          //防止多线程同时调用
 };
 

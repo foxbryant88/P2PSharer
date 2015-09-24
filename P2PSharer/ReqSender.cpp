@@ -73,9 +73,7 @@ void *CReqSender::run()
 
 		if (!g_serEx.SendMsg_P2PData_BaseMAC(&tMsg, sizeof(tMsg), m_macAddr))
 		{
-			//ShowMsg("CReqSender·¢ËÍÊý¾ÝÊ§°Ü");
-			//return NULL;
-			Sleep(1000);
+			Sleep(10);
 			continue;
 		}
 
@@ -85,6 +83,7 @@ void *CReqSender::run()
 		memset(&tMsg.FileBlock.block[0], 0, MAX_REQUEST_BLOCKS_COUNT * sizeof(DWORD));
 	}
 
+	delete this;
 	return NULL;
 }
 

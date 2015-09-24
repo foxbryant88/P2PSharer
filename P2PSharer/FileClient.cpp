@@ -96,7 +96,7 @@ void *CFileClient::run()
 		//文件接收完成
 		if (m_dwRecievedBlocks == dwTotalBlocks)
 		{
-			ShowError("文件下载完成！");
+			//ShowError("文件下载完成！");
 			break;
 		}
 	}
@@ -105,5 +105,6 @@ void *CFileClient::run()
 	m_fstream->close();
 	PostMessage(m_hWndProgressNotify, UM_DOWNLOAD_FINISHED, NULL, (LPARAM)m_md5);
 
+	delete this;
 	return NULL;
 }

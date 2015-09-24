@@ -7,6 +7,7 @@ CDownloader::CDownloader()
 {
 	m_dwLastBlockPos = 0;
 	m_bExit = false;
+	m_dwProviderLastUpdateTime = 0;
 }
 
 
@@ -131,11 +132,15 @@ void *CDownloader::run()
 
 	//停止接收及分片请求对象
 	m_objReciever->Stop();
+//	delete m_objReciever;
+
 	for (int i = 0; i < m_vObjSender.size(); i++)
 	{
 		m_vObjSender[i]->Stop();
+// 		delete m_vObjSender[i];
 	}
 
+	m_vObjSender.clear();
 	return NULL;
 }
 
@@ -231,11 +236,9 @@ void CDownloader::DealTimeoutBlockRequests()
 //每隔1分钟重新搜索一次服务节点
 bool CDownloader::UpdateServiceProvider(void)
 {
-	static DWORD dwLastUpdate = 0;
-
-	if (GetTickCount() - dwLastUpdate > UPDATE_SERVICE_PROVIDER_TIME)
+	if (GetTickCount() - m_dwProviderLastUpdateTime > UPDATE_SERVICE_PROVIDER_TIME)
 	{
-		dwLastUpdate = GetTickCount();
+		m_dwProviderLastUpdateTime = GetTickCount();
 
 		std::vector<acl::string> vRes;
 		int num = m_redis->GetResourceOwnersID(m_fileInfo.filemd5, vRes);

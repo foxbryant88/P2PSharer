@@ -12,6 +12,7 @@
 #define	MAX_MACADDR_LEN		18
 #define MAX_ADDNUM			5
 #define MAX_ADDR_LENGTH           22
+#define MAX_REQUEST_BLOCKS_COUNT  290
 
 struct Addr_Info
 {
@@ -45,7 +46,7 @@ struct File_BLOCKS
 {
 	//unsigned short nFileID;
 	char md5[33];                          // 文件的MD5值
-	DWORD block[295];       //确保包长度不超过1200
+	DWORD block[MAX_REQUEST_BLOCKS_COUNT];       //确保包长度不超过1200
 };
 
 //与本机相连的所有客户端列表

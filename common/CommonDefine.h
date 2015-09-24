@@ -39,7 +39,6 @@ enum eMSG
 #define FORMAT_FLAG_LOGIN       "LOGIN_SERVER_%s"             // 发送登录请求标记
 
 #define EACH_BLOCK_SIZE  1200                                 //文件分片的大小
-#define MAX_REQUEST_BLOCKS_COUNT  (EACH_BLOCK_SIZE / sizeof(DWORD))
 
 struct BLOCK_DATA_INFO
 {
