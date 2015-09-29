@@ -103,6 +103,14 @@ void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
 		ProcGetUserClientIP(msg, sock);
 		break;
 
+	case eMSG_GETBLOCKS2:
+		ProcMsgGetBlocks(msg, sock);
+		break;
+
+	case eMsg_FILEBLOCKDATA2:
+		ProcMsgFileBlockData(msg, sock);
+		break;
+
 	default:
 		break;
 	}
@@ -285,4 +293,23 @@ void CMsgHandler::ProcGetUserClientIP(MSGDef::TMSG_HEADER *pMsgHeader, acl::sock
 		MSGDef::TMSG_GETUSERCLIENTIPACK tMsgGetClientIPAck;
 		SendData(&tMsgGetClientIPAck, sizeof(tMsgGetClientIPAck), sock, msg->PeerInfo.arrAddr[msg->PeerInfo.nAddrNum - 1].IPAddr);
 	}
+}
+
+//收到请求下载数据块的消息(转发）
+void CMsgHandler::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
+{
+	MSGDef::TMSG_GETBLOCKS2 *msg = (MSGDef::TMSG_GETBLOCKS2 *)data;
+	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->szDestMAC);
+	if (NULL != peer)
+	{
+		SendData(msg, sizeof(MSGDef::TMSG_GETBLOCKS2), stream, peer->arrAddr[peer->nAddrNum - 1].IPAddr);
+	}
+}
+
+//收到文件下载数据(转发）
+void CMsgHandler::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
+{
+	MSGDef::TMSG_FILEBLOCKDATA2 *msg = (MSGDef::TMSG_FILEBLOCKDATA2 *)data;
+
+	SendData(msg, sizeof(MSGDef::TMSG_FILEBLOCKDATA2), stream, msg->srcIPAddr);
 }

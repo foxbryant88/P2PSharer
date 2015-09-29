@@ -22,7 +22,10 @@ public:
 	bool Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CRedisClient *redis, HWND hNotifyWnd);
 
 	//处理收到的分块数据,转发给FileReciver
-	void Recieve(void *data);
+	void Recieve(MSGDef::TMSG_FILEBLOCKDATA *data);
+
+	//移除连接失败的发送对象(只移除但不释放内存，CReqSender本身会自删除)
+	void RemoveFailConnSender(CReqSender *);
 
 	//控制分片及请求
 	void *run();
@@ -58,6 +61,8 @@ private:
 
 	T_LOCAL_FILE_INFO m_fileInfo;
 	acl::ofstream m_fstream;
+	HWND m_hWndRecieveNotify;                    //接收停止下载消息的窗口句柄
+	acl::locker m_lockSenderObject;
 
 	CFileClient *m_objReciever;
 	std::vector<CReqSender *> m_vObjSender;

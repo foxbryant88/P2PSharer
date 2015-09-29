@@ -25,6 +25,7 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CR
 
 	//m_sock = &sock;
 	m_redis = redis;
+	m_hWndRecieveNotify = hNotifyWnd;
 
 	acl::string localpath = "d:\\p2pfile\\";
 	if (_access(localpath.c_str(), 0) != 0)
@@ -51,7 +52,7 @@ bool CDownloader::Init(T_LOCAL_FILE_INFO &fileinfo, acl::socket_stream &sock, CR
 	//m_fstream.write(0);
 	
 	m_objReciever = new CFileClient;
-	m_objReciever->Init(m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize, hNotifyWnd);
+	m_objReciever->Init(m_fstream, m_fileInfo.filemd5.c_str(), m_fileInfo.filesize, m_hWndRecieveNotify);
 	m_objReciever->start();
 }
 
@@ -70,17 +71,18 @@ void CDownloader::AddProvider(acl::string &addr, acl::string &md5)
 	m_vProviderMACs.push_back(addr);
 
 	CReqSender *psender = new CReqSender;
-	psender->Init(addr, g_serEx.GetSockStream(), md5);
+	psender->Init(addr, g_serEx.GetSockStream(), md5, this);
 	psender->start();
 
+	m_lockSenderObject.lock();
 	m_vObjSender.push_back(psender);
+	m_lockSenderObject.unlock();
 }
 
 //处理收到的分块数据,转发给FileReciver
-void CDownloader::Recieve(void *data)
+void CDownloader::Recieve(MSGDef::TMSG_FILEBLOCKDATA *data)
 {
-	MSGDef::TMSG_FILEBLOCKDATA *msg = (MSGDef::TMSG_FILEBLOCKDATA *)data;
-	BLOCK_DATA_INFO *block = &msg->info;
+	BLOCK_DATA_INFO *block = &data->info;
 
 	m_lockFileBlocks.lock();
 	std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.find(block->dwBlockNumber);
@@ -99,6 +101,27 @@ void CDownloader::Recieve(void *data)
 	m_lockFileBlocks.unlock();
 }
 
+//移除连接失败的发送对象(只移除但不释放内存，CReqSender本身会自删除)
+void CDownloader::RemoveFailConnSender(CReqSender *pSender)
+{
+	m_lockSenderObject.lock();
+	std::vector<CReqSender *>::iterator it = m_vObjSender.begin();
+	for (; it != m_vObjSender.end(); ++it)
+	{
+		if (*it == pSender)
+		{
+			m_vObjSender.erase(it);
+			break;
+		}
+	}
+
+	if (m_vObjSender.size() == 0)
+	{
+		PostMessage(m_hWndRecieveNotify, UM_DOWNLOAD_ABORT, NULL, (LPARAM)m_fileInfo.filemd5.c_str());
+	}
+	m_lockSenderObject.unlock();
+}
+
 //控制分片及请求
 void *CDownloader::run()
 {
@@ -114,6 +137,7 @@ void *CDownloader::run()
 
 
 			//为每个发送对象指定发送任务
+			m_lockSenderObject.lock();
 			for (int i = 0; i < m_vObjSender.size(); i++)
 			{
 				if (GetBlocks(vBlocks))
@@ -124,23 +148,27 @@ void *CDownloader::run()
 					}
 				}
 			}
+			m_lockSenderObject.unlock();
 
 			//处理超时的分片请求
 			DealTimeoutBlockRequests();
 		}
+
+		Sleep(100);
 	}
 
 	//停止接收及分片请求对象
 	m_objReciever->Stop();
 //	delete m_objReciever;
 
+	m_lockSenderObject.lock();
 	for (int i = 0; i < m_vObjSender.size(); i++)
 	{
 		m_vObjSender[i]->Stop();
-// 		delete m_vObjSender[i];
 	}
-
 	m_vObjSender.clear();
+	m_lockSenderObject.unlock();
+
 	return NULL;
 }
 

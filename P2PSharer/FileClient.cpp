@@ -102,7 +102,9 @@ void *CFileClient::run()
 	}
 
 	//关闭文件，下次会重新打开接着写
-	m_fstream->close();
+	if (m_fstream->opened())
+		m_fstream->close();
+
 	PostMessage(m_hWndProgressNotify, UM_DOWNLOAD_FINISHED, NULL, (LPARAM)m_md5);
 
 	delete this;

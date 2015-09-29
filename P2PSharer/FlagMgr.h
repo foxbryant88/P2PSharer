@@ -16,6 +16,9 @@ public:
 	//循环检查标记是否为1
 	bool WaitFlag(const acl::string &flag);
 
+	//检查标记是否为1
+	bool CheckFlag(const acl::string &flag);
+
 	//设置标记为指定值
 	void SetFlag(acl::string &flag, byte val);
 	void SetFlag(const char *formatstr, const char *suffix, byte val);

@@ -320,6 +320,22 @@ BOOL CP2PSharerDlg::OnWndMsg(UINT message, WPARAM wParam, LPARAM lParam, LRESULT
 		}
 
 		break;
+
+	case UM_DOWNLOAD_ABORT:
+	   {
+		 acl::string text = acl::string((char *)lParam);
+		 itDownloader = g_mapFileDownloader.find(text);
+		 if (itDownloader != g_mapFileDownloader.end())
+		 {
+			 itDownloader->second->Stop();
+			 delete itDownloader->second;
+			 g_mapFileDownloader.erase(itDownloader);
+	     }
+
+		 m_listSearchResult.SetItemText(iItem, 2, "0");
+	   }
+
+	   break;
 	default:
 		break;
 	}

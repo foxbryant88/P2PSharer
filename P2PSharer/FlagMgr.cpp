@@ -39,6 +39,13 @@ bool CFlagMgr::WaitFlag(const acl::string &flag)
 	return false;
 }
 
+//检查标记是否为1 
+//成功返回true 否则false
+bool CFlagMgr::CheckFlag(const acl::string &flag)
+{
+	return m_mapFlags[flag] == 1;
+}
+
 //设置标记为指定值
 void CFlagMgr::SetFlag(acl::string &flag, byte val)
 {

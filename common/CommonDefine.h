@@ -22,12 +22,14 @@ enum eMSG
 	//eMSG_REQFILE,                  // 协商请求的文件
 	//eMSG_REQFILEACK,               // 同意文件请求
 	eMSG_GETBLOCKS,                // 向服务方请求块数据的信息
+	eMSG_GETBLOCKS2,               // 向服务方请求块数据的信息(经服务器转发)
 	eMSG_GETBLOCKSACK,             // 同意块数据请求
 	eMSG_USERLOGOUT,			   // 通知server用户退出
 	eMSG_USERACTIVEQUERY,		   // 查询用户是否还存在
 	eMSG_GETUSERCLIENTIP,          // 获取指定MAC用户的IP地址
 	eMSG_GETUSERCLIENTIPACK,       // 收到请求MAC所返回的对应IP地址
 	eMsg_FILEBLOCKDATA,            // 文件下载过程中的数据块
+	eMsg_FILEBLOCKDATA2,           // 经服务器转发过来的数据块
 };
 
 // Flag定义（因同时可能与多台客户端交互，故附带目标IP）
@@ -148,59 +150,34 @@ public:
 			PeerInfo = rPeerInfo;
 		}
 	};
-
-	//// client收到另一个client发送的请求下载文件消息
-	//struct TMSG_REQFILE
-	//	: TMSG_HEADER
-	//{
-	//	File_Info FileInfo;
-	//	TMSG_REQFILE(const File_Info &rFileInfo)
-	//		: TMSG_HEADER(eMSG_REQFILE)
-	//	{
-	//		FileInfo = rFileInfo;
-	//	}
-	//};
-	// 
-	//// client收到另一个client发送的请求下载文件消息
-	//struct TMSG_REQFILEACK
-	//	: TMSG_HEADER
-	//{
-	//	File_Info FileInfo;
-	//	TMSG_REQFILEACK(const File_Info &rFileInfo)
-	//		: TMSG_HEADER(eMSG_REQFILEACK)
-	//	{
-	//		FileInfo = rFileInfo;
-	//	}
-	//};
-
+	
 	// client收到另一个client发送的请求下载块消息
 	struct TMSG_GETBLOCKS
 		: TMSG_HEADER
 	{
 		File_BLOCKS FileBlock;
-		//TMSG_GETBLOCKS(const File_BLOCKS &rFileBlock)
-		//	: TMSG_HEADER(eMSG_GETBLOCKS)
-		//{
-		//	FileBlock = rFileBlock;
-		//}
 		TMSG_GETBLOCKS()
 			: TMSG_HEADER(eMSG_GETBLOCKS)
 		{
 		}
-
 	};
 
-	// client收到另一个client发送的请求下载块消息
-	struct TMSG_GETBLOCKSACK
+	// client收到另一个client发送的请求下载块消息（不能直接P2P传输，需要服务器转发）
+	struct TMSG_GETBLOCKS2
 		: TMSG_HEADER
 	{
+		char srcIPAddr[MAX_ADDR_LENGTH];       //请求方的IP地址
+		char szDestMAC[MAX_MACADDR_LEN];       // 目标机器的MAC地址
+
 		File_BLOCKS FileBlock;
-		TMSG_GETBLOCKSACK(const File_BLOCKS &rFileBlock)
-			: TMSG_HEADER(eMSG_GETBLOCKSACK)
+		TMSG_GETBLOCKS2()
+			: TMSG_HEADER(eMSG_GETBLOCKS2)
 		{
-			FileBlock = rFileBlock;
+			memset(srcIPAddr, 0, MAX_ADDR_LENGTH);
+			memset(szDestMAC, 0, MAX_MACADDR_LEN);
 		}
 	};
+
 
 	// 文件传输过程中的数据块
 	struct TMSG_FILEBLOCKDATA
@@ -216,6 +193,20 @@ public:
 		}
 	};
 
+	// 文件传输过程中的数据块
+	struct TMSG_FILEBLOCKDATA2
+		: TMSG_HEADER, TMSG_FILEBLOCKDATA
+	{
+		char srcIPAddr[MAX_ADDR_LENGTH];       //请求方的IP地址
+
+		TMSG_FILEBLOCKDATA2() : TMSG_HEADER(eMsg_FILEBLOCKDATA){ memset(srcIPAddr, 0, MAX_ADDR_LENGTH); };
+		TMSG_FILEBLOCKDATA2(const BLOCK_DATA_INFO &rblockInfo)
+			: TMSG_HEADER(eMsg_FILEBLOCKDATA2)
+		{
+			info = rblockInfo;
+			memset(srcIPAddr, 0, MAX_ADDR_LENGTH);
+		}
+	};
 
 	// 通知server用户退出
 	struct TMSG_USERLOGOUT
@@ -286,6 +277,11 @@ static void ShowMsg(acl::string msg)
 static void ShowError(acl::string msg)
 {
 	MessageBox(NULL, msg, "Error", MB_OK);
+}
+
+static int ShowErrorWithChoose(acl::string msg)
+{
+	return MessageBox(NULL, msg, "Error", MB_YESNO);
 }
 
 //获取本机MAC地址

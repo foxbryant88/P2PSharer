@@ -23,6 +23,9 @@ public:
 	//返回socket，测试用？？？
 	acl::socket_stream &GetSockStream();
 
+	//获取本机的外网地址
+	char *GetNatIP();
+
 	//发送登录消息
 	bool SendMsg_UserLogin();
 
@@ -38,10 +41,12 @@ public:
 	//发送P2P数据，仅测试
 	bool SendMsg_P2PData_BaseMAC(const char *data, const char *tomac);
 	bool SendMsg_P2PData_BaseMAC(void *data, size_t size, const char *toMac);
-	bool SendMsg_P2PData_BaseIP(void *data, size_t size, const char *ip);
 
 	//向指定地址发送数据
 	bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);
+
+	//向指定地址发送数据
+	bool SendMsgToServer(void *data, size_t size);
 
 private:
 	//获取本机所有网卡IP
@@ -65,6 +70,8 @@ private:
 	//收到请求下载数据块的消息
 	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
 
+	//收到请求下载数据块的消息
+	void ProcMsgGetBlocks2(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
 
 	////服务方收到协商请求下载的文件
 	//void ProcMsgReqFile(MSGDef::TMSG_HEADER *data);
@@ -83,6 +90,9 @@ private:
 
 	//收到文件下载数据
 	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data);
+
+	//收到文件下载数据(服务器转发过来的)
+	void ProcMsgFileBlockData2(MSGDef::TMSG_HEADER *data);
 
 	////向指定地址发送数据
 	//bool SendData(void *data, size_t size, acl::socket_stream *stream, const char *addr);

@@ -51,11 +51,12 @@ extern std::map<acl::string, CFileServer *> g_mapFileServer;    //key£ºÎÄ¼þMD5 v
 #define NAME_FILE_INFO_LIST_LOCK    "listlock.txt"
 
 #define SPLITOR_OF_FILE_INFO   "|"
-
+#define MAX_SEND_DATA_RETRY    1
 
 #define UM_UPDATE_SEARCH_RESULT        WM_USER + 1
 #define UM_UPDATE_DOWNLOAD_PROGRESS    WM_USER + 2
 #define UM_DOWNLOAD_FINISHED           WM_USER + 3
+#define UM_DOWNLOAD_ABORT              WM_USER + 4
 
 #ifdef _UNICODE
 #if defined _M_IX86

@@ -117,6 +117,9 @@ void* ServerEX::run()
 		case eMSG_GETBLOCKS:
 			ProcMsgGetBlocks(msg, &m_sockstream);
 			break;
+		case eMSG_GETBLOCKS2:
+			ProcMsgGetBlocks2(msg, &m_sockstream);
+			break;
 		case eMSG_USERACTIVEQUERY:
 			ProcMsgUserActiveQuery(msg, &m_sockstream);
 			break;
@@ -126,6 +129,10 @@ void* ServerEX::run()
 		case eMsg_FILEBLOCKDATA:
 			ProcMsgFileBlockData(msg);
 			break;
+		case eMsg_FILEBLOCKDATA2:
+			ProcMsgFileBlockData2(msg);
+			break;
+
 		default:
 			g_cli_exlog.error1("错误的消息类型：%d", msg->cMsgID);
 			break;
@@ -156,6 +163,12 @@ bool ServerEX::SendData(void *data, size_t size, acl::socket_stream *stream, con
 	m_lockSockStream.unlock();
 
 	return false;
+}
+
+//向服务器发送数据
+bool ServerEX::SendMsgToServer(void *data, size_t size)
+{
+	return SendData(data, size, &m_sockstream, server_addr_);
 }
 
 //发送登录消息
@@ -287,11 +300,11 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 			return true;
 		}
 
-		Sleep(1000);
+		Sleep(500);
 	}
 
 	m_errmsg.format("向服务端[%s]发送请求[%s]的IP地址失败", server_addr_.c_str(), mac);
-	ShowError(m_errmsg);
+	//ShowError(m_errmsg);
 	return false;
 
 }
@@ -377,7 +390,7 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 //发送P2P数据，仅测试
 bool ServerEX::SendMsg_P2PData_BaseMAC(const char *data, const char *tomac)
 {
-	for (int iRetry = 0; iRetry < 10; iRetry++)
+	for (int iRetry = 0; iRetry < 2; iRetry++)
 	{
 		Peer_Info *peer = m_lstUser.GetAPeer(tomac);
 		if (peer != NULL && strlen(peer->P2PAddr) > 1)
@@ -400,11 +413,13 @@ bool ServerEX::SendMsg_P2PData_BaseMAC(const char *data, const char *tomac)
 		SendMsg_P2PConnect(tomac);
 		Sleep(300);
 	}
+
+	return false;
 }
 
 bool ServerEX::SendMsg_P2PData_BaseMAC(void *data, size_t size, const char *toMac)
 {
-	for (int iRetry = 0; iRetry < 3; iRetry++)
+	for (int iRetry = 0; iRetry < 2; iRetry++)
 	{
 		Peer_Info *peer = m_lstUser.GetAPeer(toMac);
 		if (peer != NULL  && strlen(peer->P2PAddr) > 1)
@@ -418,7 +433,7 @@ bool ServerEX::SendMsg_P2PData_BaseMAC(void *data, size_t size, const char *toMa
 					return true;
 				}
 
-				Sleep(1000);
+				Sleep(500);
 			}
 
 			ShowMsg("连接已不可用，尝试重新打洞！");
@@ -429,29 +444,6 @@ bool ServerEX::SendMsg_P2PData_BaseMAC(void *data, size_t size, const char *toMa
 			continue;;
 
 		Sleep(500);
-	}
-
-	return false;
-}
-
-bool ServerEX::SendMsg_P2PData_BaseIP(void *data, size_t size, const char *ip)
-{
-	for (int iRetry = 0; iRetry < 3; iRetry++)
-	{
-		if (strlen(ip) > 1)
-		{
-			//尝试发送数据
-			for (int i = 0; i < 3; i++)
-			{
-				if (SendData(data, size, &m_sockstream, ip))
-				{
-					g_cli_exlog.msg1("向ip:%s发送数据成功！", ip);
-					return true;
-				}
-
-				Sleep(1000);
-			}
-		}
 	}
 
 	return false;
@@ -481,6 +473,12 @@ acl::socket_stream &ServerEX::GetSockStream()
 	return m_sockstream;
 }
 
+//获取本机的外网地址
+char *ServerEX::GetNatIP()
+{
+	return m_peerInfo.arrAddr[m_peerInfo.nAddrNum - 1].IPAddr;
+}
+
 //收到所请求指定MAC的IP
 void ServerEX::ProcMsgGetUserClientAck(MSGDef::TMSG_HEADER *data)
 {
@@ -507,13 +505,30 @@ void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 	}
 }
 
+//收到文件下载数据(服务器转发过来的)
+void ServerEX::ProcMsgFileBlockData2(MSGDef::TMSG_HEADER *data)
+{
+	MSGDef::TMSG_FILEBLOCKDATA2 *msg = (MSGDef::TMSG_FILEBLOCKDATA2 *)data;
+	ShowMsg("收到服务器转发过来的下载数据块，即将写入文件");
+
+	std::map<acl::string, CDownloader *>::iterator itTemp = g_mapFileDownloader.find(msg->info.md5);
+	if (itTemp != g_mapFileDownloader.end())
+	{
+		itTemp->second->Recieve(msg);
+	}
+}
+
 //收到请求下载数据块的消息
 void ServerEX::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
 {
 	MSGDef::TMSG_GETBLOCKS *msg = (MSGDef::TMSG_GETBLOCKS *)data;
 	static void *buf = new char[EACH_BLOCK_SIZE];
-
+	acl::string bFileNotExistFlag = msg->FileBlock.md5;
 	ShowMsg("收到GetBlocks下载数据分块消息");
+
+	//文件不存在
+	if (m_objFlagMgr->CheckFlag(bFileNotExistFlag))
+		return;
 
 start:
 
@@ -555,6 +570,82 @@ start:
 			acl::string msgText;
 			msgText.format("打开供应文件[%s]出错，MD5：%s", fullPath.c_str(), msg->FileBlock.md5);
 			ShowError(msgText);
+			m_objFlagMgr->SetFlag(bFileNotExistFlag, 1);
+
+			return;
+		}
+
+		CFileServer *pFileServer = new CFileServer;
+		if (!pFileServer->Init(fullPath, EACH_BLOCK_SIZE))
+		{
+			m_errmsg.format("初始化下载文件[%s]失败!", fullPath.c_str());
+			g_clientlog.error1(m_errmsg);
+
+			ShowError(m_errmsg);
+			delete pFileServer;
+			return;
+		}
+
+		g_mapFileServer[msg->FileBlock.md5] = pFileServer;
+		goto start;
+	}
+}
+
+//收到请求下载数据块的消息
+void ServerEX::ProcMsgGetBlocks2(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream)
+{
+	MSGDef::TMSG_GETBLOCKS2 *msg = (MSGDef::TMSG_GETBLOCKS2 *)data;
+	static void *buf = new char[EACH_BLOCK_SIZE];
+	acl::string bFileNotExistFlag = msg->FileBlock.md5;
+	ShowMsg("收到服务器转发过来的GetBlocks下载数据分块消息");
+
+	//文件不存在
+	if (m_objFlagMgr->CheckFlag(bFileNotExistFlag))
+		return;
+
+start:
+
+	std::map<acl::string, CFileServer *>::iterator itTmp = g_mapFileServer.find(msg->FileBlock.md5);
+	if (itTmp != g_mapFileServer.end())
+	{
+		for (int i = 0; i < sizeof(msg->FileBlock.block) / sizeof(DWORD); i++)
+		{
+			DWORD dwBlock = msg->FileBlock.block[i];
+
+			int len = EACH_BLOCK_SIZE;
+			memset(buf, 0, EACH_BLOCK_SIZE);
+			if (itTmp->second->GetBlockData(dwBlock, buf, len))
+			{
+				ShowMsg("读取分块成功，即将开始传输！");
+
+				MSGDef::TMSG_FILEBLOCKDATA2 tdata;
+				memcpy(tdata.srcIPAddr, msg->srcIPAddr, MAX_ADDR_LENGTH);
+				memcpy(tdata.info.md5, msg->FileBlock.md5, 33);
+				tdata.info.dwBlockNumber = dwBlock;
+				tdata.info.datalen = len;
+				memcpy(tdata.info.data, buf, EACH_BLOCK_SIZE);
+
+				SendData(&tdata, sizeof(tdata), &m_sockstream, stream->get_peer(true));
+			}
+			else
+			{
+				ShowError("读取分块失败！");
+			}
+		}
+	}
+	else
+	{
+		acl::string fullPath;
+		fullPath.url_decode(g_resourceMgr->GetFileFullPath(msg->FileBlock.md5));
+
+		m_errmsg.format("文件下载路径为：%s", fullPath.c_str());
+		if (_access(fullPath.c_str(), 0) != 0)
+		{
+			acl::string msgText;
+			msgText.format("打开供应文件[%s]出错，MD5：%s", fullPath.c_str(), msg->FileBlock.md5);
+			ShowError(msgText);
+			m_objFlagMgr->SetFlag(bFileNotExistFlag, 1);
+
 			return;
 		}
 

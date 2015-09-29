@@ -55,6 +55,12 @@ private:
 	//收到请求指定客户端IP的消息
 	void ProcGetUserClientIP(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock);
 
+	//收到请求下载数据块的消息(转发）
+	void ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
+
+	//收到文件下载数据(转发）
+	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
+
 	acl::locker m_lockMsgData; 
 	acl::locker m_lockUserList;
 	acl::locker m_lockSocket;
