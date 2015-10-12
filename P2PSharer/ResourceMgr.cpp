@@ -130,15 +130,15 @@ bool CResourceMgr::UpdateResourceList()
 
 // 	//////创建扫描对象并启动文件扫描
  	std::vector<CFileScan *> vScanObject;
-// 	for (int i = 0; i < vDiskDrive.size(); i++)
-// 	{
-// 		CFileScan *obj = new CFileScan();
-// 		obj->Init(vDiskDrive[i], &m_mapResource);
-// 		obj->set_detachable(false);
-// 		obj->start();
-// 
-// 		vScanObject.push_back(obj);
-// 	}
+ 	//for (int i = 0; i < vDiskDrive.size(); i++)
+ 	//{
+ 	//	CFileScan *obj = new CFileScan();
+ 	//	obj->Init(vDiskDrive[i], &m_mapResource);
+ 	//	obj->set_detachable(false);
+ 	//	obj->start();
+ 
+ 	//	vScanObject.push_back(obj);
+ 	//}
 	CFileScan *obj = new CFileScan();
 	obj->Init("D:\\KuGou_P2PTest", &m_mapResource);
 	obj->set_detachable(false);

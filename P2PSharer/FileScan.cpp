@@ -141,15 +141,15 @@ bool CFileScan::IsVideoFile(const char *filename)
 	char *ext = file.rfind(".");
 	if (NULL != ext)
 	{
-		if (//!_stricmp(ext, ".avi") ||
-			//!_stricmp(ext, ".rmvb") ||
-			//!_stricmp(ext, ".wmv") ||
-			//!_stricmp(ext, ".mkv") ||
-			//!_stricmp(ext, ".mp4") ||
-			//!_stricmp(ext, ".mov") ||
-			//!_stricmp(ext, ".mpeg") ||
-			//!_stricmp(ext, ".3gp") ||
-			//!_stricmp(ext, ".asf") ||
+		if (/*!_stricmp(ext, ".avi") ||
+			!_stricmp(ext, ".rmvb") ||
+			!_stricmp(ext, ".wmv") ||
+			!_stricmp(ext, ".mkv") ||
+			!_stricmp(ext, ".mp4") ||
+			!_stricmp(ext, ".mov") ||
+			!_stricmp(ext, ".mpeg") ||
+			!_stricmp(ext, ".3gp") ||
+			!_stricmp(ext, ".asf") ||*/
 			!_stricmp(ext, ".mp3"))
 		{
 			return true;

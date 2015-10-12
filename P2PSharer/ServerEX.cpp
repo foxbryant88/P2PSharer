@@ -266,8 +266,8 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 		Sleep(1000);
 	}
 
-	m_errmsg.format("向服务端[%s]发送P2P打洞转发消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
-	ShowError(m_errmsg);
+	//m_errmsg.format("向服务端[%s]发送P2P打洞转发消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
+	//ShowError(m_errmsg);
 	return false;
 }
 
@@ -414,6 +414,9 @@ bool ServerEX::SendMsg_P2PData_BaseMAC(const char *data, const char *tomac)
 		Sleep(300);
 	}
 
+	m_errmsg.format("向服务端[%s]发送P2P打洞转发消息失败,err:%d", m_sockstream.get_peer(true), acl::last_error());
+	ShowError(m_errmsg);
+
 	return false;
 }
 
@@ -509,7 +512,7 @@ void ServerEX::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data)
 void ServerEX::ProcMsgFileBlockData2(MSGDef::TMSG_HEADER *data)
 {
 	MSGDef::TMSG_FILEBLOCKDATA2 *msg = (MSGDef::TMSG_FILEBLOCKDATA2 *)data;
-	ShowMsg("收到服务器转发过来的下载数据块，即将写入文件");
+	//ShowError("收到服务器转发过来的下载数据块，即将写入文件");
 
 	std::map<acl::string, CDownloader *>::iterator itTemp = g_mapFileDownloader.find(msg->info.md5);
 	if (itTemp != g_mapFileDownloader.end())
@@ -597,7 +600,7 @@ void ServerEX::ProcMsgGetBlocks2(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 	MSGDef::TMSG_GETBLOCKS2 *msg = (MSGDef::TMSG_GETBLOCKS2 *)data;
 	static void *buf = new char[EACH_BLOCK_SIZE];
 	acl::string bFileNotExistFlag = msg->FileBlock.md5;
-	ShowMsg("收到服务器转发过来的GetBlocks下载数据分块消息");
+	//ShowError("收到服务器转发过来的GetBlocks下载数据分块消息");
 
 	//文件不存在
 	if (m_objFlagMgr->CheckFlag(bFileNotExistFlag))

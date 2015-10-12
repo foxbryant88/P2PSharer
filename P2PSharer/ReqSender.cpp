@@ -168,7 +168,7 @@ void *CReqSender::run()
 	int ret = P2PNoTrasmit();
 	if (ret == 1)
 	{
-		if (ShowErrorWithChoose("双方NAT类型不支持P2P传输，是否通过服务器转发？") == IDOK)
+		if (ShowErrorWithChoose("双方NAT类型不支持P2P传输，是否通过服务器转发？") == IDYES)
 		{
 			if (P2PWithTransmit() == 0)
 				goto cleanObj;

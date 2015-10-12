@@ -302,8 +302,13 @@ void CMsgHandler::ProcMsgGetBlocks(MSGDef::TMSG_HEADER *data, acl::socket_stream
 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->szDestMAC);
 	if (NULL != peer)
 	{
+		printf("收到转发请求下载数据消息，查找目标客户端成功！\r\n");
 		SendData(msg, sizeof(MSGDef::TMSG_GETBLOCKS2), stream, peer->arrAddr[peer->nAddrNum - 1].IPAddr);
+		return;
 	}
+
+	printf("收到转发请求下载数据消息，查找目标客户端失败！\r\n");
+	//system("pause");
 }
 
 //收到文件下载数据(转发）
@@ -311,5 +316,7 @@ void CMsgHandler::ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data, acl::socket_st
 {
 	MSGDef::TMSG_FILEBLOCKDATA2 *msg = (MSGDef::TMSG_FILEBLOCKDATA2 *)data;
 
+	printf("收到下载数据块，将转发给ip:%s！\r\n", msg->srcIPAddr);
+	//system("pause");
 	SendData(msg, sizeof(MSGDef::TMSG_FILEBLOCKDATA2), stream, msg->srcIPAddr);
 }
