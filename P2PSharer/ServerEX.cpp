@@ -194,7 +194,7 @@ bool ServerEX::SendMsg_UserLogin()
 		{
 			for (int iWait = 0; iWait < 20; iWait++)
 			{
-				if (m_objFlagMgr->WaitFlag(loginFlag))
+				if (m_objFlagMgr->WaitFlagIs1(loginFlag))
 				{
 					g_cli_exlog.msg1("登录成功！");
 					m_objFlagMgr->RMFlag(loginFlag);
@@ -238,6 +238,8 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 		if (!SendMsg_GetIPofMAC(mac))
 		{
 			g_cli_exlog.msg1("获取[%s]的IP地址失败！", mac);
+			ShowError("暂无可用的资源服务器，请稍后再试！");
+			ExitThread(0);
 			return false;
 		}
 
@@ -265,11 +267,14 @@ bool ServerEX::SendMsg_P2PConnect(const char *mac)
 
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
-		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, server_addr_) && m_objFlagMgr->WaitFlag(flag))
+		if (SendData(&tMsgConnect, sizeof(tMsgConnect), &m_sockstream, server_addr_))
 		{
-			g_cli_exlog.msg1("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
-			m_objFlagMgr->RMFlag(flag);
-			return true;
+			if (m_objFlagMgr->WaitFlagIs1(flag))
+			{
+				g_cli_exlog.msg1("向服务端[%s]发送P2P打洞转发消息成功", server_addr_);
+				m_objFlagMgr->RMFlag(flag);
+				return true;
+			}
 		}
 
 		Sleep(1000);
@@ -298,7 +303,7 @@ bool ServerEX::SendMsg_GetIPofMAC(const char *mac)
 
 	for (int iRetry = 0; iRetry < MAX_TRY_NUMBER; iRetry++)
 	{
-		if (SendData(&tMsgGetClientIP, sizeof(tMsgGetClientIP), &m_sockstream, server_addr_) && m_objFlagMgr->WaitFlag(flag))
+		if (SendData(&tMsgGetClientIP, sizeof(tMsgGetClientIP), &m_sockstream, server_addr_) && m_objFlagMgr->WaitFlagIs1(flag))
 		{
 			g_cli_exlog.msg1("向服务端[%s]发送请求[%s]的IP地址成功", server_addr_, mac);
 			m_objFlagMgr->RMFlag(flag);
@@ -395,7 +400,6 @@ void ServerEX::ProcMsgP2PConnect(MSGDef::TMSG_HEADER *data, acl::socket_stream *
 	return;
 }
 
-
 //发送P2P数据，仅测试
 bool ServerEX::SendMsg_P2PData_BaseMAC(const char *data, const char *tomac)
 {
@@ -405,14 +409,13 @@ bool ServerEX::SendMsg_P2PData_BaseMAC(const char *data, const char *tomac)
 		if (peer != NULL && strlen(peer->P2PAddr) > 1)
 		{
 			//尝试发送数据
-				MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
-				memcpy(tMsgP2PData.szMsg, data, strlen(data));
-				if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, peer->P2PAddr))
-				{
-					g_cli_exlog.msg1("向%s发送数据成功！", peer->P2PAddr);
-					return true;
-				}
-
+			MSGDef::TMSG_P2PDATA tMsgP2PData(m_peerInfo);
+			memcpy(tMsgP2PData.szMsg, data, strlen(data));
+			if (SendData(&tMsgP2PData, sizeof(tMsgP2PData), &m_sockstream, peer->P2PAddr))
+			{
+				g_cli_exlog.msg1("向%s发送数据成功！", peer->P2PAddr);
+				return true;
+			}
 
 			ShowMsg("连接已不可用，尝试重新打洞！");
 			memcpy(peer->P2PAddr, 0, MAX_ADDR_LENGTH);

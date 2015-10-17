@@ -22,13 +22,32 @@ acl::string CFlagMgr::GetFlag(const char *formatstr, const char *suffix)
 
 //循环检查标记是否为1 
 //成功返回true 否则false
-bool CFlagMgr::WaitFlag(const acl::string &flag)
+bool CFlagMgr::WaitFlagIs1(const acl::string &flag)
 {
 #define WAIT_RETRY 100
 
 	for (int i = 0; i < WAIT_RETRY; i++)
 	{
 		if (m_mapFlags[flag] == 1)
+		{
+			return true;
+		}
+
+		Sleep(20);
+	}
+
+	return false;
+}
+
+//循环检查标记是否为1 
+//成功返回true 否则false
+bool CFlagMgr::WaitFlagIs2(const acl::string &flag)
+{
+#define WAIT_RETRY 100
+
+	for (int i = 0; i < WAIT_RETRY; i++)
+	{
+		if (m_mapFlags[flag] == 2)
 		{
 			return true;
 		}

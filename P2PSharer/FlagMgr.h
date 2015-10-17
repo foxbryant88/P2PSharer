@@ -14,7 +14,10 @@ public:
 	acl::string GetFlag(const char *formatstr, const char *suffix);
 
 	//循环检查标记是否为1
-	bool WaitFlag(const acl::string &flag);
+	bool WaitFlagIs1(const acl::string &flag);
+
+	//循环检查标记是否为2
+	bool WaitFlagIs2(const acl::string &flag);
 
 	//检查标记是否为1
 	bool CheckFlag(const acl::string &flag);

@@ -174,6 +174,7 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 		m_errmsg.format("用户[%s]已经下线，打洞失败！\r\n", msg->szMAC);
 		g_serlog.msg1(m_errmsg);
 		printf(m_errmsg);
+
 		return;
 	}
 
