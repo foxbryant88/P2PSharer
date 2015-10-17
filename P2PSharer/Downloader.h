@@ -10,7 +10,7 @@
 #include "FileClient.h"
 
 #define MAX_CACHE_BLOCKS  2048
-#define BLOCK_REQUEST_TIME_OUT          2000    //分片下载超时时间（默认5分钟）
+#define BLOCK_REQUEST_TIME_OUT          500    //分片下载超时时间（默认5分钟）
 #define UPDATE_SERVICE_PROVIDER_TIME    60000     //更新服务下载节点的时间
 class CDownloader : public acl::thread
 {
@@ -40,8 +40,8 @@ private:
 	//对超过5分钟未响应的分片重新压入分片列表
 	void DealTimeoutBlockRequests();
 
-	//获取一批分块
-	bool GetBlocks(std::vector<DWORD> &blockNums);
+	//获取一批分块 0：分片缓冲区为空 1：成功 2：无未下发分片
+	int GetBlocks(std::vector<DWORD> &blockNums);
 
 	//每隔1分钟重新搜索一次服务节点
 	bool UpdateServiceProvider(void);

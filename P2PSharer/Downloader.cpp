@@ -126,6 +126,7 @@ void CDownloader::RemoveFailConnSender(CReqSender *pSender)
 void *CDownloader::run()
 {
 	std::vector<DWORD> vBlocks;
+	int iGetBlockRes = 0;
 
 	while (!m_bExit)
 	{
@@ -140,7 +141,7 @@ void *CDownloader::run()
 			m_lockSenderObject.lock();
 			for (int i = 0; i < m_vObjSender.size(); i++)
 			{
-				if (GetBlocks(vBlocks))
+				if ((iGetBlockRes = GetBlocks(vBlocks)) == 1)
 				{
 					if (m_vObjSender[i]->PushTask(vBlocks))
 					{
@@ -150,8 +151,11 @@ void *CDownloader::run()
 			}
 			m_lockSenderObject.unlock();
 
-			//处理超时的分片请求
-			DealTimeoutBlockRequests();
+			//处理超时的分片请求(无未下发分片时才处理）
+			if (iGetBlockRes == 2)
+			{
+				DealTimeoutBlockRequests();
+			}
 		}
 
 		Sleep(100);
@@ -202,21 +206,22 @@ bool CDownloader::SplitFileSizeIntoBlockMap()
 	return true;
 }
 
-//获取一批分块
-bool CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
+//获取一批分块 0：分片缓冲区为空 1：成功 2：无未下发分片
+int CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
 {
 	//分块缓冲列表中无分块则取分块失败
 	if (m_mapFileBlocks.empty())
 	{
-		return false;
+		return 0;
 	}
 
 	//分块列表非空，表明还未分配给CFileSender对象执行。直接返回
 	if (blockNums.size() > 0)
 	{
-		return true;
+		return 1;
 	}
 
+	bool bDispatch = false;
 	m_lockFileBlocks.lock();
 	std::map<DWORD, DWORD>::iterator itTmp = m_mapFileBlocks.begin();
 	for (; itTmp != m_mapFileBlocks.end(); ++itTmp)
@@ -231,11 +236,15 @@ bool CDownloader::GetBlocks(std::vector<DWORD> &blockNums)
 		{
 			blockNums.push_back(itTmp->first);
 			itTmp->second = GetTickCount();        //已分配标记
+			bDispatch = true;
 		}
 	}
 	m_lockFileBlocks.unlock();
 
-	return true;
+	if (bDispatch)
+		return 1;
+	else
+		return 2;
 }
 
 //对超过5分钟未响应的分片重置其分片时间戳为0

@@ -41,7 +41,7 @@ enum eMSG
 #define FORMAT_FLAG_GETCLIENTIP "GET_CLIENT_IP_OF_MAC_%s"     // 获取指定MAC的IP地址
 #define FORMAT_FLAG_LOGIN       "LOGIN_SERVER_%s"             // 发送登录请求标记
 
-#define EACH_BLOCK_SIZE  1200                                 //文件分片的大小
+#define EACH_BLOCK_SIZE  1300                                 //文件分片的大小
 
 struct BLOCK_DATA_INFO
 {

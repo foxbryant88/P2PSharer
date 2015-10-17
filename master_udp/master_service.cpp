@@ -50,7 +50,7 @@ master_service::~master_service()
 
 void master_service::on_read(acl::socket_stream* stream)
 {
-	char  buf[1300];
+	char  buf[EACH_BLOCK_SIZE + 100];
 	int   ret;
 
 	if ((ret = stream->read(buf, sizeof(buf), false)) == -1)

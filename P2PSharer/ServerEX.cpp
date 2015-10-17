@@ -95,7 +95,7 @@ void ServerEX::DoLogin()
 
 void* ServerEX::run()
 {
-	char buf[1300];
+	char buf[EACH_BLOCK_SIZE + 100];
 	MSGDef::TMSG_HEADER *msg;
 
 	while (!m_bExit)
