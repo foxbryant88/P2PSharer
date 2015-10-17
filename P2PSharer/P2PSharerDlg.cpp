@@ -6,12 +6,13 @@
 #include "P2PSharer.h"
 #include "P2PSharerDlg.h"
 #include "afxdialogex.h"
+#include "AutoLogin.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
-
+CAutoLogin g_objAutoLogin;
 CResourceMgr *g_resourceMgr;
 ServerEX g_serEx;
 std::map<acl::string, CDownloader *> g_mapFileDownloader;    //key：文件MD5 value：文件下载对象
@@ -192,7 +193,9 @@ bool CP2PSharerDlg::Init(void)
 	g_serEx.set_detachable(true);
 	g_serEx.start();
 
-	g_serEx.SendMsg_UserLogin();
+	//serEx.SendMsg_UserLogin();
+ 	g_objAutoLogin.set_detachable(true);
+ 	g_objAutoLogin.start();
 
 	return true;
 }

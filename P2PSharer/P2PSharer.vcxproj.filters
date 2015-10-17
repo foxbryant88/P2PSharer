@@ -75,6 +75,9 @@
     <ClInclude Include="FileClient.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AutoLogin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="P2PSharer.cpp">
@@ -117,6 +120,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="FileClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoLogin.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

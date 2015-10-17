@@ -4,10 +4,11 @@
 
 #include "PeerList.h"
 
-#define MAX_TRY_NUMBER		2
+#define MAX_TRY_NUMBER		                 2
 
-#define SERVER_PORT			9999
-#define MAX_PACKET_SIZE		1300
+#define SERVER_PORT		                    9999
+#define MAX_PACKET_SIZE	                	1300
+#define HEARTBEAT_CLIENT_ACTIVITY_QUERY     15000 //15秒
 
 // 各种消息标识
 enum eMSG

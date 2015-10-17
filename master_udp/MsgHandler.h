@@ -62,11 +62,14 @@ private:
 	void ProcMsgFileBlockData(MSGDef::TMSG_HEADER *data, acl::socket_stream *stream);
 
 	acl::locker m_lockMsgData; 
-	acl::locker m_lockUserList;
+// 	acl::locker m_lockUserList;
 	acl::locker m_lockSocket;
 
 	std::vector<RECIEVE_DATA> m_vMsgData;     //收到的数据先缓存
 	PeerList m_lstOnlineUser;                 //在线客户端列表
+	//std::map<acl::string, DWORD> m_mapMsgClientHistory;    //向服务端发送过消息的客户端列表，key为ip/port value为最后一次发送的时间
+	//                                                       //检测是否下线时优先从这个map判断，效率更高
+
 	acl::socket_stream m_SockStream;
 	acl::socket_stream *m_pSock;
 	bool m_bExit;

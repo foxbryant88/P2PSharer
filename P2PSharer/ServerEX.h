@@ -48,6 +48,8 @@ public:
 	//向指定地址发送数据
 	bool SendMsgToServer(void *data, size_t size);
 
+	//若连续两个心跳时间未收到服务器查询消息则重新登录
+	void DoLogin();
 private:
 	//获取本机所有网卡IP
 	void GetLocalIPs(Peer_Info &peerInfo, acl::string portInfo);
@@ -103,6 +105,7 @@ private:
 	acl::string server_addr_;              //服务端地址
 	Peer_Info m_peerInfo;                  //本机信息
 	acl::string m_errmsg;                  //错误信息
+	DWORD m_dwLastActiveTime;              //上次与服务器保持通信的时间
 
 	acl::locker m_lockSockStream;
 	acl::socket_stream m_sockstream;

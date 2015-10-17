@@ -9,7 +9,7 @@ acl::log g_cli_exlog;
 ServerEX::ServerEX()
 {
 	g_cli_exlog.open("serEx.log", "ServerEx");
-
+	m_dwLastActiveTime = 0;
 	m_bExit = false;
 
 	m_objFlagMgr = new CFlagMgr;
@@ -81,6 +81,15 @@ void ServerEX::GetLocalIPs(Peer_Info &peerInfo, acl::string portInfo)
 		_snprintf_s(peerInfo.arrAddr[i].IPAddr, MAX_ADDR_LENGTH, "%s%s", inet_ntoa(tmpIp), portInfo.c_str());
 
 		++peerInfo.nAddrNum;
+	}
+}
+
+//若连续两个心跳时间未收到服务器查询消息则重新登录
+void ServerEX::DoLogin()
+{
+	if (GetTickCount() - m_dwLastActiveTime > HEARTBEAT_CLIENT_ACTIVITY_QUERY * 2)
+	{
+		SendMsg_UserLogin();
 	}
 }
 
@@ -210,10 +219,10 @@ void ServerEX::ProcMsgUserLoginAck(MSGDef::TMSG_HEADER *data)
 	MSGDef::TMSG_USERLOGINACK *msg = (MSGDef::TMSG_USERLOGINACK*)data;
 
 	m_peerInfo = msg->PeerInfo;
-
 	//设置登录成功标记
 	m_objFlagMgr->SetFlag(m_objFlagMgr->GetFlag(FORMAT_FLAG_LOGIN, server_addr_), 1);
 
+	m_dwLastActiveTime = GetTickCount();
 	m_errmsg.format("登录成功，外网IP：%s", m_peerInfo.arrAddr[m_peerInfo.nAddrNum - 1].IPAddr);
 	g_cli_exlog.msg1(m_errmsg);
 	//MessageBox(NULL, m_errmsg, "client", MB_OK);
@@ -465,6 +474,7 @@ void ServerEX::ProcMsgUserActiveQuery(MSGDef::TMSG_HEADER *data, acl::socket_str
 	MSGDef::TMSG_USERACTIVEQUERY tMsgUserActive(m_peerInfo);
 	//ShowMsg("收到存活检测消息!");
 
+	m_dwLastActiveTime = GetTickCount();
 	if (!SendData(&tMsgUserActive, sizeof(tMsgUserActive), stream, server_addr_))
 	{
 		ShowError("回复存活消息失败！");
@@ -556,10 +566,10 @@ start:
 
 				SendData(&tdata, sizeof(tdata), &m_sockstream, stream->get_peer(true));
 			}
-			else
-			{
-				ShowError("读取分块失败！");
-			}
+			//else
+			//{
+			//	ShowError("读取分块失败！");
+			//}
 		}
 	}
 	else
@@ -571,7 +581,7 @@ start:
 		if (_access(fullPath.c_str(), 0) != 0)
 		{
 			acl::string msgText;
-			msgText.format("打开供应文件[%s]出错，MD5：%s", fullPath.c_str(), msg->FileBlock.md5);
+			msgText.format("打开目标文件[%s]出错，MD5：%s", fullPath.c_str(), msg->FileBlock.md5);
 			ShowError(msgText);
 			m_objFlagMgr->SetFlag(bFileNotExistFlag, 1);
 
@@ -630,10 +640,10 @@ start:
 
 				SendData(&tdata, sizeof(tdata), &m_sockstream, stream->get_peer(true));
 			}
-			else
-			{
-				ShowError("读取分块失败！");
-			}
+			//else
+			//{
+			//	ShowError("读取分块失败！");
+			//}
 		}
 	}
 	else

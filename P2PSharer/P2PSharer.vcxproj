@@ -114,6 +114,7 @@
   <ItemGroup>
     <ClInclude Include="..\common\CommonDefine.h" />
     <ClInclude Include="..\common\PeerList.h" />
+    <ClInclude Include="AutoLogin.h" />
     <ClInclude Include="Downloader.h" />
     <ClInclude Include="FileScan.h" />
     <ClInclude Include="FileServer.h" />
@@ -135,6 +136,7 @@
     <ClCompile Include="..\common\PeerList.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="AutoLogin.cpp" />
     <ClCompile Include="Downloader.cpp" />
     <ClCompile Include="FileScan.cpp" />
     <ClCompile Include="FileServer.cpp" />

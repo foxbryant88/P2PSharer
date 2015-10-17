@@ -118,6 +118,7 @@ int CReqSender::P2PNoTrasmit()
 
 		//清空上次记录
 		memset(&tMsg.FileBlock.block[0], 0, MAX_REQUEST_BLOCKS_COUNT * sizeof(DWORD));
+		Sleep(300);
 		iRetry = 0;
 	}
 
@@ -158,6 +159,7 @@ int CReqSender::P2PWithTransmit()
 		//清空上次记录
 		memset(&tMsg.FileBlock.block[0], 0, MAX_REQUEST_BLOCKS_COUNT * sizeof(DWORD));
 		iRetry = 0;
+		Sleep(300);
 	}
 
 	return 0;
