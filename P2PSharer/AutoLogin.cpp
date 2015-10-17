@@ -15,6 +15,6 @@ void *CAutoLogin::run()
 	while (true)
 	{
 		g_serEx.DoLogin();
-		Sleep(1000);
+		Sleep(5000);
 	}
 }

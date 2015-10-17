@@ -60,7 +60,7 @@ void* CMsgHandler::run()
 			Sleep(20);
 			continue;
 		}
-		
+
 		MSGDef::TMSG_HEADER *msg = (MSGDef::TMSG_HEADER *)recieve.data.buf();
 		const char *addr = (const char *)recieve.peerAddr.buf();
 		if (!m_SockStream.set_peer(addr))
@@ -79,7 +79,7 @@ void* CMsgHandler::run()
 //消息处理
 void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
 {
-// 	m_pSock = sock;
+	// 	m_pSock = sock;
 
 	switch (msg->cMsgID)
 	{
@@ -119,9 +119,8 @@ void CMsgHandler::DealMsg(MSGDef::TMSG_HEADER *msg, acl::socket_stream *sock)
 //客户端登录消息
 void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_stream *sock)
 {
-
 	MSGDef::TMSG_USERLOGIN *pUserLogin = (MSGDef::TMSG_USERLOGIN*)pMsgHeader;
-	 
+
 	m_errmsg.clear();
 	m_errmsg.format("收到%s登录消息, ip:%s\r\n", pUserLogin->PeerInfo.szMAC, sock->get_peer(true));
 	g_serlog.msg1(m_errmsg);
@@ -129,17 +128,23 @@ void CMsgHandler::ProcUserLoginMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_
 
 	acl::string ip = sock->get_peer(true);
 	int nNum = pUserLogin->PeerInfo.nAddrNum;
-	memcpy(pUserLogin->PeerInfo.arrAddr[nNum].IPAddr, ip.c_str(), ip.length());
-	pUserLogin->PeerInfo.nAddrNum++;
-	pUserLogin->PeerInfo.dwActiveTime = GetTickCount();   // 登陆的时间为活跃时间
+
+	//防止客户端多次登录
+	if (strcmp(ip.c_str(), pUserLogin->PeerInfo.arrAddr[nNum - 1].IPAddr) != 0)
+	{
+		memcpy(pUserLogin->PeerInfo.arrAddr[nNum].IPAddr, ip.c_str(), ip.length());
+		pUserLogin->PeerInfo.dwActiveTime = GetTickCount();   // 登陆的时间为活跃时间
+		pUserLogin->PeerInfo.nAddrNum++;
+	}
 
 	//加入在线列表
-// 	m_lockUserList.lock();
-//	if (m_lstOnlineUser.GetAPeer(pUserLogin->PeerInfo.szMAC) == NULL)
 	m_lstOnlineUser.DeleteAPeer(pUserLogin->PeerInfo.szMAC);
 	m_lstOnlineUser.AddPeer(pUserLogin->PeerInfo);
-// 	m_lockUserList.unlock();
 
+	if (pUserLogin->PeerInfo.nAddrNum > 5)
+	{
+		ShowError("外网IP个数超过最大限制！");
+	}
 
 	//回复登录确认消息
 	MSGDef::TMSG_USERLOGINACK tMsgUserLogAck(pUserLogin->PeerInfo);
@@ -165,9 +170,9 @@ void CMsgHandler::ProcP2PConnectMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket
 
 	//根据MAC地址查找目标IP
 	Peer_Info *peer = NULL;
-// 	m_lockUserList.lock();
+	// 	m_lockUserList.lock();
 	peer = m_lstOnlineUser.GetAPeer(msg->szMAC);
-// 	m_lockUserList.unlock();
+	// 	m_lockUserList.unlock();
 
 	if (peer == NULL)
 	{
@@ -200,9 +205,9 @@ void CMsgHandler::ProcLogoutMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_str
 	g_serlog.msg1(m_errmsg);
 	printf(m_errmsg);
 
-// 	m_lockUserList.lock();
+	// 	m_lockUserList.lock();
 	m_lstOnlineUser.DeleteAPeer(msg->PeerInfo.szMAC);
-// 	m_lockUserList.unlock();
+	// 	m_lockUserList.unlock();
 }
 
 //收到客户端确认存活消息
@@ -211,13 +216,13 @@ void CMsgHandler::ProcActiveMsg(MSGDef::TMSG_HEADER *pMsgHeader, acl::socket_str
 	MSGDef::TMSG_USERACTIVEQUERY *msg = (MSGDef::TMSG_USERACTIVEQUERY *)pMsgHeader;
 	printf("收到%s存活确认消息, IP: %s \n", msg->PeerInfo.szMAC, msg->PeerInfo.arrAddr[msg->PeerInfo.nAddrNum - 1].IPAddr);
 
-// 	m_lockUserList.lock();
+	// 	m_lockUserList.lock();
 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->PeerInfo.szMAC);
 	if (NULL != peer)
 	{
 		peer->dwActiveTime = GetTickCount();
 	}
-// 	m_lockUserList.unlock();
+	// 	m_lockUserList.unlock();
 }
 
 //维护在线列表
@@ -234,9 +239,9 @@ void CMsgHandler::MaintainUserlist()
 			if (dwTick - pPeerInfo->dwActiveTime >= HEARTBEAT_CLIENT_ACTIVITY_QUERY + 600)
 			{
 				printf("------删除下线客户端-----, MAC:%s, IP: %s \n", pPeerInfo->szMAC, pPeerInfo->arrAddr[nNum].IPAddr);
-// 				m_lockUserList.lock();
+				// 				m_lockUserList.lock();
 				m_lstOnlineUser.DeleteAPeer(pPeerInfo->szMAC);
-// 				m_lockUserList.unlock();
+				// 				m_lockUserList.unlock();
 				--i;
 			}
 			else
@@ -274,7 +279,7 @@ bool CMsgHandler::SendData(void *data, size_t size, acl::socket_stream *stream, 
 		g_serlog.error1("设置远程地址[%s]失败,err:%d", addr, acl::last_error());
 
 	m_lockSocket.unlock();
-	
+
 	return false;
 }
 
@@ -283,11 +288,11 @@ void CMsgHandler::ProcGetUserClientIP(MSGDef::TMSG_HEADER *pMsgHeader, acl::sock
 {
 	MSGDef::TMSG_GETUSERCLIENTIP *msg = (MSGDef::TMSG_GETUSERCLIENTIP *)pMsgHeader;
 	printf("收到请求[%s] IP地址的消息\n", msg->szMAC);
-	
+
 	Peer_Info *peer = m_lstOnlineUser.GetAPeer(msg->szMAC);
 	if (NULL != peer)
 	{
-    	MSGDef::TMSG_GETUSERCLIENTIPACK tMsgGetClientIPAck(*peer);
+		MSGDef::TMSG_GETUSERCLIENTIPACK tMsgGetClientIPAck(*peer);
 		SendData(&tMsgGetClientIPAck, sizeof(tMsgGetClientIPAck), sock, msg->PeerInfo.arrAddr[msg->PeerInfo.nAddrNum - 1].IPAddr);
 	}
 	else

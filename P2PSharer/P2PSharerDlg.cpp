@@ -179,7 +179,8 @@ bool CP2PSharerDlg::Init(void)
 {
 	//启动资源管理对象
 	g_resourceMgr = new CResourceMgr();
-	g_resourceMgr->Init("119.29.66.237:6379");
+	//g_resourceMgr->Init("119.29.66.237:6379");   //Redis server on Windows
+	g_resourceMgr->Init("203.195.147.86:6379");    //Redis server on linux
 	g_resourceMgr->set_detachable(true);
 	g_resourceMgr->start();
 
@@ -221,7 +222,7 @@ void CP2PSharerDlg::OnBnClickedButtonSearch()
 		//等待上次搜索结束，避免多线程同时调用问题
 		if (m_objSearchMgr->IsSearching())
 		{
-			MessageBox("正在搜索中，请等待搜索结束！");
+			MessageBox("正在搜索中，请耐心等待！");
 			return;
 		}
 

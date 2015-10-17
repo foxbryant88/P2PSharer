@@ -64,8 +64,9 @@ void master_service::on_read(acl::socket_stream* stream)
 		rec.data = buf;
 		rec.peerAddr = stream->get_peer(true);
 
-		m_err.format("收到来自：%s data： %s\r\n", rec.peerAddr.buf(), buf);
-		g_serlog.msg1(m_err);
+		m_err.format("收到来自：%s的数据\r\n", rec.peerAddr.buf());
+// 		m_err.format("收到来自：%s data： %s\r\n", rec.peerAddr.buf(), buf);
+// 		g_serlog.msg1(m_err);
 		//printf(m_err);
 
 		//m_msghandler.CacheMsgData(rec);

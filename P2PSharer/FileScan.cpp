@@ -15,13 +15,6 @@ if (*ptr == '.' && *(ptr + 1) == '/')  \
 CFileScan::CFileScan()
 {
 	g_scanlog.open("scanlog.log");
-	if (!m_lockFilelist.open(NAME_FILE_INFO_LIST_LOCK))
-	{
-		m_errmsg.format("创建文件锁失败：%s, err:%d", NAME_FILE_INFO_LIST_LOCK, acl::last_error());
-		g_scanlog.error1(m_errmsg);
-
-		ShowError(m_errmsg);
-	}
 }
 
 
@@ -53,7 +46,7 @@ void CFileScan::ScanVideo(acl::scan_dir &scan, const char *dir, bool brecursive,
 {
 	if (!scan.open(dir, brecursive))
 	{
-		g_scanlog.error1("打开目录【%ds】失败，err:%d", dir, acl::last_error());
+		g_scanlog.error1("打开目录【%s】失败，err:%d", dir, acl::last_error());
 		return;
 	}
 
@@ -116,7 +109,7 @@ void CFileScan::CacheFileInfo(const char *fullfile)
 //将缓存的文件信息写入文件
 void CFileScan::WriteCacheToFile()
 {
-	m_lockFilelist.lock();
+ 	m_lockFilelist.lock();
 	acl::ofstream file;
 	file.open_append(NAME_FILE_INFO_LIST);
 
@@ -131,7 +124,7 @@ void CFileScan::WriteCacheToFile()
 
 	file.close();
 	m_vfileList.clear();
-	m_lockFilelist.unlock();
+ 	m_lockFilelist.unlock();
 }
 
 //是否是视频文件

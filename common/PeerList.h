@@ -17,6 +17,8 @@
 struct Addr_Info
 {
 	char IPAddr[MAX_ADDR_LENGTH];
+
+	Addr_Info(){ memset(IPAddr, 0, MAX_ADDR_LENGTH); }
 };
 
 struct Peer_Info
@@ -28,7 +30,7 @@ struct Peer_Info
 	int        dwActiveTime;              // 活跃时间
 	int        nAddrNum;                  // 适配器数目
 	char       P2PAddr[MAX_ADDR_LENGTH];
-	Peer_Info(); 
+	Peer_Info();
 
 	Peer_Info operator=(const Peer_Info& rPeerinfo);
 };

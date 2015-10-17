@@ -87,7 +87,7 @@ void ServerEX::GetLocalIPs(Peer_Info &peerInfo, acl::string portInfo)
 //若连续两个心跳时间未收到服务器查询消息则重新登录
 void ServerEX::DoLogin()
 {
-	if (GetTickCount() - m_dwLastActiveTime > HEARTBEAT_CLIENT_ACTIVITY_QUERY * 2)
+	if (GetTickCount() - m_dwLastActiveTime > HEARTBEAT_CLIENT_ACTIVITY_QUERY)
 	{
 		SendMsg_UserLogin();
 	}
