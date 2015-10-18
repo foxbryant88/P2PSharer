@@ -8,7 +8,7 @@
   .平台工具集：Visual Studio 2013 - Windows XP (v120_xp)
   .C/C++ -> 代码生成 -> 运行库:多线程 DLL (/MD)
 4.安装MFC MBCS DLL，参见：https://msdn.microsoft.com/library/dn251007.aspx
-
+5.此代码已提交到GitHub：https://github.com/foxbryant88/P2PSharer/
 
 
 
